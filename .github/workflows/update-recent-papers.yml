@@ -1,0 +1,48 @@
+name: Update recent papers
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Monday 09:37 JST = Monday 00:37 UTC.
+    # Avoid exactly at the top of the hour.
+    - cron: "37 0 * * 1"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-recent-papers:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Update README recent papers
+        env:
+          INSPIRE_QUERY: "a K.Mukaida.1"
+        run: |
+          python scripts/update_recent_papers.py
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: "Update recent papers"
+          title: "Update recent papers"
+          body: |
+            This PR updates the Recent papers block in README.md from INSPIRE.
+
+            Please check:
+            - [ ] The two papers are really the latest relevant papers.
+            - [ ] arXiv links are correct.
+            - [ ] DOI/journal information, if present, is correct.
+          branch: bot/update-recent-papers
+          delete-branch: true
+          add-paths: |
+            README.md
