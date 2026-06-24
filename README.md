@@ -4,10 +4,10 @@ I am a theoretical physicist working on particle physics and early-Universe cosm
 
 ## Research interests
 
-- Particle physics in the early Universe
-- Reheating and thermalization
-- Baryogenesis and lepton flavor asymmetries
-- Dark matter production
+- Particle physics / Cosmology
+- Reheating / thermalization
+- Baryogenesis / Leptogenesis
+- Dark matter 
 - Cosmological collider physics
 - Primordial gravitational waves
 
