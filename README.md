@@ -11,9 +11,22 @@ I am a theoretical physicist working on particle physics and early-Universe cosm
 - Cosmological collider physics
 - Primordial gravitational waves
 
-## Selected publications
+## Research highlights
 
-Coming soon.
+* **[Thermalization after/during Reheating](https://arxiv.org/abs/1312.3097)**
+  *JHEP* 05, 006 (2014)
+
+* **[Violent Preheating in Inflation with Nonminimal Coupling](https://arxiv.org/abs/1609.05209)**
+  *JCAP* 02, 045 (2017)
+
+* **[Inflationary primordial black holes for the LIGO gravitational wave events and pulsar timing array experiments](https://arxiv.org/abs/1611.06130)**
+  *Phys. Rev. D* 95, 123510 (2017)
+
+* **[Wash-In Leptogenesis](https://arxiv.org/abs/2011.09347)**
+  *Phys. Rev. Lett.* 126, 201802 (2021)
+
+For a longer curated list, see [Publications](publications.md).
+
 
 ## Talks
 
