@@ -63,4 +63,4 @@ For the complete and up-to-date publication list, please see my INSPIRE author p
 
 ## Complete list
 
-The complete publication list, citation information, and bibliographic metadata are available from my INSPIRE author profile.
+The complete publication list, citation information, and bibliographic metadata are available from my [INSPIRE author profile](https://inspirehep.net/authors/1309535).
