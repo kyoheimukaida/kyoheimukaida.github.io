@@ -28,11 +28,12 @@ I am a theoretical physicist working on particle physics and early-Universe cosm
 For a longer curated list, see [Publications](publications.md).
 
 
-## Talks
+## Upcoming and recent talks
 
-* **Cosmological Collider Physics**
+<!-- talks:start -->
+- **Cosmological Collider Physics**  
   iTHEMS Cosmology Forum N06, RIKEN iTHEMS, June 22, 2026
-  [Event page](https://ithems.riken.jp/ja/events/ithems-cosmology-forum-n06-cosmological-collider-physics)
 
-* **Particle Physics in the Early Universe**
-  Invited talk, Paris/Orsay, September 14--18, 2026
+- **Particle Physics in the Early Universe**  
+  Paris/Orsay, September 14--18, 2026
+<!-- talks:end -->
