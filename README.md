@@ -31,12 +31,12 @@ For a longer curated list, see [Publications](publications.md).
 
 <!-- recent-papers:start -->
 - **[Revisiting unitarity of single scalar field with non-minimal coupling](https://arxiv.org/abs/2603.06296)**  
-  He, Minxi, Hong, Muzi, Mukaida, Kyohei, and Nishiki, Tomoya  
+  Minxi He, Muzi Hong, Kyohei Mukaida, and Tomoya Nishiki  
   *arXiv preprint (2026-03-06)*  
   [[arXiv](https://arxiv.org/abs/2603.06296)]
 
 - **[Cancellation of loop corrections to soft scalar power spectrum](https://arxiv.org/abs/2603.01961)**  
-  Ema, Yohei, Hong, Muzi, Jinno, Ryusuke, and Mukaida, Kyohei  
+  Yohei Ema, Muzi Hong, Ryusuke Jinno, and Kyohei Mukaida  
   *arXiv preprint (2026-03-02)*  
   [[arXiv](https://arxiv.org/abs/2603.01961)]
 <!-- recent-papers:end -->
