@@ -9,10 +9,8 @@ import urllib.parse
 import urllib.request
 from typing import Any
 
-
 START = "<!-- recent-papers:start -->"
 END = "<!-- recent-papers:end -->"
-
 README_PATH = "index.md"
 
 # INSPIRE author query.
