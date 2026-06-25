@@ -37,10 +37,18 @@ jobs:
 
           git add cv.md
 
+          if [ -d "_data" ]; then
+            git add _data
+          fi
+
+          if [ -d "generated" ]; then
+            git add generated
+          fi
+
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "Update CV"
+            git commit -m "Update CV and generated TeX lists"
             git pull --rebase
             git push
           fi
