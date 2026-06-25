@@ -5,7 +5,7 @@ title: Talks
 
 # Talks
 
-This page lists selected invited talks, seminars, lectures, and conference presentations.
+This page lists all invited talks, seminars, and conference presentations.
 
 ## Talks
 
