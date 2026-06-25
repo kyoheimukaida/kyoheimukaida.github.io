@@ -46,6 +46,9 @@ For the complete publication list, see my [INSPIRE author profile](https://inspi
 
 - **[Cutting Rules for In-In correlators & Cosmo Collider Signals](https://indico2.riken.jp/event/5612/timetable/#20260622)**  
   Invited talk, 2026-06-22, Okochi Hall, RIKEN
+
+- **Magnetic Helicity, Higgs Winding, and Chiral Asymmetry**  
+  Invited talk, 2026-02, Chung-Ang University, Seoul, Korea
 <!-- talks:end -->
 
 For a curated list of talks, see [Talks](talks.md).
