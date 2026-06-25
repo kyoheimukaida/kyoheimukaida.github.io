@@ -1,3 +1,8 @@
+---
+layout: default
+title: Publications
+---
+
 # Kyohei Mukaida
 
 I am a theoretical physicist working on particle physics and early-Universe cosmology.
