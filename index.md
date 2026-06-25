@@ -24,7 +24,15 @@ I am a theoretical physicist working on particle physics and early-Universe cosm
 ## Recent papers
 
 <!-- recent-papers:start -->
-- This section will be updated automatically.
+- **[Revisiting unitarity of single scalar field with non-minimal coupling](https://arxiv.org/abs/2603.06296)**  
+  Minxi He, Muzi Hong, Kyohei Mukaida, and Tomoya Nishiki  
+  *arXiv preprint (2026-03-06)*  
+  [[arXiv](https://arxiv.org/abs/2603.06296)]
+
+- **[Cancellation of loop corrections to soft scalar power spectrum](https://arxiv.org/abs/2603.01961)**  
+  Yohei Ema, Muzi Hong, Ryusuke Jinno, and Kyohei Mukaida  
+  *arXiv preprint (2026-03-02)*  
+  [[arXiv](https://arxiv.org/abs/2603.01961)]
 <!-- recent-papers:end -->
 
 For selected publications, see [Publications](publications.md).  
