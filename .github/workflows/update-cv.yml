@@ -1,0 +1,46 @@
+name: Update CV
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Every day at 10:17 JST.
+    - cron: "17 10 * * *"
+      timezone: "Asia/Tokyo"
+
+permissions:
+  contents: write
+
+jobs:
+  update-cv:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Update CV from INSPIRE and public-talk calendar
+        env:
+          INSPIRE_QUERY: "a K.Mukaida.1"
+          TALKS_ICS_URLS: ${{ secrets.TALKS_ICS_URLS }}
+        run: |
+          python scripts/update_cv.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add cv.md
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Update CV"
+            git pull --rebase
+            git push
+          fi
