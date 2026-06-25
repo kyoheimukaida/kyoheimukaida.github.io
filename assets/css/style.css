@@ -297,3 +297,138 @@ hr {
     gap: 8px;
   }
 }
+
+/* Homepage hero */
+
+.hero {
+  margin: 8px 0 44px;
+  padding: 34px;
+  background:
+    linear-gradient(135deg, rgba(36, 84, 214, 0.08), rgba(255, 255, 255, 0.75));
+  border: 1px solid var(--line);
+  border-radius: 24px;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: var(--accent);
+  font-size: 0.84rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.lead {
+  max-width: 720px;
+  color: #3f4754;
+  font-size: 1.12rem;
+  line-height: 1.75;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 0.94rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.button:hover {
+  color: #ffffff;
+  text-decoration: none;
+  filter: brightness(0.95);
+}
+
+.button.secondary {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.button.secondary:hover {
+  color: var(--accent);
+}
+
+/* Cards */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 20px 0 32px;
+}
+
+.paper-card {
+  padding: 18px 18px 16px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(18, 24, 40, 0.04);
+}
+
+.paper-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.02rem;
+  line-height: 1.35;
+}
+
+.paper-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+/* Auto-generated markdown lists as cards */
+
+.card-list {
+  margin: 18px 0 28px;
+}
+
+.card-list ul {
+  display: grid;
+  gap: 14px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.card-list li {
+  margin: 0;
+  padding: 18px 18px 16px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(18, 24, 40, 0.04);
+}
+
+.card-list li strong {
+  font-size: 1.02rem;
+}
+
+/* Mobile */
+
+@media (max-width: 720px) {
+  .hero {
+    padding: 24px 20px;
+    border-radius: 18px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .button-row {
+    gap: 8px;
+  }
+}
