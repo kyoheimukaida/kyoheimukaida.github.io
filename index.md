@@ -1,0 +1,43 @@
+---
+layout: default
+title: Home
+---
+
+# Kyohei Mukaida
+
+I am a theoretical physicist working on particle physics and early-Universe cosmology.
+
+## Research highlights
+
+- **[Thermalization after/during Reheating](https://arxiv.org/abs/1312.3097)**  
+  JHEP 05, 006 (2014)
+
+- **[Violent Preheating in Inflation with Nonminimal Coupling](https://arxiv.org/abs/1609.05209)**  
+  JCAP 02, 045 (2017)
+
+- **[Inflationary primordial black holes for the LIGO gravitational wave events and pulsar timing array experiments](https://arxiv.org/abs/1611.06130)**  
+  Phys. Rev. D 95, 123510 (2017)
+
+- **[Wash-In Leptogenesis](https://arxiv.org/abs/2011.09347)**  
+  Phys. Rev. Lett. 126, 201802 (2021)
+
+## Recent papers
+
+<!-- recent-papers:start -->
+- This section will be updated automatically.
+<!-- recent-papers:end -->
+
+For selected publications, see [Publications](publications.md).  
+For the complete publication list, see my [INSPIRE author profile](https://inspirehep.net/authors/1309535).
+
+## Upcoming and recent talks
+
+<!-- talks:start -->
+- **Cosmological Collider Physics**  
+  iTHEMS Cosmology Forum N06, RIKEN iTHEMS, June 22, 2026
+
+- **Particle Physics in the Early Universe**  
+  Paris/Orsay, September 14--18, 2026
+<!-- talks:end -->
+
+For a curated list of talks, see [Talks](talks.md).
