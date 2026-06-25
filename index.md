@@ -54,15 +54,7 @@ title: Home
 <div class="card-list" markdown="1">
 
 <!-- recent-papers:start -->
-- **[Revisiting unitarity of single scalar field with non-minimal coupling](https://arxiv.org/abs/2603.06296)**  
-  Minxi He, Muzi Hong, Kyohei Mukaida, and Tomoya Nishiki  
-  *arXiv preprint (2026-03-06)*  
-  [[arXiv](https://arxiv.org/abs/2603.06296)]
-
-- **[Cancellation of loop corrections to soft scalar power spectrum](https://arxiv.org/abs/2603.01961)**  
-  Yohei Ema, Muzi Hong, Ryusuke Jinno, and Kyohei Mukaida  
-  *arXiv preprint (2026-03-02)*  
-  [[arXiv](https://arxiv.org/abs/2603.01961)]
+- This section will be updated automatically.
 <!-- recent-papers:end -->
 
 </div>
@@ -75,14 +67,7 @@ For the complete publication list, see my [INSPIRE author profile](https://inspi
 <div class="card-list" markdown="1">
 
 <!-- talks:start -->
-- **[Particle Physics in the Early Universe (talk title TBA)](https://indico.ijclab.in2p3.fr/event/13541/)**  
-  Invited talk, 2026-09-14, Paris/Orsay, France
-
-- **[Cutting Rules for In-In correlators & Cosmo Collider Signals](https://indico2.riken.jp/event/5612/timetable/#20260622)**  
-  Invited talk, 2026-06-22, Okochi Hall, RIKEN
-
-- **Magnetic Helicity, Higgs Winding, and Chiral Asymmetry**  
-  Invited talk, 2026-02, Chung-Ang University, Seoul, Korea
+- This section will be updated automatically.
 <!-- talks:end -->
 
 </div>
