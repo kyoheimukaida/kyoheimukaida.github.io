@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ site.description }}">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  </head>
+
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <div>
+          <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+          <p class="site-subtitle">{{ site.description }}</p>
+        </div>
+
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="{{ '/' | relative_url }}">Home</a>
+          <a href="{{ '/research.html' | relative_url }}">Research</a>
+          <a href="{{ '/publications.html' | relative_url }}">Publications</a>
+          <a href="{{ '/talks.html' | relative_url }}">Talks</a>
+          <a href="{{ '/cv.html' | relative_url }}">CV</a>
+        </nav>
+      </header>
+
+      <main class="content">
+        {{ content }}
+      </main>
+
+      <footer class="site-footer">
+        <p>
+          Complete publication list:
+          <a href="https://inspirehep.net/authors/1309535">INSPIRE</a>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
