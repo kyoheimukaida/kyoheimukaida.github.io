@@ -75,7 +75,14 @@ For the complete publication list, see my [INSPIRE author profile](https://inspi
 <div class="card-list" markdown="1">
 
 <!-- talks:start -->
-- This section will be updated automatically.
+- **[Particle Physics in the Early Universe (talk title TBA)](https://indico.ijclab.in2p3.fr/event/13541/)**  
+  Invited talk, 2026-09-14, Paris/Orsay, France
+
+- **[Cutting Rules for In-In correlators & Cosmo Collider Signals](https://indico2.riken.jp/event/5612/timetable/#20260622)**  
+  Invited talk, 2026-06-22, Okochi Hall, RIKEN
+
+- **Magnetic Helicity, Higgs Winding, and Chiral Asymmetry**  
+  Invited talk, 2026-02, Chung-Ang University, Seoul, Korea
 <!-- talks:end -->
 
 </div>
