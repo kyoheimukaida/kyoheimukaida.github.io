@@ -10,7 +10,7 @@ I am a theoretical physicist working on particle physics and early-Universe cosm
 ## Research interests
 
 - Particle physics / Cosmology
-- Reheating / thermalization
+- Inflatoin/ Reheating / Thermalization
 - Baryogenesis / Leptogenesis
 - Dark matter 
 - Cosmological collider physics
