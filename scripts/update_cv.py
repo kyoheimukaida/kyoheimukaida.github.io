@@ -495,13 +495,16 @@ def update_block(text: str, start: str, end: str, replacement_body: str) -> str:
     )
 
     replacement = f"{start}\n{replacement_body}\n{end}"
-    new_text, count = pattern.subn(replacement, text)
+
+    # Important:
+    # Use a callable replacement so that backslashes in TeX strings
+    # such as \section, \small, \href are not interpreted by re.sub.
+    new_text, count = pattern.subn(lambda _match: replacement, text)
 
     if count != 1:
         raise RuntimeError(f"Could not find exactly one block: {start} ... {end}")
 
     return new_text
-
 
 def main() -> int:
     publications, total_count = fetch_all_inspire_records(size=100)
