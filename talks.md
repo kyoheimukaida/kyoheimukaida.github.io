@@ -13,7 +13,7 @@ The following list is updated automatically from the public-talk calendar.
 Only entries normalized as `[INVITED]`, `[TALK]`, `[SEMINAR]`, or `[LECTURE]` are included.
 
 <!-- talks-auto:start -->
-This section will be updated automatically.
+No public talks found.
 <!-- talks-auto:end -->
 
 ## Notes

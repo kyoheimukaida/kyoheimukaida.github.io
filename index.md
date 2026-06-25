@@ -41,11 +41,7 @@ For the complete publication list, see my [INSPIRE author profile](https://inspi
 ## Upcoming and recent talks
 
 <!-- talks:start -->
-- **Cosmological Collider Physics**  
-  iTHEMS Cosmology Forum N06, RIKEN iTHEMS, June 22, 2026
-
-- **Particle Physics in the Early Universe**  
-  Paris/Orsay, September 14--18, 2026
+- No public talks found.
 <!-- talks:end -->
 
 For a curated list of talks, see [Talks](talks.md).
