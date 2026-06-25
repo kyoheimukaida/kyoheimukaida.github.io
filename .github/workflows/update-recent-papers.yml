@@ -23,7 +23,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Update README recent papers
+      - name: Update recent papers in index.md
         env:
           INSPIRE_QUERY: "a K.Mukaida.1"
         run: |
@@ -34,7 +34,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add README.md
+          git add index.md
 
           if git diff --cached --quiet; then
             echo "No changes to commit."
