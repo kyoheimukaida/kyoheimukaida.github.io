@@ -1,4 +1,9 @@
 ---
+layout: default
+title: Publications
+---
+
+---
 # Publications
 
 This page highlights selected publications that represent my main scientific contributions.
