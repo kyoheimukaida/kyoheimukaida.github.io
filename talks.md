@@ -1,26 +1,22 @@
 ---
 layout: default
-title: Talk
+title: Talks
 ---
-
----
-
-## title: Talks
 
 # Talks
 
-This page lists selected invited talks, seminars, and lectures.
+This page lists selected invited talks, seminars, lectures, and conference presentations.
 
-## Selected invited talks and seminars
+## Talks
 
-* **Cosmological Collider Physics**
-  iTHEMS Cosmology Forum N06, RIKEN iTHEMS, June 22, 2026
-  [Event page](https://ithems.riken.jp/ja/events/ithems-cosmology-forum-n06-cosmological-collider-physics)
+The following list is updated automatically from the public-talk calendar.  
+Only entries normalized as `[INVITED]`, `[TALK]`, `[SEMINAR]`, or `[LECTURE]` are included.
 
-* **Particle Physics in the Early Universe**
-  Invited talk, Paris/Orsay, September 14--18, 2026
+<!-- talks-auto:start -->
+This section will be updated automatically.
+<!-- talks-auto:end -->
 
 ## Notes
 
-This page is intended to provide a curated list of talks.
-A more complete list will be added gradually from calendar and email records after manual verification.
+This page is generated from a dedicated public-talk calendar.  
+It is intended to provide a curated public list, not a complete private calendar record.
