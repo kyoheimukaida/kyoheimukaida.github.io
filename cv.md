@@ -7,7 +7,7 @@ title: CV
 
 ## Kyohei Mukaida
 
-Institute of Particle and Nuclear Studies, KEK
+Theory Center, Institute of Particle and Nuclear Studies, KEK  
 Theoretical particle physics and early-Universe cosmology
 
 ## Research interests
