@@ -1,0 +1,43 @@
+name: Update talks
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Every day at 07:45 JST = 22:45 UTC.
+    - cron: "45 22 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update-talks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Update talks from Google Calendar iCal
+        env:
+          TALKS_ICS_URLS: ${{ secrets.TALKS_ICS_URLS }}
+        run: |
+          python scripts/update_talks_from_ics.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add index.md talks.md
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Update talks"
+            git push
+          fi
