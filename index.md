@@ -41,7 +41,8 @@ For the complete publication list, see my [INSPIRE author profile](https://inspi
 ## Upcoming and recent talks
 
 <!-- talks:start -->
-- No public talks found.
+- **[Cutting Rules for In-In correlators & Cosmo Collider Signals](https://indico2.riken.jp/event/5612/timetable/#20260622)**  
+  Invited talk, 2026-06-22, Okochi Hall, RIKEN
 <!-- talks:end -->
 
 For a curated list of talks, see [Talks](talks.md).

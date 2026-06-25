@@ -13,7 +13,8 @@ The following list is updated automatically from the public-talk calendar.
 Only entries normalized as `[INVITED]`, `[TALK]`, `[SEMINAR]`, or `[LECTURE]` are included.
 
 <!-- talks-auto:start -->
-No public talks found.
+- **[Cutting Rules for In-In correlators & Cosmo Collider Signals](https://indico2.riken.jp/event/5612/timetable/#20260622)**  
+  Invited talk, 2026-06-22, Okochi Hall, RIKEN
 <!-- talks-auto:end -->
 
 ## Notes
