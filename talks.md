@@ -3,11 +3,11 @@ layout: default
 title: Talks
 ---
 
-# Talks
+# Invited Talks
 
 This page lists all invited talks, seminars, and conference presentations.
 
-## Talks
+Ordinary meetings, private seminars, lectures, tentative holds, and internal schedule items are not included.
 
 The following list is updated automatically from the public-talk calendar.  
 Only entries normalized as `[INVITED]`, `[TALK]`, `[SEMINAR]`, or `[LECTURE]` are included.
