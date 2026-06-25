@@ -21,8 +21,14 @@ It does not include ordinary meetings, internal schedule items, tentative holds,
 - **[Particle Physics in the Early Universe (talk title TBA)](https://indico.ijclab.in2p3.fr/event/13541/)**  
   Invited talk, 2026-09-14, Paris/Orsay, France
 
+- **[Quantum crossroads: Interdisciplinary, hybrid workshop at the interface of open quantum systems, high-energy physics, and quantum science (talk title TBA)](https://indico.ipmu.jp/event/519/)**  
+  Invited talk, 2026-08-03, Lecture Hall, Kavli IPMU, The University of Tokyo, Kashiwa Campus
+
 - **[Cutting Rules for In-In correlators & Cosmo Collider Signals](https://indico2.riken.jp/event/5612/timetable/#20260622)**  
   Invited talk, 2026-06-22, Okochi Hall, RIKEN
+
+- **[Early Universe Cosmology and Particle Physics](https://kds.kek.jp/category/2982/)**  
+  Lecture, 2026-06-17, SOKENDAI Lecture room, 1F, 2-go-kan bldg., KEK / Hybrid
 
 - **Magnetic Helicity, Higgs Winding, and Chiral Asymmetry**  
   Invited talk, 2026-02, 2026 CAU Beyond the Standard Model Focus Workshop, Chung-Ang University, Seoul, Korea
