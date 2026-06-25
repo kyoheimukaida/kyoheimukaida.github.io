@@ -5,12 +5,15 @@ title: Invited Talks
 
 Invited Talks
 
-This page lists invited talks and invited conference presentations.
+This page provides a complete public-facing list of my invited talks and invited conference presentations.
 
-The historical list was initialized from my CV and achievement records.
-New entries are added through the dedicated public-talk calendar and updated automatically.
+The historical entries were initialized from my CV and achievement records.
+New entries are added through a dedicated public-talk calendar and updated automatically after normalization.
 
-Ordinary meetings, private seminars, lectures, tentative holds, and internal schedule items are not included.
+This list is intended to cover invited scientific presentations, including invited conference talks, workshop talks, seminars, and colloquia.
+It does not include ordinary meetings, internal schedule items, tentative holds, or teaching-only lectures unless they were explicitly invited research presentations.
+
+Full list
 
 <div class="record-list" markdown="1">
 <!-- talks-auto:start -->
@@ -22,5 +25,5 @@ This section will be updated automatically.
 
 Notes
 
-This page is intended to provide a curated public record of invited talks.
-For upcoming schedule management, I separately maintain calendar entries in KM schedule.
+This page is maintained as a public record of invited talks.
+For schedule management and family-visible planning, corresponding upcoming talks are separately maintained in KM schedule.
