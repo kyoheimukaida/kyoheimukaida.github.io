@@ -13,7 +13,7 @@ from typing import Any
 START = "<!-- recent-papers:start -->"
 END = "<!-- recent-papers:end -->"
 
-README_PATH = "README.md"
+README_PATH = "index.md"
 
 # INSPIRE author query.
 # This should return papers associated with Kyohei Mukaida's INSPIRE author profile.
