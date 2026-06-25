@@ -1,4 +1,9 @@
 ---
+layout: default
+title: Publications
+---
+
+---
 
 ## title: Talks
 
