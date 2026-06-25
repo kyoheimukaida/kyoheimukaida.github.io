@@ -3,8 +3,9 @@ name: Update recent papers
 on:
   workflow_dispatch:
   schedule:
-    # Monday 09:37 JST = Monday 00:37 UTC.
-    - cron: "37 0 * * 1"
+    # Every day at 09:37 JST.
+    - cron: "37 9 * * *"
+      timezone: "Asia/Tokyo"
 
 permissions:
   contents: write
