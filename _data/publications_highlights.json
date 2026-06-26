@@ -1,0 +1,57 @@
+{
+  "selected_arxiv_ids": [
+    "1312.3097",
+    "1402.2846",
+    "1609.05209",
+    "1611.06130",
+    "2011.09347",
+    "2111.03082"
+  ],
+  "recent_attention_criteria": {
+    "window_days": 730,
+    "recent_citation_threshold": 5,
+    "recent_citation_share_threshold": 0.12,
+    "recent_12m_bonus_threshold": 3,
+    "notable_published_count": 6,
+    "citing_fetch_size": 150
+  },
+  "selected": [
+    {
+      "title": "Thermalization after/during Reheating",
+      "arxiv": "1312.3097",
+      "citations_total": 156,
+      "journal": "JHEP 05 006 (2014)"
+    },
+    {
+      "title": "Dark Matter Production in Late Time Reheating",
+      "arxiv": "1402.2846",
+      "citations_total": 141,
+      "journal": "Phys.Rev.D 89 083532 (2014)"
+    },
+    {
+      "title": "Violent Preheating in Inflation with Nonminimal Coupling",
+      "arxiv": "1609.05209",
+      "citations_total": 178,
+      "journal": "JCAP 02 045 (2017)"
+    },
+    {
+      "title": "Inflationary primordial black holes for the LIGO gravitational wave events and pulsar timing array experiments",
+      "arxiv": "1611.06130",
+      "citations_total": 273,
+      "journal": "Phys.Rev.D 95 123510 (2017)"
+    },
+    {
+      "title": "Wash-In Leptogenesis",
+      "arxiv": "2011.09347",
+      "citations_total": 63,
+      "journal": "Phys.Rev.Lett. 126 201802 (2021)"
+    },
+    {
+      "title": "Baryon Asymmetry of the Universe from Lepton Flavor Violation",
+      "arxiv": "2111.03082",
+      "citations_total": 22,
+      "journal": "Phys.Rev.Lett. 129 011803 (2022)"
+    }
+  ],
+  "recently_cited_published": []
+}
