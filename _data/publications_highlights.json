@@ -8,10 +8,10 @@
     "2111.03082"
   ],
   "recent_attention_criteria": {
-    "window_days": 1065,
-    "recent_citation_threshold": 5,
+    "window_days": 1095,
+    "recent_citation_threshold": 1,
     "recent_citation_share_threshold": 0.0,
-    "recent_12m_bonus_threshold": 3,
+    "recent_12m_bonus_threshold": 10,
     "notable_published_count": 6,
     "citing_fetch_size": 150
   },
