@@ -27,9 +27,6 @@ It does not include ordinary meetings, internal schedule items, tentative holds,
 - **[Cutting Rules for In-In correlators & Cosmo Collider Signals](https://indico2.riken.jp/event/5612/timetable/#20260622)**  
   Invited talk, 2026-06-22, Okochi Hall, RIKEN
 
-- **[Early Universe Cosmology and Particle Physics](https://kds.kek.jp/category/2982/)**  
-  Lecture, 2026-06-17, SOKENDAI Lecture room, 1F, 2-go-kan bldg., KEK / Hybrid
-
 - **Magnetic Helicity, Higgs Winding, and Chiral Asymmetry**  
   Invited talk, 2026-02, 2026 CAU Beyond the Standard Model Focus Workshop, Chung-Ang University, Seoul, Korea
 
