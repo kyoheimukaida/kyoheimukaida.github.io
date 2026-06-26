@@ -15,7 +15,7 @@ from zoneinfo import ZoneInfo
 
 INDEX_PATH = "index.md"
 TALKS_PATH = "talks.md"
-HISTORY_PATH = "_data/talks_history.json"
+HISTORY_PATH = Path("_data/talks_history.json")
 
 INDEX_START = "<!-- talks:start -->"
 INDEX_END = "<!-- talks:end -->"
@@ -33,29 +33,28 @@ TAGS = {
 }
 
 
-@dataclass
+@dataclass(frozen=True)
 class TalkEvent:
     title: str
     kind: str
     start: datetime | date
     end: datetime | date | None
-    location: str
-    description: str
-    url: str
+    location: str = ""
+    description: str = ""
+    url: str = ""
     event: str = ""
-    date_label: str = ""
     source: str = ""
 
 
 def split_ics_urls(raw: str) -> list[str]:
     urls = re.split(r"[\n,;]+", raw.strip())
-    return [u.strip() for u in urls if u.strip()]
+    return [url.strip() for url in urls if url.strip()]
 
 
 def fetch_url(url: str) -> str:
     request = urllib.request.Request(
         url,
-        headers={"User-Agent": "kyoheimukaida-github-pages-talks-updater/1.1"},
+        headers={"User-Agent": "kyoheimukaida-github-pages-talks-updater/1.0"},
     )
     with urllib.request.urlopen(request, timeout=30) as response:
         return response.read().decode("utf-8", errors="replace")
@@ -174,11 +173,10 @@ def extract_url(description: str, explicit_url: str) -> str:
     return ""
 
 
-def extract_field(description: str, field: str) -> str:
-    pattern = re.compile(rf"^{re.escape(field)}:\s*(.+)$", re.MULTILINE)
-    match = pattern.search(description)
-    if match:
-        return match.group(1).strip()
+def extract_event_name(description: str) -> str:
+    for line in description.splitlines():
+        if line.lower().startswith("event:"):
+            return line.split(":", 1)[1].strip()
     return ""
 
 
@@ -200,7 +198,6 @@ def make_talk_events(events: list[dict[str, Any]]) -> list[TalkEvent]:
 
         description = str(event.get("DESCRIPTION", "")).strip()
         explicit_url = str(event.get("URL", "")).strip()
-        event_name = extract_field(description, "Event")
 
         talks.append(
             TalkEvent(
@@ -211,141 +208,111 @@ def make_talk_events(events: list[dict[str, Any]]) -> list[TalkEvent]:
                 location=str(event.get("LOCATION", "")).strip(),
                 description=description,
                 url=extract_url(description, explicit_url),
-                event=event_name,
-                source="public-talk-calendar",
+                event=extract_event_name(description),
+                source="calendar",
             )
         )
 
-    talks.sort(key=lambda e: start_sort_key(e.start), reverse=True)
     return talks
 
 
-def parse_history_date(value: str) -> tuple[datetime, str]:
-    value = str(value).strip()
+def parse_history_date(value: Any) -> datetime | date | None:
+    if value is None:
+        return None
 
-    for fmt in ("%Y-%m-%d", "%Y-%m"):
+    if isinstance(value, int):
+        return date(value, 1, 1)
+
+    text = str(value).strip()
+    if not text:
+        return None
+
+    match = re.search(r"\d{4}-\d{2}-\d{2}", text)
+    if match:
         try:
-            parsed = datetime.strptime(value, fmt)
-            return parsed.replace(tzinfo=TOKYO), value
+            return datetime.strptime(match.group(0), "%Y-%m-%d").date()
         except ValueError:
             pass
 
-    try:
-        parsed_year = datetime.strptime(value, "%Y")
-        return parsed_year.replace(tzinfo=TOKYO), value
-    except ValueError:
-        return datetime(1900, 1, 1, tzinfo=TOKYO), value
+    match = re.search(r"\b(19|20)\d{2}\b", text)
+    if match:
+        return date(int(match.group(0)), 1, 1)
+
+    return None
 
 
-def load_history_talks(path: str = HISTORY_PATH) -> list[TalkEvent]:
-    data_path = Path(path)
-    if not data_path.exists():
+def history_item_to_talk(item: dict[str, Any]) -> TalkEvent | None:
+    title = (
+        item.get("title")
+        or item.get("talk_title")
+        or item.get("summary")
+        or item.get("name")
+        or ""
+    )
+    title = str(title).strip()
+    if not title:
+        return None
+
+    start = (
+        item.get("start")
+        or item.get("date")
+        or item.get("year")
+        or item.get("start_date")
+        or item.get("when")
+    )
+    parsed_start = parse_history_date(start)
+    if parsed_start is None:
+        return None
+
+    kind = str(item.get("kind") or item.get("type") or "Invited talk").strip()
+    if kind.lower() in {"invited", "invited_talk", "invited talk"}:
+        kind = "Invited talk"
+
+    location = str(item.get("location") or item.get("place") or "").strip()
+    event = str(item.get("event") or item.get("conference") or item.get("workshop") or "").strip()
+    url = str(item.get("url") or "").strip()
+    description = str(item.get("description") or item.get("notes") or "").strip()
+
+    return TalkEvent(
+        title=title,
+        kind=kind,
+        start=parsed_start,
+        end=None,
+        location=location,
+        description=description,
+        url=url,
+        event=event,
+        source="history",
+    )
+
+
+def load_history_talks(path: Path = HISTORY_PATH) -> list[TalkEvent]:
+    if not path.exists():
         return []
 
-    records = json.loads(data_path.read_text(encoding="utf-8"))
+    with path.open("r", encoding="utf-8") as f:
+        payload = json.load(f)
+
+    if isinstance(payload, dict):
+        if isinstance(payload.get("talks"), list):
+            records = payload["talks"]
+        elif isinstance(payload.get("items"), list):
+            records = payload["items"]
+        else:
+            records = []
+    elif isinstance(payload, list):
+        records = payload
+    else:
+        records = []
 
     talks: list[TalkEvent] = []
     for record in records:
-        title = str(record.get("title", "")).strip()
-        if not title:
-            continue
-
-        start, date_label = parse_history_date(str(record.get("date", "")))
-
-        talks.append(
-            TalkEvent(
-                title=title,
-                kind=str(record.get("kind", "Talk")).strip() or "Talk",
-                start=start,
-                end=None,
-                location=str(record.get("location", "")).strip(),
-                description=str(record.get("note", "")).strip(),
-                url=str(record.get("url", "")).strip(),
-                event=str(record.get("event", "")).strip(),
-                date_label=date_label,
-                source=str(record.get("source", "history")).strip() or "history",
-            )
-        )
+        if isinstance(record, dict):
+            talk = history_item_to_talk(record)
+            if talk is not None:
+                talks.append(talk)
 
     return talks
-
-
-def load_calendar_talks() -> list[TalkEvent]:
-    raw_urls = os.environ.get("TALKS_ICS_URLS", "").strip()
-
-    if not raw_urls:
-        return []
-
-    all_events: list[dict[str, Any]] = []
-
-    for url in split_ics_urls(raw_urls):
-        text = fetch_url(url)
-        all_events.extend(parse_ics_events(text))
-
-    return make_talk_events(all_events)
-
-
-def normalize_for_key(value: str) -> str:
-    value = value.lower()
-    value = value.replace("&", "and")
-    value = re.sub(r"[^a-z0-9ぁ-んァ-ン一-龥]+", "", value)
-    return value
-
-
-def year_month(value: datetime | date) -> str:
-    if isinstance(value, datetime):
-        dt = value.astimezone(TOKYO)
-        return f"{dt.year:04d}-{dt.month:02d}"
-
-    return f"{value.year:04d}-{value.month:02d}"
-
-
-def dedupe_talks(talks: list[TalkEvent]) -> list[TalkEvent]:
-    """
-    Prefer calendar records over historical records.
-
-    Historical data can contain multiple talks with the same title in the same month
-    at different events, so do not dedupe history-history records by title alone.
-    Calendar-history duplicates are deduped by title and year-month because the
-    calendar entry is the manually normalized/current source.
-    """
-    seen_full: set[str] = set()
-    seen_calendar_title_month: set[str] = set()
-    deduped: list[TalkEvent] = []
-
-    for talk in talks:
-        title_key = normalize_for_key(talk.title)[:100]
-        event_key = normalize_for_key(talk.event)[:100]
-        location_key = normalize_for_key(talk.location)[:100]
-
-        full_key = f"{year_month(talk.start)}::{title_key}::{event_key}::{location_key}"
-        title_month_key = f"{year_month(talk.start)}::{title_key}"
-
-        if full_key in seen_full:
-            continue
-
-        # If the same title/month already exists in the public calendar,
-        # drop the historical seed entry and keep the calendar-normalized one.
-        if talk.source != "public-talk-calendar" and title_month_key in seen_calendar_title_month:
-            continue
-
-        deduped.append(talk)
-        seen_full.add(full_key)
-
-        if talk.source == "public-talk-calendar":
-            seen_calendar_title_month.add(title_month_key)
-
-    return deduped
-
-
-def load_all_talks() -> list[TalkEvent]:
-    calendar_talks = load_calendar_talks()
-    history_talks = load_history_talks()
-
-    # Calendar first, so calendar-normalized entries win duplicates.
-    combined = dedupe_talks(calendar_talks + history_talks)
-    combined.sort(key=lambda e: start_sort_key(e.start), reverse=True)
-    return combined
 
 
 def start_sort_key(value: datetime | date) -> datetime:
@@ -354,63 +321,88 @@ def start_sort_key(value: datetime | date) -> datetime:
     return datetime(value.year, value.month, value.day, tzinfo=TOKYO)
 
 
-def format_date(value: datetime | date, date_label: str = "") -> str:
-    if date_label:
-        return date_label
+def sort_talks_future_first(talks: list[TalkEvent]) -> list[TalkEvent]:
+    """
+    Sort by date descending.
 
+    This puts the most future talk first, followed by recent past talks
+    and then older historical records.
+    """
+    return sorted(talks, key=lambda event: start_sort_key(event.start), reverse=True)
+
+
+def normalize_for_dedup(text: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "", text.lower())
+
+
+def deduplicate_talks(talks: list[TalkEvent]) -> list[TalkEvent]:
+    """
+    Prefer calendar entries over historical entries when they describe the
+    same title/date, because calendar entries usually have richer URLs and
+    locations.
+    """
+    ordered = sorted(
+        talks,
+        key=lambda t: 0 if t.source == "calendar" else 1,
+    )
+
+    seen: set[tuple[str, str]] = set()
+    result: list[TalkEvent] = []
+
+    for talk in ordered:
+        key = (
+            normalize_for_dedup(talk.title),
+            start_sort_key(talk.start).strftime("%Y-%m-%d"),
+        )
+        if key in seen:
+            continue
+        seen.add(key)
+        result.append(talk)
+
+    return sort_talks_future_first(result)
+
+
+def format_date(value: datetime | date) -> str:
     if isinstance(value, datetime):
         return value.astimezone(TOKYO).strftime("%Y-%m-%d")
-
     return value.strftime("%Y-%m-%d")
 
 
-def format_talk(event: TalkEvent, include_event: bool = True) -> str:
-    date_str = format_date(event.start, event.date_label)
+def format_talk(event: TalkEvent) -> str:
+    date_str = format_date(event.start)
 
     if event.url:
         title_md = f"**[{event.title}]({event.url})**"
     else:
         title_md = f"**{event.title}**"
 
-    lines = [
-        f"- {title_md}  ",
-        f"  {event.kind}, {date_str}",
-    ]
+    details: list[str] = [event.kind, date_str]
 
-    details: list[str] = []
-    if include_event and event.event:
+    if event.event:
         details.append(event.event)
+
     if event.location:
         details.append(event.location)
 
-    if details:
-        lines[-1] += ", " + ", ".join(details)
-
-    return "\n".join(lines)
+    return f"- {title_md}  \n  " + ", ".join(details)
 
 
 def format_talks_for_index(talks: list[TalkEvent], n: int = 3) -> str:
-    now = datetime.now(TOKYO)
-
-    upcoming = [t for t in talks if start_sort_key(t.start) >= now]
-    past = [t for t in talks if start_sort_key(t.start) < now]
-
-    upcoming.sort(key=lambda e: start_sort_key(e.start))
-    past.sort(key=lambda e: start_sort_key(e.start), reverse=True)
-
-    selected = (upcoming + past)[:n]
+    selected = sort_talks_future_first(talks)[:n]
 
     if not selected:
         return "- No public talks found."
 
-    return "\n\n".join(format_talk(t, include_event=False) for t in selected)
+    return "\n\n".join(format_talk(talk) for talk in selected)
 
 
-def format_talks_for_talks_page(talks: list[TalkEvent], n: int = 80) -> str:
-    if not talks:
+def format_talks_for_talks_page(talks: list[TalkEvent], n: int = 500) -> str:
+    selected = sort_talks_future_first(talks)[:n]
+
+    if not selected:
         return "No public talks found."
 
-    return "\n\n".join(format_talk(t, include_event=True) for t in talks[:n])
+    return "\n\n".join(format_talk(talk) for talk in selected)
 
 
 def update_block(path: str, start: str, end: str, replacement_body: str) -> None:
@@ -423,7 +415,7 @@ def update_block(path: str, start: str, end: str, replacement_body: str) -> None
     )
 
     replacement = f"{start}\n{replacement_body}\n{end}"
-    new_text, count = pattern.subn(replacement, text)
+    new_text, count = pattern.subn(lambda _match: replacement, text)
 
     if count != 1:
         raise RuntimeError(f"Could not find exactly one block in {path}: {start} ... {end}")
@@ -432,8 +424,24 @@ def update_block(path: str, start: str, end: str, replacement_body: str) -> None
         f.write(new_text)
 
 
+def fetch_calendar_talks() -> list[TalkEvent]:
+    raw_urls = os.environ.get("TALKS_ICS_URLS", "").strip()
+
+    if not raw_urls:
+        return []
+
+    all_events: list[dict[str, Any]] = []
+    for url in split_ics_urls(raw_urls):
+        text = fetch_url(url)
+        all_events.extend(parse_ics_events(text))
+
+    return make_talk_events(all_events)
+
+
 def main() -> int:
-    talks = load_all_talks()
+    calendar_talks = fetch_calendar_talks()
+    history_talks = load_history_talks()
+    talks = deduplicate_talks(calendar_talks + history_talks)
 
     update_block(
         INDEX_PATH,
@@ -446,10 +454,13 @@ def main() -> int:
         TALKS_PATH,
         TALKS_START,
         TALKS_END,
-        format_talks_for_talks_page(talks, n=80),
+        format_talks_for_talks_page(talks, n=500),
     )
 
-    print(f"Updated talks: {len(talks)} talk record(s) found.")
+    print(
+        f"Updated talks: {len(talks)} total "
+        f"({len(calendar_talks)} calendar, {len(history_talks)} history)."
+    )
     return 0
 
 
