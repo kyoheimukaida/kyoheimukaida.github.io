@@ -26,11 +26,24 @@ jobs:
       - name: Update publications page from INSPIRE
         env:
           INSPIRE_QUERY: "a K.Mukaida.1"
-          RECENT_CITATION_WINDOW_DAYS: "1065"
-          RECENT_CITATION_THRESHOLD: "5"
+
+          # Recent attention criteria.
+          # Look for citations in the last 3 years.
+          RECENT_CITATION_WINDOW_DAYS: "1095"
+
+          # At least one recent citation is enough to enter the candidate pool.
+          RECENT_CITATION_THRESHOLD: "1"
+
+          # Do not require recent citations to be a large fraction of total citations.
           RECENT_CITATION_SHARE_THRESHOLD: "0.0"
-          RECENT_12M_BONUS_THRESHOLD: "3"
+
+          # A single citation in the last 12 months is also enough.
+          RECENT_12M_BONUS_THRESHOLD: "10"
+
+          # Number of papers to show.
           NOTABLE_PUBLISHED_COUNT: "6"
+
+          # Number of citing records to inspect per paper.
           CITING_FETCH_SIZE: "150"
         run: |
           python scripts/update_publications.py
