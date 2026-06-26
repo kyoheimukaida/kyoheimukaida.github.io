@@ -26,9 +26,9 @@ jobs:
       - name: Update publications page from INSPIRE
         env:
           INSPIRE_QUERY: "a K.Mukaida.1"
-          RECENT_CITATION_WINDOW_DAYS: "730"
+          RECENT_CITATION_WINDOW_DAYS: "1065"
           RECENT_CITATION_THRESHOLD: "5"
-          RECENT_CITATION_SHARE_THRESHOLD: "0.02"
+          RECENT_CITATION_SHARE_THRESHOLD: "0.0"
           RECENT_12M_BONUS_THRESHOLD: "3"
           NOTABLE_PUBLISHED_COUNT: "6"
           CITING_FETCH_SIZE: "150"
