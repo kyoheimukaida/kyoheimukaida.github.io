@@ -363,3 +363,32 @@ hr {
     border-radius: 13px;
   }
 }
+
+/* Details / collapsible sections */
+
+details {
+  margin: 18px 0 28px;
+  padding: 0;
+}
+
+summary {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--accent);
+  font-weight: 680;
+  box-shadow: 0 5px 16px rgba(18, 24, 40, 0.03);
+}
+
+summary:hover {
+  background: var(--accent-soft);
+}
+
+details[open] summary {
+  margin-bottom: 14px;
+}
