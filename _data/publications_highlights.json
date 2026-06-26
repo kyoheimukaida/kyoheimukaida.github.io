@@ -10,7 +10,7 @@
   "recent_attention_criteria": {
     "window_days": 730,
     "recent_citation_threshold": 5,
-    "recent_citation_share_threshold": 0.12,
+    "recent_citation_share_threshold": 0.02,
     "recent_12m_bonus_threshold": 3,
     "notable_published_count": 6,
     "citing_fetch_size": 150
