@@ -609,8 +609,8 @@ Theoretical particle physics and early-Universe cosmology
 
 ## Academic service
 
-* Seminar and journal club coordination at KEK Theory Center
-* Organization and announcement of theory seminars and phenomenology journal clubs
+* Organization of KEK-PH
+* Organization and announcement of theory seminars
 
 ## Education and employment
 
