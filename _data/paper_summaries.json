@@ -1,0 +1,12 @@
+{
+  "2603.01961": {
+    "summary_en": "The authors show that enhanced short-wavelength scalar perturbations do not generate scale-invariant one-loop corrections to superhorizon curvature perturbations in the soft external-momentum limit, including in transient ultra-slow-roll inflation. The cancellation is traced to dilatation symmetry in the in-in effective theory for soft modes, with the tadpole counterterm respecting the same symmetry.",
+    "source": "arXiv abstract",
+    "checked": false
+  },
+  "2603.06296": {
+    "summary_en": "Using six-point scalar scattering amplitudes, this paper revisits the unitarity-violation scale of a quartic scalar field non-minimally coupled to gravity and compares the Jordan- and Einstein-frame descriptions. It finds frame-independent amplitudes and identifies the scalar potential, rather than target-space curvature from the conformal mode, as the relevant source in the single-field case.",
+    "source": "arXiv abstract",
+    "checked": false
+  }
+}
