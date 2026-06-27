@@ -26,10 +26,11 @@ jobs:
       - name: Update publications page from INSPIRE
         env:
           INSPIRE_QUERY: "a K.Mukaida.1"
+          RECENT_ACTIVITY_MAX_AGE_YEARS: "6"
           RECENT_CITATION_WINDOW_DAYS: "1095"
           NOTABLE_PUBLISHED_COUNT: "6"
           CITING_FETCH_SIZE: "120"
-          MAX_ATTENTION_CANDIDATES: "60"
+          MAX_ATTENTION_CANDIDATES: "80"
         run: |
           python scripts/update_publications.py
 
