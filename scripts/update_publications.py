@@ -120,7 +120,7 @@ def authors(m: dict[str, Any], max_authors: int = 6) -> str:
     if len(xs) <= max_authors:
         return ", ".join(xs[:-1]) + ", and " + xs[-1]
 
-    return ", ".join(xs[:max_authors]) + ", et al.
+    return ", ".join(xs[:max_authors]) + ", et al."
 
 
 def pubinfo(m: dict[str, Any]) -> list[dict[str, Any]]:
