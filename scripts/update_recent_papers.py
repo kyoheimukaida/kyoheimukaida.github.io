@@ -228,10 +228,10 @@ def format_paper(
     summary = get_cached_summary(arxiv, summary_cache or {})
     if summary:
         lines.append(
-            '  <div class="paper-summary">'
-            '<span class="summary-label">Summary</span>'
+            '  <p class="paper-summary">'
+            '<strong class="summary-label">Summary:</strong> '
             f'{escape(summary)}'
-            '</div>'
+            '</p>  '
         )
 
     links = [f"[[arXiv](https://arxiv.org/abs/{arxiv})]"]

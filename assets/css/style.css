@@ -392,3 +392,29 @@ summary:hover {
 details[open] summary {
   margin-bottom: 14px;
 }
+
+
+/* Paper summaries in recent-paper cards */
+
+.paper-summary,
+.card-list li .paper-summary {
+  display: block;
+  margin: 12px 0 12px;
+  padding: 12px 14px;
+  background: #f7f8fb;
+  border-left: 3px solid var(--accent);
+  border-radius: 12px;
+  color: #4b5563;
+  font-size: 0.94rem;
+  line-height: 1.62;
+  box-shadow: none;
+}
+
+.paper-summary .summary-label,
+.card-list li .paper-summary .summary-label {
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 760;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
