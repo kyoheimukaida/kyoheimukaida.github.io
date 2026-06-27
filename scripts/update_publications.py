@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
-
 from __future__ import annotations
 
 import json
-import math
 import os
 import re
 import urllib.parse
@@ -33,31 +31,30 @@ SELECTED_ARXIV_IDS = [
     "2111.03082",
 ]
 
+RECENT_ACTIVITY_MAX_AGE_YEARS = float(os.environ.get("RECENT_ACTIVITY_MAX_AGE_YEARS", "6"))
 RECENT_CITATION_WINDOW_DAYS = int(os.environ.get("RECENT_CITATION_WINDOW_DAYS", "1095"))
 NOTABLE_PUBLISHED_COUNT = int(os.environ.get("NOTABLE_PUBLISHED_COUNT", "6"))
 CITING_FETCH_SIZE = int(os.environ.get("CITING_FETCH_SIZE", "120"))
-MAX_ATTENTION_CANDIDATES = int(os.environ.get("MAX_ATTENTION_CANDIDATES", "60"))
+MAX_ATTENTION_CANDIDATES = int(os.environ.get("MAX_ATTENTION_CANDIDATES", "80"))
 
 
 def fetch_json(url: str, timeout: int = 60) -> dict[str, Any]:
-    req = urllib.request.Request(
-        url,
-        headers={"User-Agent": "kyoheimukaida-publications-updater/1.0"},
-    )
+    req = urllib.request.Request(url, headers={"User-Agent": "kmukaida-publications-updater/1.0"})
     with urllib.request.urlopen(req, timeout=timeout) as res:
         return json.loads(res.read().decode("utf-8"))
 
 
 def inspire_query(params: dict[str, str | int]) -> dict[str, Any]:
-    return fetch_json("https://inspirehep.net/api/literature?" + urllib.parse.urlencode(params))
+    url = "https://inspirehep.net/api/literature?" + urllib.parse.urlencode(params)
+    return fetch_json(url)
 
 
-def fetch_author_papers(size: int = 250) -> dict[str, Any]:
-    return inspire_query({"q": INSPIRE_QUERY, "sort": "mostrecent", "size": str(size)})
+def fetch_author_papers() -> dict[str, Any]:
+    return inspire_query({"q": INSPIRE_QUERY, "sort": "mostrecent", "size": "250"})
 
 
-def fetch_citing_records(recid: int, size: int = CITING_FETCH_SIZE) -> dict[str, Any]:
-    return inspire_query({"q": f"refersto:recid:{recid}", "sort": "mostrecent", "size": str(size)})
+def fetch_citing_records(recid: int) -> dict[str, Any]:
+    return inspire_query({"q": f"refersto:recid:{recid}", "sort": "mostrecent", "size": str(CITING_FETCH_SIZE)})
 
 
 def hits(payload: dict[str, Any]) -> list[dict[str, Any]]:
@@ -102,24 +99,28 @@ def author_name(a: dict[str, Any]) -> str:
     last = (a.get("last_name") or a.get("family_name") or a.get("family_names") or "").strip()
     if first and last:
         return f"{first} {last}"
+
     full = (a.get("full_name") or "").strip()
     if "," in full:
         family, given = [p.strip() for p in full.split(",", 1)]
         if given and family:
             return f"{given} {family}"
+
     return full
 
 
 def authors(m: dict[str, Any], max_authors: int = 6) -> str:
     xs = [author_name(a) for a in m.get("authors", [])]
     xs = [x for x in xs if x]
+
     if not xs:
         return ""
     if len(xs) == 1:
         return xs[0]
     if len(xs) <= max_authors:
         return ", ".join(xs[:-1]) + ", and " + xs[-1]
-    return ", ".join(xs[:max_authors]) + ", et al."
+
+    return ", ".join(xs[:max_authors]) + ", et al.
 
 
 def pubinfo(m: dict[str, Any]) -> list[dict[str, Any]]:
@@ -145,12 +146,16 @@ def journal_line(m: dict[str, Any]) -> str:
         volume = str(x.get("journal_volume", "")).strip()
         artid = str(x.get("artid") or x.get("page_start") or "").strip()
         year = str(x.get("year", "")).strip()
+
         parts = [p for p in [journal, volume, artid] if p]
         line = " ".join(parts)
+
         if year:
             line += f" ({year})"
+
         if line.strip():
             return line.strip()
+
     d = str(m.get("earliest_date", "")).strip()
     return f"arXiv preprint ({d})" if d else "arXiv preprint"
 
@@ -159,11 +164,13 @@ def parse_date(s: str) -> date | None:
     s = str(s).strip()
     if not s:
         return None
+
     for fmt, n in (("%Y-%m-%d", 10), ("%Y-%m", 7), ("%Y", 4)):
         try:
             return datetime.strptime(s[:n], fmt).date()
         except ValueError:
             pass
+
     return None
 
 
@@ -172,6 +179,7 @@ def record_date(m: dict[str, Any]) -> date | None:
         d = parse_date(str(m.get(key, "")).strip())
         if d is not None:
             return d
+
     for x in pubinfo(m):
         y = x.get("year")
         if y:
@@ -179,6 +187,7 @@ def record_date(m: dict[str, Any]) -> date | None:
                 return date(int(y), 1, 1)
             except (TypeError, ValueError):
                 pass
+
     return None
 
 
@@ -187,11 +196,15 @@ def date_key(m: dict[str, Any]) -> str:
     return d.isoformat() if d else ""
 
 
-def paper_age_years(m: dict[str, Any]) -> float:
+def age_years(m: dict[str, Any]) -> float:
     d = record_date(m)
     if d is None:
         return 99.0
     return max((datetime.now(timezone.utc).date() - d).days / 365.25, 0.0)
+
+
+def recent_enough(m: dict[str, Any]) -> bool:
+    return age_years(m) <= RECENT_ACTIVITY_MAX_AGE_YEARS
 
 
 def usable_papers(payload: dict[str, Any]) -> list[dict[str, Any]]:
@@ -207,7 +220,7 @@ def arxiv_map(papers: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
     return {arxiv(p): p for p in papers if arxiv(p)}
 
 
-def recent_citation_metrics(m: dict[str, Any]) -> dict[str, Any]:
+def recent_metrics(m: dict[str, Any]) -> dict[str, Any]:
     r = recid(m)
     total = citation_count(m)
     now = datetime.now(timezone.utc).date()
@@ -222,31 +235,34 @@ def recent_citation_metrics(m: dict[str, Any]) -> dict[str, Any]:
     if r is not None:
         try:
             payload = fetch_citing_records(r)
-            hs = hits(payload)
-            fetched = len(hs)
-            for h in hs:
+            citing_hits = hits(payload)
+            fetched = len(citing_hits)
+
+            for h in citing_hits:
                 cm = meta(h)
                 d = record_date(cm)
                 if d is None:
                     continue
+
                 if d >= cutoff_window:
                     recent_window += 1
                 if d >= cutoff_12m:
                     recent_12m += 1
+
         except Exception as exc:
             error = str(exc)
 
+    age = age_years(m)
     share = recent_window / total if total > 0 else 0.0
-    age = paper_age_years(m)
 
-    # Recent citations dominate. Total citations and recency are weak fallbacks,
-    # so the section never becomes empty just because no paper passes a hard threshold.
+    # Candidate pool is already age-limited. Recent citations dominate.
+    recency_bonus = max(0, int((RECENT_ACTIVITY_MAX_AGE_YEARS - age) * 300))
     score = (
-        recent_window * 10000
-        + recent_12m * 3000
-        + int(share * 500)
-        + min(total, 300)
-        + max(0, int(60 - age * 2))
+        recent_window * 20000
+        + recent_12m * 6000
+        + int(share * 1000)
+        + recency_bonus
+        + min(total, 60)
     )
 
     return {
@@ -259,27 +275,31 @@ def recent_citation_metrics(m: dict[str, Any]) -> dict[str, Any]:
         "attention_score": score,
         "fetched_citing_records": fetched,
         "window_days": RECENT_CITATION_WINDOW_DAYS,
+        "max_age_years": RECENT_ACTIVITY_MAX_AGE_YEARS,
         "error": error,
     }
 
 
-def select_active_published(
+def select_active_recent_published(
     papers: list[dict[str, Any]],
     selected_ids: set[str],
     limit: int,
 ) -> tuple[list[dict[str, Any]], dict[str, dict[str, Any]]]:
     candidates = [
         p for p in papers
-        if arxiv(p) not in selected_ids and is_published(p) and recid(p) is not None
+        if arxiv(p) not in selected_ids
+        and is_published(p)
+        and recent_enough(p)
+        and recid(p) is not None
     ]
 
-    # Keep API usage finite while allowing both cited classics and recent papers.
-    candidates.sort(key=lambda p: (citation_count(p), date_key(p)), reverse=True)
+    # Keep API usage finite. Within the age window, prefer recency first.
+    candidates.sort(key=lambda p: (date_key(p), citation_count(p)), reverse=True)
     candidates = candidates[:MAX_ATTENTION_CANDIDATES]
 
     metrics: dict[str, dict[str, Any]] = {}
     for p in candidates:
-        metrics[arxiv(p)] = recent_citation_metrics(p)
+        metrics[arxiv(p)] = recent_metrics(p)
 
     candidates.sort(
         key=lambda p: (
@@ -289,44 +309,63 @@ def select_active_published(
         ),
         reverse=True,
     )
+
     return candidates[:limit], metrics
 
 
 def format_paper(m: dict[str, Any]) -> str:
     a = arxiv(m)
     arxiv_url = f"https://arxiv.org/abs/{a}"
+
     lines = [f"- **[{title(m)}]({arxiv_url})**  "]
+
     au = authors(m)
     if au:
         lines.append(f"  {au}  ")
+
     lines.append(f"  *{journal_line(m)}*  ")
+
     links = [f"[[arXiv:{a}]({arxiv_url})]"]
+
     d = doi(m)
     if d:
         links.append(f"[[DOI](https://doi.org/{d})]")
+
     lines.append("  " + " ".join(links))
     return "\n".join(lines)
 
 
 def update_block(text: str, start: str, end: str, body: str) -> str:
-    pat = re.compile(rf"{re.escape(start)}.*?{re.escape(end)}", flags=re.DOTALL)
-    repl = f"{start}\n{body}\n{end}"
-    new_text, count = pat.subn(lambda _m: repl, text)
+    pattern = re.compile(rf"{re.escape(start)}.*?{re.escape(end)}", flags=re.DOTALL)
+    replacement = f"{start}\n{body}\n{end}"
+
+    new_text, count = pattern.subn(lambda _m: replacement, text)
+
     if count != 1:
         raise RuntimeError(f"Could not find exactly one block: {start} ... {end}")
+
     return new_text
 
 
-def write_cache(selected: list[dict[str, Any]], active: list[dict[str, Any]], metrics: dict[str, dict[str, Any]]) -> None:
+def write_cache(
+    selected: list[dict[str, Any]],
+    active: list[dict[str, Any]],
+    metrics: dict[str, dict[str, Any]],
+) -> None:
     DATA_DIR.mkdir(exist_ok=True)
+
     payload = {
         "selected_arxiv_ids": SELECTED_ARXIV_IDS,
         "ranking": {
             "window_days": RECENT_CITATION_WINDOW_DAYS,
+            "max_age_years": RECENT_ACTIVITY_MAX_AGE_YEARS,
             "notable_published_count": NOTABLE_PUBLISHED_COUNT,
             "citing_fetch_size": CITING_FETCH_SIZE,
             "max_attention_candidates": MAX_ATTENTION_CANDIDATES,
-            "note": "Recent citation activity dominates the score; total citations and paper age are weak fallback tie-breakers.",
+            "note": (
+                "Candidate pool is restricted to relatively recent published papers. "
+                "Recent citation activity dominates; cumulative citations are only weak fallback."
+            ),
         },
         "selected": [
             {
@@ -337,7 +376,7 @@ def write_cache(selected: list[dict[str, Any]], active: list[dict[str, Any]], me
             }
             for p in selected
         ],
-        "recently_active_published": [
+        "recently_active_publications": [
             {
                 "title": title(p),
                 "arxiv": arxiv(p),
@@ -347,14 +386,12 @@ def write_cache(selected: list[dict[str, Any]], active: list[dict[str, Any]], me
             for p in active
         ],
         "audited_candidates_by_score": sorted(
-            [
-                {"arxiv": k, **v}
-                for k, v in metrics.items()
-            ],
+            [{"arxiv": k, **v} for k, v in metrics.items()],
             key=lambda x: x.get("attention_score", 0),
             reverse=True,
         )[:50],
     }
+
     HIGHLIGHTS_CACHE.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
@@ -365,6 +402,7 @@ def main() -> int:
 
     selected = []
     missing = []
+
     for aid in SELECTED_ARXIV_IDS:
         p = amap.get(aid)
         if p is None:
@@ -372,15 +410,24 @@ def main() -> int:
         else:
             selected.append(p)
 
-    active, metrics = select_active_published(papers, set(SELECTED_ARXIV_IDS), NOTABLE_PUBLISHED_COUNT)
+    active, metrics = select_active_recent_published(
+        papers,
+        set(SELECTED_ARXIV_IDS),
+        NOTABLE_PUBLISHED_COUNT,
+    )
 
     selected_block = "\n\n".join(format_paper(p) for p in selected)
+
     if missing:
         selected_block += "\n\n- Missing selected arXiv IDs from INSPIRE fetch: " + ", ".join(missing)
 
     active_block = "\n\n".join(format_paper(p) for p in active)
+
     if not active_block:
-        active_block = "- No published papers outside the selected list could be ranked automatically."
+        active_block = (
+            "- No relatively recent published papers outside the selected list "
+            "could be ranked automatically."
+        )
 
     write_cache(selected, active, metrics)
 
@@ -393,7 +440,12 @@ def main() -> int:
     with open(PUBLICATIONS_PATH, "w", encoding="utf-8") as f:
         f.write(text)
 
-    print(f"Updated publications.md: {len(selected)} selected, {len(active)} recently active published.")
+    print(
+        f"Updated publications.md: {len(selected)} selected, "
+        f"{len(active)} recently active publications "
+        f"(max_age={RECENT_ACTIVITY_MAX_AGE_YEARS} yrs)."
+    )
+
     return 0
 
 
