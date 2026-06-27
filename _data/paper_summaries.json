@@ -1,4 +1,34 @@
 {
+  "1312.3097": {
+    "summary_en": "This paper analyzes how energetic, under-occupied particles produced by inflaton decay thermalize during reheating, including small-angle scatterings and soft-particle production in non-Abelian plasmas. It finds that thermalization is often much faster than estimates based only on large-angle number-changing scatterings, giving a milder condition for thermal equilibrium before reheating completes.",
+    "source": "arXiv abstract",
+    "checked": false
+  },
+  "1402.2846": {
+    "summary_en": "This work computes weakly interacting massive-particle production when the reheating temperature is below the dark matter mass, where high-energy particles from inflaton decay can still create dark matter through inelastic scattering and pair production. Including the Landau-Pomeranchuk-Migdal effect, it finds larger relic abundances than earlier estimates and identifies viable parameter space for dark matter heavier than about 100 GeV.",
+    "source": "arXiv abstract",
+    "checked": false
+  },
+  "1609.05209": {
+    "summary_en": "This paper studies preheating in quartic inflation with a nonminimal gravitational coupling for real, complex, and Abelian Higgs inflatons. It shows that rapid changes in the effective potential or kinetic terms can drive very efficient production of phase modes or longitudinal gauge bosons, potentially altering the standard reheating picture for Higgs-like inflation models.",
+    "source": "arXiv abstract",
+    "checked": false
+  },
+  "1611.06130": {
+    "summary_en": "This paper examines whether primordial black holes produced by inflationary density perturbations could account for LIGO gravitational-wave events. It emphasizes that pulsar timing constraints on induced gravitational waves and CMB mu-distortion bounds require a sharply peaked scalar power spectrum, and proposes an inflationary way to realize such a peak.",
+    "source": "arXiv abstract",
+    "checked": false
+  },
+  "2011.09347": {
+    "summary_en": "This paper introduces wash-in leptogenesis, a type-I seesaw mechanism in which preexisting chemical potentials in a nonstandard cosmological background are reprocessed into a baryon-minus-lepton asymmetry. The scenario can operate with right-handed neutrino masses around a few hundred TeV, without requiring CP violation in the neutrino sector and even in the strong-washout regime.",
+    "source": "arXiv abstract",
+    "checked": false
+  },
+  "2111.03082": {
+    "summary_en": "This paper proposes leptoflavorgenesis, where charged-lepton flavor violation in the early Universe generates lepton flavor asymmetries that sphalerons partly convert into baryon asymmetry even when total baryon-minus-lepton initially vanishes. The small observed baryon asymmetry is linked to charged-lepton Yukawa-suppressed transport effects in the Standard Model plasma.",
+    "source": "arXiv abstract",
+    "checked": false
+  },
   "2603.01961": {
     "summary_en": "The authors show that enhanced short-wavelength scalar perturbations do not generate scale-invariant one-loop corrections to superhorizon curvature perturbations in the soft external-momentum limit, including in transient ultra-slow-roll inflation. The cancellation is traced to dilatation symmetry in the in-in effective theory for soft modes, with the tadpole counterterm respecting the same symmetry.",
     "source": "arXiv abstract",

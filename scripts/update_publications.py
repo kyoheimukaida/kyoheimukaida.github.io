@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import html
 import json
 import os
 import re
@@ -16,6 +17,7 @@ INSPIRE_QUERY = os.environ.get("INSPIRE_QUERY", "a K.Mukaida.1")
 
 DATA_DIR = Path("_data")
 HIGHLIGHTS_CACHE = DATA_DIR / "publications_highlights.json"
+SUMMARY_CACHE = DATA_DIR / "paper_summaries.json"
 
 SELECTED_START = "<!-- publications-selected:start -->"
 SELECTED_END = "<!-- publications-selected:end -->"
@@ -73,6 +75,39 @@ def title(m: dict[str, Any]) -> str:
 def arxiv(m: dict[str, Any]) -> str:
     xs = m.get("arxiv_eprints", [])
     return str(xs[0].get("value", "")).strip() if xs else ""
+
+
+def normalize_arxiv_id(arxiv_id: str) -> str:
+    return re.sub(r"v\d+$", "", arxiv_id.strip())
+
+
+def load_summary_cache(path: Path = SUMMARY_CACHE) -> dict[str, dict[str, Any]]:
+    if not path.exists():
+        return {}
+
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(payload, dict):
+        raise RuntimeError(f"Expected {path} to contain a JSON object.")
+
+    summaries: dict[str, dict[str, Any]] = {}
+    for arxiv_id, entry in payload.items():
+        if isinstance(entry, dict):
+            summaries[normalize_arxiv_id(arxiv_id)] = entry
+
+    return summaries
+
+
+def cached_summary(
+    arxiv_id: str,
+    summary_cache: dict[str, dict[str, Any]],
+) -> str:
+    entry = summary_cache.get(normalize_arxiv_id(arxiv_id), {})
+    summary = entry.get("summary_en", "")
+
+    if isinstance(summary, str):
+        return summary.strip()
+
+    return ""
 
 
 def doi(m: dict[str, Any]) -> str:
@@ -313,7 +348,11 @@ def select_active_recent_published(
     return candidates[:limit], metrics
 
 
-def format_paper(m: dict[str, Any]) -> str:
+def format_paper(
+    m: dict[str, Any],
+    summary_cache: dict[str, dict[str, Any]] | None = None,
+    include_summary: bool = False,
+) -> str:
     a = arxiv(m)
     arxiv_url = f"https://arxiv.org/abs/{a}"
 
@@ -324,6 +363,15 @@ def format_paper(m: dict[str, Any]) -> str:
         lines.append(f"  {au}  ")
 
     lines.append(f"  *{journal_line(m)}*  ")
+
+    if include_summary:
+        summary = cached_summary(a, summary_cache or {})
+        if summary:
+            lines.append(
+                '  <p class="paper-summary">'
+                '<strong class="summary-label">Summary:</strong> '
+                f"{html.escape(summary)}</p>  "
+            )
 
     links = [f"[[arXiv:{a}]({arxiv_url})]"]
 
@@ -399,6 +447,7 @@ def main() -> int:
     payload = fetch_author_papers()
     papers = usable_papers(payload)
     amap = arxiv_map(papers)
+    summary_cache = load_summary_cache()
 
     selected = []
     missing = []
@@ -416,7 +465,9 @@ def main() -> int:
         NOTABLE_PUBLISHED_COUNT,
     )
 
-    selected_block = "\n\n".join(format_paper(p) for p in selected)
+    selected_block = "\n\n".join(
+        format_paper(p, summary_cache, include_summary=True) for p in selected
+    )
 
     if missing:
         selected_block += "\n\n- Missing selected arXiv IDs from INSPIRE fetch: " + ", ".join(missing)

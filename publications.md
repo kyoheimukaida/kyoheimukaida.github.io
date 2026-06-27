@@ -18,31 +18,37 @@ The following list is curated, while bibliographic metadata is updated automatic
 - **[Thermalization after/during Reheating](https://arxiv.org/abs/1312.3097)**  
   Keisuke Harigaya, and Kyohei Mukaida  
   *JHEP 05 006 (2014)*  
+  <p class="paper-summary"><strong class="summary-label">Summary:</strong> This paper analyzes how energetic, under-occupied particles produced by inflaton decay thermalize during reheating, including small-angle scatterings and soft-particle production in non-Abelian plasmas. It finds that thermalization is often much faster than estimates based only on large-angle number-changing scatterings, giving a milder condition for thermal equilibrium before reheating completes.</p>  
   [[arXiv:1312.3097](https://arxiv.org/abs/1312.3097)] [[DOI](https://doi.org/10.1007/JHEP05(2014)006)]
 
 - **[Dark Matter Production in Late Time Reheating](https://arxiv.org/abs/1402.2846)**  
   Keisuke Harigaya, Masahiro Kawasaki, Kyohei Mukaida, and Masaki Yamada  
   *Phys.Rev.D 89 083532 (2014)*  
+  <p class="paper-summary"><strong class="summary-label">Summary:</strong> This work computes weakly interacting massive-particle production when the reheating temperature is below the dark matter mass, where high-energy particles from inflaton decay can still create dark matter through inelastic scattering and pair production. Including the Landau-Pomeranchuk-Migdal effect, it finds larger relic abundances than earlier estimates and identifies viable parameter space for dark matter heavier than about 100 GeV.</p>  
   [[arXiv:1402.2846](https://arxiv.org/abs/1402.2846)] [[DOI](https://doi.org/10.1103/PhysRevD.89.083532)]
 
 - **[Violent Preheating in Inflation with Nonminimal Coupling](https://arxiv.org/abs/1609.05209)**  
   Yohei Ema, Ryusuke Jinno, Kyohei Mukaida, and Kazunori Nakayama  
   *JCAP 02 045 (2017)*  
+  <p class="paper-summary"><strong class="summary-label">Summary:</strong> This paper studies preheating in quartic inflation with a nonminimal gravitational coupling for real, complex, and Abelian Higgs inflatons. It shows that rapid changes in the effective potential or kinetic terms can drive very efficient production of phase modes or longitudinal gauge bosons, potentially altering the standard reheating picture for Higgs-like inflation models.</p>  
   [[arXiv:1609.05209](https://arxiv.org/abs/1609.05209)] [[DOI](https://doi.org/10.1088/1475-7516/2017/02/045)]
 
 - **[Inflationary primordial black holes for the LIGO gravitational wave events and pulsar timing array experiments](https://arxiv.org/abs/1611.06130)**  
   Keisuke Inomata, Masahiro Kawasaki, Kyohei Mukaida, Yuichiro Tada, and Tsutomu T. Yanagida  
   *Phys.Rev.D 95 123510 (2017)*  
+  <p class="paper-summary"><strong class="summary-label">Summary:</strong> This paper examines whether primordial black holes produced by inflationary density perturbations could account for LIGO gravitational-wave events. It emphasizes that pulsar timing constraints on induced gravitational waves and CMB mu-distortion bounds require a sharply peaked scalar power spectrum, and proposes an inflationary way to realize such a peak.</p>  
   [[arXiv:1611.06130](https://arxiv.org/abs/1611.06130)] [[DOI](https://doi.org/10.1103/PhysRevD.95.123510)]
 
 - **[Wash-In Leptogenesis](https://arxiv.org/abs/2011.09347)**  
   Valerie Domcke, Kohei Kamada, Kyohei Mukaida, Kai Schmitz, and Masaki Yamada  
   *Phys.Rev.Lett. 126 201802 (2021)*  
+  <p class="paper-summary"><strong class="summary-label">Summary:</strong> This paper introduces wash-in leptogenesis, a type-I seesaw mechanism in which preexisting chemical potentials in a nonstandard cosmological background are reprocessed into a baryon-minus-lepton asymmetry. The scenario can operate with right-handed neutrino masses around a few hundred TeV, without requiring CP violation in the neutrino sector and even in the strong-washout regime.</p>  
   [[arXiv:2011.09347](https://arxiv.org/abs/2011.09347)] [[DOI](https://doi.org/10.1103/PhysRevLett.126.201802)]
 
 - **[Baryon Asymmetry of the Universe from Lepton Flavor Violation](https://arxiv.org/abs/2111.03082)**  
   Kyohei Mukaida, Kai Schmitz, and Masaki Yamada  
   *Phys.Rev.Lett. 129 011803 (2022)*  
+  <p class="paper-summary"><strong class="summary-label">Summary:</strong> This paper proposes leptoflavorgenesis, where charged-lepton flavor violation in the early Universe generates lepton flavor asymmetries that sphalerons partly convert into baryon asymmetry even when total baryon-minus-lepton initially vanishes. The small observed baryon asymmetry is linked to charged-lepton Yukawa-suppressed transport effects in the Standard Model plasma.</p>  
   [[arXiv:2111.03082](https://arxiv.org/abs/2111.03082)] [[DOI](https://doi.org/10.1103/PhysRevLett.129.011803)]
 <!-- publications-selected:end -->
 
