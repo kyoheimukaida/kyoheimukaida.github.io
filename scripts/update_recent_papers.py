@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from __future__ import annotations
-
+from html import escape
 import json
 import os
 import re
@@ -12,6 +12,7 @@ from typing import Any
 START = "<!-- recent-papers:start -->"
 END = "<!-- recent-papers:end -->"
 README_PATH = "index.md"
+SUMMARY_CACHE_PATH = "_data/paper_summaries.json"
 
 # INSPIRE author query.
 # This should return papers associated with Kyohei Mukaida's INSPIRE author profile.
@@ -125,6 +126,41 @@ def get_arxiv(meta: dict[str, Any]) -> str:
     return eprints[0].get("value", "").strip()
 
 
+def normalize_arxiv_id(arxiv: str) -> str:
+    return re.sub(r"v\d+$", "", arxiv.strip())
+
+
+def load_summary_cache(path: str = SUMMARY_CACHE_PATH) -> dict[str, dict[str, Any]]:
+    if not os.path.exists(path):
+        return {}
+
+    with open(path, "r", encoding="utf-8") as f:
+        payload = json.load(f)
+
+    if not isinstance(payload, dict):
+        raise RuntimeError(f"Expected {path} to contain a JSON object.")
+
+    summaries: dict[str, dict[str, Any]] = {}
+    for arxiv, entry in payload.items():
+        if isinstance(entry, dict):
+            summaries[normalize_arxiv_id(arxiv)] = entry
+
+    return summaries
+
+
+def get_cached_summary(
+    arxiv: str,
+    summary_cache: dict[str, dict[str, Any]],
+) -> str:
+    entry = summary_cache.get(normalize_arxiv_id(arxiv), {})
+    summary = entry.get("summary_en", "")
+
+    if isinstance(summary, str):
+        return summary.strip()
+
+    return ""
+
+
 def get_doi(meta: dict[str, Any]) -> str:
     dois = meta.get("dois", [])
     if not dois:
@@ -168,7 +204,10 @@ def get_journal_line(meta: dict[str, Any]) -> str:
     return "arXiv preprint"
 
 
-def format_paper(meta: dict[str, Any]) -> str:
+def format_paper(
+    meta: dict[str, Any],
+    summary_cache: dict[str, dict[str, Any]] | None = None,
+) -> str:
     title = get_title(meta)
     authors = get_authors(meta)
     arxiv = get_arxiv(meta)
@@ -185,6 +224,15 @@ def format_paper(meta: dict[str, Any]) -> str:
         lines.append(f"  {authors}  ")
 
     lines.append(f"  *{journal_line}*  ")
+
+    summary = get_cached_summary(arxiv, summary_cache or {})
+    if summary:
+        lines.append(
+            '  <div class="paper-summary">'
+            '<span class="summary-label">Summary</span>'
+            f'{escape(summary)}'
+            '</div>'
+        )
 
     links = [f"[[arXiv](https://arxiv.org/abs/{arxiv})]"]
 
@@ -219,10 +267,11 @@ def update_readme(block: str) -> None:
 
 def main() -> int:
     papers = fetch_recent_papers(n=2)
-    block = "\n\n".join(format_paper(p) for p in papers)
+    summary_cache = load_summary_cache()
+    block = "\n\n".join(format_paper(p, summary_cache) for p in papers)
     update_readme(block)
 
-    print("Updated recent papers block in README.md")
+    print("Updated recent papers block in index.md")
     return 0
 
 
