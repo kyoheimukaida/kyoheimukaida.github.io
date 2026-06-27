@@ -38,7 +38,7 @@ jobs:
           RECENT_CITATION_SHARE_THRESHOLD: "0.0"
 
           # A single citation in the last 12 months is also enough.
-          RECENT_12M_BONUS_THRESHOLD: "10"
+          RECENT_12M_BONUS_THRESHOLD: "1"
 
           # Number of papers to show.
           NOTABLE_PUBLISHED_COUNT: "6"
