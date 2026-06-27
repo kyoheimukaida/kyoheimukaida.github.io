@@ -11,7 +11,7 @@
     "window_days": 1095,
     "recent_citation_threshold": 1,
     "recent_citation_share_threshold": 0.0,
-    "recent_12m_bonus_threshold": 10,
+    "recent_12m_bonus_threshold": 1,
     "notable_published_count": 6,
     "citing_fetch_size": 150
   },
