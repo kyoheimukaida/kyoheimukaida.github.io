@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import math
 import os
 import re
 import urllib.parse
@@ -20,541 +21,379 @@ HIGHLIGHTS_CACHE = DATA_DIR / "publications_highlights.json"
 
 SELECTED_START = "<!-- publications-selected:start -->"
 SELECTED_END = "<!-- publications-selected:end -->"
-
 NOTABLE_START = "<!-- publications-notable:start -->"
 NOTABLE_END = "<!-- publications-notable:end -->"
 
-# Curated once. Metadata is updated automatically from INSPIRE.
 SELECTED_ARXIV_IDS = [
-    "1312.3097",   # Thermalization after/during Reheating
-    "1402.2846",   # Dark Matter Production in Late Time Reheating
-    "1609.05209",  # Violent Preheating
-    "1611.06130",  # PBHs for LIGO/PTA
-    "2011.09347",  # Wash-In Leptogenesis
-    "2111.03082",  # Leptoflavorgenesis
+    "1312.3097",
+    "1402.2846",
+    "1609.05209",
+    "1611.06130",
+    "2011.09347",
+    "2111.03082",
 ]
 
-# Objective automatic highlights based on recent attention.
-# Tune these in .github/workflows/update-publications.yml.
-RECENT_CITATION_WINDOW_DAYS = int(os.environ.get("RECENT_CITATION_WINDOW_DAYS", "730"))
-RECENT_CITATION_THRESHOLD = int(os.environ.get("RECENT_CITATION_THRESHOLD", "5"))
-RECENT_CITATION_SHARE_THRESHOLD = float(os.environ.get("RECENT_CITATION_SHARE_THRESHOLD", "0.12"))
-RECENT_12M_BONUS_THRESHOLD = int(os.environ.get("RECENT_12M_BONUS_THRESHOLD", "3"))
+RECENT_CITATION_WINDOW_DAYS = int(os.environ.get("RECENT_CITATION_WINDOW_DAYS", "1095"))
 NOTABLE_PUBLISHED_COUNT = int(os.environ.get("NOTABLE_PUBLISHED_COUNT", "6"))
-CITING_FETCH_SIZE = int(os.environ.get("CITING_FETCH_SIZE", "150"))
+CITING_FETCH_SIZE = int(os.environ.get("CITING_FETCH_SIZE", "120"))
+MAX_ATTENTION_CANDIDATES = int(os.environ.get("MAX_ATTENTION_CANDIDATES", "60"))
 
 
 def fetch_json(url: str, timeout: int = 60) -> dict[str, Any]:
-    request = urllib.request.Request(
+    req = urllib.request.Request(
         url,
-        headers={"User-Agent": "kyoheimukaida-github-pages-publications-updater/1.0"},
+        headers={"User-Agent": "kyoheimukaida-publications-updater/1.0"},
     )
-    with urllib.request.urlopen(request, timeout=timeout) as response:
-        return json.loads(response.read().decode("utf-8"))
+    with urllib.request.urlopen(req, timeout=timeout) as res:
+        return json.loads(res.read().decode("utf-8"))
 
 
-def inspire_literature_query(params: dict[str, str | int]) -> dict[str, Any]:
-    url = "https://inspirehep.net/api/literature?" + urllib.parse.urlencode(params)
-    return fetch_json(url)
+def inspire_query(params: dict[str, str | int]) -> dict[str, Any]:
+    return fetch_json("https://inspirehep.net/api/literature?" + urllib.parse.urlencode(params))
 
 
 def fetch_author_papers(size: int = 250) -> dict[str, Any]:
-    return inspire_literature_query(
-        {
-            "q": INSPIRE_QUERY,
-            "sort": "mostrecent",
-            "size": str(size),
-        }
-    )
+    return inspire_query({"q": INSPIRE_QUERY, "sort": "mostrecent", "size": str(size)})
 
 
-def fetch_citing_records(recid: int | str, size: int = CITING_FETCH_SIZE) -> dict[str, Any]:
-    # INSPIRE search syntax for records that cite a given record.
-    return inspire_literature_query(
-        {
-            "q": f"refersto:recid:{recid}",
-            "sort": "mostrecent",
-            "size": str(size),
-        }
-    )
+def fetch_citing_records(recid: int, size: int = CITING_FETCH_SIZE) -> dict[str, Any]:
+    return inspire_query({"q": f"refersto:recid:{recid}", "sort": "mostrecent", "size": str(size)})
 
 
-def get_hits(payload: dict[str, Any]) -> list[dict[str, Any]]:
+def hits(payload: dict[str, Any]) -> list[dict[str, Any]]:
     return payload.get("hits", {}).get("hits", [])
 
 
-def get_metadata(hit: dict[str, Any]) -> dict[str, Any]:
+def meta(hit: dict[str, Any]) -> dict[str, Any]:
     return hit.get("metadata", {})
 
 
-def get_title(meta: dict[str, Any]) -> str:
-    titles = meta.get("titles", [])
-    if not titles:
-        return ""
-    return str(titles[0].get("title", "")).strip()
+def title(m: dict[str, Any]) -> str:
+    xs = m.get("titles", [])
+    return str(xs[0].get("title", "")).strip() if xs else ""
 
 
-def get_arxiv(meta: dict[str, Any]) -> str:
-    eprints = meta.get("arxiv_eprints", [])
-    if not eprints:
-        return ""
-    return str(eprints[0].get("value", "")).strip()
+def arxiv(m: dict[str, Any]) -> str:
+    xs = m.get("arxiv_eprints", [])
+    return str(xs[0].get("value", "")).strip() if xs else ""
 
 
-def get_doi(meta: dict[str, Any]) -> str:
-    dois = meta.get("dois", [])
-    if not dois:
-        return ""
-    return str(dois[0].get("value", "")).strip()
+def doi(m: dict[str, Any]) -> str:
+    xs = m.get("dois", [])
+    return str(xs[0].get("value", "")).strip() if xs else ""
 
 
-def get_recid(meta: dict[str, Any]) -> int | None:
-    value = meta.get("control_number")
+def recid(m: dict[str, Any]) -> int | None:
     try:
-        return int(value)
+        return int(m.get("control_number"))
     except (TypeError, ValueError):
         return None
 
 
-def get_citation_count(meta: dict[str, Any]) -> int:
-    value = meta.get("citation_count", 0)
+def citation_count(m: dict[str, Any]) -> int:
     try:
-        return int(value)
+        return int(m.get("citation_count", 0))
     except (TypeError, ValueError):
         return 0
 
 
-def format_author_name(author: dict[str, Any]) -> str:
-    first = (
-        author.get("first_name")
-        or author.get("given_name")
-        or author.get("given_names")
-        or ""
-    ).strip()
-
-    last = (
-        author.get("last_name")
-        or author.get("family_name")
-        or author.get("family_names")
-        or ""
-    ).strip()
-
+def author_name(a: dict[str, Any]) -> str:
+    first = (a.get("first_name") or a.get("given_name") or a.get("given_names") or "").strip()
+    last = (a.get("last_name") or a.get("family_name") or a.get("family_names") or "").strip()
     if first and last:
         return f"{first} {last}"
-
-    full_name = (author.get("full_name") or "").strip()
-
-    # INSPIRE often returns "Family, Given".
-    if "," in full_name:
-        family, given = [part.strip() for part in full_name.split(",", 1)]
+    full = (a.get("full_name") or "").strip()
+    if "," in full:
+        family, given = [p.strip() for p in full.split(",", 1)]
         if given and family:
             return f"{given} {family}"
+    return full
 
-    return full_name
 
-
-def get_authors(meta: dict[str, Any], max_authors: int = 6) -> str:
-    authors = [format_author_name(a) for a in meta.get("authors", [])]
-    authors = [a for a in authors if a]
-
-    if not authors:
+def authors(m: dict[str, Any], max_authors: int = 6) -> str:
+    xs = [author_name(a) for a in m.get("authors", [])]
+    xs = [x for x in xs if x]
+    if not xs:
         return ""
-
-    if len(authors) == 1:
-        return authors[0]
-
-    if len(authors) <= max_authors:
-        return ", ".join(authors[:-1]) + ", and " + authors[-1]
-
-    return ", ".join(authors[:max_authors]) + ", et al."
+    if len(xs) == 1:
+        return xs[0]
+    if len(xs) <= max_authors:
+        return ", ".join(xs[:-1]) + ", and " + xs[-1]
+    return ", ".join(xs[:max_authors]) + ", et al."
 
 
-def publication_info_items(meta: dict[str, Any]) -> list[dict[str, Any]]:
-    info = meta.get("publication_info", [])
-    return [item for item in info if isinstance(item, dict)]
+def pubinfo(m: dict[str, Any]) -> list[dict[str, Any]]:
+    return [x for x in m.get("publication_info", []) if isinstance(x, dict)]
 
 
-def is_published(meta: dict[str, Any]) -> bool:
-    """
-    Treat a paper as published if INSPIRE has journal publication metadata.
-
-    This excludes bare arXiv preprints from the recently-cited-published section.
-    """
-    for item in publication_info_items(meta):
-        journal = str(item.get("journal_title", "")).strip()
-        year = str(item.get("year", "")).strip()
-        volume = str(item.get("journal_volume", "")).strip()
-        artid = str(item.get("artid") or item.get("page_start") or "").strip()
+def is_published(m: dict[str, Any]) -> bool:
+    for x in pubinfo(m):
+        journal = str(x.get("journal_title", "")).strip()
+        year = str(x.get("year", "")).strip()
+        volume = str(x.get("journal_volume", "")).strip()
+        artid = str(x.get("artid") or x.get("page_start") or "").strip()
         if journal and (year or volume or artid):
             return True
-
     return False
 
 
-def get_journal_line(meta: dict[str, Any]) -> str:
-    info = publication_info_items(meta)
-
-    if info:
-        item = info[0]
-
-        journal = str(item.get("journal_title", "")).strip()
-        volume = str(item.get("journal_volume", "")).strip()
-        artid = str(item.get("artid") or item.get("page_start") or "").strip()
-        year = str(item.get("year", "")).strip()
-
-        parts: list[str] = []
-        if journal:
-            parts.append(journal)
-        if volume:
-            parts.append(volume)
-        if artid:
-            parts.append(artid)
-
+def journal_line(m: dict[str, Any]) -> str:
+    xs = pubinfo(m)
+    if xs:
+        x = xs[0]
+        journal = str(x.get("journal_title", "")).strip()
+        volume = str(x.get("journal_volume", "")).strip()
+        artid = str(x.get("artid") or x.get("page_start") or "").strip()
+        year = str(x.get("year", "")).strip()
+        parts = [p for p in [journal, volume, artid] if p]
         line = " ".join(parts)
-
         if year:
             line += f" ({year})"
-
         if line.strip():
             return line.strip()
-
-    earliest_date = str(meta.get("earliest_date", "")).strip()
-    if earliest_date:
-        return f"arXiv preprint ({earliest_date})"
-
-    return "arXiv preprint"
+    d = str(m.get("earliest_date", "")).strip()
+    return f"arXiv preprint ({d})" if d else "arXiv preprint"
 
 
-def get_year(meta: dict[str, Any]) -> str:
-    for item in publication_info_items(meta):
-        year = item.get("year")
-        if year:
-            return str(year)
-
-    earliest_date = str(meta.get("earliest_date", "")).strip()
-    if earliest_date[:4].isdigit():
-        return earliest_date[:4]
-
-    return ""
-
-
-def parse_date(text: str) -> date | None:
-    text = str(text).strip()
-    if not text:
+def parse_date(s: str) -> date | None:
+    s = str(s).strip()
+    if not s:
         return None
-
-    for fmt in ("%Y-%m-%d", "%Y-%m", "%Y"):
+    for fmt, n in (("%Y-%m-%d", 10), ("%Y-%m", 7), ("%Y", 4)):
         try:
-            parsed = datetime.strptime(text[: len(fmt)], fmt)
-            return parsed.date()
+            return datetime.strptime(s[:n], fmt).date()
         except ValueError:
-            continue
-
+            pass
     return None
 
 
-def paper_date_key(meta: dict[str, Any]) -> str:
-    earliest_date = str(meta.get("earliest_date", "")).strip()
-    if earliest_date:
-        return earliest_date
+def record_date(m: dict[str, Any]) -> date | None:
+    for key in ("earliest_date", "preprint_date", "date", "created"):
+        d = parse_date(str(m.get(key, "")).strip())
+        if d is not None:
+            return d
+    for x in pubinfo(m):
+        y = x.get("year")
+        if y:
+            try:
+                return date(int(y), 1, 1)
+            except (TypeError, ValueError):
+                pass
+    return None
 
-    year = get_year(meta)
-    return f"{year}-01-01" if year else ""
+
+def date_key(m: dict[str, Any]) -> str:
+    d = record_date(m)
+    return d.isoformat() if d else ""
+
+
+def paper_age_years(m: dict[str, Any]) -> float:
+    d = record_date(m)
+    if d is None:
+        return 99.0
+    return max((datetime.now(timezone.utc).date() - d).days / 365.25, 0.0)
 
 
 def usable_papers(payload: dict[str, Any]) -> list[dict[str, Any]]:
-    papers: list[dict[str, Any]] = []
-
-    for hit in get_hits(payload):
-        meta = get_metadata(hit)
-        if get_title(meta) and get_arxiv(meta):
-            papers.append(meta)
-
-    return sorted(papers, key=paper_date_key, reverse=True)
+    papers = []
+    for h in hits(payload):
+        m = meta(h)
+        if title(m) and arxiv(m):
+            papers.append(m)
+    return sorted(papers, key=date_key, reverse=True)
 
 
-def build_arxiv_map(papers: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
-    return {get_arxiv(paper): paper for paper in papers if get_arxiv(paper)}
+def arxiv_map(papers: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
+    return {arxiv(p): p for p in papers if arxiv(p)}
 
 
-def count_recent_citations(recid: int) -> dict[str, Any]:
-    payload = fetch_citing_records(recid, size=CITING_FETCH_SIZE)
-    hits = get_hits(payload)
-
+def recent_citation_metrics(m: dict[str, Any]) -> dict[str, Any]:
+    r = recid(m)
+    total = citation_count(m)
     now = datetime.now(timezone.utc).date()
     cutoff_window = now - timedelta(days=RECENT_CITATION_WINDOW_DAYS)
     cutoff_12m = now - timedelta(days=365)
 
     recent_window = 0
     recent_12m = 0
-    seen_dates: list[str] = []
+    fetched = 0
+    error = ""
 
-    for hit in hits:
-        meta = get_metadata(hit)
-        citing_date = parse_date(str(meta.get("earliest_date", "")).strip())
-
-        if citing_date is None:
-            continue
-
-        if citing_date >= cutoff_window:
-            recent_window += 1
-            seen_dates.append(citing_date.isoformat())
-
-        if citing_date >= cutoff_12m:
-            recent_12m += 1
-
-    return {
-        "recent_window": recent_window,
-        "recent_12m": recent_12m,
-        "fetched_citing_records": len(hits),
-        "cutoff_window": cutoff_window.isoformat(),
-        "cutoff_12m": cutoff_12m.isoformat(),
-        "recent_citing_dates": seen_dates[:20],
-    }
-
-
-def attention_metrics(meta: dict[str, Any]) -> dict[str, Any]:
-    recid = get_recid(meta)
-    total = get_citation_count(meta)
-
-    if recid is None:
-        recent = {
-            "recent_window": 0,
-            "recent_12m": 0,
-            "fetched_citing_records": 0,
-            "cutoff_window": "",
-            "cutoff_12m": "",
-            "recent_citing_dates": [],
-        }
-    else:
-        recent = count_recent_citations(recid)
-
-    recent_window = int(recent["recent_window"])
-    recent_12m = int(recent["recent_12m"])
+    if r is not None:
+        try:
+            payload = fetch_citing_records(r)
+            hs = hits(payload)
+            fetched = len(hs)
+            for h in hs:
+                cm = meta(h)
+                d = record_date(cm)
+                if d is None:
+                    continue
+                if d >= cutoff_window:
+                    recent_window += 1
+                if d >= cutoff_12m:
+                    recent_12m += 1
+        except Exception as exc:
+            error = str(exc)
 
     share = recent_window / total if total > 0 else 0.0
+    age = paper_age_years(m)
 
-    # Ranking score prioritizes genuine recent attention.
-    # The 12-month count breaks ties toward papers with very recent movement.
-    score = (recent_window * 1000) + (recent_12m * 100) + int(share * 100)
+    # Recent citations dominate. Total citations and recency are weak fallbacks,
+    # so the section never becomes empty just because no paper passes a hard threshold.
+    score = (
+        recent_window * 10000
+        + recent_12m * 3000
+        + int(share * 500)
+        + min(total, 300)
+        + max(0, int(60 - age * 2))
+    )
 
     return {
-        "recid": recid,
+        "recid": r,
         "total_citations": total,
         "recent_citations_window": recent_window,
         "recent_citations_12m": recent_12m,
         "recent_citation_share": share,
+        "paper_age_years": age,
         "attention_score": score,
-        **recent,
+        "fetched_citing_records": fetched,
+        "window_days": RECENT_CITATION_WINDOW_DAYS,
+        "error": error,
     }
 
 
-def passes_recent_attention_threshold(metrics: dict[str, Any]) -> bool:
-    recent_window = int(metrics["recent_citations_window"])
-    recent_12m = int(metrics["recent_citations_12m"])
-    share = float(metrics["recent_citation_share"])
-
-    # Main condition:
-    # enough citations in the recent window and not merely ancient cumulative impact.
-    if (
-        recent_window >= RECENT_CITATION_THRESHOLD
-        and share >= RECENT_CITATION_SHARE_THRESHOLD
-    ):
-        return True
-
-    # Bonus condition:
-    # a clear very-recent burst in the last 12 months can pass even if the
-    # share is slightly diluted by older citations.
-    if recent_12m >= RECENT_12M_BONUS_THRESHOLD:
-        return True
-
-    return False
-
-
-def select_recently_cited_published(
+def select_active_published(
     papers: list[dict[str, Any]],
-    selected_arxiv_ids: set[str],
+    selected_ids: set[str],
     limit: int,
 ) -> tuple[list[dict[str, Any]], dict[str, dict[str, Any]]]:
-    metrics_by_arxiv: dict[str, dict[str, Any]] = {}
-    candidates: list[dict[str, Any]] = []
-
-    published_candidates = [
-        paper
-        for paper in papers
-        if get_arxiv(paper) not in selected_arxiv_ids
-        and is_published(paper)
-        and get_recid(paper) is not None
-        and get_citation_count(paper) > 0
+    candidates = [
+        p for p in papers
+        if arxiv(p) not in selected_ids and is_published(p) and recid(p) is not None
     ]
 
-    for paper in published_candidates:
-        arxiv = get_arxiv(paper)
-        metrics = attention_metrics(paper)
-        metrics_by_arxiv[arxiv] = metrics
+    # Keep API usage finite while allowing both cited classics and recent papers.
+    candidates.sort(key=lambda p: (citation_count(p), date_key(p)), reverse=True)
+    candidates = candidates[:MAX_ATTENTION_CANDIDATES]
 
-        if passes_recent_attention_threshold(metrics):
-            candidates.append(paper)
+    metrics: dict[str, dict[str, Any]] = {}
+    for p in candidates:
+        metrics[arxiv(p)] = recent_citation_metrics(p)
 
     candidates.sort(
-        key=lambda paper: (
-            metrics_by_arxiv[get_arxiv(paper)]["attention_score"],
-            paper_date_key(paper),
+        key=lambda p: (
+            metrics[arxiv(p)]["attention_score"],
+            metrics[arxiv(p)]["recent_citations_window"],
+            date_key(p),
         ),
         reverse=True,
     )
+    return candidates[:limit], metrics
 
-    return candidates[:limit], metrics_by_arxiv
 
-
-def format_paper(meta: dict[str, Any], metrics: dict[str, Any] | None = None) -> str:
-    title = get_title(meta)
-    authors = get_authors(meta)
-    arxiv = get_arxiv(meta)
-    doi = get_doi(meta)
-    journal_line = get_journal_line(meta)
-
-    arxiv_url = f"https://arxiv.org/abs/{arxiv}"
-
-    lines = [
-        f"- **[{title}]({arxiv_url})**  ",
-    ]
-
-    if authors:
-        lines.append(f"  {authors}  ")
-
-    lines.append(f"  *{journal_line}*  ")
-
-    links = [f"[[arXiv:{arxiv}]({arxiv_url})]"]
-    if doi:
-        links.append(f"[[DOI](https://doi.org/{doi})]")
-
+def format_paper(m: dict[str, Any]) -> str:
+    a = arxiv(m)
+    arxiv_url = f"https://arxiv.org/abs/{a}"
+    lines = [f"- **[{title(m)}]({arxiv_url})**  "]
+    au = authors(m)
+    if au:
+        lines.append(f"  {au}  ")
+    lines.append(f"  *{journal_line(m)}*  ")
+    links = [f"[[arXiv:{a}]({arxiv_url})]"]
+    d = doi(m)
+    if d:
+        links.append(f"[[DOI](https://doi.org/{d})]")
     lines.append("  " + " ".join(links))
-
-    # Do not display citation metrics on the public page by default.
-    # They are stored in _data/publications_highlights.json for auditing.
-
     return "\n".join(lines)
 
 
-def update_block(text: str, start: str, end: str, replacement_body: str) -> str:
-    pattern = re.compile(
-        rf"{re.escape(start)}.*?{re.escape(end)}",
-        flags=re.DOTALL,
-    )
-
-    replacement = f"{start}\n{replacement_body}\n{end}"
-    new_text, count = pattern.subn(lambda _match: replacement, text)
-
+def update_block(text: str, start: str, end: str, body: str) -> str:
+    pat = re.compile(rf"{re.escape(start)}.*?{re.escape(end)}", flags=re.DOTALL)
+    repl = f"{start}\n{body}\n{end}"
+    new_text, count = pat.subn(lambda _m: repl, text)
     if count != 1:
         raise RuntimeError(f"Could not find exactly one block: {start} ... {end}")
-
     return new_text
 
 
-def write_highlights_cache(
-    selected_papers: list[dict[str, Any]],
-    recently_cited_papers: list[dict[str, Any]],
-    metrics_by_arxiv: dict[str, dict[str, Any]],
-) -> None:
+def write_cache(selected: list[dict[str, Any]], active: list[dict[str, Any]], metrics: dict[str, dict[str, Any]]) -> None:
     DATA_DIR.mkdir(exist_ok=True)
-
     payload = {
         "selected_arxiv_ids": SELECTED_ARXIV_IDS,
-        "recent_attention_criteria": {
+        "ranking": {
             "window_days": RECENT_CITATION_WINDOW_DAYS,
-            "recent_citation_threshold": RECENT_CITATION_THRESHOLD,
-            "recent_citation_share_threshold": RECENT_CITATION_SHARE_THRESHOLD,
-            "recent_12m_bonus_threshold": RECENT_12M_BONUS_THRESHOLD,
             "notable_published_count": NOTABLE_PUBLISHED_COUNT,
             "citing_fetch_size": CITING_FETCH_SIZE,
+            "max_attention_candidates": MAX_ATTENTION_CANDIDATES,
+            "note": "Recent citation activity dominates the score; total citations and paper age are weak fallback tie-breakers.",
         },
         "selected": [
             {
-                "title": get_title(paper),
-                "arxiv": get_arxiv(paper),
-                "citations_total": get_citation_count(paper),
-                "journal": get_journal_line(paper),
+                "title": title(p),
+                "arxiv": arxiv(p),
+                "citations_total": citation_count(p),
+                "journal": journal_line(p),
             }
-            for paper in selected_papers
+            for p in selected
         ],
-        "recently_cited_published": [
+        "recently_active_published": [
             {
-                "title": get_title(paper),
-                "arxiv": get_arxiv(paper),
-                "journal": get_journal_line(paper),
-                **metrics_by_arxiv.get(get_arxiv(paper), {}),
+                "title": title(p),
+                "arxiv": arxiv(p),
+                "journal": journal_line(p),
+                **metrics.get(arxiv(p), {}),
             }
-            for paper in recently_cited_papers
+            for p in active
         ],
+        "audited_candidates_by_score": sorted(
+            [
+                {"arxiv": k, **v}
+                for k, v in metrics.items()
+            ],
+            key=lambda x: x.get("attention_score", 0),
+            reverse=True,
+        )[:50],
     }
-
-    HIGHLIGHTS_CACHE.write_text(
-        json.dumps(payload, ensure_ascii=False, indent=2),
-        encoding="utf-8",
-    )
+    HIGHLIGHTS_CACHE.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 def main() -> int:
-    payload = fetch_author_papers(size=250)
+    payload = fetch_author_papers()
     papers = usable_papers(payload)
-    arxiv_map = build_arxiv_map(papers)
+    amap = arxiv_map(papers)
 
-    selected_papers: list[dict[str, Any]] = []
-    missing_selected: list[str] = []
-
-    for arxiv_id in SELECTED_ARXIV_IDS:
-        paper = arxiv_map.get(arxiv_id)
-        if paper is None:
-            missing_selected.append(arxiv_id)
+    selected = []
+    missing = []
+    for aid in SELECTED_ARXIV_IDS:
+        p = amap.get(aid)
+        if p is None:
+            missing.append(aid)
         else:
-            selected_papers.append(paper)
+            selected.append(p)
 
-    selected_set = set(SELECTED_ARXIV_IDS)
-    recently_cited_papers, metrics_by_arxiv = select_recently_cited_published(
-        papers=papers,
-        selected_arxiv_ids=selected_set,
-        limit=NOTABLE_PUBLISHED_COUNT,
-    )
+    active, metrics = select_active_published(papers, set(SELECTED_ARXIV_IDS), NOTABLE_PUBLISHED_COUNT)
 
-    selected_block = "\n\n".join(format_paper(paper) for paper in selected_papers)
-    if missing_selected:
-        selected_block += (
-            "\n\n"
-            "- Missing selected arXiv IDs from INSPIRE fetch: "
-            + ", ".join(missing_selected)
-        )
+    selected_block = "\n\n".join(format_paper(p) for p in selected)
+    if missing:
+        selected_block += "\n\n- Missing selected arXiv IDs from INSPIRE fetch: " + ", ".join(missing)
 
-    if recently_cited_papers:
-        notable_block = "\n\n".join(
-            format_paper(paper, metrics_by_arxiv.get(get_arxiv(paper)))
-            for paper in recently_cited_papers
-        )
-    else:
-        notable_block = (
-            "- No published papers outside the selected list currently pass "
-            "the recent-attention threshold."
-        )
+    active_block = "\n\n".join(format_paper(p) for p in active)
+    if not active_block:
+        active_block = "- No published papers outside the selected list could be ranked automatically."
 
-    write_highlights_cache(selected_papers, recently_cited_papers, metrics_by_arxiv)
+    write_cache(selected, active, metrics)
 
     with open(PUBLICATIONS_PATH, "r", encoding="utf-8") as f:
         text = f.read()
 
     text = update_block(text, SELECTED_START, SELECTED_END, selected_block)
-    text = update_block(text, NOTABLE_START, NOTABLE_END, notable_block)
+    text = update_block(text, NOTABLE_START, NOTABLE_END, active_block)
 
     with open(PUBLICATIONS_PATH, "w", encoding="utf-8") as f:
         f.write(text)
 
-    print(
-        f"Updated publications.md: "
-        f"{len(selected_papers)} selected, "
-        f"{len(recently_cited_papers)} recently cited published "
-        f"(window={RECENT_CITATION_WINDOW_DAYS} days, "
-        f"threshold={RECENT_CITATION_THRESHOLD}, "
-        f"share={RECENT_CITATION_SHARE_THRESHOLD})."
-    )
+    print(f"Updated publications.md: {len(selected)} selected, {len(active)} recently active published.")
     return 0
 
 
