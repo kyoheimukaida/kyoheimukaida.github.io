@@ -16,6 +16,7 @@ from zoneinfo import ZoneInfo
 INDEX_PATH = "index.md"
 TALKS_PATH = "talks.md"
 HISTORY_PATH = Path("_data/talks_history.json")
+TALKS_COMBINED_PATH = Path("_data/talks_combined.json")
 
 INDEX_START = "<!-- talks:start -->"
 INDEX_END = "<!-- talks:end -->"
@@ -39,11 +40,18 @@ class TalkEvent:
     kind: str
     start: datetime | date
     end: datetime | date | None
+    date_label: str
     location: str = ""
     description: str = ""
     url: str = ""
     event: str = ""
     source: str = ""
+
+
+def format_date(value: datetime | date) -> str:
+    if isinstance(value, datetime):
+        return value.astimezone(TOKYO).strftime("%Y-%m-%d")
+    return value.strftime("%Y-%m-%d")
 
 
 def split_ics_urls(raw: str) -> list[str]:
@@ -205,6 +213,7 @@ def make_talk_events(events: list[dict[str, Any]]) -> list[TalkEvent]:
                 kind=kind,
                 start=start,
                 end=event.get("DTEND"),
+                date_label=format_date(start),
                 location=str(event.get("LOCATION", "")).strip(),
                 description=description,
                 url=extract_url(description, explicit_url),
@@ -216,27 +225,38 @@ def make_talk_events(events: list[dict[str, Any]]) -> list[TalkEvent]:
     return talks
 
 
-def parse_history_date(value: Any) -> datetime | date | None:
+def parse_history_date(value: Any) -> tuple[datetime | date, str] | None:
     if value is None:
         return None
 
     if isinstance(value, int):
-        return date(value, 1, 1)
+        return date(value, 1, 1), f"{value:04d}"
 
     text = str(value).strip()
     if not text:
         return None
 
-    match = re.search(r"\d{4}-\d{2}-\d{2}", text)
+    match = re.search(r"\b((?:19|20)\d{2})-(\d{2})-(\d{2})\b", text)
     if match:
         try:
-            return datetime.strptime(match.group(0), "%Y-%m-%d").date()
+            parsed = datetime.strptime(match.group(0), "%Y-%m-%d").date()
+            return parsed, match.group(0)
+        except ValueError:
+            pass
+
+    match = re.search(r"\b((?:19|20)\d{2})-(\d{2})\b", text)
+    if match:
+        year = int(match.group(1))
+        month = int(match.group(2))
+        try:
+            return date(year, month, 1), f"{year:04d}-{month:02d}"
         except ValueError:
             pass
 
     match = re.search(r"\b(19|20)\d{2}\b", text)
     if match:
-        return date(int(match.group(0)), 1, 1)
+        year = int(match.group(0))
+        return date(year, 1, 1), f"{year:04d}"
 
     return None
 
@@ -260,9 +280,10 @@ def history_item_to_talk(item: dict[str, Any]) -> TalkEvent | None:
         or item.get("start_date")
         or item.get("when")
     )
-    parsed_start = parse_history_date(start)
-    if parsed_start is None:
+    parsed = parse_history_date(start)
+    if parsed is None:
         return None
+    parsed_start, date_label = parsed
 
     kind = str(item.get("kind") or item.get("type") or "Invited talk").strip()
     if kind.lower() in {"invited", "invited_talk", "invited talk"}:
@@ -278,6 +299,7 @@ def history_item_to_talk(item: dict[str, Any]) -> TalkEvent | None:
         kind=kind,
         start=parsed_start,
         end=None,
+        date_label=date_label,
         location=location,
         description=description,
         url=url,
@@ -362,14 +384,8 @@ def deduplicate_talks(talks: list[TalkEvent]) -> list[TalkEvent]:
     return sort_talks_future_first(result)
 
 
-def format_date(value: datetime | date) -> str:
-    if isinstance(value, datetime):
-        return value.astimezone(TOKYO).strftime("%Y-%m-%d")
-    return value.strftime("%Y-%m-%d")
-
-
 def format_talk(event: TalkEvent) -> str:
-    date_str = format_date(event.start)
+    date_str = event.date_label or format_date(event.start)
 
     if event.url:
         title_md = f"**[{event.title}]({event.url})**"
@@ -405,6 +421,47 @@ def format_talks_for_talks_page(talks: list[TalkEvent], n: int = 500) -> str:
     return "\n\n".join(format_talk(talk) for talk in selected)
 
 
+def load_cached_calendar_talks(path: Path = TALKS_COMBINED_PATH) -> list[TalkEvent]:
+    if not path.exists():
+        return []
+
+    with path.open("r", encoding="utf-8") as f:
+        payload = json.load(f)
+
+    if not isinstance(payload, list):
+        return []
+
+    talks: list[TalkEvent] = []
+    for item in payload:
+        if not isinstance(item, dict) or item.get("source") != "calendar":
+            continue
+
+        title = str(item.get("title") or "").strip()
+        if not title:
+            continue
+
+        parsed = parse_history_date(item.get("date"))
+        if parsed is None:
+            continue
+
+        parsed_start, date_label = parsed
+        talks.append(
+            TalkEvent(
+                title=title,
+                kind=str(item.get("kind") or "Invited talk").strip(),
+                start=parsed_start,
+                end=None,
+                date_label=date_label,
+                location=str(item.get("location") or "").strip(),
+                url=str(item.get("url") or "").strip(),
+                event=str(item.get("event") or "").strip(),
+                source="calendar",
+            )
+        )
+
+    return talks
+
+
 def update_block(path: str, start: str, end: str, replacement_body: str) -> None:
     with open(path, "r", encoding="utf-8") as f:
         text = f.read()
@@ -428,7 +485,7 @@ def fetch_calendar_talks() -> list[TalkEvent]:
     raw_urls = os.environ.get("TALKS_ICS_URLS", "").strip()
 
     if not raw_urls:
-        return []
+        return load_cached_calendar_talks()
 
     all_events: list[dict[str, Any]] = []
     for url in split_ics_urls(raw_urls):

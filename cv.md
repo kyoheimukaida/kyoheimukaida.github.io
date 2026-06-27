@@ -507,91 +507,106 @@ Theoretical particle physics and early-Universe cosmology
   Invited talk, 2026-06-22, Okochi Hall, RIKEN
 
 - **Cutting Rules for In-In correlators & Cosmo Collider Signals**  
-  Invited talk, 2026-01-01, iTHEMS Cosmology Forum No. 6: Cosmological Collider Physics, RIKEN Wako Campus
+  Invited talk, 2026-06, iTHEMS Cosmology Forum No. 6: Cosmological Collider Physics, RIKEN Wako Campus
 
 - **Magnetic Helicity, Higgs Winding, and Chiral Asymmetry**  
-  Invited talk, 2026-01-01, 2026 CAU Beyond the Standard Model Focus Workshop, Chung-Ang University, Seoul, Korea
-
-- **Cascade of Energetic SM Particles**  
-  Invited talk, 2025-01-01, KEK Theory Meeting on Particle Physics Phenomenology (KEK-PH2025winter), KEK, Tsukuba
-
-- **Perturbative Reheating and Thermalization**  
-  Invited talk, 2025-01-01, iTHEMS Cosmology Forum No. 3: (P)reheating the Primordial Universe, RIKEN Wako Campus
-
-- **Reheating after Axion Inflation**  
-  Invited talk, 2025-01-01, Axions in Stockholm 2025, Stockholm University and Nordita, Stockholm, Sweden
+  Invited talk, 2026-02, 2026 CAU Beyond the Standard Model Focus Workshop, Chung-Ang University, Seoul, Korea
 
 - **宇宙の再加熱**  
-  Review talk, 2025-01-01, 物性研研究会「熱場の量子論とその応用」, 東京大学物性研究所，柏
+  Review talk, 2025-09, 物性研研究会「熱場の量子論とその応用」, 東京大学物性研究所，柏
 
-- **Charge Transfer Induced by Chiral Plasma Instability**  
-  Invited talk, 2024-01-01, Generation, Evolution, and Observations of Cosmological Magnetic Fields, Bernoulli Center, EPFL, Lausanne, Switzerland
+- **Reheating after Axion Inflation**  
+  Invited talk, 2025-07, Axions in Stockholm 2025, Stockholm University and Nordita, Stockholm, Sweden
 
-- **Cascades of High-Energy SM Particles**  
-  Invited talk, 2024-01-01, Quantum Aspects of Inflationary Cosmology, MIAPbP, Garching, Germany
+- **Perturbative Reheating and Thermalization**  
+  Invited talk, 2025-03, iTHEMS Cosmology Forum No. 3: (P)reheating the Primordial Universe, RIKEN Wako Campus
 
-- **Thermalization and Dark Matter Production**  
-  Invited talk, 2024-01-01, Particle Production in the Early Universe, CERN, Geneva, Switzerland
+- **Cascade of Energetic SM Particles**  
+  Invited talk, 2025-02, KEK Theory Meeting on Particle Physics Phenomenology (KEK-PH2025winter), KEK, Tsukuba
 
 - **How Did the Hot Universe Begin?**  
-  Award talk, 2024-01-01, 2024 AAPPS--APCTP C. N. Yang Award Invited talk, Pohang, Korea
+  Award talk, 2024-11, 2024 AAPPS--APCTP C. N. Yang Award Invited talk, Pohang, Korea
 
-- **Lepton Number Violation & Baryogenesis**  
-  Invited talk, 2023-01-01, RCNP研究会「原子核によるバリオン数・レプトン数の物理」, 大阪大学核物理研究センター，大阪
+- **Thermalization and Dark Matter Production**  
+  Invited talk, 2024-09, Particle Production in the Early Universe, CERN, Geneva, Switzerland
 
-- **Hot Spots around Small PBHs**  
-  Invited talk, 2023-01-01, NEHOP, Naples, Italy
+- **Cascades of High-Energy SM Particles**  
+  Invited talk, 2024-07, Quantum Aspects of Inflationary Cosmology, MIAPbP, Garching, Germany
 
-- **Chiral Effects & Baryogenesis in the Early Universe**  
-  Invited talk, 2023-01-01, KiPAS International Workshop: From Particle Physics to Supernovae and Early Universe, Keio University, Yokohama
+- **Charge Transfer Induced by Chiral Plasma Instability**  
+  Invited talk, 2024-05, Generation, Evolution, and Observations of Cosmological Magnetic Fields, Bernoulli Center, EPFL, Lausanne, Switzerland
 
 - **バリオン非対称性生成：レビューと最近の進展**  
-  Review talk, 2023-01-01, 第36回理論懇シンポジウム, 弘前大学，弘前
+  Review talk, 2023-12, 第36回理論懇シンポジウム, 弘前大学，弘前
 
-- **New Ideas on Leptogenesis**  
-  Invited talk, 2022-01-01, 2022 Winter NRF--JSPS Workshop in Particle Physics, Cosmology, and Gravitation, online
+- **Chiral Effects & Baryogenesis in the Early Universe**  
+  Invited talk, 2023-11, KiPAS International Workshop: From Particle Physics to Supernovae and Early Universe, Keio University, Yokohama
 
-- **Leptogenesis and Its Descendants**  
-  Invited talk, 2022-01-01, Unraveling the History of the Universe and Matter Evolution with Underground Physics (UGAP2022)
+- **Hot Spots around Small PBHs**  
+  Invited talk, 2023-08, 27th International Summer Institute on Phenomenology of Elementary Particle Physics and Cosmology, Nantou, Taiwan
 
-- **Baryon Asymmetry from Lepton Flavor Asymmetry**  
-  Invited talk, 2022-01-01, Beyond the Standard Models: Particle Physics Meets Cosmology, IFT UAM--CSIC, Madrid, Spain
+- **Hot Spots around Small PBHs**  
+  Invited talk, 2023-06, NEHOP, Naples, Italy
+
+- **Lepton Number Violation & Baryogenesis**  
+  Invited talk, 2023-03, RCNP研究会「原子核によるバリオン数・レプトン数の物理」, 大阪大学核物理研究センター，大阪
 
 - **Leptoflavorgenesis**  
-  Invited talk, 2022-01-01, 2nd Asian--European Institutes Workshop for BSM and 10th KIAS Workshop on Particle Physics and Cosmology, Grand Sumorum, Jeju, Korea
+  Invited talk, 2022-11, 2nd Asian--European Institutes Workshop for BSM and 10th KIAS Workshop on Particle Physics and Cosmology, Grand Sumorum, Jeju, Korea
+
+- **Baryon Asymmetry from Lepton Flavor Asymmetry**  
+  Invited talk, 2022-10, Beyond the Standard Models: Particle Physics Meets Cosmology, IFT UAM--CSIC, Madrid, Spain
+
+- **Leptogenesis and Its Descendants**  
+  Invited talk, 2022-06, Unraveling the History of the Universe and Matter Evolution with Underground Physics (UGAP2022)
+
+- **New Ideas on Leptogenesis**  
+  Invited talk, 2022-02, 2022 Winter NRF--JSPS Workshop in Particle Physics, Cosmology, and Gravitation, online
 
 - **初期宇宙のダイナミクス**  
-  Invited talk, 2021-01-01, KEK「素核宇・物性」連携研究会, online
-
-- **1. Spontaneous Lepto/Baryogenesis & 2. Schwinger Effect and Chiral Anomaly**  
-  Invited talk, 2020-01-01, Zooming in on Axions in the Early Universe, CERN online workshop
+  Invited talk, 2021-03, KEK「素核宇・物性」連携研究会, online
 
 - **Baryo/Leptogenesis from Axion Inflation**  
-  Invited talk, 2020-01-01, Progress in Particle Physics 2020, Yukawa Institute for Theoretical Physics, online
+  Invited talk, 2020-08, Progress in Particle Physics 2020, Yukawa Institute for Theoretical Physics, online
+
+- **1. Spontaneous Lepto/Baryogenesis & 2. Schwinger Effect and Chiral Anomaly**  
+  Invited talk, 2020-06, Zooming in on Axions in the Early Universe, CERN online workshop
 
 - **Baryogenesis from Axion Inflation**  
-  Invited talk, 2019-01-01, Theory Institute in Particle Physics and Cosmology, University of Warsaw, Warsaw, Poland
+  Invited talk, 2019-10, Theory Institute in Particle Physics and Cosmology, University of Warsaw, Warsaw, Poland
 
 - **Refining Calculations of WIMP Abundance**  
-  Seminar, 2019-01-01, MLL-Kolloquium, TUM, Munich, Germany
+  Seminar, 2019-07, MLL-Kolloquium, TUM, Munich, Germany
 
 - **PBHs from Inflation and their Implications**  
-  Invited talk, 2019-01-01, Theoretical Cosmology Meeting, Utrecht, Netherlands
+  Invited talk, 2019-03, Theoretical Cosmology Meeting, Utrecht, Netherlands
 
 - **PBHs from Inflation and their Implications**  
-  Invited talk, 2018-01-01, KIAS Workshop on Particle Physics and Cosmology, KIAS, Seoul, Korea
+  Invited talk, 2019-02, Primordial Black Holes, de Sitter Space and Quantum Tests of Gravity, DESY, Hamburg, Germany
 
 - **PBHs from Inflation and their Implications**  
-  Invited talk, 2017-01-01, Focus Week on Primordial Black Holes, Kavli IPMU, Kashiwa, Japan
+  Invited talk, 2018-10, KIAS Workshop on Particle Physics and Cosmology, KIAS, Seoul, Korea
+
+- **PBHs from Inflation and their Implications**  
+  Invited talk, 2018-05, Cosmological Probes of BSM -- from the Big Bang to the LHC, Benasque, Spain
+
+- **PBHs from Inflation and their Implications**  
+  Invited talk, 2017-11, Focus Week on Primordial Black Holes, Kavli IPMU, Kashiwa, Japan
 
 - **Inflationary PBHs for the LIGO Gravitational Wave Events and Induced Gravitational Waves**  
-  Invited talk, 2017-01-01, HEP Matsue Workshop 2017, Matsue, Shimane, Japan
+  Invited talk, 2017-03, HEP Matsue Workshop 2017, Matsue, Shimane, Japan
 
 - **Reheating Process after Inflation**  
-  Invited talk, 2016-01-01, The Big Bang and the Little Bangs, CERN, Geneva, Switzerland
+  Invited talk, 2016-08, The Big Bang and the Little Bangs, CERN, Geneva, Switzerland
 
 - **Fate of Electroweak Vacuum during Preheating**  
-  Seminar, 2016-01-01, Joint Seminar, Kavli IPMU, Kashiwa, Japan
+  Seminar, 2016-06, Joint Seminar, Kavli IPMU, Kashiwa, Japan
+
+- **Fate of Electroweak Vacuum during Preheating**  
+  Invited talk, 2016-05, The 1st KEK--KIAS--NCTS Joint Workshop on Particle Physics Phenomenology, NCTS, Hsinchu, Taiwan
+
+- **Fate of Electroweak Vacuum during Preheating**  
+  Invited talk, 2016-03, Berkeley Week at IPMU, Kavli IPMU, Kashiwa, Japan
 <!-- cv-full-talks:end -->
 
 </div>

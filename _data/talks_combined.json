@@ -29,7 +29,7 @@
   {
     "title": "Cutting Rules for In-In correlators & Cosmo Collider Signals",
     "kind": "Invited talk",
-    "date": "2026-01-01",
+    "date": "2026-06",
     "location": "RIKEN Wako Campus",
     "event": "iTHEMS Cosmology Forum No. 6: Cosmological Collider Physics",
     "url": "",
@@ -38,187 +38,196 @@
   {
     "title": "Magnetic Helicity, Higgs Winding, and Chiral Asymmetry",
     "kind": "Invited talk",
-    "date": "2026-01-01",
+    "date": "2026-02",
     "location": "Chung-Ang University, Seoul, Korea",
     "event": "2026 CAU Beyond the Standard Model Focus Workshop",
     "url": "",
     "source": "history"
   },
   {
-    "title": "Cascade of Energetic SM Particles",
-    "kind": "Invited talk",
-    "date": "2025-01-01",
-    "location": "KEK, Tsukuba",
-    "event": "KEK Theory Meeting on Particle Physics Phenomenology (KEK-PH2025winter)",
-    "url": "",
-    "source": "history"
-  },
-  {
-    "title": "Perturbative Reheating and Thermalization",
-    "kind": "Invited talk",
-    "date": "2025-01-01",
-    "location": "RIKEN Wako Campus",
-    "event": "iTHEMS Cosmology Forum No. 3: (P)reheating the Primordial Universe",
-    "url": "",
-    "source": "history"
-  },
-  {
-    "title": "Reheating after Axion Inflation",
-    "kind": "Invited talk",
-    "date": "2025-01-01",
-    "location": "Stockholm University and Nordita, Stockholm, Sweden",
-    "event": "Axions in Stockholm 2025",
-    "url": "",
-    "source": "history"
-  },
-  {
     "title": "宇宙の再加熱",
     "kind": "Review talk",
-    "date": "2025-01-01",
+    "date": "2025-09",
     "location": "東京大学物性研究所，柏",
     "event": "物性研研究会「熱場の量子論とその応用」",
     "url": "",
     "source": "history"
   },
   {
-    "title": "Charge Transfer Induced by Chiral Plasma Instability",
+    "title": "Reheating after Axion Inflation",
     "kind": "Invited talk",
-    "date": "2024-01-01",
-    "location": "Bernoulli Center, EPFL, Lausanne, Switzerland",
-    "event": "Generation, Evolution, and Observations of Cosmological Magnetic Fields",
+    "date": "2025-07",
+    "location": "Stockholm University and Nordita, Stockholm, Sweden",
+    "event": "Axions in Stockholm 2025",
     "url": "",
     "source": "history"
   },
   {
-    "title": "Cascades of High-Energy SM Particles",
+    "title": "Perturbative Reheating and Thermalization",
     "kind": "Invited talk",
-    "date": "2024-01-01",
-    "location": "MIAPbP, Garching, Germany",
-    "event": "Quantum Aspects of Inflationary Cosmology",
+    "date": "2025-03",
+    "location": "RIKEN Wako Campus",
+    "event": "iTHEMS Cosmology Forum No. 3: (P)reheating the Primordial Universe",
     "url": "",
     "source": "history"
   },
   {
-    "title": "Thermalization and Dark Matter Production",
+    "title": "Cascade of Energetic SM Particles",
     "kind": "Invited talk",
-    "date": "2024-01-01",
-    "location": "CERN, Geneva, Switzerland",
-    "event": "Particle Production in the Early Universe",
+    "date": "2025-02",
+    "location": "KEK, Tsukuba",
+    "event": "KEK Theory Meeting on Particle Physics Phenomenology (KEK-PH2025winter)",
     "url": "",
     "source": "history"
   },
   {
     "title": "How Did the Hot Universe Begin?",
     "kind": "Award talk",
-    "date": "2024-01-01",
+    "date": "2024-11",
     "location": "Pohang, Korea",
     "event": "2024 AAPPS--APCTP C. N. Yang Award Invited talk",
     "url": "",
     "source": "history"
   },
   {
-    "title": "Lepton Number Violation & Baryogenesis",
+    "title": "Thermalization and Dark Matter Production",
     "kind": "Invited talk",
-    "date": "2023-01-01",
-    "location": "大阪大学核物理研究センター，大阪",
-    "event": "RCNP研究会「原子核によるバリオン数・レプトン数の物理」",
+    "date": "2024-09",
+    "location": "CERN, Geneva, Switzerland",
+    "event": "Particle Production in the Early Universe",
     "url": "",
     "source": "history"
   },
   {
-    "title": "Hot Spots around Small PBHs",
+    "title": "Cascades of High-Energy SM Particles",
     "kind": "Invited talk",
-    "date": "2023-01-01",
-    "location": "Naples, Italy",
-    "event": "NEHOP",
+    "date": "2024-07",
+    "location": "MIAPbP, Garching, Germany",
+    "event": "Quantum Aspects of Inflationary Cosmology",
     "url": "",
     "source": "history"
   },
   {
-    "title": "Chiral Effects & Baryogenesis in the Early Universe",
+    "title": "Charge Transfer Induced by Chiral Plasma Instability",
     "kind": "Invited talk",
-    "date": "2023-01-01",
-    "location": "Keio University, Yokohama",
-    "event": "KiPAS International Workshop: From Particle Physics to Supernovae and Early Universe",
+    "date": "2024-05",
+    "location": "Bernoulli Center, EPFL, Lausanne, Switzerland",
+    "event": "Generation, Evolution, and Observations of Cosmological Magnetic Fields",
     "url": "",
     "source": "history"
   },
   {
     "title": "バリオン非対称性生成：レビューと最近の進展",
     "kind": "Review talk",
-    "date": "2023-01-01",
+    "date": "2023-12",
     "location": "弘前大学，弘前",
     "event": "第36回理論懇シンポジウム",
     "url": "",
     "source": "history"
   },
   {
-    "title": "New Ideas on Leptogenesis",
+    "title": "Chiral Effects & Baryogenesis in the Early Universe",
     "kind": "Invited talk",
-    "date": "2022-01-01",
-    "location": "online",
-    "event": "2022 Winter NRF--JSPS Workshop in Particle Physics, Cosmology, and Gravitation",
+    "date": "2023-11",
+    "location": "Keio University, Yokohama",
+    "event": "KiPAS International Workshop: From Particle Physics to Supernovae and Early Universe",
     "url": "",
     "source": "history"
   },
   {
-    "title": "Leptogenesis and Its Descendants",
+    "title": "Hot Spots around Small PBHs",
     "kind": "Invited talk",
-    "date": "2022-01-01",
-    "location": "",
-    "event": "Unraveling the History of the Universe and Matter Evolution with Underground Physics (UGAP2022)",
+    "date": "2023-08",
+    "location": "Nantou, Taiwan",
+    "event": "27th International Summer Institute on Phenomenology of Elementary Particle Physics and Cosmology",
     "url": "",
     "source": "history"
   },
   {
-    "title": "Baryon Asymmetry from Lepton Flavor Asymmetry",
+    "title": "Hot Spots around Small PBHs",
     "kind": "Invited talk",
-    "date": "2022-01-01",
-    "location": "IFT UAM--CSIC, Madrid, Spain",
-    "event": "Beyond the Standard Models: Particle Physics Meets Cosmology",
+    "date": "2023-06",
+    "location": "Naples, Italy",
+    "event": "NEHOP",
+    "url": "",
+    "source": "history"
+  },
+  {
+    "title": "Lepton Number Violation & Baryogenesis",
+    "kind": "Invited talk",
+    "date": "2023-03",
+    "location": "大阪大学核物理研究センター，大阪",
+    "event": "RCNP研究会「原子核によるバリオン数・レプトン数の物理」",
     "url": "",
     "source": "history"
   },
   {
     "title": "Leptoflavorgenesis",
     "kind": "Invited talk",
-    "date": "2022-01-01",
+    "date": "2022-11",
     "location": "Grand Sumorum, Jeju, Korea",
     "event": "2nd Asian--European Institutes Workshop for BSM and 10th KIAS Workshop on Particle Physics and Cosmology",
     "url": "",
     "source": "history"
   },
   {
+    "title": "Baryon Asymmetry from Lepton Flavor Asymmetry",
+    "kind": "Invited talk",
+    "date": "2022-10",
+    "location": "IFT UAM--CSIC, Madrid, Spain",
+    "event": "Beyond the Standard Models: Particle Physics Meets Cosmology",
+    "url": "",
+    "source": "history"
+  },
+  {
+    "title": "Leptogenesis and Its Descendants",
+    "kind": "Invited talk",
+    "date": "2022-06",
+    "location": "",
+    "event": "Unraveling the History of the Universe and Matter Evolution with Underground Physics (UGAP2022)",
+    "url": "",
+    "source": "history"
+  },
+  {
+    "title": "New Ideas on Leptogenesis",
+    "kind": "Invited talk",
+    "date": "2022-02",
+    "location": "online",
+    "event": "2022 Winter NRF--JSPS Workshop in Particle Physics, Cosmology, and Gravitation",
+    "url": "",
+    "source": "history"
+  },
+  {
     "title": "初期宇宙のダイナミクス",
     "kind": "Invited talk",
-    "date": "2021-01-01",
+    "date": "2021-03",
     "location": "online",
     "event": "KEK「素核宇・物性」連携研究会",
     "url": "",
     "source": "history"
   },
   {
-    "title": "1. Spontaneous Lepto/Baryogenesis & 2. Schwinger Effect and Chiral Anomaly",
-    "kind": "Invited talk",
-    "date": "2020-01-01",
-    "location": "CERN online workshop",
-    "event": "Zooming in on Axions in the Early Universe",
-    "url": "",
-    "source": "history"
-  },
-  {
     "title": "Baryo/Leptogenesis from Axion Inflation",
     "kind": "Invited talk",
-    "date": "2020-01-01",
+    "date": "2020-08",
     "location": "Yukawa Institute for Theoretical Physics, online",
     "event": "Progress in Particle Physics 2020",
     "url": "",
     "source": "history"
   },
   {
+    "title": "1. Spontaneous Lepto/Baryogenesis & 2. Schwinger Effect and Chiral Anomaly",
+    "kind": "Invited talk",
+    "date": "2020-06",
+    "location": "CERN online workshop",
+    "event": "Zooming in on Axions in the Early Universe",
+    "url": "",
+    "source": "history"
+  },
+  {
     "title": "Baryogenesis from Axion Inflation",
     "kind": "Invited talk",
-    "date": "2019-01-01",
+    "date": "2019-10",
     "location": "University of Warsaw, Warsaw, Poland",
     "event": "Theory Institute in Particle Physics and Cosmology",
     "url": "",
@@ -227,7 +236,7 @@
   {
     "title": "Refining Calculations of WIMP Abundance",
     "kind": "Seminar",
-    "date": "2019-01-01",
+    "date": "2019-07",
     "location": "TUM, Munich, Germany",
     "event": "MLL-Kolloquium",
     "url": "",
@@ -236,7 +245,7 @@
   {
     "title": "PBHs from Inflation and their Implications",
     "kind": "Invited talk",
-    "date": "2019-01-01",
+    "date": "2019-03",
     "location": "Utrecht, Netherlands",
     "event": "Theoretical Cosmology Meeting",
     "url": "",
@@ -245,7 +254,16 @@
   {
     "title": "PBHs from Inflation and their Implications",
     "kind": "Invited talk",
-    "date": "2018-01-01",
+    "date": "2019-02",
+    "location": "DESY, Hamburg, Germany",
+    "event": "Primordial Black Holes, de Sitter Space and Quantum Tests of Gravity",
+    "url": "",
+    "source": "history"
+  },
+  {
+    "title": "PBHs from Inflation and their Implications",
+    "kind": "Invited talk",
+    "date": "2018-10",
     "location": "KIAS, Seoul, Korea",
     "event": "KIAS Workshop on Particle Physics and Cosmology",
     "url": "",
@@ -254,7 +272,16 @@
   {
     "title": "PBHs from Inflation and their Implications",
     "kind": "Invited talk",
-    "date": "2017-01-01",
+    "date": "2018-05",
+    "location": "Benasque, Spain",
+    "event": "Cosmological Probes of BSM -- from the Big Bang to the LHC",
+    "url": "",
+    "source": "history"
+  },
+  {
+    "title": "PBHs from Inflation and their Implications",
+    "kind": "Invited talk",
+    "date": "2017-11",
     "location": "Kavli IPMU, Kashiwa, Japan",
     "event": "Focus Week on Primordial Black Holes",
     "url": "",
@@ -263,7 +290,7 @@
   {
     "title": "Inflationary PBHs for the LIGO Gravitational Wave Events and Induced Gravitational Waves",
     "kind": "Invited talk",
-    "date": "2017-01-01",
+    "date": "2017-03",
     "location": "Matsue, Shimane, Japan",
     "event": "HEP Matsue Workshop 2017",
     "url": "",
@@ -272,7 +299,7 @@
   {
     "title": "Reheating Process after Inflation",
     "kind": "Invited talk",
-    "date": "2016-01-01",
+    "date": "2016-08",
     "location": "CERN, Geneva, Switzerland",
     "event": "The Big Bang and the Little Bangs",
     "url": "",
@@ -281,9 +308,27 @@
   {
     "title": "Fate of Electroweak Vacuum during Preheating",
     "kind": "Seminar",
-    "date": "2016-01-01",
+    "date": "2016-06",
     "location": "Kavli IPMU, Kashiwa, Japan",
     "event": "Joint Seminar",
+    "url": "",
+    "source": "history"
+  },
+  {
+    "title": "Fate of Electroweak Vacuum during Preheating",
+    "kind": "Invited talk",
+    "date": "2016-05",
+    "location": "NCTS, Hsinchu, Taiwan",
+    "event": "The 1st KEK--KIAS--NCTS Joint Workshop on Particle Physics Phenomenology",
+    "url": "",
+    "source": "history"
+  },
+  {
+    "title": "Fate of Electroweak Vacuum during Preheating",
+    "kind": "Invited talk",
+    "date": "2016-03",
+    "location": "Kavli IPMU, Kashiwa, Japan",
+    "event": "Berkeley Week at IPMU",
     "url": "",
     "source": "history"
   }

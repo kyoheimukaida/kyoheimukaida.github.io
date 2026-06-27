@@ -341,6 +341,13 @@ def fetch_public_talks() -> list[Any]:
 
 
 def format_talk_date(value: Any) -> str:
+    date_label = getattr(value, "date_label", "")
+    if date_label:
+        return str(date_label)
+
+    if hasattr(value, "start"):
+        value = value.start
+
     if isinstance(value, datetime):
         return value.strftime("%Y-%m-%d")
 
@@ -351,7 +358,7 @@ def format_talk_date(value: Any) -> str:
 
 
 def format_talk_markdown(event: Any) -> str:
-    date_str = format_talk_date(event.start)
+    date_str = format_talk_date(event)
 
     if event.url:
         title_md = f"**[{event.title}]({event.url})**"
@@ -370,7 +377,7 @@ def format_talk_markdown(event: Any) -> str:
 
 
 def format_talk_tex(event: Any) -> str:
-    date_str = format_talk_date(event.start)
+    date_str = format_talk_date(event)
 
     title_tex = tex_escape(event.title)
     if event.url:
@@ -429,7 +436,7 @@ def write_data_cache(payload: dict[str, Any], talks: list[Any]) -> None:
             {
                 "title": talk.title,
                 "kind": talk.kind,
-                "date": format_talk_date(talk.start),
+                "date": format_talk_date(talk),
                 "location": talk.location,
                 "event": getattr(talk, "event", ""),
                 "url": talk.url,
