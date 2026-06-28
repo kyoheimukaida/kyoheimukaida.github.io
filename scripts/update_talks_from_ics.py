@@ -6,7 +6,7 @@ import json
 import os
 import re
 import urllib.request
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from datetime import date, datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -353,8 +353,159 @@ def sort_talks_future_first(talks: list[TalkEvent]) -> list[TalkEvent]:
     return sorted(talks, key=lambda event: start_sort_key(event.start), reverse=True)
 
 
-def normalize_for_dedup(text: str) -> str:
-    return re.sub(r"[^a-z0-9]+", "", text.lower())
+def normalize_text_for_dedup(text: str) -> str:
+    text = re.sub(r"\[[^\]]+\]", " ", text)
+    text = text.lower().replace("&", " and ")
+    text = text.replace("–", "-").replace("—", "-")
+    text = re.sub(r"[^a-z0-9]+", " ", text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def canonical_dedup_token(token: str) -> str:
+    aliases = {
+        "cosmo": "cosmological",
+        "cosmology": "cosmological",
+        "colliders": "collider",
+        "correlators": "correlator",
+        "rules": "rule",
+        "signals": "signal",
+    }
+    if token in aliases:
+        return aliases[token]
+
+    if len(token) > 4 and token.endswith("s"):
+        return token[:-1]
+
+    return token
+
+
+def dedup_tokens(text: str) -> set[str]:
+    stopwords = {
+        "a",
+        "an",
+        "and",
+        "at",
+        "by",
+        "for",
+        "from",
+        "in",
+        "of",
+        "on",
+        "or",
+        "the",
+        "to",
+        "with",
+    }
+    return {
+        canonical_dedup_token(token)
+        for token in normalize_text_for_dedup(text).split()
+        if token and token not in stopwords
+    }
+
+
+def token_similarity(left: set[str], right: set[str]) -> float:
+    if not left or not right:
+        return 0.0
+
+    return len(left & right) / len(left | right)
+
+
+def date_label_for_dedup(talk: TalkEvent) -> str:
+    return talk.date_label or format_date(talk.start)
+
+
+def dates_compatible(left: TalkEvent, right: TalkEvent) -> bool:
+    left_label = date_label_for_dedup(left)
+    right_label = date_label_for_dedup(right)
+
+    if left_label == right_label:
+        return True
+
+    if len(left_label) == 10 and len(right_label) == 7:
+        return left_label.startswith(right_label + "-")
+
+    if len(left_label) == 7 and len(right_label) == 10:
+        return right_label.startswith(left_label + "-")
+
+    if len(left_label) == 10 and len(right_label) == 10:
+        return abs((start_sort_key(left.start) - start_sort_key(right.start)).days) <= 7
+
+    return False
+
+
+def title_similarity(left: TalkEvent, right: TalkEvent) -> float:
+    return token_similarity(dedup_tokens(left.title), dedup_tokens(right.title))
+
+
+def context_tokens(talk: TalkEvent) -> set[str]:
+    generic = {
+        "campus",
+        "center",
+        "centre",
+        "conference",
+        "cosmological",
+        "event",
+        "forum",
+        "hall",
+        "institute",
+        "italy",
+        "japan",
+        "korea",
+        "meeting",
+        "netherlands",
+        "physics",
+        "spain",
+        "switzerland",
+        "symposium",
+        "talk",
+        "taiwan",
+        "university",
+        "workshop",
+    }
+    tokens = dedup_tokens(" ".join([talk.event, talk.location]))
+    return {token for token in tokens if token not in generic}
+
+
+def contexts_compatible(left: TalkEvent, right: TalkEvent) -> bool:
+    left_context = normalize_text_for_dedup(" ".join([left.event, left.location]))
+    right_context = normalize_text_for_dedup(" ".join([right.event, right.location]))
+
+    if left_context and right_context and (
+        left_context in right_context or right_context in left_context
+    ):
+        return True
+
+    left_tokens = context_tokens(left)
+    right_tokens = context_tokens(right)
+    if not left_tokens or not right_tokens:
+        return False
+
+    return bool(left_tokens & right_tokens)
+
+
+def same_talk(left: TalkEvent, right: TalkEvent) -> bool:
+    if not dates_compatible(left, right):
+        return False
+
+    title_score = title_similarity(left, right)
+    left_label = date_label_for_dedup(left)
+    right_label = date_label_for_dedup(right)
+    precise_date_match = len(left_label) == 10 and len(right_label) == 10
+
+    if title_score >= 0.86 and (precise_date_match or contexts_compatible(left, right)):
+        return True
+
+    return title_score >= 0.58 and contexts_compatible(left, right)
+
+
+def merge_duplicate_talk(preferred: TalkEvent, duplicate: TalkEvent) -> TalkEvent:
+    return replace(
+        preferred,
+        event=preferred.event or duplicate.event,
+        location=preferred.location or duplicate.location,
+        description=preferred.description or duplicate.description,
+        url=preferred.url or duplicate.url,
+    )
 
 
 def deduplicate_talks(talks: list[TalkEvent]) -> list[TalkEvent]:
@@ -368,17 +519,16 @@ def deduplicate_talks(talks: list[TalkEvent]) -> list[TalkEvent]:
         key=lambda t: 0 if t.source == "calendar" else 1,
     )
 
-    seen: set[tuple[str, str]] = set()
     result: list[TalkEvent] = []
 
     for talk in ordered:
-        key = (
-            normalize_for_dedup(talk.title),
-            start_sort_key(talk.start).strftime("%Y-%m-%d"),
+        duplicate_index = next(
+            (index for index, existing in enumerate(result) if same_talk(talk, existing)),
+            None,
         )
-        if key in seen:
+        if duplicate_index is not None:
+            result[duplicate_index] = merge_duplicate_talk(result[duplicate_index], talk)
             continue
-        seen.add(key)
         result.append(talk)
 
     return sort_talks_future_first(result)

@@ -25,10 +25,7 @@ It does not include ordinary meetings, internal schedule items, tentative holds,
   Invited talk, 2026-08-03, Lecture Hall, Kavli IPMU, The University of Tokyo, Kashiwa Campus
 
 - **[Cutting Rules for In-In correlators & Cosmo Collider Signals](https://indico2.riken.jp/event/5612/timetable/#20260622)**  
-  Invited talk, 2026-06-22, Okochi Hall, RIKEN
-
-- **Cutting Rules for In-In correlators & Cosmo Collider Signals**  
-  Invited talk, 2026-06, iTHEMS Cosmology Forum No. 6: Cosmological Collider Physics, RIKEN Wako Campus
+  Invited talk, 2026-06-22, iTHEMS Cosmology Forum No. 6: Cosmological Collider Physics, Okochi Hall, RIKEN
 
 - **Magnetic Helicity, Higgs Winding, and Chiral Asymmetry**  
   Invited talk, 2026-02, 2026 CAU Beyond the Standard Model Focus Workshop, Chung-Ang University, Seoul, Korea
@@ -128,6 +125,9 @@ It does not include ordinary meetings, internal schedule items, tentative holds,
 
 - **Fate of Electroweak Vacuum during Preheating**  
   Invited talk, 2016-03, Berkeley Week at IPMU, Kavli IPMU, Kashiwa, Japan
+
+- **Fate of Electroweak Vacuum during Preheating**  
+  Invited talk, 2016-03, Beyond the Standard Model in Okinawa 2016, OIST, Okinawa, Japan
 <!-- talks-auto:end -->
 
 </div>

@@ -22,18 +22,9 @@
     "kind": "Invited talk",
     "date": "2026-06-22",
     "location": "Okochi Hall, RIKEN",
-    "event": "",
+    "event": "iTHEMS Cosmology Forum No. 6: Cosmological Collider Physics",
     "url": "https://indico2.riken.jp/event/5612/timetable/#20260622",
     "source": "calendar"
-  },
-  {
-    "title": "Cutting Rules for In-In correlators & Cosmo Collider Signals",
-    "kind": "Invited talk",
-    "date": "2026-06",
-    "location": "RIKEN Wako Campus",
-    "event": "iTHEMS Cosmology Forum No. 6: Cosmological Collider Physics",
-    "url": "",
-    "source": "history"
   },
   {
     "title": "Magnetic Helicity, Higgs Winding, and Chiral Asymmetry",
@@ -329,6 +320,15 @@
     "date": "2016-03",
     "location": "Kavli IPMU, Kashiwa, Japan",
     "event": "Berkeley Week at IPMU",
+    "url": "",
+    "source": "history"
+  },
+  {
+    "title": "Fate of Electroweak Vacuum during Preheating",
+    "kind": "Invited talk",
+    "date": "2016-03",
+    "location": "OIST, Okinawa, Japan",
+    "event": "Beyond the Standard Model in Okinawa 2016",
     "url": "",
     "source": "history"
   }
