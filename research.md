@@ -22,7 +22,7 @@ The six directions below are complementary parts of that program rather than iso
 </article>
 
 <article class="paper-card">
-  <h3><a href="research/dark-matter-production.html">Dark matter production in nonstandard thermal histories</a></h3>
+  <h3><a href="research/dark-matter-production.html">Dark matter abundance in thermal and nonstandard histories</a></h3>
   <p>Relic-abundance theory for dark matter, from precision finite-temperature calculations in a thermal plasma to production in nonstandard or not-yet-thermal histories.</p>
 </article>
 
