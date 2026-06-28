@@ -84,7 +84,7 @@ For the complete publication list, see my [INSPIRE author profile](https://inspi
   Invited talk, 2026-08-03, Lecture Hall, Kavli IPMU, The University of Tokyo, Kashiwa Campus
 
 - **[Cutting Rules for In-In correlators & Cosmo Collider Signals](https://indico2.riken.jp/event/5612/timetable/#20260622)**  
-  Invited talk, 2026-06-22, Okochi Hall, RIKEN
+  Invited talk, 2026-06-22, iTHEMS Cosmology Forum No. 6: Cosmological Collider Physics, Okochi Hall, RIKEN
 <!-- talks:end -->
 
 </div>
