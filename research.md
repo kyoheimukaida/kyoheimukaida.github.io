@@ -23,7 +23,7 @@ The six directions below are complementary parts of that program rather than iso
 
 <article class="paper-card">
   <h3><a href="research/dark-matter-production.html">Dark matter production in nonstandard thermal histories</a></h3>
-  <p>Relic production when the early Universe is not yet a simple thermal bath, so abundances depend on the actual temperature history and nonthermal particle spectra.</p>
+  <p>Relic-abundance theory for dark matter, from precision finite-temperature calculations in a thermal plasma to production in nonstandard or not-yet-thermal histories.</p>
 </article>
 
 <article class="paper-card">
@@ -38,7 +38,7 @@ The six directions below are complementary parts of that program rather than iso
 
 <article class="paper-card">
   <h3><a href="research/gravity-inflation-geometry.html">Gravity, inflation, and field-space geometry</a></h3>
-  <p>The consistency of scalar-gravity effective field theories during and after inflation, including nonminimal coupling, field-space geometry, and perturbative unitarity.</p>
+  <p>Scalar-gravity EFT consistency in inflation, together with gravitational production of hidden particles, dark radiation, or gravitons after inflation.</p>
 </article>
 
 </div>

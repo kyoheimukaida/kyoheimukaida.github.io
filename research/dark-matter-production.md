@@ -1,31 +1,54 @@
 ---
 layout: default
-title: Dark Matter Production in Nonstandard Thermal Histories
+title: Dark Matter Abundance in Thermal and Nonstandard Histories
 ---
 
-# Dark Matter Production in Nonstandard Thermal Histories
+# Dark Matter Abundance in Thermal and Nonstandard Histories
 
-This direction is about relic production when the early Universe is not yet a simple thermal bath. In the broader research program, it asks how the dark matter abundance depends on the actual thermal history before, during, or after reheating.
+This direction is about connecting particle-physics models of dark matter to the observed relic abundance. Cosmology measures the dark matter density very precisely, so theoretical predictions should include the relevant microscopic, thermal, and cosmological effects whenever they are important.
+
+There are two complementary branches. One is precision relic-abundance theory in the thermal early Universe. The other is dark matter production in nonstandard histories, where the plasma is not yet fully thermalized or the temperature history differs from the standard radiation-dominated picture.
 
 ## Question
 
-How is dark matter production modified when the plasma is nonthermal, under-occupied, or still thermalizing?
+How do microscopic dark matter interactions and the thermal history of the Universe determine the final relic abundance?
 
-The question is not only which dark matter interaction exists, but also which particles are available to initiate it. Before full equilibrium, the relevant distribution functions can differ substantially from a thermal bath at a single temperature.
+In a thermal plasma, this requires accurate finite-temperature rates, including in-medium effects and bound-state dynamics when they matter. In a nonstandard history, the question also depends on which particles exist before full equilibrium and how their distribution functions differ from a thermal bath.
 
 ## Why it matters
 
-Standard freeze-out and freeze-in calculations are powerful when the bath is thermal. They can miss production channels or timing effects when the bath is still forming. This is especially important for weakly coupled relics, where rare high-energy processes can compete with or dominate thermal reactions.
+The relic abundance is one of the most precise cosmological measurements of particle physics beyond the Standard Model. Matching that precision does not always mean adding formal complexity; it means identifying the physical effects that actually control the abundance in a given model.
+
+For thermal dark matter, this can involve Sommerfeld enhancement, bound-state formation and dissociation, real-time thermal correlators, and non-equilibrium quantum field theory. For nonstandard histories, it can involve late reheating, nonthermal spectra, and production before the plasma has equilibrated.
 
 ## Key ideas
 
-The technical tools overlap with reheating, but the organizing observable is the relic abundance. Late-time reheating changes the expansion and temperature history. Nonthermal spectra change reaction rates. Thermalization-era calculations track freeze-in or freeze-out before the plasma has fully equilibrated. Energetic particle cascades can provide sources for dark-sector production.
+**Precision thermal abundance.** When dark matter is in or near thermal contact with the plasma, the abundance can depend on finite-temperature potentials, in-medium interactions, Sommerfeld enhancement, bound-state formation, bound-state dissociation, and transport coefficients. Real-time thermal correlators provide a way to compute some of these rates without reducing the plasma to vacuum cross sections.
 
-This makes dark matter a diagnostic of the prethermal Universe. The point is not to duplicate the reheating program, but to use the real thermal history as input for relic production.
+**Nonstandard thermal histories.** When the Universe is reheating or still thermalizing, dark matter production can occur before a simple thermal bath exists. Late-time reheating changes the expansion and temperature history; under-occupied or nonthermal spectra change reaction rates; high-energy Standard Model cascades can act as sources for rare dark-sector production. These effects use reheating physics as input, but the organizing observable here is the final dark matter abundance.
 
 ## Representative papers
 
 <div class="record-list" markdown="1">
+
+### Precision thermal abundance
+
+- **[Dark Matter Sommerfeld-enhanced annihilation and Bound-state decay at finite temperature](https://arxiv.org/abs/1808.06472)**  
+  Tobias Binder, Laura Covi, and Kyohei Mukaida  
+  arXiv:1808.06472  
+  Studies how finite-temperature effects modify Sommerfeld-enhanced annihilation and bound-state decay in dark matter abundance calculations.
+
+- **[Rapid bound-state formation of Dark Matter in the Early Universe](https://arxiv.org/abs/1910.11288)**  
+  Tobias Binder, Kyohei Mukaida, and Kalliopi Petraki  
+  arXiv:1910.11288  
+  Shows how efficient bound-state formation can affect the thermal relic abundance when long-range interactions are present.
+
+- **[Non-Abelian Electric Field Correlator at NLO for Dark Matter Relic Abundance and Quarkonium Transport](https://arxiv.org/abs/2107.03945)**  
+  Tobias Binder, Kyohei Mukaida, Bruno Scheihing-Hitschfeld, and Xiaojun Yao  
+  arXiv:2107.03945  
+  Computes a real-time thermal correlator relevant for in-medium bound-state dynamics in dark matter and quarkonium systems.
+
+### Nonstandard thermal histories
 
 - **[Dark Matter Production in Late Time Reheating](https://arxiv.org/abs/1402.2846)**  
   Keisuke Harigaya, Masahiro Kawasaki, Kyohei Mukaida, and Masaki Yamada  
@@ -46,4 +69,4 @@ This makes dark matter a diagnostic of the prethermal Universe. The point is not
 
 ## Current direction
 
-The current direction is to connect dark matter phenomenology to increasingly realistic thermal histories. Reheating and thermalization papers such as [Thermalization after/during Reheating](https://arxiv.org/abs/1312.3097) and [Perturbative reheating and thermalization of pure Yang-Mills plasma](https://arxiv.org/abs/2402.14054) provide the background plasma physics, while this category asks how that background changes the final relic abundance.
+The current direction is to improve the map from microscopic interactions and cosmological histories to the relic abundance. This means combining precision finite-temperature rate calculations with more realistic histories before full equilibrium, so that dark matter constraints can be compared to particle models without assuming more simplicity than the early Universe actually provides.
