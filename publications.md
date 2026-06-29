@@ -67,15 +67,15 @@ It highlights relatively recent published papers that are not already listed abo
   *JCAP 09 080 (2025)*  
   [[arXiv:2504.16069](https://arxiv.org/abs/2504.16069)] [[DOI](https://doi.org/10.1088/1475-7516/2025/09/080)]
 
-- **[NANOGrav Results and LIGO-Virgo Primordial Black Holes in Axionlike Curvaton Models](https://arxiv.org/abs/2011.01270)**  
-  Keisuke Inomata, Masahiro Kawasaki, Kyohei Mukaida, and Tsutomu T. Yanagida  
-  *Phys.Rev.Lett. 126 131301 (2021)*  
-  [[arXiv:2011.01270](https://arxiv.org/abs/2011.01270)] [[DOI](https://doi.org/10.1103/PhysRevLett.126.131301)]
-
 - **[Axion curvaton model for the gravitational waves observed by pulsar timing arrays](https://arxiv.org/abs/2309.11398)**  
   Keisuke Inomata, Masahiro Kawasaki, Kyohei Mukaida, and Tsutomu T. Yanagida  
   *Phys.Rev.D 109 043508 (2024)*  
   [[arXiv:2309.11398](https://arxiv.org/abs/2309.11398)] [[DOI](https://doi.org/10.1103/PhysRevD.109.043508)]
+
+- **[NANOGrav Results and LIGO-Virgo Primordial Black Holes in Axionlike Curvaton Models](https://arxiv.org/abs/2011.01270)**  
+  Keisuke Inomata, Masahiro Kawasaki, Kyohei Mukaida, and Tsutomu T. Yanagida  
+  *Phys.Rev.Lett. 126 131301 (2021)*  
+  [[arXiv:2011.01270](https://arxiv.org/abs/2011.01270)] [[DOI](https://doi.org/10.1103/PhysRevLett.126.131301)]
 
 - **[Cutting rule for in-in correlators and cosmological collider](https://arxiv.org/abs/2409.07521)**  
   Yohei Ema, and Kyohei Mukaida  
