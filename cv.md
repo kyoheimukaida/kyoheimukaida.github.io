@@ -113,7 +113,7 @@ Theoretical particle physics and early-Universe cosmology
 
 - **[No-scale Brans-Dicke Gravity -- ultralight scalar boson & heavy inflaton](https://arxiv.org/abs/2503.18648)**  
   Muzi Hong, Kyohei Mukaida, and Tsutomu T. Yanagida  
-  *arXiv preprint (2025-03-24)*  
+  *JCAP10(2025)032*  
   [[arXiv](https://arxiv.org/abs/2503.18648)] [[DOI](https://doi.org/10.1088/1475-7516/2025/10/032)]
 
 - **[Multilayered Aspects of Casimir Energy](https://arxiv.org/abs/2503.03853)**  
