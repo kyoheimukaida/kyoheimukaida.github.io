@@ -630,14 +630,6 @@ Theoretical particle physics and early-Universe cosmology
 
 </details>
 
-## Grants
-
-* **JSPS KAKENHI Grant-in-Aid for Early-Career Scientists**
-  Project: *Dynamics of the Higgs Field in the Early Universe*
-  Grant number: 22K14044
-
-* **JSPS KAKENHI Grant-in-Aid for Scientific Research (C)**
-  Details to be added.
 
 ## Academic service
 
