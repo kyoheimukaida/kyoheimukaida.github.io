@@ -1,0 +1,62 @@
+[
+  {
+    "source": "KAKEN",
+    "public": true,
+    "funder": "JSPS KAKENHI",
+    "program": "基盤研究(C)",
+    "grant_number": "26K07096",
+    "title_en": "",
+    "title_ja": "標準模型枠内外の電弱相転移における物質量固定の解明",
+    "role": "Principal Investigator",
+    "period": "2026-2030",
+    "start_year": 2026,
+    "end_year": 2030,
+    "url": "https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-26K07096/",
+    "notes_public": ""
+  },
+  {
+    "source": "KAKEN",
+    "public": true,
+    "funder": "JSPS KAKENHI",
+    "program": "若手研究",
+    "grant_number": "22K14044",
+    "title_en": "",
+    "title_ja": "宇宙初期におけるヒッグス場のダイナミクス",
+    "role": "Principal Investigator",
+    "period": "2022-2026",
+    "start_year": 2022,
+    "end_year": 2026,
+    "url": "https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-22K14044/",
+    "notes_public": ""
+  },
+  {
+    "source": "KAKEN",
+    "public": true,
+    "funder": "JSPS KAKENHI",
+    "program": "特別研究員奨励費",
+    "grant_number": "15J07034",
+    "title_en": "",
+    "title_ja": "再加熱過程の精査を中心に初期宇宙の非平衡多体系のダイナミクスを明らかにする",
+    "role": "Principal Investigator",
+    "period": "2015-2018",
+    "start_year": 2015,
+    "end_year": 2018,
+    "url": "https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-15J07034/",
+    "notes_public": ""
+  },
+  {
+    "source": "KAKEN",
+    "public": true,
+    "funder": "JSPS KAKENHI",
+    "program": "特別研究員奨励費",
+    "grant_number": "12J09035",
+    "title_en": "",
+    "title_ja": "非平衡系熱場の理論を用いた素粒子論的宇宙論の統一的理解",
+    "role": "Principal Investigator",
+    "period": "2012-2015",
+    "start_year": 2012,
+    "end_year": 2015,
+    "url": "https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-12J09035/",
+    "notes_public": ""
+  }
+]

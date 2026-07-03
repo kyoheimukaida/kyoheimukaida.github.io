@@ -26,7 +26,24 @@ Theoretical particle physics and early-Universe cosmology
 * [Research](research.md)
 * [Publications](publications.md)
 * [Invited Talks](talks.md)
+* [Grants / Funding](grants.md)
 * [INSPIRE author profile](https://inspirehep.net/authors/1309535)
+
+## Grants / Funding
+
+<!-- cv-grants:start -->
+- **[標準模型枠内外の電弱相転移における物質量固定の解明](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-26K07096/)**  
+  JSPS KAKENHI / 基盤研究(C), Principal Investigator, 2026-2030, Grant No. 26K07096
+
+- **[宇宙初期におけるヒッグス場のダイナミクス](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-22K14044/)**  
+  JSPS KAKENHI / 若手研究, Principal Investigator, 2022-2026, Grant No. 22K14044
+
+- **[再加熱過程の精査を中心に初期宇宙の非平衡多体系のダイナミクスを明らかにする](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-15J07034/)**  
+  JSPS KAKENHI / 特別研究員奨励費, Principal Investigator, 2015-2018, Grant No. 15J07034
+
+- **[非平衡系熱場の理論を用いた素粒子論的宇宙論の統一的理解](https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-12J09035/)**  
+  JSPS KAKENHI / 特別研究員奨励費, Principal Investigator, 2012-2015, Grant No. 12J09035
+<!-- cv-grants:end -->
 
 ## Publication summary
 
@@ -634,4 +651,4 @@ A full CV PDF may be linked here in the future.
 
 ## Generated files
 
-The full publication list and invited talk list are also generated as TeX fragments under `generated/` for use in application documents.
+The full publication list, invited talk list, and grants list are also generated as TeX fragments under `generated/` for use in application documents.
