@@ -7,6 +7,7 @@ import os
 import re
 import urllib.parse
 import urllib.request
+import xml.etree.ElementTree as ET
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
@@ -18,6 +19,10 @@ INSPIRE_QUERY = os.environ.get("INSPIRE_QUERY", "a K.Mukaida.1")
 DATA_DIR = Path("_data")
 HIGHLIGHTS_CACHE = DATA_DIR / "publications_highlights.json"
 SUMMARY_CACHE = DATA_DIR / "paper_summaries.json"
+ARXIV_API_URL = "https://export.arxiv.org/api/query"
+ARXIV_ATOM_NS = "{http://www.w3.org/2005/Atom}"
+ARXIV_NS = "{http://arxiv.org/schemas/atom}"
+ARXIV_METADATA_CACHE: dict[str, dict[str, str]] = {}
 
 SELECTED_START = "<!-- publications-selected:start -->"
 SELECTED_END = "<!-- publications-selected:end -->"
@@ -81,6 +86,52 @@ def normalize_arxiv_id(arxiv_id: str) -> str:
     return re.sub(r"v\d+$", "", arxiv_id.strip())
 
 
+def clean_pubinfo_text(value: str) -> str:
+    return re.sub(r"\s+", " ", value).strip()
+
+
+def arxiv_text(entry: ET.Element, name: str) -> str:
+    element = entry.find(f"{ARXIV_NS}{name}")
+    if element is None or element.text is None:
+        return ""
+    return clean_pubinfo_text(element.text)
+
+
+def fetch_arxiv_metadata(arxiv_id: str) -> dict[str, str]:
+    aid = normalize_arxiv_id(arxiv_id)
+    if not aid:
+        return {}
+
+    if aid in ARXIV_METADATA_CACHE:
+        return ARXIV_METADATA_CACHE[aid]
+
+    metadata: dict[str, str] = {}
+    url = ARXIV_API_URL + "?" + urllib.parse.urlencode({"id_list": aid})
+    req = urllib.request.Request(
+        url,
+        headers={"User-Agent": "kmukaida-publications-arxiv-fallback/1.0"},
+    )
+
+    try:
+        with urllib.request.urlopen(req, timeout=20) as res:
+            root = ET.fromstring(res.read().decode("utf-8"))
+    except Exception:
+        ARXIV_METADATA_CACHE[aid] = metadata
+        return metadata
+
+    entry = root.find(f"{ARXIV_ATOM_NS}entry")
+    if entry is not None:
+        journal_ref = arxiv_text(entry, "journal_ref")
+        doi_value = arxiv_text(entry, "doi")
+        if journal_ref:
+            metadata["journal_ref"] = journal_ref
+        if doi_value:
+            metadata["doi"] = doi_value
+
+    ARXIV_METADATA_CACHE[aid] = metadata
+    return metadata
+
+
 def load_summary_cache(path: Path = SUMMARY_CACHE) -> dict[str, dict[str, Any]]:
     if not path.exists():
         return {}
@@ -110,9 +161,22 @@ def cached_summary(
     return ""
 
 
-def doi(m: dict[str, Any]) -> str:
+def doi_from_inspire(m: dict[str, Any]) -> str:
     xs = m.get("dois", [])
     return str(xs[0].get("value", "")).strip() if xs else ""
+
+
+def doi(m: dict[str, Any]) -> str:
+    value = doi_from_inspire(m)
+    if value:
+        return value
+
+    # If INSPIRE/arXiv already indicates a publication, ask arXiv for a
+    # missing related DOI without failing the whole generator on network errors.
+    if publication_info_line(m):
+        return fetch_arxiv_metadata(arxiv(m)).get("doi", "")
+
+    return ""
 
 
 def recid(m: dict[str, Any]) -> int | None:
@@ -162,34 +226,53 @@ def pubinfo(m: dict[str, Any]) -> list[dict[str, Any]]:
     return [x for x in m.get("publication_info", []) if isinstance(x, dict)]
 
 
-def is_published(m: dict[str, Any]) -> bool:
+def format_pubinfo_item(x: dict[str, Any]) -> str:
+    journal = str(x.get("journal_title", "")).strip()
+    volume = str(x.get("journal_volume", "")).strip()
+    artid = str(x.get("artid") or x.get("page_start") or "").strip()
+    year = str(x.get("year", "")).strip()
+
+    parts = [p for p in [journal, volume, artid] if p]
+    line = " ".join(parts)
+
+    if year:
+        line += f" ({year})"
+
+    return line.strip()
+
+
+def publication_info_line(m: dict[str, Any]) -> str:
     for x in pubinfo(m):
-        journal = str(x.get("journal_title", "")).strip()
-        year = str(x.get("year", "")).strip()
-        volume = str(x.get("journal_volume", "")).strip()
-        artid = str(x.get("artid") or x.get("page_start") or "").strip()
-        if journal and (year or volume or artid):
-            return True
+        line = format_pubinfo_item(x)
+        if line:
+            return line
+
+        freetext = clean_pubinfo_text(str(x.get("pubinfo_freetext", "")))
+        if freetext:
+            return freetext
+
+    return ""
+
+
+def is_published(m: dict[str, Any]) -> bool:
+    if publication_info_line(m):
+        return True
+
+    if doi_from_inspire(m):
+        return bool(fetch_arxiv_metadata(arxiv(m)).get("journal_ref", ""))
+
     return False
 
 
 def journal_line(m: dict[str, Any]) -> str:
-    xs = pubinfo(m)
-    if xs:
-        x = xs[0]
-        journal = str(x.get("journal_title", "")).strip()
-        volume = str(x.get("journal_volume", "")).strip()
-        artid = str(x.get("artid") or x.get("page_start") or "").strip()
-        year = str(x.get("year", "")).strip()
+    line = publication_info_line(m)
+    if line:
+        return line
 
-        parts = [p for p in [journal, volume, artid] if p]
-        line = " ".join(parts)
-
-        if year:
-            line += f" ({year})"
-
-        if line.strip():
-            return line.strip()
+    if doi_from_inspire(m):
+        arxiv_journal_ref = fetch_arxiv_metadata(arxiv(m)).get("journal_ref", "")
+        if arxiv_journal_ref:
+            return arxiv_journal_ref
 
     d = str(m.get("earliest_date", "")).strip()
     return f"arXiv preprint ({d})" if d else "arXiv preprint"
