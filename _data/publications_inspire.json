@@ -95,6 +95,7 @@
             }
           ],
           "citation_count": 0,
+          "citation_count_without_self_citations": 0,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -113,7 +114,6 @@
               "value": "RESCEU-8/26"
             }
           ],
-          "citation_count_without_self_citations": 0,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "references": [
@@ -6983,6 +6983,7 @@
               "journal_title": "JCAP"
             }
           ],
+          "citation_count_without_self_citations": 2,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -6997,7 +6998,6 @@
               "value": "KEK-QUP-2025-0019"
             }
           ],
-          "citation_count_without_self_citations": 2,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -11985,7 +11985,6 @@
               "recid": 2638245
             }
           ],
-          "citation_count": 3,
           "documents": [
             {
               "filename": "document",
@@ -11995,6 +11994,7 @@
               "url": "https://inspirehep.net/files/6bf42bf3fe8c545ad1efa6ed7ee404c7"
             }
           ],
+          "citation_count": 3,
           "publication_info": [
             {
               "journal_volume": "03",
@@ -12007,6 +12007,7 @@
               "journal_title": "JHEP"
             }
           ],
+          "citation_count_without_self_citations": 1,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -12025,7 +12026,6 @@
               "value": "IPMU25-0048"
             }
           ],
-          "citation_count_without_self_citations": 1,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -14477,6 +14477,7 @@
               "journal_title": "Phys.Rev.D"
             }
           ],
+          "citation_count_without_self_citations": 0,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -14487,7 +14488,6 @@
               "value": "IPMU25-0047"
             }
           ],
-          "citation_count_without_self_citations": 0,
           "citeable": true,
           "copyright": [
             {
@@ -24974,7 +24974,6 @@
               "recid": 2638245
             }
           ],
-          "citation_count": 8,
           "documents": [
             {
               "filename": "document",
@@ -24984,6 +24983,7 @@
               "url": "https://inspirehep.net/files/f85bec737aee8e9c7364675d597b7a28"
             }
           ],
+          "citation_count": 8,
           "publication_info": [
             {
               "journal_volume": "01",
@@ -24996,6 +24996,7 @@
               "journal_title": "JHEP"
             }
           ],
+          "citation_count_without_self_citations": 6,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -25006,7 +25007,6 @@
               "value": "IPMU25-0035"
             }
           ],
-          "citation_count_without_self_citations": 6,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -35400,6 +35400,7 @@
               "journal_title": "JCAP"
             }
           ],
+          "citation_count_without_self_citations": 8,
           "report_numbers": [
             {
               "value": "CERN-TH-2025-117"
@@ -35417,7 +35418,6 @@
               "value": "KEK-TH-2731"
             }
           ],
-          "citation_count_without_self_citations": 8,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -49851,6 +49851,7 @@
             }
           ],
           "citation_count": 0,
+          "citation_count_without_self_citations": 0,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -49865,7 +49866,6 @@
               "value": "TU-1245"
             }
           ],
-          "citation_count_without_self_citations": 0,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "references": [
@@ -51791,13 +51791,13 @@
               "journal_title": "JCAP"
             }
           ],
+          "citation_count_without_self_citations": 9,
           "report_numbers": [
             {
               "source": "arXiv",
               "value": "KEK-TH-2692"
             }
           ],
-          "citation_count_without_self_citations": 9,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -55955,7 +55955,6 @@
               "recid": 1309535
             }
           ],
-          "citation_count": 35,
           "documents": [
             {
               "filename": "document",
@@ -55965,6 +55964,7 @@
               "url": "https://inspirehep.net/files/7ae837a3d5936aaed133b00ca78a889f"
             }
           ],
+          "citation_count": 35,
           "publication_info": [
             {
               "journal_volume": "12",
@@ -55977,6 +55977,7 @@
               "journal_title": "JHEP"
             }
           ],
+          "citation_count_without_self_citations": 32,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -55991,7 +55992,6 @@
               "value": "KEK-TH-2653"
             }
           ],
-          "citation_count_without_self_citations": 32,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -59671,6 +59671,7 @@
               "journal_title": "JCAP"
             }
           ],
+          "citation_count_without_self_citations": 10,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -59693,7 +59694,6 @@
               "value": "KEK-Cosmo-0351,\n  KEK-QUP-2024-0018"
             }
           ],
-          "citation_count_without_self_citations": 10,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -61655,6 +61655,7 @@
               "journal_title": "JCAP"
             }
           ],
+          "citation_count_without_self_citations": 6,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -61665,7 +61666,6 @@
               "value": "TU-1234"
             }
           ],
-          "citation_count_without_self_citations": 6,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -64427,7 +64427,6 @@
               "recid": 982946
             }
           ],
-          "citation_count": 11,
           "documents": [
             {
               "filename": "document",
@@ -64437,6 +64436,7 @@
               "url": "https://inspirehep.net/files/3c01c5c2f8f66c57e02eb7b623f3237a"
             }
           ],
+          "citation_count": 11,
           "publication_info": [
             {
               "journal_volume": "05",
@@ -64449,6 +64449,7 @@
               "journal_title": "JHEP"
             }
           ],
+          "citation_count_without_self_citations": 10,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -64459,7 +64460,6 @@
               "value": "TU-1224"
             }
           ],
-          "citation_count_without_self_citations": 10,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -66948,6 +66948,7 @@
               "journal_title": "JCAP"
             }
           ],
+          "citation_count_without_self_citations": 20,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -66962,7 +66963,6 @@
               "value": "CTPU-PTC-24-05"
             }
           ],
-          "citation_count_without_self_citations": 20,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -70235,6 +70235,7 @@
               "journal_title": "Phys.Rev.D"
             }
           ],
+          "citation_count_without_self_citations": 40,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -70245,7 +70246,6 @@
               "value": "KEK-Cosmo-0324"
             }
           ],
-          "citation_count_without_self_citations": 40,
           "citeable": true,
           "copyright": [
             {
@@ -79136,6 +79136,7 @@
               "journal_title": "Phys.Rev.Lett."
             }
           ],
+          "citation_count_without_self_citations": 6,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -79150,7 +79151,6 @@
               "value": "RESCEU-19/23"
             }
           ],
-          "citation_count_without_self_citations": 6,
           "citeable": true,
           "copyright": [
             {
@@ -81711,7 +81711,6 @@
               "recid": 1309535
             }
           ],
-          "citation_count": 16,
           "documents": [
             {
               "filename": "document",
@@ -81721,6 +81720,7 @@
               "url": "https://inspirehep.net/files/99297083908903a0b41d312e066e9cca"
             }
           ],
+          "citation_count": 16,
           "publication_info": [
             {
               "journal_volume": "01",
@@ -81733,6 +81733,7 @@
               "journal_title": "JHEP"
             }
           ],
+          "citation_count_without_self_citations": 12,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -81747,7 +81748,6 @@
               "value": "RESCEU-15/23"
             }
           ],
-          "citation_count_without_self_citations": 12,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -85618,6 +85618,7 @@
               "journal_title": "Phys.Rev.D"
             }
           ],
+          "citation_count_without_self_citations": 9,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -85636,7 +85637,6 @@
               "value": "MS-TP-23-13"
             }
           ],
-          "citation_count_without_self_citations": 9,
           "citeable": true,
           "copyright": [
             {
@@ -90346,6 +90346,7 @@
               "journal_title": "Phys.Rev.D"
             }
           ],
+          "citation_count_without_self_citations": 9,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -90372,7 +90373,6 @@
               "value": "KEK-TH-2498"
             }
           ],
-          "citation_count_without_self_citations": 9,
           "citeable": true,
           "copyright": [
             {
@@ -95157,7 +95157,6 @@
               "recid": 982946
             }
           ],
-          "citation_count": 37,
           "documents": [
             {
               "filename": "document",
@@ -95166,6 +95165,7 @@
               "url": "https://inspirehep.net/files/a7fee4b58c524d81eed80f695406c56a"
             }
           ],
+          "citation_count": 37,
           "publication_info": [
             {
               "journal_volume": "01",
@@ -95178,6 +95178,7 @@
               "journal_title": "JHEP"
             }
           ],
+          "citation_count_without_self_citations": 17,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -95200,7 +95201,6 @@
               "value": "TU-1170"
             }
           ],
-          "citation_count_without_self_citations": 17,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -99380,6 +99380,7 @@
               "journal_title": "JCAP"
             }
           ],
+          "citation_count_without_self_citations": 28,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -99398,7 +99399,6 @@
               "value": "TU-1171"
             }
           ],
-          "citation_count_without_self_citations": 28,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -103848,7 +103848,6 @@
               "recid": 982946
             }
           ],
-          "citation_count": 29,
           "documents": [
             {
               "filename": "document",
@@ -103857,6 +103856,7 @@
               "url": "https://inspirehep.net/files/2e691ee2f867c74e78e6cfb070214528"
             }
           ],
+          "citation_count": 29,
           "publication_info": [
             {
               "journal_volume": "10",
@@ -103869,13 +103869,13 @@
               "journal_title": "JHEP"
             }
           ],
+          "citation_count_without_self_citations": 25,
           "report_numbers": [
             {
               "source": "arXiv",
               "value": "KEK-TH-2443; TU-1165"
             }
           ],
-          "citation_count_without_self_citations": 25,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -107193,7 +107193,6 @@
               "recid": 982946
             }
           ],
-          "citation_count": 32,
           "documents": [
             {
               "filename": "Publication",
@@ -107204,6 +107203,7 @@
               "url": "https://inspirehep.net/files/77a0aeac0bee3709095f4caa85d190fe"
             }
           ],
+          "citation_count": 32,
           "publication_info": [
             {
               "journal_volume": "130",
@@ -107217,6 +107217,7 @@
               "journal_title": "Phys.Rev.Lett."
             }
           ],
+          "citation_count_without_self_citations": 26,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -107239,7 +107240,6 @@
               "value": "TU-1164"
             }
           ],
-          "citation_count_without_self_citations": 26,
           "citeable": true,
           "copyright": [
             {
@@ -111010,13 +111010,13 @@
               "journal_title": "JCAP"
             }
           ],
+          "citation_count_without_self_citations": 8,
           "report_numbers": [
             {
               "source": "arXiv",
               "value": "KEK-TH-2434"
             }
           ],
-          "citation_count_without_self_citations": 8,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -113162,7 +113162,6 @@
               "recid": 1309535
             }
           ],
-          "citation_count": 4,
           "documents": [
             {
               "filename": "document",
@@ -113171,6 +113170,7 @@
               "url": "https://inspirehep.net/files/b025d39dd66d73bb886cc74567553afe"
             }
           ],
+          "citation_count": 4,
           "publication_info": [
             {
               "journal_volume": "09",
@@ -113183,13 +113183,13 @@
               "journal_title": "JHEP"
             }
           ],
+          "citation_count_without_self_citations": 4,
           "report_numbers": [
             {
               "source": "arXiv",
               "value": "KEK-TH-2431"
             }
           ],
-          "citation_count_without_self_citations": 4,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -114764,7 +114764,6 @@
               "recid": 1309535
             }
           ],
-          "citation_count": 19,
           "documents": [
             {
               "filename": "document",
@@ -114773,6 +114772,7 @@
               "url": "https://inspirehep.net/files/9e86e5e23979177ec6dd5b27d31ef2fa"
             }
           ],
+          "citation_count": 19,
           "publication_info": [
             {
               "journal_volume": "08",
@@ -114785,6 +114785,7 @@
               "journal_title": "JHEP"
             }
           ],
+          "citation_count_without_self_citations": 7,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -114795,7 +114796,6 @@
               "value": "KEK-TH-2422"
             }
           ],
-          "citation_count_without_self_citations": 7,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -116617,7 +116617,6 @@
               "recid": 1309535
             }
           ],
-          "citation_count": 6,
           "documents": [
             {
               "filename": "document",
@@ -116626,6 +116625,7 @@
               "url": "https://inspirehep.net/files/f2d50740e6630709066e8d807a78c5f7"
             }
           ],
+          "citation_count": 6,
           "publication_info": [
             {
               "journal_volume": "11",
@@ -116638,6 +116638,7 @@
               "journal_title": "JHEP"
             }
           ],
+          "citation_count_without_self_citations": 6,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -116656,7 +116657,6 @@
               "value": "KEK-TH-2415"
             }
           ],
-          "citation_count_without_self_citations": 6,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -118381,6 +118381,7 @@
               "journal_title": "JCAP"
             }
           ],
+          "citation_count_without_self_citations": 26,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -118391,7 +118392,6 @@
               "value": "KEK-TH-2402"
             }
           ],
-          "citation_count_without_self_citations": 26,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -121714,7 +121714,6 @@
               "recid": 1060297
             }
           ],
-          "citation_count": 34,
           "documents": [
             {
               "filename": "document",
@@ -121723,6 +121722,7 @@
               "url": "https://inspirehep.net/files/aa5c9512e06a9d18fb6dc3c80a2f3b27"
             }
           ],
+          "citation_count": 34,
           "publication_info": [
             {
               "journal_volume": "05",
@@ -121735,6 +121735,7 @@
               "journal_title": "JHEP"
             }
           ],
+          "citation_count_without_self_citations": 24,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -121745,7 +121746,6 @@
               "value": "KEK-TH-2379"
             }
           ],
-          "citation_count_without_self_citations": 24,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -124819,6 +124819,7 @@
               "journal_title": "Phys.Rev.Lett."
             }
           ],
+          "citation_count_without_self_citations": 18,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -124833,7 +124834,6 @@
               "value": "TU-1137"
             }
           ],
-          "citation_count_without_self_citations": 18,
           "citeable": true,
           "copyright": [
             {
@@ -132365,13 +132365,13 @@
               "journal_title": "Phys.Rev.D"
             }
           ],
+          "citation_count_without_self_citations": 9,
           "report_numbers": [
             {
               "source": "arXiv",
               "value": "KEK-TH-2349"
             }
           ],
-          "citation_count_without_self_citations": 9,
           "citeable": true,
           "copyright": [
             {
@@ -134021,7 +134021,6 @@
               "recid": 1470862
             }
           ],
-          "citation_count": 55,
           "documents": [
             {
               "filename": "document",
@@ -134030,6 +134029,7 @@
               "url": "https://inspirehep.net/files/7615e6dca1f1a72b380bb4c4d9687ef6"
             }
           ],
+          "citation_count": 55,
           "publication_info": [
             {
               "journal_volume": "01",
@@ -134042,6 +134042,7 @@
               "journal_title": "JHEP"
             }
           ],
+          "citation_count_without_self_citations": 30,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -134052,7 +134053,6 @@
               "value": "MIT-CTP/5313"
             }
           ],
-          "citation_count_without_self_citations": 30,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -144089,7 +144089,6 @@
               "recid": 1309535
             }
           ],
-          "citation_count": 29,
           "documents": [
             {
               "filename": "scoap",
@@ -144099,6 +144098,7 @@
               "url": "https://inspirehep.net/files/6c10ccdbb2087081cd9ef239f3479124"
             }
           ],
+          "citation_count": 29,
           "publication_info": [
             {
               "journal_volume": "05",
@@ -144111,6 +144111,7 @@
               "journal_title": "JHEP"
             }
           ],
+          "citation_count_without_self_citations": 27,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -144121,7 +144122,6 @@
               "value": "CERN-TH-2021-010"
             }
           ],
-          "citation_count_without_self_citations": 27,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -145776,7 +145776,6 @@
               "recid": 982946
             }
           ],
-          "citation_count": 63,
           "documents": [
             {
               "filename": "scoap3-fulltext.pdf",
@@ -145786,6 +145785,7 @@
               "url": "https://inspirehep.net/files/3e8c3f94d8b7dd86ae971b803628d72b"
             }
           ],
+          "citation_count": 63,
           "publication_info": [
             {
               "journal_volume": "126",
@@ -145800,6 +145800,7 @@
               "journal_title": "Phys.Rev.Lett."
             }
           ],
+          "citation_count_without_self_citations": 44,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -145818,7 +145819,6 @@
               "value": "TU-1112"
             }
           ],
-          "citation_count_without_self_citations": 44,
           "citeable": true,
           "copyright": [
             {
@@ -149251,7 +149251,6 @@
               "recid": 982834
             }
           ],
-          "citation_count": 96,
           "documents": [
             {
               "filename": "10.1103_PhysRevLett.126.131301.pdf",
@@ -149260,6 +149259,7 @@
               "url": "https://inspirehep.net/files/8f7af1fe60a24c8f4558f5c71c1be93c"
             }
           ],
+          "citation_count": 96,
           "publication_info": [
             {
               "journal_volume": "126",
@@ -149274,6 +149274,7 @@
               "journal_title": "Phys.Rev.Lett."
             }
           ],
+          "citation_count_without_self_citations": 85,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -149288,7 +149289,6 @@
               "value": "DESY 20-188"
             }
           ],
-          "citation_count_without_self_citations": 85,
           "citeable": true,
           "copyright": [
             {
@@ -153773,7 +153773,6 @@
               "recid": 1589979
             }
           ],
-          "citation_count": 41,
           "documents": [
             {
               "filename": "scoap",
@@ -153783,6 +153782,7 @@
               "url": "https://inspirehep.net/files/56249f5ae4a02616cf53f76eada06700"
             }
           ],
+          "citation_count": 41,
           "publication_info": [
             {
               "journal_volume": "02",
@@ -153795,6 +153795,7 @@
               "journal_title": "JHEP"
             }
           ],
+          "citation_count_without_self_citations": 34,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -153805,7 +153806,6 @@
               "value": "DESY-20-130"
             }
           ],
-          "citation_count_without_self_citations": 34,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -156388,7 +156388,6 @@
               "recid": 982946
             }
           ],
-          "citation_count": 88,
           "documents": [
             {
               "filename": "scoap",
@@ -156398,6 +156397,7 @@
               "url": "https://inspirehep.net/files/92dd3f1949fcbb248f58fbd112b36fea"
             }
           ],
+          "citation_count": 88,
           "publication_info": [
             {
               "journal_volume": "08",
@@ -156410,6 +156410,7 @@
               "journal_title": "JHEP"
             }
           ],
+          "citation_count_without_self_citations": 75,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -156428,7 +156429,6 @@
               "value": "TU-1102"
             }
           ],
-          "citation_count_without_self_citations": 75,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -158159,6 +158159,7 @@
               "journal_title": "Phys.Rev.D"
             }
           ],
+          "citation_count_without_self_citations": 189,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -158177,7 +158178,6 @@
               "value": "CTPU-PTC-20-05"
             }
           ],
-          "citation_count_without_self_citations": 189,
           "citeable": true,
           "copyright": [
             {
@@ -163758,7 +163758,6 @@
               "recid": 1589979
             }
           ],
-          "citation_count": 43,
           "documents": [
             {
               "filename": "scoap",
@@ -163768,6 +163767,7 @@
               "url": "https://inspirehep.net/files/0cc1dfb47c46266c6f2ad5da5ab8d577"
             }
           ],
+          "citation_count": 43,
           "publication_info": [
             {
               "journal_volume": "11",
@@ -163780,6 +163780,7 @@
               "journal_title": "JHEP"
             }
           ],
+          "citation_count_without_self_citations": 32,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -163790,7 +163791,6 @@
               "value": "DESY-20-031"
             }
           ],
-          "citation_count_without_self_citations": 32,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -166210,7 +166210,6 @@
               "recid": 1309535
             }
           ],
-          "citation_count": 48,
           "documents": [
             {
               "filename": "scoap",
@@ -166220,6 +166219,7 @@
               "url": "https://inspirehep.net/files/90bf3d6810aa1d9b5b97e2952d253451"
             }
           ],
+          "citation_count": 48,
           "publication_info": [
             {
               "journal_volume": "09",
@@ -166232,13 +166232,13 @@
               "journal_title": "JHEP"
             }
           ],
+          "citation_count_without_self_citations": 36,
           "report_numbers": [
             {
               "source": "DESY",
               "value": "DESY-20-022"
             }
           ],
-          "citation_count_without_self_citations": 36,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -172412,7 +172412,6 @@
               "recid": 1050246
             }
           ],
-          "citation_count": 34,
           "documents": [
             {
               "filename": "scoap3-fulltext.pdf",
@@ -172422,6 +172421,7 @@
               "url": "https://inspirehep.net/files/de0b4560d9a425cdd25c7aff3319ae92"
             }
           ],
+          "citation_count": 34,
           "publication_info": [
             {
               "journal_volume": "124",
@@ -172436,6 +172436,7 @@
               "journal_title": "Phys.Rev.Lett."
             }
           ],
+          "citation_count_without_self_citations": 25,
           "report_numbers": [
             {
               "value": "DESY-19-181"
@@ -172444,7 +172445,6 @@
               "value": "IPMU19-0148"
             }
           ],
-          "citation_count_without_self_citations": 25,
           "citeable": true,
           "copyright": [
             {
@@ -177921,7 +177921,6 @@
               "recid": 1309535
             }
           ],
-          "citation_count": 87,
           "documents": [
             {
               "filename": "scoap",
@@ -177931,6 +177930,7 @@
               "url": "https://inspirehep.net/files/7cc64ea413983d2e6940f4158c3fb3b4"
             }
           ],
+          "citation_count": 87,
           "publication_info": [
             {
               "journal_volume": "02",
@@ -177945,6 +177945,7 @@
               "journal_title": "JHEP"
             }
           ],
+          "citation_count_without_self_citations": 74,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -177955,7 +177956,6 @@
               "value": "DESY 19-166"
             }
           ],
-          "citation_count_without_self_citations": 74,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -180320,6 +180320,7 @@
               "journal_title": "JCAP"
             }
           ],
+          "citation_count_without_self_citations": 77,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -180329,7 +180330,6 @@
               "value": "DESY-19-084"
             }
           ],
-          "citation_count_without_self_citations": 77,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -182767,7 +182767,6 @@
               "recid": 982946
             }
           ],
-          "citation_count": 74,
           "documents": [
             {
               "filename": "scoap",
@@ -182777,6 +182776,7 @@
               "url": "https://inspirehep.net/files/3fbb63657c00670136a9eaa2191b91a3"
             }
           ],
+          "citation_count": 74,
           "publication_info": [
             {
               "journal_volume": "07",
@@ -182789,6 +182789,7 @@
               "journal_title": "JHEP"
             }
           ],
+          "citation_count_without_self_citations": 61,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -182799,7 +182800,6 @@
               "value": "DESY-19-014"
             }
           ],
-          "citation_count_without_self_citations": 61,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -184082,7 +184082,6 @@
               "recid": 1069270
             }
           ],
-          "citation_count": 35,
           "documents": [
             {
               "filename": "scoap",
@@ -184092,6 +184091,7 @@
               "url": "https://inspirehep.net/files/cb6a7373fd6a1178a230566a13e37e0e"
             }
           ],
+          "citation_count": 35,
           "publication_info": [
             {
               "journal_volume": "03",
@@ -184106,6 +184106,7 @@
               "journal_title": "JHEP"
             }
           ],
+          "citation_count_without_self_citations": 27,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -184120,7 +184121,6 @@
               "value": "KEK-TH-2090"
             }
           ],
-          "citation_count_without_self_citations": 27,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -185911,7 +185911,6 @@
               "recid": 1309535
             }
           ],
-          "citation_count": 46,
           "documents": [
             {
               "filename": "scoap3-fulltext.pdf",
@@ -185921,6 +185920,7 @@
               "url": "https://inspirehep.net/files/27fe25aa6ac40c83387b60ec0d5e2c7d"
             }
           ],
+          "citation_count": 46,
           "publication_info": [
             {
               "journal_volume": "98",
@@ -185932,12 +185932,12 @@
               "journal_title": "Phys.Rev.D"
             }
           ],
+          "citation_count_without_self_citations": 39,
           "report_numbers": [
             {
               "value": "DESY-18-123"
             }
           ],
-          "citation_count_without_self_citations": 39,
           "citeable": true,
           "copyright": [
             {
@@ -189394,7 +189394,6 @@
               "recid": 982946
             }
           ],
-          "citation_count": 45,
           "documents": [
             {
               "filename": "scoap3-fulltext.pdf",
@@ -189404,6 +189403,7 @@
               "url": "https://inspirehep.net/files/e8ada67ff29e815f3de4f88fdb47966b"
             }
           ],
+          "citation_count": 45,
           "publication_info": [
             {
               "journal_volume": "99",
@@ -189415,6 +189415,7 @@
               "journal_title": "Phys.Rev.D"
             }
           ],
+          "citation_count_without_self_citations": 36,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -189425,7 +189426,6 @@
               "value": "DESY 18-124"
             }
           ],
-          "citation_count_without_self_citations": 36,
           "citeable": true,
           "copyright": [
             {
@@ -191256,6 +191256,7 @@
               "journal_title": "JCAP"
             }
           ],
+          "citation_count_without_self_citations": 115,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -191265,7 +191266,6 @@
               "value": "DESY-18-098"
             }
           ],
-          "citation_count_without_self_citations": 115,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -196008,6 +196008,7 @@
               "journal_title": "Phys.Rev.D"
             }
           ],
+          "citation_count_without_self_citations": 146,
           "report_numbers": [
             {
               "value": "IPMU-17-0158"
@@ -196016,7 +196017,6 @@
               "value": "DESY-17-190"
             }
           ],
-          "citation_count_without_self_citations": 146,
           "citeable": true,
           "copyright": [
             {
@@ -201974,6 +201974,7 @@
               "journal_title": "Phys.Rev.D"
             }
           ],
+          "citation_count_without_self_citations": 116,
           "report_numbers": [
             {
               "value": "IPMU-17-0165"
@@ -201982,7 +201983,6 @@
               "value": "DESY-17-209"
             }
           ],
-          "citation_count_without_self_citations": 116,
           "citeable": true,
           "copyright": [
             {
@@ -207307,12 +207307,12 @@
               "journal_title": "Phys.Rev.D"
             }
           ],
+          "citation_count_without_self_citations": 8,
           "report_numbers": [
             {
               "value": "IPMU-17-0133"
             }
           ],
-          "citation_count_without_self_citations": 8,
           "citeable": true,
           "copyright": [
             {
@@ -213079,6 +213079,7 @@
               "journal_title": "JCAP"
             }
           ],
+          "citation_count_without_self_citations": 15,
           "report_numbers": [
             {
               "value": "UT-17-21"
@@ -213087,7 +213088,6 @@
               "value": "IPMU-17-0090"
             }
           ],
-          "citation_count_without_self_citations": 15,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -216850,12 +216850,12 @@
               "journal_title": "Phys.Rev.D"
             }
           ],
+          "citation_count_without_self_citations": 72,
           "report_numbers": [
             {
               "value": "IPMU-17-0069"
             }
           ],
-          "citation_count_without_self_citations": 72,
           "citeable": true,
           "copyright": [
             {
@@ -227432,7 +227432,6 @@
               "recid": 1274262
             }
           ],
-          "citation_count": 42,
           "documents": [
             {
               "filename": "scoap3-fulltext.pdf",
@@ -227442,6 +227441,7 @@
               "url": "https://inspirehep.net/files/91c80b868b477a473594b945612cec04"
             }
           ],
+          "citation_count": 42,
           "publication_info": [
             {
               "journal_volume": "767",
@@ -227452,6 +227452,7 @@
               "journal_title": "Phys.Lett.B"
             }
           ],
+          "citation_count_without_self_citations": 38,
           "report_numbers": [
             {
               "value": "IPMU17-0008"
@@ -227463,7 +227464,6 @@
               "value": "UT-17-01"
             }
           ],
-          "citation_count_without_self_citations": 38,
           "citeable": true,
           "copyright": [
             {
@@ -230525,12 +230525,12 @@
               "journal_title": "Phys.Rev.D"
             }
           ],
+          "citation_count_without_self_citations": 247,
           "report_numbers": [
             {
               "value": "IPMU17-0009"
             }
           ],
-          "citation_count_without_self_citations": 247,
           "citeable": true,
           "copyright": [
             {
@@ -233455,7 +233455,6 @@
               "recid": 982946
             }
           ],
-          "citation_count": 93,
           "documents": [
             {
               "filename": "scoap",
@@ -233465,6 +233464,7 @@
               "url": "https://inspirehep.net/files/ef5ede74b2b18ebe5d35334d809bbaec"
             }
           ],
+          "citation_count": 93,
           "publication_info": [
             {
               "journal_volume": "03",
@@ -233479,13 +233479,13 @@
               "journal_title": "JHEP"
             }
           ],
+          "citation_count_without_self_citations": 86,
           "report_numbers": [
             {
               "source": "arXiv",
               "value": "IPMU16-0197"
             }
           ],
-          "citation_count_without_self_citations": 86,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -236757,12 +236757,12 @@
               "journal_title": "Phys.Rev.D"
             }
           ],
+          "citation_count_without_self_citations": 233,
           "report_numbers": [
             {
               "value": "IPMU16-0172"
             }
           ],
-          "citation_count_without_self_citations": 233,
           "citeable": true,
           "copyright": [
             {
@@ -243588,7 +243588,6 @@
               "recid": 1198420
             }
           ],
-          "citation_count": 31,
           "documents": [
             {
               "filename": "scoap",
@@ -243598,6 +243597,7 @@
               "url": "https://inspirehep.net/files/dc564e8587dfb12d5d65f4e3dbaf3a72"
             }
           ],
+          "citation_count": 31,
           "publication_info": [
             {
               "journal_volume": "11",
@@ -243610,6 +243610,7 @@
               "journal_title": "JHEP"
             }
           ],
+          "citation_count_without_self_citations": 22,
           "report_numbers": [
             {
               "value": "UT-16-27"
@@ -243621,7 +243622,6 @@
               "value": "KIAS-P16069"
             }
           ],
-          "citation_count_without_self_citations": 22,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -247054,7 +247054,6 @@
               "recid": 1060297
             }
           ],
-          "citation_count": 22,
           "documents": [
             {
               "filename": "scoap3-fulltext.pdf",
@@ -247064,6 +247063,7 @@
               "url": "https://inspirehep.net/files/3251b3acaaccdc82eda5952f83bb8d98"
             }
           ],
+          "citation_count": 22,
           "publication_info": [
             {
               "journal_volume": "761",
@@ -247073,6 +247073,7 @@
               "journal_title": "Phys.Lett.B"
             }
           ],
+          "citation_count_without_self_citations": 21,
           "report_numbers": [
             {
               "value": "UT-16-22"
@@ -247081,7 +247082,6 @@
               "value": "IPMU-16-0075"
             }
           ],
-          "citation_count_without_self_citations": 21,
           "citeable": true,
           "copyright": [
             {
@@ -255269,12 +255269,12 @@
               "journal_title": "Phys.Rev.D"
             }
           ],
+          "citation_count_without_self_citations": 18,
           "report_numbers": [
             {
               "value": "IPMU-16-0072"
             }
           ],
-          "citation_count_without_self_citations": 18,
           "citeable": true,
           "copyright": [
             {
@@ -259734,6 +259734,7 @@
               "journal_title": "Phys.Rev.D"
             }
           ],
+          "citation_count_without_self_citations": 153,
           "report_numbers": [
             {
               "value": "UT-16-20"
@@ -259745,7 +259746,6 @@
               "value": "IPMU-16-0062"
             }
           ],
-          "citation_count_without_self_citations": 153,
           "citeable": true,
           "copyright": [
             {
@@ -261783,7 +261783,6 @@
               "recid": 1074536
             }
           ],
-          "citation_count": 82,
           "documents": [
             {
               "filename": "scoap",
@@ -261793,6 +261792,7 @@
               "url": "https://inspirehep.net/files/4b89b8dbe0a44a4ee8d317afd3485dab"
             }
           ],
+          "citation_count": 82,
           "publication_info": [
             {
               "journal_volume": "11",
@@ -261805,6 +261805,7 @@
               "journal_title": "JHEP"
             }
           ],
+          "citation_count_without_self_citations": 72,
           "report_numbers": [
             {
               "value": "IPMU16-0039"
@@ -261813,7 +261814,6 @@
               "value": "LAPTH-013-16"
             }
           ],
-          "citation_count_without_self_citations": 72,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -275057,7 +275057,6 @@
               "recid": 1060297
             }
           ],
-          "citation_count": 83,
           "documents": [
             {
               "filename": "scoap3-fulltext.pdf",
@@ -275067,6 +275066,7 @@
               "url": "https://inspirehep.net/files/172b62a82f7a8179a0102c366425f503"
             }
           ],
+          "citation_count": 83,
           "publication_info": [
             {
               "journal_volume": "10",
@@ -275079,6 +275079,7 @@
               "journal_title": "JCAP"
             }
           ],
+          "citation_count_without_self_citations": 67,
           "report_numbers": [
             {
               "value": "UT-16-04"
@@ -275087,7 +275088,6 @@
               "value": "IPMU-16-0012"
             }
           ],
-          "citation_count_without_self_citations": 67,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -278234,7 +278234,6 @@
               "recid": 982946
             }
           ],
-          "citation_count": 112,
           "documents": [
             {
               "filename": "10.1088_1475-7516_2016_02_003.pdf",
@@ -278253,6 +278252,7 @@
               "url": "https://inspirehep.net/files/cf541e1877e9bc81efbd31f5595c4649"
             }
           ],
+          "citation_count": 112,
           "publication_info": [
             {
               "journal_volume": "02",
@@ -278266,12 +278266,12 @@
               "journal_title": "JCAP"
             }
           ],
+          "citation_count_without_self_citations": 98,
           "report_numbers": [
             {
               "value": "IPMU-15-0096"
             }
           ],
-          "citation_count_without_self_citations": 98,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -280962,6 +280962,7 @@
               "journal_title": "JCAP"
             }
           ],
+          "citation_count_without_self_citations": 1,
           "report_numbers": [
             {
               "value": "UT-15-19"
@@ -280970,7 +280971,6 @@
               "value": "IPMU-15-0071"
             }
           ],
-          "citation_count_without_self_citations": 1,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -287909,6 +287909,7 @@
               "journal_title": "JCAP"
             }
           ],
+          "citation_count_without_self_citations": 36,
           "report_numbers": [
             {
               "value": "UT-15-15"
@@ -287917,7 +287918,6 @@
               "value": "IPMU-15-0056"
             }
           ],
-          "citation_count_without_self_citations": 36,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -295032,7 +295032,6 @@
               "recid": 1309535
             }
           ],
-          "citation_count": 0,
           "documents": [
             {
               "filename": "document",
@@ -295042,6 +295041,7 @@
               "url": "https://inspirehep.net/files/557db7a1da39629de67e30be4fa7a1c5"
             }
           ],
+          "citation_count": 0,
           "publication_info": [
             {
               "year": 2015
@@ -301235,7 +301235,6 @@
               "recid": 1060297
             }
           ],
-          "citation_count": 143,
           "documents": [
             {
               "filename": "scoap3-fulltext.pdf",
@@ -301245,6 +301244,7 @@
               "url": "https://inspirehep.net/files/b0b3407e36032ee55be5a232a8c98220"
             }
           ],
+          "citation_count": 143,
           "publication_info": [
             {
               "journal_volume": "05",
@@ -301257,12 +301257,12 @@
               "journal_title": "JCAP"
             }
           ],
+          "citation_count_without_self_citations": 114,
           "report_numbers": [
             {
               "value": "UT-15-03"
             }
           ],
-          "citation_count_without_self_citations": 114,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -302224,7 +302224,6 @@
               "recid": 1257925
             }
           ],
-          "citation_count": 30,
           "documents": [
             {
               "filename": "scoap",
@@ -302234,6 +302233,7 @@
               "url": "https://inspirehep.net/files/78e86106af7cbd41c50f3e56c616fa2b"
             }
           ],
+          "citation_count": 30,
           "publication_info": [
             {
               "journal_volume": "11",
@@ -302246,12 +302246,12 @@
               "journal_title": "JHEP"
             }
           ],
+          "citation_count_without_self_citations": 21,
           "report_numbers": [
             {
               "value": "UT-14-31"
             }
           ],
-          "citation_count_without_self_citations": 21,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -305257,7 +305257,6 @@
               "recid": 1257925
             }
           ],
-          "citation_count": 23,
           "documents": [
             {
               "filename": "scoap3-fulltext.pdf",
@@ -305267,6 +305266,7 @@
               "url": "https://inspirehep.net/files/9b437849baf0859d92336cb3497f7f14"
             }
           ],
+          "citation_count": 23,
           "publication_info": [
             {
               "journal_volume": "08",
@@ -305279,12 +305279,12 @@
               "journal_title": "JCAP"
             }
           ],
+          "citation_count_without_self_citations": 20,
           "report_numbers": [
             {
               "value": "UT-14-22"
             }
           ],
-          "citation_count_without_self_citations": 20,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -307124,6 +307124,7 @@
               "journal_title": "Phys.Rev.D"
             }
           ],
+          "citation_count_without_self_citations": 26,
           "report_numbers": [
             {
               "value": "IPMU-14-0093"
@@ -307135,7 +307136,6 @@
               "value": "UT-14-17"
             }
           ],
-          "citation_count_without_self_citations": 26,
           "citeable": true,
           "copyright": [
             {
@@ -310634,7 +310634,6 @@
               "recid": 1060297
             }
           ],
-          "citation_count": 25,
           "documents": [
             {
               "filename": "scoap3-fulltext.pdf",
@@ -310644,6 +310643,7 @@
               "url": "https://inspirehep.net/files/bb08a042ce7c92d018184ddf1694c653"
             }
           ],
+          "citation_count": 25,
           "publication_info": [
             {
               "journal_volume": "08",
@@ -310656,12 +310656,12 @@
               "journal_title": "JCAP"
             }
           ],
+          "citation_count_without_self_citations": 22,
           "report_numbers": [
             {
               "value": "UT-14-15"
             }
           ],
-          "citation_count_without_self_citations": 22,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -312272,6 +312272,7 @@
               "journal_title": "Phys.Rev.D"
             }
           ],
+          "citation_count_without_self_citations": 117,
           "report_numbers": [
             {
               "value": "IPMU-14-0027"
@@ -312283,7 +312284,6 @@
               "value": "UT-14-04"
             }
           ],
-          "citation_count_without_self_citations": 117,
           "citeable": true,
           "copyright": [
             {
@@ -321081,12 +321081,12 @@
               "journal_title": "Phys.Rev.D"
             }
           ],
+          "citation_count_without_self_citations": 7,
           "report_numbers": [
             {
               "value": "UT-14-03"
             }
           ],
-          "citation_count_without_self_citations": 7,
           "citeable": true,
           "copyright": [
             {
@@ -322700,7 +322700,6 @@
               "recid": 1257925
             }
           ],
-          "citation_count": 15,
           "documents": [
             {
               "filename": "scoap3-fulltext.pdf",
@@ -322710,6 +322709,7 @@
               "url": "https://inspirehep.net/files/813d1e29364fe1b529048ac2cd14efd8"
             }
           ],
+          "citation_count": 15,
           "publication_info": [
             {
               "journal_volume": "06",
@@ -322722,12 +322722,12 @@
               "journal_title": "JCAP"
             }
           ],
+          "citation_count_without_self_citations": 10,
           "report_numbers": [
             {
               "value": "UT-14-02"
             }
           ],
-          "citation_count_without_self_citations": 10,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -324440,7 +324440,6 @@
               "recid": 1309535
             }
           ],
-          "citation_count": 157,
           "documents": [
             {
               "filename": "scoap",
@@ -324450,6 +324449,7 @@
               "url": "https://inspirehep.net/files/5cb2970ca0ccd24a9f12430f464e722a"
             }
           ],
+          "citation_count": 157,
           "publication_info": [
             {
               "journal_volume": "05",
@@ -324462,6 +324462,7 @@
               "journal_title": "JHEP"
             }
           ],
+          "citation_count_without_self_citations": 123,
           "report_numbers": [
             {
               "value": "IPMU-13-0233"
@@ -324470,7 +324471,6 @@
               "value": "UT-13-43"
             }
           ],
-          "citation_count_without_self_citations": 123,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -326410,12 +326410,12 @@
               "journal_title": "JCAP"
             }
           ],
+          "citation_count_without_self_citations": 24,
           "report_numbers": [
             {
               "value": "UT-13-36"
             }
           ],
-          "citation_count_without_self_citations": 24,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -333585,12 +333585,12 @@
               "journal_title": "JHEP"
             }
           ],
+          "citation_count_without_self_citations": 41,
           "report_numbers": [
             {
               "value": "UT-13-30"
             }
           ],
-          "citation_count_without_self_citations": 41,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -335762,12 +335762,12 @@
               "journal_title": "JHEP"
             }
           ],
+          "citation_count_without_self_citations": 19,
           "report_numbers": [
             {
               "value": "UT-13-16"
             }
           ],
-          "citation_count_without_self_citations": 19,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -344075,6 +344075,7 @@
               "journal_title": "Phys.Lett.B"
             }
           ],
+          "citation_count_without_self_citations": 23,
           "report_numbers": [
             {
               "value": "UT-13-03"
@@ -344083,7 +344084,6 @@
               "value": "IPMU-13-0024"
             }
           ],
-          "citation_count_without_self_citations": 23,
           "citeable": true,
           "copyright": [
             {
@@ -346121,12 +346121,12 @@
               "journal_title": "JCAP"
             }
           ],
+          "citation_count_without_self_citations": 74,
           "report_numbers": [
             {
               "value": "UT-12-45"
             }
           ],
-          "citation_count_without_self_citations": 74,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -347469,12 +347469,12 @@
               "journal_title": "JCAP"
             }
           ],
+          "citation_count_without_self_citations": 112,
           "report_numbers": [
             {
               "value": "UT-12-28"
             }
           ],
-          "citation_count_without_self_citations": 112,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
@@ -351030,6 +351030,7 @@
               "journal_title": "JHEP"
             }
           ],
+          "citation_count_without_self_citations": 21,
           "report_numbers": [
             {
               "value": "UT-11-39"
@@ -351038,7 +351039,6 @@
               "value": "IPMU-11-0190"
             }
           ],
-          "citation_count_without_self_citations": 21,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "keywords": [
