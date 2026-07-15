@@ -1,43 +1,174 @@
-name: Update talks
+name: Update public talks
 
 on:
   workflow_dispatch:
-  schedule:
-    # Every day at 07:45 JST = 22:45 UTC.
-    - cron: "45 22 * * *"
 
-permissions:
-  contents: write
+  schedule:
+    - cron: "17 8 * * *"
+      timezone: "Asia/Tokyo"
+
+  push:
+    branches:
+      - main
+    paths:
+      - "scripts/update_talks_from_ics.py"
+      - "_data/talks_history.json"
+      - ".github/workflows/update-talks.yml"
+
+concurrency:
+  group: public-talk-calendar-sync
+  cancel-in-progress: false
 
 jobs:
-  update-talks:
+  sync-talks:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
 
     steps:
-      - name: Check out repository
+      - name: Check out main
         uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
-      - name: Update talks from Google Calendar iCal
+      - name: Require the public-talk calendar secret
         env:
           TALKS_ICS_URLS: ${{ secrets.TALKS_ICS_URLS }}
         run: |
-          python scripts/update_talks_from_ics.py
+          if [[ -z "${TALKS_ICS_URLS//[[:space:]]/}" ]]; then
+            echo "TALKS_ICS_URLS is missing or empty; refusing to use cached calendar talks in GitHub Actions."
+            exit 1
+          fi
+
+      - name: Update talks from the public calendar
+        env:
+          TALKS_ICS_URLS: ${{ secrets.TALKS_ICS_URLS }}
+          PYTHONPYCACHEPREFIX: ${{ runner.temp }}/talks-pycache
+        run: |
+          python3 -m py_compile scripts/update_talks_from_ics.py
+          python3 scripts/update_talks_from_ics.py
+
+      - name: Check generated talk files
+        run: |
+          git diff --check
+
+          while IFS='|' read -r file marker; do
+            count="$(grep -Fxc "$marker" "$file" || true)"
+            if [[ "$count" -ne 1 ]]; then
+              echo "Expected exactly one marker in $file: $marker (found $count)."
+              exit 1
+            fi
+          done <<'MARKERS'
+          index.md|<!-- talks:start -->
+          index.md|<!-- talks:end -->
+          talks.md|<!-- talks-auto:start -->
+          talks.md|<!-- talks-auto:end -->
+          MARKERS
+
+          if grep -En '^(<<<<<<<|=======|>>>>>>>)' index.md talks.md; then
+            echo "Merge-conflict markers found in generated talk files."
+            exit 1
+          fi
+
+          mapfile -t modified_files < <(
+            {
+              git diff --name-only
+              git diff --cached --name-only
+              git ls-files --others --exclude-standard
+            } | sort -u
+          )
+
+          for file in "${modified_files[@]}"; do
+            case "$file" in
+              index.md|talks.md) ;;
+              *)
+                echo "Talk generation modified an unexpected file: $file"
+                exit 1
+                ;;
+            esac
+          done
 
       - name: Commit and push if changed
+        id: commit
         run: |
+          git add -- index.md talks.md
+
+          mapfile -t staged_files < <(git diff --cached --name-only)
+          for file in "${staged_files[@]}"; do
+            case "$file" in
+              index.md|talks.md) ;;
+              *)
+                echo "Refusing to commit unexpected staged file: $file"
+                exit 1
+                ;;
+            esac
+          done
+
+          if git diff --cached --quiet; then
+            echo "No public talk update needed."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add index.md talks.md
+          git commit -m "Update public talks from calendar"
+          git pull --rebase origin main
+          git push origin main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
 
-          if git diff --cached --quiet; then
-            echo "No changes to commit."
-          else
-            git commit -m "Update talks"
-            git push
-          fi
+  build-pages:
+    needs: sync-talks
+    if: needs.sync-talks.outputs.changed == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
+
+    steps:
+      - name: Check out updated main
+        uses: actions/checkout@v5
+        with:
+          ref: main
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./_site
+
+  deploy-pages:
+    needs: build-pages
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy GitHub Pages artifact
+        id: deployment
+        uses: actions/deploy-pages@v4

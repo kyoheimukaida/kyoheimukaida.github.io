@@ -60,12 +60,15 @@ def split_ics_urls(raw: str) -> list[str]:
 
 
 def fetch_url(url: str) -> str:
-    request = urllib.request.Request(
-        url,
-        headers={"User-Agent": "kyoheimukaida-github-pages-talks-updater/1.0"},
-    )
-    with urllib.request.urlopen(request, timeout=30) as response:
-        return response.read().decode("utf-8", errors="replace")
+    try:
+        request = urllib.request.Request(
+            url,
+            headers={"User-Agent": "kyoheimukaida-github-pages-talks-updater/1.0"},
+        )
+        with urllib.request.urlopen(request, timeout=30) as response:
+            return response.read().decode("utf-8", errors="replace")
+    except Exception:
+        raise RuntimeError("Failed to fetch a configured talks ICS feed.") from None
 
 
 def unfold_ics_lines(text: str) -> list[str]:
@@ -427,9 +430,6 @@ def dates_compatible(left: TalkEvent, right: TalkEvent) -> bool:
     if len(left_label) == 7 and len(right_label) == 10:
         return right_label.startswith(left_label + "-")
 
-    if len(left_label) == 10 and len(right_label) == 10:
-        return abs((start_sort_key(left.start) - start_sort_key(right.start)).days) <= 7
-
     return False
 
 
@@ -532,6 +532,51 @@ def deduplicate_talks(talks: list[TalkEvent]) -> list[TalkEvent]:
         result.append(talk)
 
     return sort_talks_future_first(result)
+
+
+def normalize_url_for_dedup(url: str) -> str:
+    return re.sub(r"/+$", "", url.strip().lower())
+
+
+def duplicate_sanity_fields(talk: TalkEvent) -> tuple[str, str, str, str, str]:
+    return (
+        date_label_for_dedup(talk),
+        normalize_text_for_dedup(talk.title),
+        normalize_text_for_dedup(talk.event),
+        normalize_text_for_dedup(talk.location),
+        normalize_url_for_dedup(talk.url),
+    )
+
+
+def duplicate_sanity_match(left: TalkEvent, right: TalkEvent) -> bool:
+    """Use date, title, context, and URL evidence to flag residual duplicates."""
+    if duplicate_sanity_fields(left) == duplicate_sanity_fields(right):
+        return True
+
+    if same_talk(left, right):
+        return True
+
+    if not dates_compatible(left, right):
+        return False
+
+    left_url = normalize_url_for_dedup(left.url)
+    right_url = normalize_url_for_dedup(right.url)
+    return bool(
+        left_url
+        and left_url == right_url
+        and title_similarity(left, right) >= 0.58
+    )
+
+
+def validate_no_duplicate_talks(talks: list[TalkEvent]) -> None:
+    for index, left in enumerate(talks):
+        for right in talks[index + 1 :]:
+            if duplicate_sanity_match(left, right):
+                raise RuntimeError(
+                    "Duplicate generated talks remain after deduplication: "
+                    f"{date_label_for_dedup(left)} {left.title!r} and "
+                    f"{date_label_for_dedup(right)} {right.title!r}."
+                )
 
 
 def format_talk(event: TalkEvent) -> str:
@@ -663,6 +708,8 @@ def main() -> int:
         TALKS_END,
         format_talks_for_talks_page(talks, n=500),
     )
+
+    validate_no_duplicate_talks(talks)
 
     print(
         f"Updated talks: {len(talks)} total "
