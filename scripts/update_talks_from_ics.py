@@ -3,16 +3,19 @@
 from __future__ import annotations
 
 import html
+import ipaddress
 import json
 import os
 import re
+import sys
+import unicodedata
 import urllib.request
 from dataclasses import dataclass, replace
 from datetime import date, datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
-from urllib.parse import urlsplit
+from urllib.parse import unquote, urlsplit
 from zoneinfo import ZoneInfo
 
 
@@ -20,6 +23,7 @@ INDEX_PATH = "index.md"
 TALKS_PATH = "talks.md"
 HISTORY_PATH = Path("_data/talks_history.json")
 TALKS_COMBINED_PATH = Path("_data/talks_combined.json")
+TALK_ASSETS_PATH = Path("_data/talk_assets.json")
 
 INDEX_START = "<!-- talks:start -->"
 INDEX_END = "<!-- talks:end -->"
@@ -37,6 +41,8 @@ TAGS = {
 }
 
 URL_PATTERN = re.compile(r"https?://[^\s<>'\"`]+", flags=re.IGNORECASE)
+ASSET_DATE_PATTERN = re.compile(r"\d{4}(?:-\d{2}(?:-\d{2})?)?")
+ALLOWED_ASSET_TYPES = {"slides", "video", "recording", "poster", "notes"}
 
 
 class PlainTextHTMLParser(HTMLParser):
@@ -121,6 +127,25 @@ class PlainTextHTMLParser(HTMLParser):
 
 
 @dataclass(frozen=True)
+class TalkAsset:
+    type: str
+    label: str
+    url: str
+    candidate_id: str = ""
+    sha256: str = ""
+    approved_at: str = ""
+
+
+@dataclass(frozen=True)
+class TalkAssetManifestEntry:
+    date_label: str
+    title: str
+    event: str
+    aliases: tuple[str, ...]
+    assets: tuple[TalkAsset, ...]
+
+
+@dataclass(frozen=True)
 class TalkEvent:
     title: str
     kind: str
@@ -132,6 +157,7 @@ class TalkEvent:
     url: str = ""
     event: str = ""
     source: str = ""
+    assets: tuple[TalkAsset, ...] = ()
 
 
 def format_date(value: datetime | date) -> str:
@@ -311,6 +337,25 @@ def is_configured_ics_feed_url(candidate: str) -> bool:
     )
 
 
+def contains_configured_ics_feed_url(value: str) -> bool:
+    decoded_values = {value, html.unescape(value), unquote(html.unescape(value))}
+    return any(
+        private_url and private_url in decoded
+        for private_url in configured_ics_feed_urls()
+        for decoded in decoded_values
+    )
+
+
+def looks_like_local_path(value: str) -> bool:
+    return bool(
+        re.match(
+            r"^(?:/|~/|\$HOME/|\\\\|[A-Za-z]:[\\/]|file:)",
+            value.strip(),
+            flags=re.IGNORECASE,
+        )
+    )
+
+
 def validate_http_url(candidate: str) -> str:
     candidate = strip_url_punctuation(candidate.strip())
     try:
@@ -325,6 +370,129 @@ def validate_http_url(candidate: str) -> str:
     if is_configured_ics_feed_url(candidate):
         return ""
     return candidate
+
+
+def normalize_text_for_asset_match(value: str) -> str:
+    value = unicodedata.normalize("NFKC", value)
+    value = re.sub(
+        r"\[(?:INVITED|TALK|SEMINAR|LECTURE)\]",
+        " ",
+        value,
+        flags=re.IGNORECASE,
+    )
+    value = value.lower().replace("&", " and ")
+    normalized: list[str] = []
+    for character in value:
+        category = unicodedata.category(character)
+        normalized.append(" " if category.startswith(("P", "S")) else character)
+    return re.sub(r"\s+", " ", "".join(normalized)).strip()
+
+
+def validate_asset_date_label(value: str) -> str:
+    value = value.strip()
+    if not ASSET_DATE_PATTERN.fullmatch(value):
+        raise RuntimeError(
+            "Talk asset date must use YYYY, YYYY-MM, or YYYY-MM-DD."
+        )
+
+    try:
+        if len(value) == 4:
+            date(int(value), 1, 1)
+        elif len(value) == 7:
+            datetime.strptime(value, "%Y-%m")
+        else:
+            datetime.strptime(value, "%Y-%m-%d")
+    except ValueError:
+        raise RuntimeError("Talk asset date is not a valid calendar date.") from None
+    return value
+
+
+def date_labels_compatible_for_assets(left: str, right: str) -> bool:
+    if left == right:
+        return True
+    shorter, longer = sorted((left, right), key=len)
+    if len(shorter) not in {4, 7}:
+        return False
+    return longer.startswith(shorter + "-")
+
+
+def validate_public_asset_url(raw_url: str) -> str:
+    url = raw_url.strip()
+    if not url:
+        return ""
+    if any(
+        character.isspace()
+        or ord(character) < 32
+        or character in "<>\"'`\\"
+        for character in url
+    ):
+        raise ValueError("URL contains unsafe characters")
+
+    if url.startswith("/assets/talk-slides/"):
+        try:
+            parsed = urlsplit(url)
+        except ValueError:
+            raise ValueError("URL could not be parsed") from None
+        path_parts = Path(unquote(parsed.path)).parts
+        if (
+            parsed.scheme
+            or parsed.netloc
+            or parsed.query
+            or parsed.fragment
+            or parsed.path.startswith("//")
+            or ".." in path_parts
+            or not parsed.path.lower().endswith(".pdf")
+            or not re.fullmatch(
+                r"/assets/talk-slides/[a-z0-9][a-z0-9.-]*\.pdf",
+                parsed.path,
+            )
+        ):
+            raise ValueError(
+                "repository slide URL must be a clean /assets/talk-slides/*.pdf path"
+            )
+        return url
+
+    try:
+        parsed = urlsplit(url)
+        hostname = parsed.hostname
+        _port = parsed.port
+    except ValueError:
+        raise ValueError("URL could not be parsed") from None
+
+    if parsed.scheme.lower() != "https" or not parsed.netloc or not hostname:
+        raise ValueError("URL must be an absolute https:// URL")
+    if parsed.username or parsed.password:
+        raise ValueError("URL must not contain embedded credentials")
+    if is_configured_ics_feed_url(url) or contains_configured_ics_feed_url(url):
+        raise ValueError("URL must not be the configured private ICS feed")
+
+    hostname = hostname.rstrip(".").lower()
+    if (
+        hostname == "localhost"
+        or hostname.endswith((".localhost", ".local", ".lan", ".internal"))
+        or "." not in hostname
+    ):
+        raise ValueError("URL must not reference localhost or a LAN host")
+
+    try:
+        address = ipaddress.ip_address(hostname)
+    except ValueError:
+        address = None
+    if address and not address.is_global:
+        raise ValueError("URL must not reference a private or local address")
+
+    lower_url = url.lower()
+    lower_path = parsed.path.lower()
+    if "/calendar/ical/" in lower_url or lower_path.endswith(".ics"):
+        raise ValueError("URL must not be an ICS feed")
+    if hostname.endswith("dropbox.com") and (
+        "/scl/fo/" in lower_path
+        or lower_path.startswith("/sh/")
+        or lower_path.startswith("/home/")
+    ):
+        raise ValueError("Dropbox folder links are not allowed")
+
+    return url
 
 
 def extract_url(description: str, explicit_url: str) -> str:
@@ -733,7 +901,318 @@ def validate_no_duplicate_talks(talks: list[TalkEvent]) -> None:
                 )
 
 
-def format_talk(event: TalkEvent) -> str:
+def warn_talk_asset(message: str) -> None:
+    print(f"Warning: {message}", file=sys.stderr)
+
+
+def load_talk_asset_manifest(
+    path: Path = TALK_ASSETS_PATH,
+) -> list[TalkAssetManifestEntry]:
+    if not path.exists():
+        return []
+
+    try:
+        with path.open("r", encoding="utf-8") as file:
+            payload = json.load(file)
+    except json.JSONDecodeError as error:
+        raise RuntimeError(
+            f"Invalid JSON in {path}: line {error.lineno}, column {error.colno}."
+        ) from None
+
+    if not isinstance(payload, list):
+        raise RuntimeError(f"{path} must contain a JSON array.")
+
+    entries: list[TalkAssetManifestEntry] = []
+    forbidden_path_keys = {"local_path", "path", "source_path"}
+    allowed_entry_keys = {"date", "title", "event", "aliases", "assets"}
+    allowed_asset_keys = {
+        "type",
+        "label",
+        "url",
+        "public",
+        "candidate_id",
+        "sha256",
+        "approved_at",
+    }
+
+    for entry_index, raw_entry in enumerate(payload, start=1):
+        context = f"Talk asset entry {entry_index}"
+        if not isinstance(raw_entry, dict):
+            raise RuntimeError(f"{context} must be a JSON object.")
+        if forbidden_path_keys & set(raw_entry):
+            raise RuntimeError(f"{context} must not contain a local path field.")
+        if set(raw_entry) - allowed_entry_keys:
+            raise RuntimeError(f"{context} contains an unsupported field.")
+
+        raw_date = raw_entry.get("date")
+        raw_title = raw_entry.get("title")
+        if not isinstance(raw_date, str) or not isinstance(raw_title, str):
+            raise RuntimeError(f"{context} requires string date and title fields.")
+        date_label = validate_asset_date_label(raw_date)
+        title = raw_title.strip()
+        if not title:
+            raise RuntimeError(f"{context} title must not be empty.")
+        if looks_like_local_path(title) or contains_configured_ics_feed_url(title):
+            raise RuntimeError(f"{context} title contains private local data.")
+
+        raw_event = raw_entry.get("event", "")
+        if raw_event is None:
+            raw_event = ""
+        if not isinstance(raw_event, str):
+            raise RuntimeError(f"{context} event must be a string.")
+        if (
+            looks_like_local_path(raw_event)
+            or contains_configured_ics_feed_url(raw_event)
+        ):
+            raise RuntimeError(f"{context} event contains private local data.")
+
+        raw_aliases = raw_entry.get("aliases", [])
+        if not isinstance(raw_aliases, list) or not all(
+            isinstance(alias, str) for alias in raw_aliases
+        ):
+            raise RuntimeError(f"{context} aliases must be an array of strings.")
+        aliases = tuple(alias.strip() for alias in raw_aliases if alias.strip())
+        if any(
+            looks_like_local_path(alias) or contains_configured_ics_feed_url(alias)
+            for alias in aliases
+        ):
+            raise RuntimeError(f"{context} alias contains private local data.")
+
+        raw_assets = raw_entry.get("assets", [])
+        if not isinstance(raw_assets, list):
+            raise RuntimeError(f"{context} assets must be a JSON array.")
+
+        public_assets: list[TalkAsset] = []
+        seen_assets: set[tuple[str, str, str]] = set()
+        for asset_index, raw_asset in enumerate(raw_assets, start=1):
+            asset_context = f"{context}, asset {asset_index}"
+            if not isinstance(raw_asset, dict):
+                raise RuntimeError(f"{asset_context} must be a JSON object.")
+            if forbidden_path_keys & set(raw_asset):
+                raise RuntimeError(
+                    f"{asset_context} must not contain a local path field."
+                )
+            if set(raw_asset) - allowed_asset_keys:
+                raise RuntimeError(f"{asset_context} contains an unsupported field.")
+
+            asset_type = raw_asset.get("type")
+            if not isinstance(asset_type, str) or asset_type not in ALLOWED_ASSET_TYPES:
+                allowed = ", ".join(sorted(ALLOWED_ASSET_TYPES))
+                raise RuntimeError(
+                    f"{asset_context} type must be one of: {allowed}."
+                )
+
+            label = raw_asset.get("label", "")
+            url = raw_asset.get("url", "")
+            public = raw_asset.get("public", False)
+            if not isinstance(label, str) or not isinstance(url, str):
+                raise RuntimeError(f"{asset_context} label and url must be strings.")
+            if not isinstance(public, bool):
+                raise RuntimeError(f"{asset_context} public must be true or false.")
+            if looks_like_local_path(label) or contains_configured_ics_feed_url(label):
+                raise RuntimeError(
+                    f"{asset_context} label contains private local data."
+                )
+
+            validated_url = ""
+            if url.strip():
+                try:
+                    validated_url = validate_public_asset_url(url)
+                except ValueError as error:
+                    raise RuntimeError(f"{asset_context}: {error}.") from None
+
+            if not public:
+                continue
+            if not validated_url:
+                warn_talk_asset(
+                    f"{asset_context} is public but has no URL; it will not be shown."
+                )
+                continue
+            if not label.strip():
+                raise RuntimeError(f"{asset_context} public label must not be empty.")
+
+            candidate_id = raw_asset.get("candidate_id", "")
+            sha256 = raw_asset.get("sha256", "")
+            approved_at = raw_asset.get("approved_at", "")
+            if not all(
+                isinstance(value, str)
+                for value in (candidate_id, sha256, approved_at)
+            ):
+                raise RuntimeError(
+                    f"{asset_context} candidate_id, sha256, and approved_at "
+                    "must be strings when present."
+                )
+            if candidate_id and not re.fullmatch(
+                r"TA-\d{4}(?:-\d{2}(?:-\d{2})?)?-[A-F0-9]{4,16}",
+                candidate_id,
+            ):
+                raise RuntimeError(f"{asset_context} candidate_id is invalid.")
+            if sha256 and not re.fullmatch(r"[a-f0-9]{64}", sha256):
+                raise RuntimeError(f"{asset_context} sha256 is invalid.")
+            if approved_at:
+                try:
+                    datetime.fromisoformat(approved_at.replace("Z", "+00:00"))
+                except ValueError:
+                    raise RuntimeError(
+                        f"{asset_context} approved_at is not ISO 8601."
+                    ) from None
+
+            key = (asset_type, label.strip(), validated_url)
+            if key in seen_assets:
+                raise RuntimeError(f"{asset_context} duplicates another public asset.")
+            seen_assets.add(key)
+            public_assets.append(
+                TalkAsset(
+                    type=asset_type,
+                    label=label.strip(),
+                    url=validated_url,
+                    candidate_id=candidate_id,
+                    sha256=sha256,
+                    approved_at=approved_at,
+                )
+            )
+
+        entries.append(
+            TalkAssetManifestEntry(
+                date_label=date_label,
+                title=title,
+                event=raw_event.strip(),
+                aliases=aliases,
+                assets=tuple(public_assets),
+            )
+        )
+
+    return entries
+
+
+def require_unique_asset_match(
+    candidates: list[int],
+    entry: TalkAssetManifestEntry,
+    rule: str,
+) -> int | None:
+    if len(candidates) > 1:
+        raise RuntimeError(
+            "Ambiguous talk asset match for "
+            f"{entry.date_label} {entry.title!r} using {rule}: "
+            f"matched {len(candidates)} talk records."
+        )
+    return candidates[0] if candidates else None
+
+
+def match_talk_asset_entry(
+    entry: TalkAssetManifestEntry,
+    talks: list[TalkEvent],
+) -> int | None:
+    normalized_title = normalize_text_for_asset_match(entry.title)
+
+    if len(entry.date_label) == 10:
+        exact_title = [
+            index
+            for index, talk in enumerate(talks)
+            if date_label_for_dedup(talk) == entry.date_label
+            and normalize_text_for_asset_match(talk.title) == normalized_title
+        ]
+        match = require_unique_asset_match(
+            exact_title,
+            entry,
+            "exact full date and exact title",
+        )
+        if match is not None:
+            return match
+
+        normalized_aliases = {
+            normalize_text_for_asset_match(alias) for alias in entry.aliases
+        }
+        exact_alias = [
+            index
+            for index, talk in enumerate(talks)
+            if date_label_for_dedup(talk) == entry.date_label
+            and normalize_text_for_asset_match(talk.title) in normalized_aliases
+        ]
+        match = require_unique_asset_match(
+            exact_alias,
+            entry,
+            "exact full date and explicit alias",
+        )
+        if match is not None:
+            return match
+
+    compatible = [
+        index
+        for index, talk in enumerate(talks)
+        if date_labels_compatible_for_assets(
+            entry.date_label,
+            date_label_for_dedup(talk),
+        )
+        and normalize_text_for_asset_match(talk.title) == normalized_title
+    ]
+    if len(compatible) > 1 and entry.event:
+        normalized_event = normalize_text_for_asset_match(entry.event)
+        event_matches = [
+            index
+            for index in compatible
+            if normalize_text_for_asset_match(talks[index].event) == normalized_event
+        ]
+        if event_matches:
+            compatible = event_matches
+
+    return require_unique_asset_match(
+        compatible,
+        entry,
+        "compatible date label and exact title",
+    )
+
+
+def attach_public_talk_assets(
+    talks: list[TalkEvent],
+    entries: list[TalkAssetManifestEntry],
+) -> list[TalkEvent]:
+    result = list(talks)
+    matched_talks: dict[int, TalkAssetManifestEntry] = {}
+
+    for entry in entries:
+        if not entry.assets:
+            continue
+        match_index = match_talk_asset_entry(entry, result)
+        if match_index is None:
+            warn_talk_asset(
+                "approved asset did not match a talk record: "
+                f"{entry.date_label} {entry.title!r}."
+            )
+            continue
+        if match_index in matched_talks:
+            previous = matched_talks[match_index]
+            raise RuntimeError(
+                "Multiple manifest entries target the same talk: "
+                f"{previous.date_label} {previous.title!r} and "
+                f"{entry.date_label} {entry.title!r}. "
+                "Combine their assets into one manifest entry."
+            )
+        matched_talks[match_index] = entry
+        result[match_index] = replace(
+            result[match_index],
+            assets=entry.assets,
+        )
+
+    return result
+
+
+def escape_asset_label(label: str) -> str:
+    label = re.sub(r"\s+", " ", label).strip()
+    label = html.escape(label, quote=True)
+    return label.replace("\\", "\\\\").replace("[", "\\[").replace("]", "\\]")
+
+
+def format_talk_asset(asset: TalkAsset) -> str:
+    safe_url = asset.url.replace("(", "%28").replace(")", "%29")
+    return f"[{escape_asset_label(asset.label)}]({safe_url})"
+
+
+def format_talk(
+    event: TalkEvent,
+    *,
+    include_assets: bool = False,
+) -> str:
     date_str = event.date_label or format_date(event.start)
     title = redact_configured_ics_feed_urls(event.title)
     url = validate_http_url(event.url)
@@ -751,7 +1230,12 @@ def format_talk(event: TalkEvent) -> str:
     if event.location:
         details.append(redact_configured_ics_feed_urls(event.location))
 
-    return f"- {title_md}<br>\n  " + ", ".join(details)
+    lines = [f"- {title_md}<br>", "  " + ", ".join(details)]
+    if include_assets and event.assets:
+        lines[-1] += "<br>"
+        links = " · ".join(format_talk_asset(asset) for asset in event.assets)
+        lines.append("  " + links)
+    return "\n".join(lines)
 
 
 def format_talks_for_index(talks: list[TalkEvent], n: int = 3) -> str:
@@ -760,7 +1244,9 @@ def format_talks_for_index(talks: list[TalkEvent], n: int = 3) -> str:
     if not selected:
         return "- No public talks found."
 
-    return "\n\n".join(format_talk(talk) for talk in selected)
+    return "\n\n".join(
+        format_talk(talk, include_assets=False) for talk in selected
+    )
 
 
 def format_talks_for_talks_page(talks: list[TalkEvent], n: int = 500) -> str:
@@ -769,7 +1255,9 @@ def format_talks_for_talks_page(talks: list[TalkEvent], n: int = 500) -> str:
     if not selected:
         return "No public talks found."
 
-    return "\n\n".join(format_talk(talk) for talk in selected)
+    return "\n\n".join(
+        format_talk(talk, include_assets=True) for talk in selected
+    )
 
 
 def load_cached_calendar_talks(path: Path = TALKS_COMBINED_PATH) -> list[TalkEvent]:
@@ -850,6 +1338,8 @@ def main() -> int:
     calendar_talks = fetch_calendar_talks()
     history_talks = load_history_talks()
     talks = deduplicate_talks(calendar_talks + history_talks)
+    validate_no_duplicate_talks(talks)
+    talks = attach_public_talk_assets(talks, load_talk_asset_manifest())
 
     update_block(
         INDEX_PATH,
@@ -864,8 +1354,6 @@ def main() -> int:
         TALKS_END,
         format_talks_for_talks_page(talks, n=500),
     )
-
-    validate_no_duplicate_talks(talks)
 
     print(
         f"Updated talks: {len(talks)} total "

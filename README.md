@@ -19,3 +19,5 @@ The automated data flow is: dedicated public-website Google Calendar → private
 - **Pages setup:** In Settings → Pages → Build and deployment, select **GitHub Actions** as the source so the workflow can deploy the generated artifact.
 
 For troubleshooting, check the `TALKS_ICS_URLS` secret, the Update public talks logs, the generated block markers, duplicate entries (especially calendar/history overlaps), and the GitHub Pages deployment status. The script's cached-calendar fallback is for local development only.
+
+Local Dropbox candidate scanning, one-candidate approval, repository-hosted slide publication, and rollback are documented in [Talk asset operations](docs/talk-assets.md).

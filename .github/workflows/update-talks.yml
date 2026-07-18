@@ -2,6 +2,12 @@ name: Update public talks
 
 on:
   workflow_dispatch:
+    inputs:
+      deploy_pages:
+        description: Deploy Pages even when generated talk files are unchanged
+        required: false
+        type: boolean
+        default: false
 
   schedule:
     - cron: "17 8 * * *"
@@ -13,6 +19,8 @@ on:
     paths:
       - "scripts/update_talks_from_ics.py"
       - "_data/talks_history.json"
+      - "_data/talk_assets.json"
+      - "assets/talk-slides/**"
       - ".github/workflows/update-talks.yml"
 
 concurrency:
@@ -26,6 +34,7 @@ jobs:
       contents: write
     outputs:
       changed: ${{ steps.commit.outputs.changed }}
+      deploy: ${{ steps.deploy.outputs.deploy }}
 
     steps:
       - name: Check out main
@@ -126,9 +135,38 @@ jobs:
           git push origin main
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
+      - name: Decide whether Pages needs deployment
+        id: deploy
+        env:
+          GENERATED_CHANGED: ${{ steps.commit.outputs.changed }}
+          EVENT_NAME: ${{ github.event_name }}
+          BEFORE_SHA: ${{ github.event.before }}
+          TRIGGER_SHA: ${{ github.sha }}
+          FORCE_DEPLOY: ${{ inputs.deploy_pages }}
+        run: |
+          deploy="${GENERATED_CHANGED:-false}"
+
+          if [[ "$EVENT_NAME" == "workflow_dispatch" ]] && [[ "$FORCE_DEPLOY" == "true" ]]; then
+            deploy="true"
+          fi
+
+          if [[ "$EVENT_NAME" == "push" ]]; then
+            if [[ -n "$BEFORE_SHA" ]] && [[ ! "$BEFORE_SHA" =~ ^0+$ ]]; then
+              changed_paths="$(git diff --name-only "$BEFORE_SHA" "$TRIGGER_SHA")"
+            else
+              changed_paths="$(git diff-tree --root --no-commit-id --name-only -r "$TRIGGER_SHA")"
+            fi
+
+            if grep -Eq '^(_data/talk_assets\.json|assets/talk-slides/)' <<<"$changed_paths"; then
+              deploy="true"
+            fi
+          fi
+
+          echo "deploy=$deploy" >> "$GITHUB_OUTPUT"
+
   build-pages:
     needs: sync-talks
-    if: needs.sync-talks.outputs.changed == 'true'
+    if: needs.sync-talks.outputs.deploy == 'true'
     runs-on: ubuntu-latest
     permissions:
       contents: read
