@@ -427,6 +427,15 @@ class PublishTalkAssetTests(unittest.TestCase):
         for relative in ("_data/talk_assets.json", "talks.md", "index.md"):
             self.assertNotIn(private_path, (self.repo / relative).read_text())
 
+    def test_approval_allows_markdown_hard_line_breaks(self) -> None:
+        index_path = self.repo / "index.md"
+        index_path.write_text(
+            index_path.read_text(encoding="utf-8") + "Intentional hard break  \n",
+            encoding="utf-8",
+        )
+        result = self.publisher.approve(str(self.candidate["candidate_id"]))
+        self.assertTrue(result.changed)
+
     def test_unpublish_removes_only_public_copy_and_link(self) -> None:
         approved = self.publisher.approve(str(self.candidate["candidate_id"]))
         destination = self._destination()

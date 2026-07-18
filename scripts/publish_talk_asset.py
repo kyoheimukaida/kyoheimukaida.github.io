@@ -780,7 +780,13 @@ class TalkAssetPublisher:
         if re.search(r"^(?:<<<<<<<|=======|>>>>>>>)", index_text + "\n" + talks_text, re.MULTILINE):
             raise PublicationError("Generated talk files contain merge-conflict markers.")
         for path in (index_path, talks_path, self.repo_root / TALK_ASSETS_PATH):
-            if any(line.rstrip("\r\n").endswith((" ", "\t")) for line in path.read_text(encoding="utf-8").splitlines(keepends=True)):
+            for line in path.read_text(encoding="utf-8").splitlines(keepends=True):
+                content = line.rstrip("\r\n")
+                trailing_match = re.search(r"[ \t]+$", content)
+                if not trailing_match:
+                    continue
+                if path.suffix == ".md" and trailing_match.group() == "  ":
+                    continue
                 raise PublicationError(f"Trailing whitespace found in {path.name}.")
 
         private_fragments = {
