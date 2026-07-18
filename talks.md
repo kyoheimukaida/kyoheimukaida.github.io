@@ -40,8 +40,7 @@ It does not include ordinary meetings, internal schedule items, tentative holds,
   Invited talk, 2025-07, Axions in Stockholm 2025, Stockholm University and Nordita, Stockholm, Sweden
 
 - **Perturbative Reheating and Thermalization**<br>
-  Invited talk, 2025-03, iTHEMS Cosmology Forum No. 3: (P)reheating the Primordial Universe, RIKEN Wako Campus<br>
-  [Slides](/assets/talk-slides/2025-03-perturbative-reheating-and-thermalization.pdf)
+  Invited talk, 2025-03, iTHEMS Cosmology Forum No. 3: (P)reheating the Primordial Universe, RIKEN Wako Campus
 
 - **Cascade of Energetic SM Particles**<br>
   Invited talk, 2025-02, KEK Theory Meeting on Particle Physics Phenomenology (KEK-PH2025winter), KEK, Tsukuba
