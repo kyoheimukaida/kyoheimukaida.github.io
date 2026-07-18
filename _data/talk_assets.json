@@ -14,5 +14,21 @@
         "approved_at": "2026-07-18T17:57:27.625010+00:00"
       }
     ]
+  },
+  {
+    "date": "2023-06",
+    "title": "Hot Spots around Small PBHs",
+    "event": "NEHOP",
+    "assets": [
+      {
+        "type": "slides",
+        "label": "Slides",
+        "url": "/assets/talk-slides/2023-06-hot-spots-around-small-pbhs.pdf",
+        "public": true,
+        "candidate_id": "TA-2023-06-81D2ED2B",
+        "sha256": "510db0f721122f5eb6443d00c057f767120fc9cfa67d4f82b4c9764dc93a574d",
+        "approved_at": "2026-07-18T18:02:01.539642+00:00"
+      }
+    ]
   }
 ]

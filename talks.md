@@ -67,7 +67,8 @@ It does not include ordinary meetings, internal schedule items, tentative holds,
   Invited talk, 2023-08, 27th International Summer Institute on Phenomenology of Elementary Particle Physics and Cosmology, Nantou, Taiwan
 
 - **Hot Spots around Small PBHs**<br>
-  Invited talk, 2023-06, NEHOP, Naples, Italy
+  Invited talk, 2023-06, NEHOP, Naples, Italy<br>
+  [Slides](/assets/talk-slides/2023-06-hot-spots-around-small-pbhs.pdf)
 
 - **Lepton Number Violation & Baryogenesis**<br>
   Invited talk, 2023-03, RCNP研究会「原子核によるバリオン数・レプトン数の物理」, 大阪大学核物理研究センター，大阪
