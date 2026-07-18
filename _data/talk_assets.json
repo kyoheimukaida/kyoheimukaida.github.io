@@ -30,5 +30,21 @@
         "approved_at": "2026-07-18T18:02:01.539642+00:00"
       }
     ]
+  },
+  {
+    "date": "2025-03",
+    "title": "Perturbative Reheating and Thermalization",
+    "event": "iTHEMS Cosmology Forum No. 3: (P)reheating the Primordial Universe",
+    "assets": [
+      {
+        "type": "slides",
+        "label": "Slides",
+        "url": "/assets/talk-slides/2025-03-perturbative-reheating-and-thermalization.pdf",
+        "public": true,
+        "candidate_id": "TA-2025-03-79B7C09A",
+        "sha256": "6ec5909124e5fa20f4045a1956787898e45905654cae2e48e4430a8b1782e5ef",
+        "approved_at": "2026-07-18T18:07:50.068084+00:00"
+      }
+    ]
   }
 ]
