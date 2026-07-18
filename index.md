@@ -77,13 +77,13 @@ For the complete publication list, see my [INSPIRE author profile](https://inspi
 <div class="card-list" markdown="1">
 
 <!-- talks:start -->
-- **[Particle Physics in the Early Universe (talk title TBA)](https://indico.ijclab.in2p3.fr/event/13541/)**  
+- **[Particle Physics in the Early Universe (talk title TBA)](https://indico.ijclab.in2p3.fr/event/13541/)**<br>
   Invited talk, 2026-09-14, Paris/Orsay, France
 
-- **[Quantum crossroads: Interdisciplinary, hybrid workshop at the interface of open quantum systems, high-energy physics, and quantum science (talk title TBA)](https://indico.ipmu.jp/event/519/)**  
+- **[Quantum crossroads: Interdisciplinary, hybrid workshop at the interface of open quantum systems, high-energy physics, and quantum science (talk title TBA)](https://indico.ipmu.jp/event/519/)**<br>
   Invited talk, 2026-08-03, Lecture Hall, Kavli IPMU, The University of Tokyo, Kashiwa Campus
 
-- **[Cutting Rules for In-In correlators & Cosmo Collider Signals](https://indico2.riken.jp/event/5612/timetable/#20260622)**  
+- **[Cutting Rules for In-In correlators & Cosmo Collider Signals](https://indico2.riken.jp/event/5612/timetable/#20260622)**<br>
   Invited talk, 2026-06-22, iTHEMS Cosmology Forum No. 6: Cosmological Collider Physics, Okochi Hall, RIKEN
 <!-- talks:end -->
 

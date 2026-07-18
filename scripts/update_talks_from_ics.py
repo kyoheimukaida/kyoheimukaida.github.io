@@ -2,14 +2,17 @@
 
 from __future__ import annotations
 
+import html
 import json
 import os
 import re
 import urllib.request
 from dataclasses import dataclass, replace
 from datetime import date, datetime, timezone
+from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
+from urllib.parse import urlsplit
 from zoneinfo import ZoneInfo
 
 
@@ -32,6 +35,89 @@ TAGS = {
     "[SEMINAR]": "Seminar",
     "[LECTURE]": "Lecture",
 }
+
+URL_PATTERN = re.compile(r"https?://[^\s<>'\"`]+", flags=re.IGNORECASE)
+
+
+class PlainTextHTMLParser(HTMLParser):
+    BLOCK_TAGS = {
+        "article",
+        "div",
+        "footer",
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6",
+        "header",
+        "li",
+        "ol",
+        "p",
+        "section",
+        "table",
+        "td",
+        "th",
+        "tr",
+        "ul",
+    }
+    IGNORED_TAGS = {"script", "style"}
+
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self.chunks: list[str] = []
+        self.ignored_depth = 0
+
+    def add_newline(self) -> None:
+        if self.chunks and not self.chunks[-1].endswith("\n"):
+            self.chunks.append("\n")
+
+    def handle_starttag(
+        self,
+        tag: str,
+        attrs: list[tuple[str, str | None]],
+    ) -> None:
+        tag = tag.lower()
+        if tag in self.IGNORED_TAGS:
+            self.ignored_depth += 1
+            return
+        if self.ignored_depth:
+            return
+
+        if tag == "br":
+            self.add_newline()
+        elif tag in self.BLOCK_TAGS:
+            self.add_newline()
+        elif tag == "a":
+            href = dict(attrs).get("href")
+            if href and re.match(r"https?://", href.strip(), flags=re.IGNORECASE):
+                self.chunks.append(f" {href.strip()} ")
+
+    def handle_startendtag(
+        self,
+        tag: str,
+        attrs: list[tuple[str, str | None]],
+    ) -> None:
+        self.handle_starttag(tag, attrs)
+        self.handle_endtag(tag)
+
+    def handle_endtag(self, tag: str) -> None:
+        tag = tag.lower()
+        if tag in self.IGNORED_TAGS:
+            if self.ignored_depth:
+                self.ignored_depth -= 1
+            return
+        if self.ignored_depth:
+            return
+        if tag in self.BLOCK_TAGS:
+            self.add_newline()
+
+    def handle_data(self, data: str) -> None:
+        if not self.ignored_depth:
+            self.chunks.append(data)
+
+    def text(self) -> str:
+        return "".join(self.chunks)
 
 
 @dataclass(frozen=True)
@@ -57,6 +143,17 @@ def format_date(value: datetime | date) -> str:
 def split_ics_urls(raw: str) -> list[str]:
     urls = re.split(r"[\n,;]+", raw.strip())
     return [url.strip() for url in urls if url.strip()]
+
+
+def configured_ics_feed_urls() -> list[str]:
+    return split_ics_urls(os.environ.get("TALKS_ICS_URLS", ""))
+
+
+def redact_configured_ics_feed_urls(value: str) -> str:
+    for private_url in configured_ics_feed_urls():
+        value = value.replace(private_url, "")
+        value = value.replace(html.unescape(private_url), "")
+    return value
 
 
 def fetch_url(url: str) -> str:
@@ -90,6 +187,28 @@ def unescape_ics(value: str) -> str:
     value = value.replace("\\n", "\n").replace("\\N", "\n")
     value = value.replace("\\,", ",").replace("\\;", ";").replace("\\\\", "\\")
     return value.strip()
+
+
+def sanitize_ics_text(value: str) -> str:
+    decoded = redact_configured_ics_feed_urls(value)
+    for _ in range(3):
+        unescaped = html.unescape(decoded)
+        if unescaped == decoded:
+            break
+        decoded = unescaped
+    decoded = redact_configured_ics_feed_urls(decoded)
+
+    parser = PlainTextHTMLParser()
+    parser.feed(decoded)
+    parser.close()
+
+    text = redact_configured_ics_feed_urls(parser.text())
+    text = text.replace("\r\n", "\n").replace("\r", "\n")
+    text = text.replace("\N{NO-BREAK SPACE}", " ")
+    text = re.sub(r"[\t\f\v ]+", " ", text)
+    text = re.sub(r" *\n *", "\n", text)
+    text = re.sub(r"\n{3,}", "\n\n", text)
+    return text.strip()
 
 
 def parse_property(line: str) -> tuple[str, dict[str, str], str]:
@@ -156,7 +275,7 @@ def parse_ics_events(text: str) -> list[dict[str, Any]]:
         name, params, value = parse_property(line)
 
         if name in {"SUMMARY", "LOCATION", "DESCRIPTION", "URL"}:
-            current[name] = value
+            current[name] = sanitize_ics_text(value)
         elif name in {"DTSTART", "DTEND"}:
             current[name] = parse_ics_datetime(value, params)
 
@@ -173,19 +292,54 @@ def clean_title_and_kind(summary: str) -> tuple[str, str] | None:
     return None
 
 
-def extract_url(description: str, explicit_url: str) -> str:
-    if explicit_url:
-        return explicit_url.strip()
+def strip_url_punctuation(candidate: str) -> str:
+    candidate = candidate.rstrip(".,;:!?")
+    for opening, closing in (("(", ")"), ("[", "]"), ("{", "}")):
+        while (
+            candidate.endswith(closing)
+            and candidate.count(closing) > candidate.count(opening)
+        ):
+            candidate = candidate[:-1]
+    return candidate
 
-    match = re.search(r"https?://\S+", description)
-    if match:
-        return match.group(0).rstrip(").,;")
+
+def is_configured_ics_feed_url(candidate: str) -> bool:
+    normalized_candidate = candidate.rstrip("/")
+    return any(
+        normalized_candidate == url.rstrip("/")
+        for url in configured_ics_feed_urls()
+    )
+
+
+def validate_http_url(candidate: str) -> str:
+    candidate = strip_url_punctuation(candidate.strip())
+    try:
+        parsed = urlsplit(candidate)
+        if parsed.scheme.lower() not in {"http", "https"}:
+            return ""
+        if not parsed.netloc or parsed.hostname is None:
+            return ""
+    except ValueError:
+        return ""
+
+    if is_configured_ics_feed_url(candidate):
+        return ""
+    return candidate
+
+
+def extract_url(description: str, explicit_url: str) -> str:
+    for raw_value in (explicit_url, description):
+        plain_text = sanitize_ics_text(raw_value)
+        for match in URL_PATTERN.finditer(plain_text):
+            candidate = validate_http_url(match.group(0))
+            if candidate:
+                return candidate
 
     return ""
 
 
 def extract_event_name(description: str) -> str:
-    for line in description.splitlines():
+    for line in sanitize_ics_text(description).splitlines():
         if line.lower().startswith("event:"):
             return line.split(":", 1)[1].strip()
     return ""
@@ -195,7 +349,7 @@ def make_talk_events(events: list[dict[str, Any]]) -> list[TalkEvent]:
     talks: list[TalkEvent] = []
 
     for event in events:
-        summary = str(event.get("SUMMARY", "")).strip()
+        summary = sanitize_ics_text(str(event.get("SUMMARY", "")))
         cleaned = clean_title_and_kind(summary)
 
         if cleaned is None:
@@ -207,8 +361,8 @@ def make_talk_events(events: list[dict[str, Any]]) -> list[TalkEvent]:
         if start is None:
             continue
 
-        description = str(event.get("DESCRIPTION", "")).strip()
-        explicit_url = str(event.get("URL", "")).strip()
+        description = sanitize_ics_text(str(event.get("DESCRIPTION", "")))
+        explicit_url = sanitize_ics_text(str(event.get("URL", "")))
 
         talks.append(
             TalkEvent(
@@ -217,7 +371,7 @@ def make_talk_events(events: list[dict[str, Any]]) -> list[TalkEvent]:
                 start=start,
                 end=event.get("DTEND"),
                 date_label=format_date(start),
-                location=str(event.get("LOCATION", "")).strip(),
+                location=sanitize_ics_text(str(event.get("LOCATION", ""))),
                 description=description,
                 url=extract_url(description, explicit_url),
                 event=extract_event_name(description),
@@ -294,7 +448,7 @@ def history_item_to_talk(item: dict[str, Any]) -> TalkEvent | None:
 
     location = str(item.get("location") or item.get("place") or "").strip()
     event = str(item.get("event") or item.get("conference") or item.get("workshop") or "").strip()
-    url = str(item.get("url") or "").strip()
+    url = extract_url("", str(item.get("url") or ""))
     description = str(item.get("description") or item.get("notes") or "").strip()
 
     return TalkEvent(
@@ -581,21 +735,23 @@ def validate_no_duplicate_talks(talks: list[TalkEvent]) -> None:
 
 def format_talk(event: TalkEvent) -> str:
     date_str = event.date_label or format_date(event.start)
+    title = redact_configured_ics_feed_urls(event.title)
+    url = validate_http_url(event.url)
 
-    if event.url:
-        title_md = f"**[{event.title}]({event.url})**"
+    if url:
+        title_md = f"**[{title}]({url})**"
     else:
-        title_md = f"**{event.title}**"
+        title_md = f"**{title}**"
 
     details: list[str] = [event.kind, date_str]
 
     if event.event:
-        details.append(event.event)
+        details.append(redact_configured_ics_feed_urls(event.event))
 
     if event.location:
-        details.append(event.location)
+        details.append(redact_configured_ics_feed_urls(event.location))
 
-    return f"- {title_md}  \n  " + ", ".join(details)
+    return f"- {title_md}<br>\n  " + ", ".join(details)
 
 
 def format_talks_for_index(talks: list[TalkEvent], n: int = 3) -> str:
@@ -648,7 +804,7 @@ def load_cached_calendar_talks(path: Path = TALKS_COMBINED_PATH) -> list[TalkEve
                 end=None,
                 date_label=date_label,
                 location=str(item.get("location") or "").strip(),
-                url=str(item.get("url") or "").strip(),
+                url=extract_url("", str(item.get("url") or "")),
                 event=str(item.get("event") or "").strip(),
                 source="calendar",
             )
