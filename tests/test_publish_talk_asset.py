@@ -144,6 +144,7 @@ class PublishTalkAssetTests(unittest.TestCase):
             "talk_event": TALK_EVENT,
             "candidate_filename": source_pdf.name,
             "material_filename": source_pdf.name,
+            "parent_folder_name": relative.parent.name,
             "relative_path": str(relative),
             "relative_source_path": str(relative),
             "file_type": "pdf",
@@ -208,6 +209,13 @@ class PublishTalkAssetTests(unittest.TestCase):
         self.assertTrue(result.changed)
         self.assertEqual(result.candidate_id, self.candidate["candidate_id"])
         self.assertTrue(self._destination().exists())
+
+    def test_approval_card_includes_conference_and_parent_folder(self) -> None:
+        card = scanner.format_approval_card(self.candidate)
+        self.assertIn(f"Conference:\n{TALK_EVENT}", card)
+        self.assertIn("Parent folder:\nQUP-workshop", card)
+        self.assertIn("o / ok", card)
+        self.assertIn("publish this candidate to the website", card)
 
     def test_bare_approval_with_multiple_pending_uses_only_surfaced(self) -> None:
         second = self._second_candidate(score=80)

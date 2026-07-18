@@ -1268,6 +1268,21 @@ def surface_review_candidate(
 
 def format_approval_card(candidate: dict[str, object]) -> str:
     candidate_id = safe_console_text(candidate["candidate_id"])
+    conference_name = safe_console_text(
+        candidate.get("talk_event")
+        or candidate.get("conference_directory_evidence")
+        or ""
+    )
+    parent_folder_name = safe_console_text(candidate.get("parent_folder_name", ""))
+    if not parent_folder_name:
+        relative_value = str(
+            candidate.get("relative_source_path")
+            or candidate.get("relative_path")
+            or ""
+        )
+        parent_folder_name = Path(relative_value).parent.name if relative_value else ""
+    if not parent_folder_name:
+        parent_folder_name = "MYTALK_DIR"
     return "\n".join(
         [
             f"[{candidate_id}]",
@@ -1278,8 +1293,14 @@ def format_approval_card(candidate: dict[str, object]) -> str:
             "Date:",
             safe_console_text(candidate["talk_date"]),
             "",
+            "Conference:",
+            conference_name,
+            "",
             "PDF:",
             safe_console_text(candidate["candidate_filename"]),
+            "",
+            "Parent folder:",
+            parent_folder_name,
             "",
             "Cover title:",
             safe_console_text(candidate["cover_title"]),
@@ -1291,7 +1312,7 @@ def format_approval_card(candidate: dict[str, object]) -> str:
             "Surfaced for review",
             "",
             "Reply:",
-            f"{'o / ok':<24} approve this candidate",
+            f"{'o / ok':<24} publish this candidate to the website",
             f"{'n':<24} reject this candidate",
             f"{'hold':<24} hold this candidate",
             f"{'next':<24} surface the next candidate",
@@ -1365,6 +1386,7 @@ def record_for_file(
         "talk_event": talk.event if talk else "",
         "candidate_filename": item.path.name if item.extension == ".pdf" else "",
         "material_filename": item.path.name,
+        "parent_folder_name": item.relative_path.parent.name or "MYTALK_DIR",
         "relative_path": str(item.relative_path),
         "relative_source_path": str(item.relative_path),
         "file_type": item.extension.removeprefix("."),
@@ -1486,7 +1508,9 @@ def write_reports(
         "status",
         "talk_date",
         "talk_title",
+        "talk_event",
         "candidate_filename",
+        "parent_folder_name",
         "relative_path",
         "extracted_cover_title_candidate",
         "first_page_extraction_method",
@@ -1503,7 +1527,9 @@ def write_reports(
         "Status",
         "Talk date",
         "Website talk title",
+        "Candidate conference",
         "Candidate PDF",
+        "Parent folder",
         "Relative path",
         "Extracted cover title",
         "Extraction method",
