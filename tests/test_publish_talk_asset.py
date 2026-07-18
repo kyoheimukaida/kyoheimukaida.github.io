@@ -341,6 +341,40 @@ class PublishTalkAssetTests(unittest.TestCase):
             1,
         )
 
+    def test_scanner_surfaces_three_candidates_per_batch(self) -> None:
+        second = self._second_candidate(score=90)
+        third = self._second_candidate(score=80)
+        fourth = self._second_candidate(score=70)
+        third["candidate_id"] = "TA-2026-07-29-1234ABCD"
+        fourth["candidate_id"] = "TA-2026-07-29-5678EFAB"
+        records = [fourth, second, self.candidate, third]
+        decisions_path = self.repo / ".local/scanner-batch-decisions.json"
+
+        surfaced = scanner.surface_review_candidates(records, {}, decisions_path)
+
+        self.assertEqual(len(surfaced), 3)
+        self.assertEqual(
+            [candidate["candidate_id"] for candidate in surfaced],
+            [
+                self.candidate["candidate_id"],
+                second["candidate_id"],
+                third["candidate_id"],
+            ],
+        )
+        decisions = json.loads(decisions_path.read_text())["decisions"]
+        self.assertEqual(
+            sum(decision["status"] == "surfaced" for decision in decisions.values()),
+            3,
+        )
+
+    def test_batch_approval_card_uses_positioned_replies(self) -> None:
+        card = scanner.format_approval_card(self.candidate, position=2, total=3)
+        self.assertIn(f"[2/3] [{self.candidate['candidate_id']}]", card)
+        self.assertIn("o 2 / ok 2", card)
+        self.assertIn("n 2", card)
+        self.assertIn("hold 2", card)
+        self.assertNotIn("next 2", card)
+
     def test_next_surfaces_next_unsurfaced_candidate(self) -> None:
         second = self._second_candidate(score=80)
         self._write_report([self.candidate, second])

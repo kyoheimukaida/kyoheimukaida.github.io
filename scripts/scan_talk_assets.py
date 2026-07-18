@@ -47,6 +47,7 @@ REPORT_DIRECTORY = Path(".local")
 JSON_REPORT_NAME = "talk-asset-candidates.json"
 MARKDOWN_REPORT_NAME = "talk-asset-candidates.md"
 DECISIONS_REPORT_NAME = "talk-asset-decisions.json"
+REVIEW_BATCH_SIZE = 3
 SUPPORTED_EXTENSIONS = {".pdf", ".pptx", ".key", ".odp"}
 SOURCE_EXTENSIONS = {".pptx", ".key", ".odp"}
 HIGH_CONFIDENCE_THRESHOLD = 75
@@ -1208,11 +1209,15 @@ def review_priority(record: dict[str, object]) -> tuple[int, int, str, str]:
     )
 
 
-def surface_review_candidate(
+def surface_review_candidates(
     records: list[dict[str, object]],
     decisions: dict[str, dict[str, object]],
     decisions_path: Path,
-) -> dict[str, object] | None:
+    *,
+    limit: int = REVIEW_BATCH_SIZE,
+) -> list[dict[str, object]]:
+    if limit <= 0:
+        raise ValueError("Review batch size must be positive.")
     by_id = {
         str(record["candidate_id"]): record
         for record in records
@@ -1223,14 +1228,9 @@ def surface_review_candidate(
         for candidate_id, decision in decisions.items()
         if decision.get("status") == "surfaced"
     ]
-    if len(surfaced_ids) > 1:
-        raise RuntimeError(
-            "Multiple talk-slide candidates are marked surfaced; "
-            "the local decision queue must be repaired."
-        )
-
-    if surfaced_ids:
-        candidate_id = surfaced_ids[0]
+    surfaced: list[dict[str, object]] = []
+    decisions_changed = False
+    for candidate_id in surfaced_ids:
         current = by_id.get(candidate_id)
         if (
             current
@@ -1238,7 +1238,8 @@ def surface_review_candidate(
             and not current.get("already_published")
         ):
             current["status"] = "surfaced"
-            return current
+            surfaced.append(current)
+            continue
         previous = decisions[candidate_id]
         decisions[candidate_id] = {
             **previous,
@@ -1246,6 +1247,7 @@ def surface_review_candidate(
             "updated_at": datetime.now(timezone.utc).isoformat(),
             "reason": "surfaced candidate is no longer an unpublished high-confidence match",
         }
+        decisions_changed = True
 
     unsurfaced = [
         record
@@ -1256,31 +1258,57 @@ def surface_review_candidate(
             "surfaced_at"
         )
     ]
-    if not unsurfaced:
-        if surfaced_ids:
-            write_local_decisions(decisions_path, decisions)
-        return None
+    available_slots = max(0, limit - len(surfaced))
+    unsurfaced.sort(key=review_priority, reverse=True)
+    for candidate in unsurfaced[:available_slots]:
+        candidate_id = str(candidate["candidate_id"])
+        timestamp = datetime.now(timezone.utc).isoformat()
+        decisions[candidate_id] = {
+            "status": "surfaced",
+            "updated_at": timestamp,
+            "surfaced_at": timestamp,
+            "talk_date": str(candidate.get("talk_date", "")),
+            "talk_title_normalized": normalize_text_for_asset_match(
+                str(candidate.get("talk_title", ""))
+            ),
+            "source_sha256": str(candidate.get("source_sha256", "")),
+        }
+        candidate["status"] = "surfaced"
+        surfaced.append(candidate)
+        decisions_changed = True
 
-    candidate = max(unsurfaced, key=review_priority)
-    candidate_id = str(candidate["candidate_id"])
-    timestamp = datetime.now(timezone.utc).isoformat()
-    decisions[candidate_id] = {
-        "status": "surfaced",
-        "updated_at": timestamp,
-        "surfaced_at": timestamp,
-        "talk_date": str(candidate.get("talk_date", "")),
-        "talk_title_normalized": normalize_text_for_asset_match(
-            str(candidate.get("talk_title", ""))
-        ),
-        "source_sha256": str(candidate.get("source_sha256", "")),
-    }
-    candidate["status"] = "surfaced"
-    write_local_decisions(decisions_path, decisions)
-    return candidate
+    if decisions_changed:
+        write_local_decisions(decisions_path, decisions)
+    surfaced.sort(key=review_priority, reverse=True)
+    return surfaced[:limit]
 
 
-def format_approval_card(candidate: dict[str, object]) -> str:
+def surface_review_candidate(
+    records: list[dict[str, object]],
+    decisions: dict[str, dict[str, object]],
+    decisions_path: Path,
+) -> dict[str, object] | None:
+    surfaced = surface_review_candidates(
+        records,
+        decisions,
+        decisions_path,
+        limit=1,
+    )
+    return surfaced[0] if surfaced else None
+
+
+def format_approval_card(
+    candidate: dict[str, object],
+    *,
+    position: int | None = None,
+    total: int | None = None,
+) -> str:
     candidate_id = safe_console_text(candidate["candidate_id"])
+    heading = f"[{candidate_id}]"
+    batch_reference = ""
+    if position is not None and total is not None and total > 1:
+        heading = f"[{position}/{total}] [{candidate_id}]"
+        batch_reference = f" {position}"
     conference_name = safe_console_text(
         candidate.get("talk_event")
         or candidate.get("conference_directory_evidence")
@@ -1296,9 +1324,16 @@ def format_approval_card(candidate: dict[str, object]) -> str:
         parent_folder_name = Path(relative_value).parent.name if relative_value else ""
     if not parent_folder_name:
         parent_folder_name = "MYTALK_DIR"
+    reply_lines = [
+        f"{f'o{batch_reference} / ok{batch_reference}':<24} publish this candidate to the website",
+        f"{f'n{batch_reference}':<24} reject this candidate",
+        f"{f'hold{batch_reference}':<24} hold this candidate",
+    ]
+    if not batch_reference:
+        reply_lines.append(f"{'next':<24} surface the next candidate")
     return "\n".join(
         [
-            f"[{candidate_id}]",
+            heading,
             "",
             "Talk:",
             safe_console_text(candidate["talk_title"]),
@@ -1325,10 +1360,7 @@ def format_approval_card(candidate: dict[str, object]) -> str:
             "Surfaced for review",
             "",
             "Reply:",
-            f"{'o / ok':<24} publish this candidate to the website",
-            f"{'n':<24} reject this candidate",
-            f"{'hold':<24} hold this candidate",
-            f"{'next':<24} surface the next candidate",
+            *reply_lines,
         ]
     )
 
@@ -1659,7 +1691,7 @@ def main() -> int:
                 str(record["relative_path"]).lower(),
             )
         )
-        surfaced_candidate = surface_review_candidate(
+        surfaced_candidates = surface_review_candidates(
             records,
             decisions,
             report_dir / DECISIONS_REPORT_NAME,
@@ -1682,10 +1714,19 @@ def main() -> int:
         f"{summary['pdfs_with_extractable_first_page_text']} with extractable page-one text; "
         f"score bands {safe_console_text(distribution)}."
     )
-    if surfaced_candidate is None:
+    if not surfaced_candidates:
         print("No unsurfaced high-confidence talk-slide candidates found.")
         return 0
-    print(format_approval_card(surfaced_candidate))
+    for position, candidate in enumerate(surfaced_candidates, start=1):
+        if position > 1:
+            print()
+        print(
+            format_approval_card(
+                candidate,
+                position=position,
+                total=len(surfaced_candidates),
+            )
+        )
     return 0
 
 
