@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "date": "2022-11",
+    "title": "Leptoflavorgenesis",
+    "event": "2nd Asian--European Institutes Workshop for BSM and 10th KIAS Workshop on Particle Physics and Cosmology",
+    "assets": [
+      {
+        "type": "slides",
+        "label": "Slides",
+        "url": "/assets/talk-slides/2022-11-leptoflavorgenesis.pdf",
+        "public": true,
+        "candidate_id": "TA-2022-11-3A4AFA6A",
+        "sha256": "56a4b27496576a8141dd9cc9ac9b2a253a14158c45b3b92955062d9bbc0c6bb0",
+        "approved_at": "2026-07-18T17:57:27.625010+00:00"
+      }
+    ]
+  }
+]

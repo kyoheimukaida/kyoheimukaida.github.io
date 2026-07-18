@@ -19,16 +19,13 @@ It does not include ordinary meetings, internal schedule items, tentative holds,
 
 <!-- talks-auto:start -->
 - **[Particle Physics in the Early Universe (talk title TBA)](https://indico.ijclab.in2p3.fr/event/13541/)**<br>
-  Invited talk, 2026-09-14, Particle Physics in the Early Universe, Paris/Orsay, France
+  Invited talk, 2026-09-14, Paris/Orsay, France
 
 - **[Cutting Rules for In-In Correlators & Cosmo Collider Signals](https://indico.ipmu.jp/event/519/)**<br>
-  Invited talk, 2026-08-03, Quantum crossroads: Interdisciplinary, hybrid workshop at the interface of open quantum systems, high-energy physics, and quantum science, Lecture Hall, Kavli IPMU, The University of Tokyo, Kashiwa Campus
-
-- **[Listening for Dark Waves: Light Dark Matter & High-Frequency GWs](https://kds.kek.jp/event/60533/)**<br>
-  Invited talk, 2026-07-29, QUP Building, KEK
+  Invited talk, 2026-08-03, Lecture Hall, Kavli IPMU, The University of Tokyo, Kashiwa Campus
 
 - **[Cutting Rules for In-In correlators & Cosmo Collider Signals](https://indico2.riken.jp/event/5612/timetable/#20260622)**<br>
-  Invited talk, 2026-06-22, iTHEMS Cosmology Forum n°6 - Cosmological Collider Physics, Okochi Hall, RIKEN
+  Invited talk, 2026-06-22, iTHEMS Cosmology Forum No. 6: Cosmological Collider Physics, Okochi Hall, RIKEN
 
 - **Magnetic Helicity, Higgs Winding, and Chiral Asymmetry**<br>
   Invited talk, 2026-02, 2026 CAU Beyond the Standard Model Focus Workshop, Chung-Ang University, Seoul, Korea
@@ -73,7 +70,8 @@ It does not include ordinary meetings, internal schedule items, tentative holds,
   Invited talk, 2023-03, RCNP研究会「原子核によるバリオン数・レプトン数の物理」, 大阪大学核物理研究センター，大阪
 
 - **Leptoflavorgenesis**<br>
-  Invited talk, 2022-11, 2nd Asian--European Institutes Workshop for BSM and 10th KIAS Workshop on Particle Physics and Cosmology, Grand Sumorum, Jeju, Korea
+  Invited talk, 2022-11, 2nd Asian--European Institutes Workshop for BSM and 10th KIAS Workshop on Particle Physics and Cosmology, Grand Sumorum, Jeju, Korea<br>
+  [Slides](/assets/talk-slides/2022-11-leptoflavorgenesis.pdf)
 
 - **Baryon Asymmetry from Lepton Flavor Asymmetry**<br>
   Invited talk, 2022-10, Beyond the Standard Models: Particle Physics Meets Cosmology, IFT UAM--CSIC, Madrid, Spain
