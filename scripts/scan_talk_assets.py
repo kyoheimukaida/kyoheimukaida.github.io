@@ -132,6 +132,8 @@ TOKEN_EXPANSIONS = {
     "axinf": {"axion", "inflation"},
     "axions": {"axion"},
     "axistock": {"axion", "stockholm"},
+    "coll": {"collider"},
+    "cosmo": {"cosmology"},
 }
 MONTH_PATTERN = re.compile(
     r"\b(?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|"
@@ -1014,6 +1016,16 @@ def plausible_talk_scores(item: PresentationFile, talks: list[TalkEvent]) -> lis
     ]
 
 
+def decisive_directory_separation(
+    best_breakdown: dict[str, int],
+    runner_up_breakdown: dict[str, int],
+) -> bool:
+    directory_keys = ("date_path", "event_directory", "location_directory")
+    best_support = sum(best_breakdown.get(key, 0) for key in directory_keys)
+    runner_up_support = sum(runner_up_breakdown.get(key, 0) for key in directory_keys)
+    return best_support >= 10 and best_support >= runner_up_support + 10
+
+
 def best_talk_match(item: PresentationFile, talks: list[TalkEvent]) -> MatchResult | None:
     plausible = plausible_talk_scores(item, talks)
     plausible.sort(
@@ -1034,6 +1046,7 @@ def best_talk_match(item: PresentationFile, talks: list[TalkEvent]) -> MatchResu
         runner_up
         and runner_up.identity_score >= 30
         and runner_up.score >= best.score - 10
+        and not decisive_directory_separation(best.breakdown, runner_up.breakdown)
         and (
             date_label_for_dedup(runner_up.talk),
             normalize_text_for_asset_match(runner_up.talk.title),

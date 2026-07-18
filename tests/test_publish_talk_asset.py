@@ -217,6 +217,24 @@ class PublishTalkAssetTests(unittest.TestCase):
         self.assertIn("o / ok", card)
         self.assertIn("publish this candidate to the website", card)
 
+    def test_abbreviated_conference_folder_matches_event(self) -> None:
+        score, reason = scanner.directory_similarity_score(
+            "iTHEMS Cosmology Forum No. 6: Cosmological Collider Physics",
+            "iTHEMS_cosmo_coll",
+            24,
+            "event",
+        )
+        self.assertGreater(score, 0)
+        self.assertIn("event tokens", reason)
+
+    def test_directory_evidence_breaks_a_tied_title_match(self) -> None:
+        self.assertTrue(
+            scanner.decisive_directory_separation(
+                {"date_path": 0, "event_directory": 10, "location_directory": 0},
+                {"date_path": 0, "event_directory": 0, "location_directory": 0},
+            )
+        )
+
     def test_bare_approval_with_multiple_pending_uses_only_surfaced(self) -> None:
         second = self._second_candidate(score=80)
         self._write_report([self.candidate, second])
