@@ -87,10 +87,10 @@ It highlights relatively recent published papers that are not already listed abo
   *Phys.Rev.Lett. 126 131301 (2021)*  
   [[arXiv:2011.01270](https://arxiv.org/abs/2011.01270)] [[DOI](https://doi.org/10.1103/PhysRevLett.126.131301)]
 
-- **[Formation of hot spots around small primordial black holes](https://arxiv.org/abs/2210.06238)**  
-  Minxi He, Kazunori Kohri, Kyohei Mukaida, and Masaki Yamada  
-  *JCAP 01 027 (2023)*  
-  [[arXiv:2210.06238](https://arxiv.org/abs/2210.06238)] [[DOI](https://doi.org/10.1088/1475-7516/2023/01/027)]
+- **[Wash-in leptogenesis after axion inflation](https://arxiv.org/abs/2210.06412)**  
+  Valerie Domcke, Kohei Kamada, Kyohei Mukaida, Kai Schmitz, and Masaki Yamada  
+  *JHEP 01 053 (2023)*  
+  [[arXiv:2210.06412](https://arxiv.org/abs/2210.06412)] [[DOI](https://doi.org/10.1007/JHEP01(2023)053)]
 <!-- publications-notable:end -->
 
 </div>
