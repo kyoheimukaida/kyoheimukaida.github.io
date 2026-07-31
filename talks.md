@@ -22,7 +22,7 @@ It does not include ordinary meetings, internal schedule items, tentative holds,
   Invited talk, 2026-09-14, Particle Physics in the Early Universe, Paris/Orsay, France
 
 - **[Cutting Rules for In-In Correlators & Cosmo Collider Signals](https://indico.ipmu.jp/event/519/)**<br>
-  Invited talk, 2026-08-07, Quantum Crossroads: Interdisciplinary Workshop at the Interface of Open Quantum Systems, High-Energy Physics, and Quantum Science, Lecture Hall, Kavli IPMU, The University of Tokyo, Kashiwa Campus
+  Invited talk, 2026-08-07, Quantum Crossroads: Interdisciplinary Workshop at the Interface of Open Quantum Systems, High-Energy Physics, and Quantum Science, Ground-floor Lecture Hall, Kavli IPMU, The University of Tokyo, Kashiwa Campus
 
 - **[Cutting Rules for In-In correlators & Cosmo Collider Signals](https://indico2.riken.jp/event/5612/timetable/#20260622)**<br>
   Invited talk, 2026-06-22, iTHEMS Cosmology Forum n°6 - Cosmological Collider Physics, Okochi Hall, RIKEN<br>
