@@ -77,15 +77,15 @@ It highlights relatively recent published papers that are not already listed abo
   *JHEP 12 194 (2024)*  
   [[arXiv:2409.07521](https://arxiv.org/abs/2409.07521)] [[DOI](https://doi.org/10.1007/JHEP12(2024)194)]
 
-- **[Non-Abelian electric field correlator at NLO for dark matter relic abundance and quarkonium transport](https://arxiv.org/abs/2107.03945)**  
-  Tobias Binder, Kyohei Mukaida, Bruno Scheihing-Hitschfeld, and Xiaojun Yao  
-  *JHEP 01 137 (2022)*  
-  [[arXiv:2107.03945](https://arxiv.org/abs/2107.03945)] [[DOI](https://doi.org/10.1007/JHEP01(2022)137)]
-
 - **[NANOGrav Results and LIGO-Virgo Primordial Black Holes in Axionlike Curvaton Models](https://arxiv.org/abs/2011.01270)**  
   Keisuke Inomata, Masahiro Kawasaki, Kyohei Mukaida, and Tsutomu T. Yanagida  
   *Phys.Rev.Lett. 126 131301 (2021)*  
   [[arXiv:2011.01270](https://arxiv.org/abs/2011.01270)] [[DOI](https://doi.org/10.1103/PhysRevLett.126.131301)]
+
+- **[Non-Abelian electric field correlator at NLO for dark matter relic abundance and quarkonium transport](https://arxiv.org/abs/2107.03945)**  
+  Tobias Binder, Kyohei Mukaida, Bruno Scheihing-Hitschfeld, and Xiaojun Yao  
+  *JHEP 01 137 (2022)*  
+  [[arXiv:2107.03945](https://arxiv.org/abs/2107.03945)] [[DOI](https://doi.org/10.1007/JHEP01(2022)137)]
 
 - **[Wash-in leptogenesis after axion inflation](https://arxiv.org/abs/2210.06412)**  
   Valerie Domcke, Kohei Kamada, Kyohei Mukaida, Kai Schmitz, and Masaki Yamada  
