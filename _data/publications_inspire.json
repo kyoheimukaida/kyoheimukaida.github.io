@@ -75,7 +75,6 @@
               "recid": 3132707
             }
           ],
-          "citation_count_without_self_citations": 0,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -95,6 +94,7 @@
             }
           ],
           "citation_count": 0,
+          "citation_count_without_self_citations": 0,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "references": [
@@ -1689,6 +1689,7 @@
           ]
         },
         "updated": "2026-05-26T18:43:52.976089+00:00",
+        "created": "2026-03-09T04:08:05.975961+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/3127292?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/3127292?format=latex-eu",
@@ -1698,8 +1699,7 @@
           "cv": "https://inspirehep.net/api/literature/3127292?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A3127292"
         },
-        "id": "3127292",
-        "created": "2026-03-09T04:08:05.975961+00:00"
+        "id": "3127292"
       },
       {
         "metadata": {
@@ -1778,8 +1778,8 @@
               "recid": 1309535
             }
           ],
-          "citation_count_without_self_citations": 6,
           "citation_count": 6,
+          "citation_count_without_self_citations": 6,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "references": [
@@ -6812,6 +6812,7 @@
           ]
         },
         "updated": "2026-05-26T18:43:53.050845+00:00",
+        "created": "2026-03-03T04:20:43.343896+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/3124678?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/3124678?format=latex-eu",
@@ -6821,8 +6822,7 @@
           "cv": "https://inspirehep.net/api/literature/3124678?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A3124678"
         },
-        "id": "3124678",
-        "created": "2026-03-03T04:20:43.343896+00:00"
+        "id": "3124678"
       },
       {
         "metadata": {
@@ -6977,7 +6977,6 @@
               "recid": 1060297
             }
           ],
-          "citation_count_without_self_citations": 2,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -6993,6 +6992,7 @@
             }
           ],
           "citation_count": 3,
+          "citation_count_without_self_citations": 2,
           "publication_info": [
             {
               "journal_volume": "03",
@@ -11688,6 +11688,7 @@
           "curated": false
         },
         "updated": "2026-05-26T18:43:55.821012+00:00",
+        "created": "2025-10-06T04:04:29.621113+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/3062826?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/3062826?format=latex-eu",
@@ -11697,8 +11698,7 @@
           "cv": "https://inspirehep.net/api/literature/3062826?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A3062826"
         },
-        "id": "3062826",
-        "created": "2025-10-06T04:04:29.621113+00:00"
+        "id": "3062826"
       },
       {
         "metadata": {
@@ -11992,7 +11992,6 @@
               "recid": 2638245
             }
           ],
-          "citation_count_without_self_citations": 1,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -12011,16 +12010,8 @@
               "value": "IPMU25-0048"
             }
           ],
-          "documents": [
-            {
-              "filename": "document",
-              "fulltext": true,
-              "source": "Springer",
-              "key": "6bf42bf3fe8c545ad1efa6ed7ee404c7",
-              "url": "https://inspirehep.net/files/6bf42bf3fe8c545ad1efa6ed7ee404c7"
-            }
-          ],
           "citation_count": 3,
+          "citation_count_without_self_citations": 1,
           "publication_info": [
             {
               "journal_volume": "03",
@@ -12031,6 +12022,15 @@
               },
               "page_start": "127",
               "journal_title": "JHEP"
+            }
+          ],
+          "documents": [
+            {
+              "filename": "document",
+              "fulltext": true,
+              "source": "Springer",
+              "key": "6bf42bf3fe8c545ad1efa6ed7ee404c7",
+              "url": "https://inspirehep.net/files/6bf42bf3fe8c545ad1efa6ed7ee404c7"
             }
           ],
           "citeable": true,
@@ -14276,6 +14276,7 @@
           "curated": true
         },
         "updated": "2026-05-26T18:43:53.972519+00:00",
+        "created": "2025-10-01T04:22:25.492673+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/2983577?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/2983577?format=latex-eu",
@@ -14285,8 +14286,7 @@
           "cv": "https://inspirehep.net/api/literature/2983577?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A2983577"
         },
-        "id": "2983577",
-        "created": "2025-10-01T04:22:25.492673+00:00"
+        "id": "2983577"
       },
       {
         "metadata": {
@@ -14468,7 +14468,6 @@
               "recid": 2638245
             }
           ],
-          "citation_count_without_self_citations": 0,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -14480,6 +14479,7 @@
             }
           ],
           "citation_count": 2,
+          "citation_count_without_self_citations": 0,
           "publication_info": [
             {
               "journal_volume": "113",
@@ -18806,6 +18806,7 @@
           "curated": false
         },
         "updated": "2026-05-26T18:43:54.166595+00:00",
+        "created": "2025-09-30T04:19:38.417295+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/2974385?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/2974385?format=latex-eu",
@@ -18815,8 +18816,7 @@
           "cv": "https://inspirehep.net/api/literature/2974385?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A2974385"
         },
-        "id": "2974385",
-        "created": "2025-09-30T04:19:38.417295+00:00"
+        "id": "2974385"
       },
       {
         "metadata": {
@@ -18978,8 +18978,8 @@
               "recid": 1309535
             }
           ],
-          "citation_count_without_self_citations": 5,
           "citation_count": 6,
+          "citation_count_without_self_citations": 5,
           "publication_info": [
             {
               "journal_volume": "01",
@@ -24772,6 +24772,7 @@
           "curated": false
         },
         "updated": "2026-01-13T11:50:17.560528+00:00",
+        "created": "2025-07-17T04:14:04.659012+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/2947415?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/2947415?format=latex-eu",
@@ -24781,8 +24782,7 @@
           "cv": "https://inspirehep.net/api/literature/2947415?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A2947415"
         },
-        "id": "2947415",
-        "created": "2025-07-17T04:14:04.659012+00:00"
+        "id": "2947415"
       },
       {
         "metadata": {
@@ -24981,7 +24981,6 @@
               "recid": 2638245
             }
           ],
-          "citation_count_without_self_citations": 6,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -24992,16 +24991,8 @@
               "value": "IPMU25-0035"
             }
           ],
-          "documents": [
-            {
-              "filename": "document",
-              "fulltext": true,
-              "source": "Springer",
-              "key": "f85bec737aee8e9c7364675d597b7a28",
-              "url": "https://inspirehep.net/files/f85bec737aee8e9c7364675d597b7a28"
-            }
-          ],
           "citation_count": 8,
+          "citation_count_without_self_citations": 6,
           "publication_info": [
             {
               "journal_volume": "01",
@@ -25012,6 +25003,15 @@
               },
               "page_start": "040",
               "journal_title": "JHEP"
+            }
+          ],
+          "documents": [
+            {
+              "filename": "document",
+              "fulltext": true,
+              "source": "Springer",
+              "key": "f85bec737aee8e9c7364675d597b7a28",
+              "url": "https://inspirehep.net/files/f85bec737aee8e9c7364675d597b7a28"
             }
           ],
           "citeable": true,
@@ -35180,6 +35180,7 @@
           "curated": true
         },
         "updated": "2026-01-09T08:45:45.160497+00:00",
+        "created": "2025-07-03T04:17:05.126300+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/2941337?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/2941337?format=latex-eu",
@@ -35189,8 +35190,7 @@
           "cv": "https://inspirehep.net/api/literature/2941337?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A2941337"
         },
-        "id": "2941337",
-        "created": "2025-07-03T04:17:05.126300+00:00"
+        "id": "2941337"
       },
       {
         "metadata": {
@@ -35395,7 +35395,6 @@
               "recid": 1309535
             }
           ],
-          "citation_count_without_self_citations": 9,
           "report_numbers": [
             {
               "value": "CERN-TH-2025-117"
@@ -35414,6 +35413,7 @@
             }
           ],
           "citation_count": 10,
+          "citation_count_without_self_citations": 9,
           "publication_info": [
             {
               "journal_volume": "01",
@@ -41226,6 +41226,7 @@
           "curated": true
         },
         "updated": "2026-02-09T07:35:25.099595+00:00",
+        "created": "2025-06-23T04:09:46.656731+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/2937211?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/2937211?format=latex-eu",
@@ -41235,8 +41236,7 @@
           "cv": "https://inspirehep.net/api/literature/2937211?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A2937211"
         },
-        "id": "2937211",
-        "created": "2025-06-23T04:09:46.656731+00:00"
+        "id": "2937211"
       },
       {
         "metadata": {
@@ -41370,8 +41370,8 @@
               "recid": 982834
             }
           ],
-          "citation_count_without_self_citations": 2,
           "citation_count": 3,
+          "citation_count_without_self_citations": 2,
           "publication_info": [
             {
               "journal_volume": "870",
@@ -43121,6 +43121,7 @@
           "curated": false
         },
         "updated": "2026-02-18T22:28:02.108750+00:00",
+        "created": "2025-06-04T08:12:49.894198+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/2928683?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/2928683?format=latex-eu",
@@ -43130,8 +43131,7 @@
           "cv": "https://inspirehep.net/api/literature/2928683?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A2928683"
         },
-        "id": "2928683",
-        "created": "2025-06-04T08:12:49.894198+00:00"
+        "id": "2928683"
       },
       {
         "metadata": {
@@ -43283,8 +43283,8 @@
               "recid": 1309535
             }
           ],
-          "citation_count_without_self_citations": 56,
           "citation_count": 57,
+          "citation_count_without_self_citations": 56,
           "publication_info": [
             {
               "journal_volume": "09",
@@ -46460,6 +46460,7 @@
           "curated": false
         },
         "updated": "2025-10-03T04:02:32.836245+00:00",
+        "created": "2025-04-24T04:20:23.586777+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/2914985?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/2914985?format=latex-eu",
@@ -46469,8 +46470,7 @@
           "cv": "https://inspirehep.net/api/literature/2914985?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A2914985"
         },
-        "id": "2914985",
-        "created": "2025-04-24T04:20:23.586777+00:00"
+        "id": "2914985"
       },
       {
         "metadata": {
@@ -46596,8 +46596,8 @@
               "recid": 982834
             }
           ],
-          "citation_count_without_self_citations": 5,
           "citation_count": 6,
+          "citation_count_without_self_citations": 5,
           "publication_info": [
             {
               "pubinfo_freetext": "JCAP10(2025)032",
@@ -49677,6 +49677,7 @@
           "curated": true
         },
         "updated": "2026-02-11T04:04:45.236483+00:00",
+        "created": "2025-03-25T04:24:00.806520+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/2903392?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/2903392?format=latex-eu",
@@ -49686,8 +49687,7 @@
           "cv": "https://inspirehep.net/api/literature/2903392?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A2903392"
         },
-        "id": "2903392",
-        "created": "2025-03-25T04:24:00.806520+00:00"
+        "id": "2903392"
       },
       {
         "metadata": {
@@ -49802,7 +49802,6 @@
               "recid": 1060297
             }
           ],
-          "citation_count_without_self_citations": 0,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -49818,6 +49817,7 @@
             }
           ],
           "citation_count": 0,
+          "citation_count_without_self_citations": 0,
           "citeable": true,
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
           "references": [
@@ -51544,6 +51544,7 @@
           ]
         },
         "updated": "2026-04-02T12:47:43.219486+00:00",
+        "created": "2025-03-07T04:14:46.978183+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/2897402?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/2897402?format=latex-eu",
@@ -51553,8 +51554,7 @@
           "cv": "https://inspirehep.net/api/literature/2897402?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A2897402"
         },
-        "id": "2897402",
-        "created": "2025-03-07T04:14:46.978183+00:00"
+        "id": "2897402"
       },
       {
         "metadata": {
@@ -51700,7 +51700,6 @@
               "recid": 2897307
             }
           ],
-          "citation_count_without_self_citations": 9,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -51708,6 +51707,7 @@
             }
           ],
           "citation_count": 10,
+          "citation_count_without_self_citations": 9,
           "publication_info": [
             {
               "journal_volume": "07",
@@ -55746,6 +55746,7 @@
           "curated": false
         },
         "updated": "2025-08-06T04:20:41.195328+00:00",
+        "created": "2025-03-04T04:18:47.529276+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/2896243?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/2896243?format=latex-eu",
@@ -55755,8 +55756,7 @@
           "cv": "https://inspirehep.net/api/literature/2896243?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A2896243"
         },
-        "id": "2896243",
-        "created": "2025-03-04T04:18:47.529276+00:00"
+        "id": "2896243"
       },
       {
         "metadata": {
@@ -55867,7 +55867,6 @@
               "recid": 1309535
             }
           ],
-          "citation_count_without_self_citations": 33,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -55882,16 +55881,8 @@
               "value": "KEK-TH-2653"
             }
           ],
-          "documents": [
-            {
-              "filename": "document",
-              "fulltext": true,
-              "source": "Springer",
-              "key": "7ae837a3d5936aaed133b00ca78a889f",
-              "url": "https://inspirehep.net/files/7ae837a3d5936aaed133b00ca78a889f"
-            }
-          ],
           "citation_count": 36,
+          "citation_count_without_self_citations": 33,
           "publication_info": [
             {
               "journal_volume": "12",
@@ -55902,6 +55893,15 @@
               },
               "page_start": "194",
               "journal_title": "JHEP"
+            }
+          ],
+          "documents": [
+            {
+              "filename": "document",
+              "fulltext": true,
+              "source": "Springer",
+              "key": "7ae837a3d5936aaed133b00ca78a889f",
+              "url": "https://inspirehep.net/files/7ae837a3d5936aaed133b00ca78a889f"
             }
           ],
           "citeable": true,
@@ -59386,6 +59386,7 @@
           "curated": false
         },
         "updated": "2025-08-06T04:20:42.194672+00:00",
+        "created": "2024-09-13T04:17:28.697521+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/2827677?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/2827677?format=latex-eu",
@@ -59395,8 +59396,7 @@
           "cv": "https://inspirehep.net/api/literature/2827677?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A2827677"
         },
-        "id": "2827677",
-        "created": "2024-09-13T04:17:28.697521+00:00"
+        "id": "2827677"
       },
       {
         "metadata": {
@@ -59570,7 +59570,6 @@
               "recid": 982946
             }
           ],
-          "citation_count_without_self_citations": 10,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -59594,6 +59593,7 @@
             }
           ],
           "citation_count": 13,
+          "citation_count_without_self_citations": 10,
           "publication_info": [
             {
               "journal_volume": "10",
@@ -61380,6 +61380,7 @@
           "curated": false
         },
         "updated": "2026-06-19T13:20:44.855279+00:00",
+        "created": "2024-07-24T04:25:36.645870+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/2810388?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/2810388?format=latex-eu",
@@ -61389,8 +61390,7 @@
           "cv": "https://inspirehep.net/api/literature/2810388?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A2810388"
         },
-        "id": "2810388",
-        "created": "2024-07-24T04:25:36.645870+00:00"
+        "id": "2810388"
       },
       {
         "metadata": {
@@ -61554,7 +61554,6 @@
               "recid": 982946
             }
           ],
-          "citation_count_without_self_citations": 6,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -61566,6 +61565,7 @@
             }
           ],
           "citation_count": 6,
+          "citation_count_without_self_citations": 6,
           "publication_info": [
             {
               "journal_volume": "09",
@@ -64211,6 +64211,7 @@
           "curated": false
         },
         "updated": "2026-06-19T13:20:34.226890+00:00",
+        "created": "2024-05-24T03:49:02.953435+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/2789266?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/2789266?format=latex-eu",
@@ -64220,8 +64221,7 @@
           "cv": "https://inspirehep.net/api/literature/2789266?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A2789266"
         },
-        "id": "2789266",
-        "created": "2024-05-24T03:49:02.953435+00:00"
+        "id": "2789266"
       },
       {
         "metadata": {
@@ -64339,7 +64339,6 @@
               "recid": 982946
             }
           ],
-          "citation_count_without_self_citations": 11,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -64350,16 +64349,8 @@
               "value": "TU-1224"
             }
           ],
-          "documents": [
-            {
-              "filename": "document",
-              "fulltext": true,
-              "source": "Springer",
-              "key": "3c01c5c2f8f66c57e02eb7b623f3237a",
-              "url": "https://inspirehep.net/files/3c01c5c2f8f66c57e02eb7b623f3237a"
-            }
-          ],
           "citation_count": 12,
+          "citation_count_without_self_citations": 11,
           "publication_info": [
             {
               "journal_volume": "05",
@@ -64370,6 +64361,15 @@
               },
               "page_start": "174",
               "journal_title": "JHEP"
+            }
+          ],
+          "documents": [
+            {
+              "filename": "document",
+              "fulltext": true,
+              "source": "Springer",
+              "key": "3c01c5c2f8f66c57e02eb7b623f3237a",
+              "url": "https://inspirehep.net/files/3c01c5c2f8f66c57e02eb7b623f3237a"
             }
           ],
           "citeable": true,
@@ -66683,6 +66683,7 @@
           "curated": false
         },
         "updated": "2026-06-19T13:20:35.922592+00:00",
+        "created": "2024-02-23T03:50:01.457520+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/2760880?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/2760880?format=latex-eu",
@@ -66692,8 +66693,7 @@
           "cv": "https://inspirehep.net/api/literature/2760880?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A2760880"
         },
-        "id": "2760880",
-        "created": "2024-02-23T03:50:01.457520+00:00"
+        "id": "2760880"
       },
       {
         "metadata": {
@@ -66825,7 +66825,6 @@
               "recid": 1309535
             }
           ],
-          "citation_count_without_self_citations": 21,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -66841,6 +66840,7 @@
             }
           ],
           "citation_count": 23,
+          "citation_count_without_self_citations": 21,
           "publication_info": [
             {
               "journal_volume": "05",
@@ -69866,6 +69866,7 @@
           "curated": true
         },
         "updated": "2025-08-06T04:20:40.198740+00:00",
+        "created": "2024-02-09T03:42:58.804199+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/2756735?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/2756735?format=latex-eu",
@@ -69875,8 +69876,7 @@
           "cv": "https://inspirehep.net/api/literature/2756735?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A2756735"
         },
-        "id": "2756735",
-        "created": "2024-02-09T03:42:58.804199+00:00"
+        "id": "2756735"
       },
       {
         "metadata": {
@@ -70111,7 +70111,6 @@
               "recid": 982834
             }
           ],
-          "citation_count_without_self_citations": 41,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -70123,6 +70122,7 @@
             }
           ],
           "citation_count": 42,
+          "citation_count_without_self_citations": 41,
           "publication_info": [
             {
               "journal_volume": "109",
@@ -78868,6 +78868,7 @@
           "curated": true
         },
         "updated": "2025-08-06T04:20:40.561708+00:00",
+        "created": "2023-09-21T02:58:16.507737+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/2700457?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/2700457?format=latex-eu",
@@ -78877,8 +78878,7 @@
           "cv": "https://inspirehep.net/api/literature/2700457?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A2700457"
         },
-        "id": "2700457",
-        "created": "2023-09-21T02:58:16.507737+00:00"
+        "id": "2700457"
       },
       {
         "metadata": {
@@ -79012,7 +79012,6 @@
               "recid": 1309535
             }
           ],
-          "citation_count_without_self_citations": 7,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -79028,6 +79027,7 @@
             }
           ],
           "citation_count": 8,
+          "citation_count_without_self_citations": 7,
           "publication_info": [
             {
               "journal_volume": "132",
@@ -81422,6 +81422,7 @@
           "curated": true
         },
         "updated": "2025-08-06T04:20:39.663134+00:00",
+        "created": "2023-08-31T02:52:11.832191+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/2691934?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/2691934?format=latex-eu",
@@ -81431,8 +81432,7 @@
           "cv": "https://inspirehep.net/api/literature/2691934?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A2691934"
         },
-        "id": "2691934",
-        "created": "2023-08-31T02:52:11.832191+00:00"
+        "id": "2691934"
       },
       {
         "metadata": {
@@ -81601,7 +81601,6 @@
               "recid": 1309535
             }
           ],
-          "citation_count_without_self_citations": 12,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -81616,16 +81615,8 @@
               "value": "RESCEU-15/23"
             }
           ],
-          "documents": [
-            {
-              "filename": "document",
-              "fulltext": true,
-              "source": "Springer",
-              "key": "99297083908903a0b41d312e066e9cca",
-              "url": "https://inspirehep.net/files/99297083908903a0b41d312e066e9cca"
-            }
-          ],
           "citation_count": 16,
+          "citation_count_without_self_citations": 12,
           "publication_info": [
             {
               "journal_volume": "01",
@@ -81636,6 +81627,15 @@
               },
               "page_start": "014",
               "journal_title": "JHEP"
+            }
+          ],
+          "documents": [
+            {
+              "filename": "document",
+              "fulltext": true,
+              "source": "Springer",
+              "key": "99297083908903a0b41d312e066e9cca",
+              "url": "https://inspirehep.net/files/99297083908903a0b41d312e066e9cca"
             }
           ],
           "citeable": true,
@@ -85240,6 +85240,7 @@
           "curated": true
         },
         "updated": "2025-08-06T04:20:40.934866+00:00",
+        "created": "2023-08-29T03:02:24.154504+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/2691353?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/2691353?format=latex-eu",
@@ -85249,8 +85250,7 @@
           "cv": "https://inspirehep.net/api/literature/2691353?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A2691353"
         },
-        "id": "2691353",
-        "created": "2023-08-29T03:02:24.154504+00:00"
+        "id": "2691353"
       },
       {
         "metadata": {
@@ -85493,7 +85493,6 @@
               "recid": 1663041
             }
           ],
-          "citation_count_without_self_citations": 9,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -85513,6 +85512,7 @@
             }
           ],
           "citation_count": 16,
+          "citation_count_without_self_citations": 9,
           "publication_info": [
             {
               "journal_volume": "108",
@@ -89927,6 +89927,7 @@
           "curated": true
         },
         "updated": "2025-08-06T04:20:12.399409+00:00",
+        "created": "2023-04-14T03:06:20.905641+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/2651145?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/2651145?format=latex-eu",
@@ -89936,8 +89937,7 @@
           "cv": "https://inspirehep.net/api/literature/2651145?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A2651145"
         },
-        "id": "2651145",
-        "created": "2023-04-14T03:06:20.905641+00:00"
+        "id": "2651145"
       },
       {
         "metadata": {
@@ -90176,7 +90176,6 @@
               "recid": 1060297
             }
           ],
-          "citation_count_without_self_citations": 9,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -90204,6 +90203,7 @@
             }
           ],
           "citation_count": 12,
+          "citation_count_without_self_citations": 9,
           "publication_info": [
             {
               "journal_volume": "108",
@@ -94719,6 +94719,7 @@
           "curated": false
         },
         "updated": "2026-04-02T12:05:57.376021+00:00",
+        "created": "2023-03-01T03:01:04.721286+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/2637238?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/2637238?format=latex-eu",
@@ -94728,8 +94729,7 @@
           "cv": "https://inspirehep.net/api/literature/2637238?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A2637238"
         },
-        "id": "2637238",
-        "created": "2023-03-01T03:01:04.721286+00:00"
+        "id": "2637238"
       },
       {
         "metadata": {
@@ -94995,7 +94995,6 @@
               "recid": 982946
             }
           ],
-          "citation_count_without_self_citations": 18,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -95018,15 +95017,8 @@
               "value": "TU-1170"
             }
           ],
-          "documents": [
-            {
-              "filename": "document",
-              "fulltext": true,
-              "key": "a7fee4b58c524d81eed80f695406c56a",
-              "url": "https://inspirehep.net/files/a7fee4b58c524d81eed80f695406c56a"
-            }
-          ],
           "citation_count": 39,
+          "citation_count_without_self_citations": 18,
           "publication_info": [
             {
               "journal_volume": "01",
@@ -95037,6 +95029,14 @@
               },
               "page_start": "053",
               "journal_title": "JHEP"
+            }
+          ],
+          "documents": [
+            {
+              "filename": "document",
+              "fulltext": true,
+              "key": "a7fee4b58c524d81eed80f695406c56a",
+              "url": "https://inspirehep.net/files/a7fee4b58c524d81eed80f695406c56a"
             }
           ],
           "citeable": true,
@@ -99017,6 +99017,7 @@
           "curated": true
         },
         "updated": "2026-06-19T13:20:38.265849+00:00",
+        "created": "2022-10-13T03:40:57.821208+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/2164686?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/2164686?format=latex-eu",
@@ -99026,8 +99027,7 @@
           "cv": "https://inspirehep.net/api/literature/2164686?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A2164686"
         },
-        "id": "2164686",
-        "created": "2022-10-13T03:40:57.821208+00:00"
+        "id": "2164686"
       },
       {
         "metadata": {
@@ -99205,7 +99205,6 @@
               "recid": 982946
             }
           ],
-          "citation_count_without_self_citations": 28,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -99225,6 +99224,7 @@
             }
           ],
           "citation_count": 32,
+          "citation_count_without_self_citations": 28,
           "publication_info": [
             {
               "journal_volume": "01",
@@ -103552,6 +103552,7 @@
           "curated": true
         },
         "updated": "2026-06-19T13:20:35.998626+00:00",
+        "created": "2022-10-13T04:17:38.226355+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/2164775?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/2164775?format=latex-eu",
@@ -103561,8 +103562,7 @@
           "cv": "https://inspirehep.net/api/literature/2164775?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A2164775"
         },
-        "id": "2164775",
-        "created": "2022-10-13T04:17:38.226355+00:00"
+        "id": "2164775"
       },
       {
         "metadata": {
@@ -103682,22 +103682,14 @@
               "recid": 982946
             }
           ],
-          "citation_count_without_self_citations": 26,
           "report_numbers": [
             {
               "source": "arXiv",
               "value": "KEK-TH-2443; TU-1165"
             }
           ],
-          "documents": [
-            {
-              "filename": "document",
-              "fulltext": true,
-              "key": "2e691ee2f867c74e78e6cfb070214528",
-              "url": "https://inspirehep.net/files/2e691ee2f867c74e78e6cfb070214528"
-            }
-          ],
           "citation_count": 30,
+          "citation_count_without_self_citations": 26,
           "publication_info": [
             {
               "journal_volume": "10",
@@ -103708,6 +103700,14 @@
               },
               "page_start": "116",
               "journal_title": "JHEP"
+            }
+          ],
+          "documents": [
+            {
+              "filename": "document",
+              "fulltext": true,
+              "key": "2e691ee2f867c74e78e6cfb070214528",
+              "url": "https://inspirehep.net/files/2e691ee2f867c74e78e6cfb070214528"
             }
           ],
           "citeable": true,
@@ -106783,6 +106783,7 @@
           "curated": false
         },
         "updated": "2026-06-19T13:20:41.838731+00:00",
+        "created": "2022-08-26T03:01:34.363165+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/2141779?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/2141779?format=latex-eu",
@@ -106792,8 +106793,7 @@
           "cv": "https://inspirehep.net/api/literature/2141779?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A2141779"
         },
-        "id": "2141779",
-        "created": "2022-08-26T03:01:34.363165+00:00"
+        "id": "2141779"
       },
       {
         "metadata": {
@@ -106993,7 +106993,6 @@
               "recid": 982946
             }
           ],
-          "citation_count_without_self_citations": 27,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -107016,17 +107015,8 @@
               "value": "TU-1164"
             }
           ],
-          "documents": [
-            {
-              "filename": "Publication",
-              "material": "publication",
-              "fulltext": true,
-              "description": "Fulltext",
-              "key": "77a0aeac0bee3709095f4caa85d190fe",
-              "url": "https://inspirehep.net/files/77a0aeac0bee3709095f4caa85d190fe"
-            }
-          ],
           "citation_count": 33,
+          "citation_count_without_self_citations": 27,
           "publication_info": [
             {
               "journal_volume": "130",
@@ -107038,6 +107028,16 @@
               },
               "journal_issue": "26",
               "journal_title": "Phys.Rev.Lett."
+            }
+          ],
+          "documents": [
+            {
+              "filename": "Publication",
+              "material": "publication",
+              "fulltext": true,
+              "description": "Fulltext",
+              "key": "77a0aeac0bee3709095f4caa85d190fe",
+              "url": "https://inspirehep.net/files/77a0aeac0bee3709095f4caa85d190fe"
             }
           ],
           "citeable": true,
@@ -110640,6 +110640,7 @@
           "curated": true
         },
         "updated": "2026-06-19T13:20:34.613895+00:00",
+        "created": "2022-08-08T02:42:21.012563+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/2132764?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/2132764?format=latex-eu",
@@ -110649,8 +110650,7 @@
           "cv": "https://inspirehep.net/api/literature/2132764?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A2132764"
         },
-        "id": "2132764",
-        "created": "2022-08-08T02:42:21.012563+00:00"
+        "id": "2132764"
       },
       {
         "metadata": {
@@ -110787,7 +110787,6 @@
               "recid": 1316436
             }
           ],
-          "citation_count_without_self_citations": 8,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -110795,6 +110794,7 @@
             }
           ],
           "citation_count": 8,
+          "citation_count_without_self_citations": 8,
           "publication_info": [
             {
               "journal_volume": "12",
@@ -112720,6 +112720,7 @@
           "curated": true
         },
         "updated": "2026-04-07T03:57:22.342939+00:00",
+        "created": "2022-06-27T02:56:44.868491+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/2100489?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/2100489?format=latex-eu",
@@ -112729,8 +112730,7 @@
           "cv": "https://inspirehep.net/api/literature/2100489?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A2100489"
         },
-        "id": "2100489",
-        "created": "2022-06-27T02:56:44.868491+00:00"
+        "id": "2100489"
       },
       {
         "metadata": {
@@ -112948,22 +112948,14 @@
               "recid": 1309535
             }
           ],
-          "citation_count_without_self_citations": 4,
           "report_numbers": [
             {
               "source": "arXiv",
               "value": "KEK-TH-2431"
             }
           ],
-          "documents": [
-            {
-              "filename": "document",
-              "fulltext": true,
-              "key": "b025d39dd66d73bb886cc74567553afe",
-              "url": "https://inspirehep.net/files/b025d39dd66d73bb886cc74567553afe"
-            }
-          ],
           "citation_count": 4,
+          "citation_count_without_self_citations": 4,
           "publication_info": [
             {
               "journal_volume": "09",
@@ -112974,6 +112966,14 @@
               },
               "page_start": "218",
               "journal_title": "JHEP"
+            }
+          ],
+          "documents": [
+            {
+              "filename": "document",
+              "fulltext": true,
+              "key": "b025d39dd66d73bb886cc74567553afe",
+              "url": "https://inspirehep.net/files/b025d39dd66d73bb886cc74567553afe"
             }
           ],
           "citeable": true,
@@ -114365,6 +114365,7 @@
           "curated": true
         },
         "updated": "2023-10-03T07:54:24.050623+00:00",
+        "created": "2022-06-16T03:14:01.228464+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/2096424?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/2096424?format=latex-eu",
@@ -114374,8 +114375,7 @@
           "cv": "https://inspirehep.net/api/literature/2096424?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A2096424"
         },
-        "id": "2096424",
-        "created": "2022-06-16T03:14:01.228464+00:00"
+        "id": "2096424"
       },
       {
         "metadata": {
@@ -114558,7 +114558,6 @@
               "recid": 1309535
             }
           ],
-          "citation_count_without_self_citations": 7,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -114569,15 +114568,8 @@
               "value": "KEK-TH-2422"
             }
           ],
-          "documents": [
-            {
-              "filename": "document",
-              "fulltext": true,
-              "key": "9e86e5e23979177ec6dd5b27d31ef2fa",
-              "url": "https://inspirehep.net/files/9e86e5e23979177ec6dd5b27d31ef2fa"
-            }
-          ],
           "citation_count": 19,
+          "citation_count_without_self_citations": 7,
           "publication_info": [
             {
               "journal_volume": "08",
@@ -114588,6 +114580,14 @@
               },
               "page_start": "234",
               "journal_title": "JHEP"
+            }
+          ],
+          "documents": [
+            {
+              "filename": "document",
+              "fulltext": true,
+              "key": "9e86e5e23979177ec6dd5b27d31ef2fa",
+              "url": "https://inspirehep.net/files/9e86e5e23979177ec6dd5b27d31ef2fa"
             }
           ],
           "citeable": true,
@@ -116233,6 +116233,7 @@
           "curated": true
         },
         "updated": "2023-10-03T08:00:39.972199+00:00",
+        "created": "2022-05-03T03:13:41.258662+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/2075536?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/2075536?format=latex-eu",
@@ -116242,8 +116243,7 @@
           "cv": "https://inspirehep.net/api/literature/2075536?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A2075536"
         },
-        "id": "2075536",
-        "created": "2022-05-03T03:13:41.258662+00:00"
+        "id": "2075536"
       },
       {
         "metadata": {
@@ -116411,7 +116411,6 @@
               "recid": 1309535
             }
           ],
-          "citation_count_without_self_citations": 6,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -116430,15 +116429,8 @@
               "value": "KEK-TH-2415"
             }
           ],
-          "documents": [
-            {
-              "filename": "document",
-              "fulltext": true,
-              "key": "f2d50740e6630709066e8d807a78c5f7",
-              "url": "https://inspirehep.net/files/f2d50740e6630709066e8d807a78c5f7"
-            }
-          ],
           "citation_count": 6,
+          "citation_count_without_self_citations": 6,
           "publication_info": [
             {
               "journal_volume": "11",
@@ -116449,6 +116441,14 @@
               },
               "page_start": "033",
               "journal_title": "JHEP"
+            }
+          ],
+          "documents": [
+            {
+              "filename": "document",
+              "fulltext": true,
+              "key": "f2d50740e6630709066e8d807a78c5f7",
+              "url": "https://inspirehep.net/files/f2d50740e6630709066e8d807a78c5f7"
             }
           ],
           "citeable": true,
@@ -117975,6 +117975,7 @@
           "curated": true
         },
         "updated": "2023-10-03T07:38:07.174173+00:00",
+        "created": "2022-04-25T04:01:27.644638+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/2071392?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/2071392?format=latex-eu",
@@ -117984,8 +117985,7 @@
           "cv": "https://inspirehep.net/api/literature/2071392?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A2071392"
         },
-        "id": "2071392",
-        "created": "2022-04-25T04:01:27.644638+00:00"
+        "id": "2071392"
       },
       {
         "metadata": {
@@ -118162,7 +118162,6 @@
               "recid": 1316436
             }
           ],
-          "citation_count_without_self_citations": 26,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -118174,6 +118173,7 @@
             }
           ],
           "citation_count": 33,
+          "citation_count_without_self_citations": 26,
           "publication_info": [
             {
               "journal_volume": "09",
@@ -121312,6 +121312,7 @@
           "curated": true
         },
         "updated": "2026-04-07T03:57:24.416952+00:00",
+        "created": "2022-04-05T03:03:39.319670+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/2062395?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/2062395?format=latex-eu",
@@ -121321,8 +121322,7 @@
           "cv": "https://inspirehep.net/api/literature/2062395?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A2062395"
         },
-        "id": "2062395",
-        "created": "2022-04-05T03:03:39.319670+00:00"
+        "id": "2062395"
       },
       {
         "metadata": {
@@ -121500,7 +121500,6 @@
               "recid": 1060297
             }
           ],
-          "citation_count_without_self_citations": 26,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -121511,15 +121510,8 @@
               "value": "KEK-TH-2379"
             }
           ],
-          "documents": [
-            {
-              "filename": "document",
-              "fulltext": true,
-              "key": "aa5c9512e06a9d18fb6dc3c80a2f3b27",
-              "url": "https://inspirehep.net/files/aa5c9512e06a9d18fb6dc3c80a2f3b27"
-            }
-          ],
           "citation_count": 37,
+          "citation_count_without_self_citations": 26,
           "publication_info": [
             {
               "journal_volume": "05",
@@ -121530,6 +121522,14 @@
               },
               "page_start": "087",
               "journal_title": "JHEP"
+            }
+          ],
+          "documents": [
+            {
+              "filename": "document",
+              "fulltext": true,
+              "key": "aa5c9512e06a9d18fb6dc3c80a2f3b27",
+              "url": "https://inspirehep.net/files/aa5c9512e06a9d18fb6dc3c80a2f3b27"
             }
           ],
           "citeable": true,
@@ -124456,6 +124456,7 @@
           "curated": true
         },
         "updated": "2023-10-03T10:04:42.010974+00:00",
+        "created": "2021-12-24T03:05:37.846817+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1996675?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1996675?format=latex-eu",
@@ -124465,8 +124466,7 @@
           "cv": "https://inspirehep.net/api/literature/1996675?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1996675"
         },
-        "id": "1996675",
-        "created": "2021-12-24T03:05:37.846817+00:00"
+        "id": "1996675"
       },
       {
         "metadata": {
@@ -124625,7 +124625,6 @@
               "recid": 982946
             }
           ],
-          "citation_count_without_self_citations": 19,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -124641,6 +124640,7 @@
             }
           ],
           "citation_count": 23,
+          "citation_count_without_self_citations": 19,
           "publication_info": [
             {
               "journal_volume": "129",
@@ -132013,6 +132013,7 @@
           "curated": true
         },
         "updated": "2026-06-19T13:20:35.121847+00:00",
+        "created": "2021-11-08T02:41:18.787517+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1961465?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1961465?format=latex-eu",
@@ -132022,8 +132023,7 @@
           "cv": "https://inspirehep.net/api/literature/1961465?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1961465"
         },
-        "id": "1961465",
-        "created": "2021-11-08T02:41:18.787517+00:00"
+        "id": "1961465"
       },
       {
         "metadata": {
@@ -132190,7 +132190,6 @@
               "recid": 1775969
             }
           ],
-          "citation_count_without_self_citations": 9,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -132198,6 +132197,7 @@
             }
           ],
           "citation_count": 17,
+          "citation_count_without_self_citations": 9,
           "publication_info": [
             {
               "journal_volume": "105",
@@ -133652,6 +133652,7 @@
           "curated": true
         },
         "updated": "2024-02-19T11:16:48.099638+00:00",
+        "created": "2021-10-08T02:51:40.175558+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1940015?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1940015?format=latex-eu",
@@ -133661,8 +133662,7 @@
           "cv": "https://inspirehep.net/api/literature/1940015?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1940015"
         },
-        "id": "1940015",
-        "created": "2021-10-08T02:51:40.175558+00:00"
+        "id": "1940015"
       },
       {
         "metadata": {
@@ -133861,7 +133861,6 @@
               "recid": 1470862
             }
           ],
-          "citation_count_without_self_citations": 31,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -133872,15 +133871,8 @@
               "value": "MIT-CTP/5313"
             }
           ],
-          "documents": [
-            {
-              "filename": "document",
-              "fulltext": true,
-              "key": "7615e6dca1f1a72b380bb4c4d9687ef6",
-              "url": "https://inspirehep.net/files/7615e6dca1f1a72b380bb4c4d9687ef6"
-            }
-          ],
           "citation_count": 56,
+          "citation_count_without_self_citations": 31,
           "publication_info": [
             {
               "journal_volume": "01",
@@ -133891,6 +133883,14 @@
               },
               "page_start": "137",
               "journal_title": "JHEP"
+            }
+          ],
+          "documents": [
+            {
+              "filename": "document",
+              "fulltext": true,
+              "key": "7615e6dca1f1a72b380bb4c4d9687ef6",
+              "url": "https://inspirehep.net/files/7615e6dca1f1a72b380bb4c4d9687ef6"
             }
           ],
           "citeable": true,
@@ -143762,6 +143762,7 @@
           "curated": false
         },
         "updated": "2023-10-03T09:07:45.865220+00:00",
+        "created": "2021-07-09T03:00:22.443489+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1879671?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1879671?format=latex-eu",
@@ -143771,8 +143772,7 @@
           "cv": "https://inspirehep.net/api/literature/1879671?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1879671"
         },
-        "id": "1879671",
-        "created": "2021-07-09T03:00:22.443489+00:00"
+        "id": "1879671"
       },
       {
         "metadata": {
@@ -143919,7 +143919,6 @@
               "recid": 1309535
             }
           ],
-          "citation_count_without_self_citations": 27,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -143930,16 +143929,8 @@
               "value": "CERN-TH-2021-010"
             }
           ],
-          "documents": [
-            {
-              "filename": "scoap",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "6c10ccdbb2087081cd9ef239f3479124",
-              "url": "https://inspirehep.net/files/6c10ccdbb2087081cd9ef239f3479124"
-            }
-          ],
           "citation_count": 29,
+          "citation_count_without_self_citations": 27,
           "publication_info": [
             {
               "journal_volume": "05",
@@ -143950,6 +143941,15 @@
               },
               "page_start": "001",
               "journal_title": "JHEP"
+            }
+          ],
+          "documents": [
+            {
+              "filename": "scoap",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "6c10ccdbb2087081cd9ef239f3479124",
+              "url": "https://inspirehep.net/files/6c10ccdbb2087081cd9ef239f3479124"
             }
           ],
           "citeable": true,
@@ -145361,6 +145361,7 @@
           "curated": true
         },
         "updated": "2023-10-03T08:15:42.855136+00:00",
+        "created": "2021-01-14T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1840549?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1840549?format=latex-eu",
@@ -145370,8 +145371,7 @@
           "cv": "https://inspirehep.net/api/literature/1840549?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1840549"
         },
-        "id": "1840549",
-        "created": "2021-01-14T00:00:00+00:00"
+        "id": "1840549"
       },
       {
         "metadata": {
@@ -145562,7 +145562,6 @@
               "recid": 982946
             }
           ],
-          "citation_count_without_self_citations": 45,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -145581,16 +145580,8 @@
               "value": "TU-1112"
             }
           ],
-          "documents": [
-            {
-              "filename": "scoap3-fulltext.pdf",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "3e8c3f94d8b7dd86ae971b803628d72b",
-              "url": "https://inspirehep.net/files/3e8c3f94d8b7dd86ae971b803628d72b"
-            }
-          ],
           "citation_count": 65,
+          "citation_count_without_self_citations": 45,
           "publication_info": [
             {
               "journal_volume": "126",
@@ -145603,6 +145594,15 @@
               },
               "journal_issue": "20",
               "journal_title": "Phys.Rev.Lett."
+            }
+          ],
+          "documents": [
+            {
+              "filename": "scoap3-fulltext.pdf",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "3e8c3f94d8b7dd86ae971b803628d72b",
+              "url": "https://inspirehep.net/files/3e8c3f94d8b7dd86ae971b803628d72b"
             }
           ],
           "citeable": true,
@@ -148808,6 +148808,7 @@
           "curated": true
         },
         "updated": "2026-06-19T13:20:35.895651+00:00",
+        "created": "2020-11-19T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1831069?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1831069?format=latex-eu",
@@ -148817,8 +148818,7 @@
           "cv": "https://inspirehep.net/api/literature/1831069?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1831069"
         },
-        "id": "1831069",
-        "created": "2020-11-19T00:00:00+00:00"
+        "id": "1831069"
       },
       {
         "metadata": {
@@ -149027,7 +149027,6 @@
               "recid": 982834
             }
           ],
-          "citation_count_without_self_citations": 85,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -149042,15 +149041,8 @@
               "value": "DESY 20-188"
             }
           ],
-          "documents": [
-            {
-              "filename": "10.1103_PhysRevLett.126.131301.pdf",
-              "description": "Fulltext from Publisher",
-              "key": "8f7af1fe60a24c8f4558f5c71c1be93c",
-              "url": "https://inspirehep.net/files/8f7af1fe60a24c8f4558f5c71c1be93c"
-            }
-          ],
           "citation_count": 96,
+          "citation_count_without_self_citations": 85,
           "publication_info": [
             {
               "journal_volume": "126",
@@ -149063,6 +149055,14 @@
               },
               "journal_issue": "13",
               "journal_title": "Phys.Rev.Lett."
+            }
+          ],
+          "documents": [
+            {
+              "filename": "10.1103_PhysRevLett.126.131301.pdf",
+              "description": "Fulltext from Publisher",
+              "key": "8f7af1fe60a24c8f4558f5c71c1be93c",
+              "url": "https://inspirehep.net/files/8f7af1fe60a24c8f4558f5c71c1be93c"
             }
           ],
           "citeable": true,
@@ -153409,6 +153409,7 @@
           "curated": true
         },
         "updated": "2024-08-09T12:47:19.719696+00:00",
+        "created": "2020-11-04T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1827858?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1827858?format=latex-eu",
@@ -153418,8 +153419,7 @@
           "cv": "https://inspirehep.net/api/literature/1827858?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1827858"
         },
-        "id": "1827858",
-        "created": "2020-11-04T00:00:00+00:00"
+        "id": "1827858"
       },
       {
         "metadata": {
@@ -153549,7 +153549,6 @@
               "recid": 1589979
             }
           ],
-          "citation_count_without_self_citations": 34,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -153560,16 +153559,8 @@
               "value": "DESY-20-130"
             }
           ],
-          "documents": [
-            {
-              "filename": "scoap",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "56249f5ae4a02616cf53f76eada06700",
-              "url": "https://inspirehep.net/files/56249f5ae4a02616cf53f76eada06700"
-            }
-          ],
           "citation_count": 41,
+          "citation_count_without_self_citations": 34,
           "publication_info": [
             {
               "journal_volume": "02",
@@ -153580,6 +153571,15 @@
               },
               "page_start": "109",
               "journal_title": "JHEP"
+            }
+          ],
+          "documents": [
+            {
+              "filename": "scoap",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "56249f5ae4a02616cf53f76eada06700",
+              "url": "https://inspirehep.net/files/56249f5ae4a02616cf53f76eada06700"
             }
           ],
           "citeable": true,
@@ -155938,6 +155938,7 @@
           "curated": true
         },
         "updated": "2023-10-03T09:11:15.834080+00:00",
+        "created": "2020-08-05T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1810045?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1810045?format=latex-eu",
@@ -155947,8 +155948,7 @@
           "cv": "https://inspirehep.net/api/literature/1810045?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1810045"
         },
-        "id": "1810045",
-        "created": "2020-08-05T00:00:00+00:00"
+        "id": "1810045"
       },
       {
         "metadata": {
@@ -156176,7 +156176,6 @@
               "recid": 982946
             }
           ],
-          "citation_count_without_self_citations": 78,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -156195,16 +156194,8 @@
               "value": "TU-1102"
             }
           ],
-          "documents": [
-            {
-              "filename": "scoap",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "92dd3f1949fcbb248f58fbd112b36fea",
-              "url": "https://inspirehep.net/files/92dd3f1949fcbb248f58fbd112b36fea"
-            }
-          ],
           "citation_count": 91,
+          "citation_count_without_self_citations": 78,
           "publication_info": [
             {
               "journal_volume": "08",
@@ -156215,6 +156206,15 @@
               },
               "page_start": "096",
               "journal_title": "JHEP"
+            }
+          ],
+          "documents": [
+            {
+              "filename": "scoap",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "92dd3f1949fcbb248f58fbd112b36fea",
+              "url": "https://inspirehep.net/files/92dd3f1949fcbb248f58fbd112b36fea"
             }
           ],
           "citeable": true,
@@ -157744,6 +157744,7 @@
           "curated": true
         },
         "updated": "2026-06-19T13:20:36.020736+00:00",
+        "created": "2020-06-08T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1799619?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1799619?format=latex-eu",
@@ -157753,8 +157754,7 @@
           "cv": "https://inspirehep.net/api/literature/1799619?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1799619"
         },
-        "id": "1799619",
-        "created": "2020-06-08T00:00:00+00:00"
+        "id": "1799619"
       },
       {
         "metadata": {
@@ -157945,7 +157945,6 @@
               "recid": 982834
             }
           ],
-          "citation_count_without_self_citations": 192,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -157965,6 +157964,7 @@
             }
           ],
           "citation_count": 207,
+          "citation_count_without_self_citations": 192,
           "publication_info": [
             {
               "journal_volume": "101",
@@ -163422,6 +163422,7 @@
           "curated": true
         },
         "updated": "2023-12-13T12:12:31.867306+00:00",
+        "created": "2020-03-25T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1787827?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1787827?format=latex-eu",
@@ -163431,8 +163432,7 @@
           "cv": "https://inspirehep.net/api/literature/1787827?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1787827"
         },
-        "id": "1787827",
-        "created": "2020-03-25T00:00:00+00:00"
+        "id": "1787827"
       },
       {
         "metadata": {
@@ -163566,7 +163566,6 @@
               "recid": 1589979
             }
           ],
-          "citation_count_without_self_citations": 32,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -163577,16 +163576,8 @@
               "value": "DESY-20-031"
             }
           ],
-          "documents": [
-            {
-              "filename": "scoap",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "0cc1dfb47c46266c6f2ad5da5ab8d577",
-              "url": "https://inspirehep.net/files/0cc1dfb47c46266c6f2ad5da5ab8d577"
-            }
-          ],
           "citation_count": 43,
+          "citation_count_without_self_citations": 32,
           "publication_info": [
             {
               "journal_volume": "11",
@@ -163597,6 +163588,15 @@
               },
               "page_start": "011",
               "journal_title": "JHEP"
+            }
+          ],
+          "documents": [
+            {
+              "filename": "scoap",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "0cc1dfb47c46266c6f2ad5da5ab8d577",
+              "url": "https://inspirehep.net/files/0cc1dfb47c46266c6f2ad5da5ab8d577"
             }
           ],
           "citeable": true,
@@ -165815,6 +165815,7 @@
           "curated": true
         },
         "updated": "2023-10-03T09:13:54.504895+00:00",
+        "created": "2020-02-28T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1782641?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1782641?format=latex-eu",
@@ -165824,8 +165825,7 @@
           "cv": "https://inspirehep.net/api/literature/1782641?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1782641"
         },
-        "id": "1782641",
-        "created": "2020-02-28T00:00:00+00:00"
+        "id": "1782641"
       },
       {
         "metadata": {
@@ -166014,23 +166014,14 @@
               "recid": 1309535
             }
           ],
-          "citation_count_without_self_citations": 37,
           "report_numbers": [
             {
               "source": "DESY",
               "value": "DESY-20-022"
             }
           ],
-          "documents": [
-            {
-              "filename": "scoap",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "90bf3d6810aa1d9b5b97e2952d253451",
-              "url": "https://inspirehep.net/files/90bf3d6810aa1d9b5b97e2952d253451"
-            }
-          ],
           "citation_count": 49,
+          "citation_count_without_self_citations": 37,
           "publication_info": [
             {
               "journal_volume": "09",
@@ -166041,6 +166032,15 @@
               },
               "page_start": "086",
               "journal_title": "JHEP"
+            }
+          ],
+          "documents": [
+            {
+              "filename": "scoap",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "90bf3d6810aa1d9b5b97e2952d253451",
+              "url": "https://inspirehep.net/files/90bf3d6810aa1d9b5b97e2952d253451"
             }
           ],
           "citeable": true,
@@ -172061,6 +172061,7 @@
           "curated": true
         },
         "updated": "2025-02-10T00:49:45.839206+00:00",
+        "created": "2020-02-18T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1781025?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1781025?format=latex-eu",
@@ -172070,8 +172071,7 @@
           "cv": "https://inspirehep.net/api/literature/1781025?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1781025"
         },
-        "id": "1781025",
-        "created": "2020-02-18T00:00:00+00:00"
+        "id": "1781025"
       },
       {
         "metadata": {
@@ -172216,7 +172216,6 @@
               "recid": 1050246
             }
           ],
-          "citation_count_without_self_citations": 25,
           "report_numbers": [
             {
               "value": "DESY-19-181"
@@ -172225,16 +172224,8 @@
               "value": "IPMU19-0148"
             }
           ],
-          "documents": [
-            {
-              "filename": "scoap3-fulltext.pdf",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "de0b4560d9a425cdd25c7aff3319ae92",
-              "url": "https://inspirehep.net/files/de0b4560d9a425cdd25c7aff3319ae92"
-            }
-          ],
           "citation_count": 34,
+          "citation_count_without_self_citations": 25,
           "publication_info": [
             {
               "journal_volume": "124",
@@ -172247,6 +172238,15 @@
               },
               "journal_issue": "16",
               "journal_title": "Phys.Rev.Lett."
+            }
+          ],
+          "documents": [
+            {
+              "filename": "scoap3-fulltext.pdf",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "de0b4560d9a425cdd25c7aff3319ae92",
+              "url": "https://inspirehep.net/files/de0b4560d9a425cdd25c7aff3319ae92"
             }
           ],
           "citeable": true,
@@ -177576,6 +177576,7 @@
           "curated": true
         },
         "updated": "2023-03-07T05:51:44.809499+00:00",
+        "created": "2019-10-25T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1760744?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1760744?format=latex-eu",
@@ -177585,8 +177586,7 @@
           "cv": "https://inspirehep.net/api/literature/1760744?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1760744"
         },
-        "id": "1760744",
-        "created": "2019-10-25T00:00:00+00:00"
+        "id": "1760744"
       },
       {
         "metadata": {
@@ -177717,7 +177717,6 @@
               "recid": 1309535
             }
           ],
-          "citation_count_without_self_citations": 76,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -177728,16 +177727,8 @@
               "value": "DESY 19-166"
             }
           ],
-          "documents": [
-            {
-              "filename": "scoap",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "7cc64ea413983d2e6940f4158c3fb3b4",
-              "url": "https://inspirehep.net/files/7cc64ea413983d2e6940f4158c3fb3b4"
-            }
-          ],
           "citation_count": 89,
+          "citation_count_without_self_citations": 76,
           "publication_info": [
             {
               "journal_volume": "02",
@@ -177750,6 +177741,15 @@
               },
               "page_start": "055",
               "journal_title": "JHEP"
+            }
+          ],
+          "documents": [
+            {
+              "filename": "scoap",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "7cc64ea413983d2e6940f4158c3fb3b4",
+              "url": "https://inspirehep.net/files/7cc64ea413983d2e6940f4158c3fb3b4"
             }
           ],
           "citeable": true,
@@ -179949,6 +179949,7 @@
           "curated": true
         },
         "updated": "2023-10-03T08:40:01.893749+00:00",
+        "created": "2019-10-04T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1757411?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1757411?format=latex-eu",
@@ -179958,8 +179959,7 @@
           "cv": "https://inspirehep.net/api/literature/1757411?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1757411"
         },
-        "id": "1757411",
-        "created": "2019-10-04T00:00:00+00:00"
+        "id": "1757411"
       },
       {
         "metadata": {
@@ -180101,7 +180101,6 @@
               "recid": 1309535
             }
           ],
-          "citation_count_without_self_citations": 77,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -180112,6 +180111,7 @@
             }
           ],
           "citation_count": 95,
+          "citation_count_without_self_citations": 77,
           "publication_info": [
             {
               "journal_volume": "10",
@@ -182409,6 +182409,7 @@
           "curated": true
         },
         "updated": "2023-10-03T07:29:45.827705+00:00",
+        "created": "2019-06-03T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1737620?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1737620?format=latex-eu",
@@ -182418,8 +182419,7 @@
           "cv": "https://inspirehep.net/api/literature/1737620?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1737620"
         },
-        "id": "1737620",
-        "created": "2019-06-03T00:00:00+00:00"
+        "id": "1737620"
       },
       {
         "metadata": {
@@ -182563,7 +182563,6 @@
               "recid": 982946
             }
           ],
-          "citation_count_without_self_citations": 62,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -182574,16 +182573,8 @@
               "value": "DESY-19-014"
             }
           ],
-          "documents": [
-            {
-              "filename": "scoap",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "3fbb63657c00670136a9eaa2191b91a3",
-              "url": "https://inspirehep.net/files/3fbb63657c00670136a9eaa2191b91a3"
-            }
-          ],
           "citation_count": 75,
+          "citation_count_without_self_citations": 62,
           "publication_info": [
             {
               "journal_volume": "07",
@@ -182594,6 +182585,15 @@
               },
               "page_start": "059",
               "journal_title": "JHEP"
+            }
+          ],
+          "documents": [
+            {
+              "filename": "scoap",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "3fbb63657c00670136a9eaa2191b91a3",
+              "url": "https://inspirehep.net/files/3fbb63657c00670136a9eaa2191b91a3"
             }
           ],
           "citeable": true,
@@ -183688,6 +183688,7 @@
           "curated": true
         },
         "updated": "2023-03-07T04:13:03.233315+00:00",
+        "created": "2019-02-01T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1717870?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1717870?format=latex-eu",
@@ -183697,8 +183698,7 @@
           "cv": "https://inspirehep.net/api/literature/1717870?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1717870"
         },
-        "id": "1717870",
-        "created": "2019-02-01T00:00:00+00:00"
+        "id": "1717870"
       },
       {
         "metadata": {
@@ -183888,7 +183888,6 @@
               "recid": 1069270
             }
           ],
-          "citation_count_without_self_citations": 27,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -183903,16 +183902,8 @@
               "value": "KEK-TH-2090"
             }
           ],
-          "documents": [
-            {
-              "filename": "scoap",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "cb6a7373fd6a1178a230566a13e37e0e",
-              "url": "https://inspirehep.net/files/cb6a7373fd6a1178a230566a13e37e0e"
-            }
-          ],
           "citation_count": 35,
+          "citation_count_without_self_citations": 27,
           "publication_info": [
             {
               "journal_volume": "03",
@@ -183925,6 +183916,15 @@
               },
               "page_start": "111",
               "journal_title": "JHEP"
+            }
+          ],
+          "documents": [
+            {
+              "filename": "scoap",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "cb6a7373fd6a1178a230566a13e37e0e",
+              "url": "https://inspirehep.net/files/cb6a7373fd6a1178a230566a13e37e0e"
             }
           ],
           "citeable": true,
@@ -185602,6 +185602,7 @@
           "curated": true
         },
         "updated": "2023-10-03T07:30:38.656576+00:00",
+        "created": "2018-12-20T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1710080?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1710080?format=latex-eu",
@@ -185611,8 +185612,7 @@
           "cv": "https://inspirehep.net/api/literature/1710080?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1710080"
         },
-        "id": "1710080",
-        "created": "2018-12-20T00:00:00+00:00"
+        "id": "1710080"
       },
       {
         "metadata": {
@@ -185717,22 +185717,13 @@
               "recid": 1309535
             }
           ],
-          "citation_count_without_self_citations": 40,
           "report_numbers": [
             {
               "value": "DESY-18-123"
             }
           ],
-          "documents": [
-            {
-              "filename": "scoap3-fulltext.pdf",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "27fe25aa6ac40c83387b60ec0d5e2c7d",
-              "url": "https://inspirehep.net/files/27fe25aa6ac40c83387b60ec0d5e2c7d"
-            }
-          ],
           "citation_count": 47,
+          "citation_count_without_self_citations": 40,
           "publication_info": [
             {
               "journal_volume": "98",
@@ -185742,6 +185733,15 @@
               "year": 2018,
               "journal_issue": "11",
               "journal_title": "Phys.Rev.D"
+            }
+          ],
+          "documents": [
+            {
+              "filename": "scoap3-fulltext.pdf",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "27fe25aa6ac40c83387b60ec0d5e2c7d",
+              "url": "https://inspirehep.net/files/27fe25aa6ac40c83387b60ec0d5e2c7d"
             }
           ],
           "citeable": true,
@@ -188984,6 +188984,7 @@
           "curated": true
         },
         "updated": "2023-03-07T06:38:50.079691+00:00",
+        "created": "2018-08-21T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1688890?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1688890?format=latex-eu",
@@ -188993,8 +188994,7 @@
           "cv": "https://inspirehep.net/api/literature/1688890?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1688890"
         },
-        "id": "1688890",
-        "created": "2018-08-21T00:00:00+00:00"
+        "id": "1688890"
       },
       {
         "metadata": {
@@ -189200,7 +189200,6 @@
               "recid": 982946
             }
           ],
-          "citation_count_without_self_citations": 36,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -189211,16 +189210,8 @@
               "value": "DESY 18-124"
             }
           ],
-          "documents": [
-            {
-              "filename": "scoap3-fulltext.pdf",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "e8ada67ff29e815f3de4f88fdb47966b",
-              "url": "https://inspirehep.net/files/e8ada67ff29e815f3de4f88fdb47966b"
-            }
-          ],
           "citation_count": 45,
+          "citation_count_without_self_citations": 36,
           "publication_info": [
             {
               "journal_volume": "99",
@@ -189230,6 +189221,15 @@
               "year": 2019,
               "journal_issue": "12",
               "journal_title": "Phys.Rev.D"
+            }
+          ],
+          "documents": [
+            {
+              "filename": "scoap3-fulltext.pdf",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "e8ada67ff29e815f3de4f88fdb47966b",
+              "url": "https://inspirehep.net/files/e8ada67ff29e815f3de4f88fdb47966b"
             }
           ],
           "citeable": true,
@@ -190947,6 +190947,7 @@
           "curated": true
         },
         "updated": "2024-08-28T01:00:08.579246+00:00",
+        "created": "2018-07-27T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1683958?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1683958?format=latex-eu",
@@ -190956,8 +190957,7 @@
           "cv": "https://inspirehep.net/api/literature/1683958?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1683958"
         },
-        "id": "1683958",
-        "created": "2018-07-27T00:00:00+00:00"
+        "id": "1683958"
       },
       {
         "metadata": {
@@ -191027,7 +191027,6 @@
               "recid": 1309535
             }
           ],
-          "citation_count_without_self_citations": 118,
           "report_numbers": [
             {
               "source": "arXiv",
@@ -191038,6 +191037,7 @@
             }
           ],
           "citation_count": 143,
+          "citation_count_without_self_citations": 118,
           "publication_info": [
             {
               "journal_volume": "11",
@@ -195578,6 +195578,7 @@
           "curated": true
         },
         "updated": "2023-10-03T08:49:44.494078+00:00",
+        "created": "2018-06-25T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1679252?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1679252?format=latex-eu",
@@ -195587,8 +195588,7 @@
           "cv": "https://inspirehep.net/api/literature/1679252?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1679252"
         },
-        "id": "1679252",
-        "created": "2018-06-25T00:00:00+00:00"
+        "id": "1679252"
       },
       {
         "metadata": {
@@ -195744,7 +195744,6 @@
               "recid": 982834
             }
           ],
-          "citation_count_without_self_citations": 147,
           "report_numbers": [
             {
               "value": "IPMU-17-0158"
@@ -195754,6 +195753,7 @@
             }
           ],
           "citation_count": 170,
+          "citation_count_without_self_citations": 147,
           "publication_info": [
             {
               "journal_volume": "97",
@@ -201444,6 +201444,7 @@
           "curated": true
         },
         "updated": "2025-07-17T14:20:33.961342+00:00",
+        "created": "2017-11-17T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1636737?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1636737?format=latex-eu",
@@ -201453,8 +201454,7 @@
           "cv": "https://inspirehep.net/api/literature/1636737?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1636737"
         },
-        "id": "1636737",
-        "created": "2017-11-17T00:00:00+00:00"
+        "id": "1636737"
       },
       {
         "metadata": {
@@ -201700,7 +201700,6 @@
               "recid": 982834
             }
           ],
-          "citation_count_without_self_citations": 120,
           "report_numbers": [
             {
               "value": "IPMU-17-0165"
@@ -201710,6 +201709,7 @@
             }
           ],
           "citation_count": 139,
+          "citation_count_without_self_citations": 120,
           "publication_info": [
             {
               "journal_volume": "97",
@@ -206824,6 +206824,7 @@
           "curated": true
         },
         "updated": "2023-03-07T02:22:05.522037+00:00",
+        "created": "2017-11-27T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1638332?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1638332?format=latex-eu",
@@ -206833,8 +206834,7 @@
           "cv": "https://inspirehep.net/api/literature/1638332?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1638332"
         },
-        "id": "1638332",
-        "created": "2017-11-27T00:00:00+00:00"
+        "id": "1638332"
       },
       {
         "metadata": {
@@ -207105,13 +207105,13 @@
               "recid": 982834
             }
           ],
-          "citation_count_without_self_citations": 8,
           "report_numbers": [
             {
               "value": "IPMU-17-0133"
             }
           ],
           "citation_count": 13,
+          "citation_count_without_self_citations": 8,
           "publication_info": [
             {
               "journal_volume": "96",
@@ -212754,6 +212754,7 @@
           "curated": true
         },
         "updated": "2026-04-07T03:57:21.652570+00:00",
+        "created": "2017-09-25T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1625098?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1625098?format=latex-eu",
@@ -212763,8 +212764,7 @@
           "cv": "https://inspirehep.net/api/literature/1625098?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1625098"
         },
-        "id": "1625098",
-        "created": "2017-09-25T00:00:00+00:00"
+        "id": "1625098"
       },
       {
         "metadata": {
@@ -212874,7 +212874,6 @@
               "recid": 1060297
             }
           ],
-          "citation_count_without_self_citations": 16,
           "report_numbers": [
             {
               "value": "UT-17-21"
@@ -212884,6 +212883,7 @@
             }
           ],
           "citation_count": 24,
+          "citation_count_without_self_citations": 16,
           "publication_info": [
             {
               "journal_volume": "12",
@@ -216554,6 +216554,7 @@
           "curated": true
         },
         "updated": "2023-03-07T01:07:26.335192+00:00",
+        "created": "2017-06-28T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1607778?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1607778?format=latex-eu",
@@ -216563,8 +216564,7 @@
           "cv": "https://inspirehep.net/api/literature/1607778?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1607778"
         },
-        "id": "1607778",
-        "created": "2017-06-28T00:00:00+00:00"
+        "id": "1607778"
       },
       {
         "metadata": {
@@ -216654,13 +216654,13 @@
               "recid": 982946
             }
           ],
-          "citation_count_without_self_citations": 73,
           "report_numbers": [
             {
               "value": "IPMU-17-0069"
             }
           ],
           "citation_count": 79,
+          "citation_count_without_self_citations": 73,
           "publication_info": [
             {
               "journal_volume": "96",
@@ -227061,6 +227061,7 @@
           "curated": true
         },
         "updated": "2023-03-07T02:15:08.724069+00:00",
+        "created": "2017-06-15T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1605120?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1605120?format=latex-eu",
@@ -227070,8 +227071,7 @@
           "cv": "https://inspirehep.net/api/literature/1605120?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1605120"
         },
-        "id": "1605120",
-        "created": "2017-06-15T00:00:00+00:00"
+        "id": "1605120"
       },
       {
         "metadata": {
@@ -227292,7 +227292,6 @@
               "recid": 1274262
             }
           ],
-          "citation_count_without_self_citations": 37,
           "report_numbers": [
             {
               "value": "IPMU17-0008"
@@ -227304,16 +227303,8 @@
               "value": "UT-17-01"
             }
           ],
-          "documents": [
-            {
-              "filename": "scoap3-fulltext.pdf",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "91c80b868b477a473594b945612cec04",
-              "url": "https://inspirehep.net/files/91c80b868b477a473594b945612cec04"
-            }
-          ],
           "citation_count": 41,
+          "citation_count_without_self_citations": 37,
           "publication_info": [
             {
               "journal_volume": "767",
@@ -227322,6 +227313,15 @@
               "year": 2017,
               "page_start": "392",
               "journal_title": "Phys.Lett.B"
+            }
+          ],
+          "documents": [
+            {
+              "filename": "scoap3-fulltext.pdf",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "91c80b868b477a473594b945612cec04",
+              "url": "https://inspirehep.net/files/91c80b868b477a473594b945612cec04"
             }
           ],
           "citeable": true,
@@ -230126,6 +230126,7 @@
           "curated": true
         },
         "updated": "2023-03-07T02:04:08.648502+00:00",
+        "created": "2017-01-13T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1508818?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1508818?format=latex-eu",
@@ -230135,8 +230136,7 @@
           "cv": "https://inspirehep.net/api/literature/1508818?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1508818"
         },
-        "id": "1508818",
-        "created": "2017-01-13T00:00:00+00:00"
+        "id": "1508818"
       },
       {
         "metadata": {
@@ -230381,13 +230381,13 @@
               "recid": 982834
             }
           ],
-          "citation_count_without_self_citations": 248,
           "report_numbers": [
             {
               "value": "IPMU17-0009"
             }
           ],
           "citation_count": 278,
+          "citation_count_without_self_citations": 248,
           "publication_info": [
             {
               "journal_volume": "96",
@@ -233182,6 +233182,7 @@
           "curated": true
         },
         "updated": "2026-04-07T03:57:21.151866+00:00",
+        "created": "2017-01-11T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1508458?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1508458?format=latex-eu",
@@ -233191,8 +233192,7 @@
           "cv": "https://inspirehep.net/api/literature/1508458?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1508458"
         },
-        "id": "1508458",
-        "created": "2017-01-11T00:00:00+00:00"
+        "id": "1508458"
       },
       {
         "metadata": {
@@ -233345,23 +233345,14 @@
               "recid": 982946
             }
           ],
-          "citation_count_without_self_citations": 87,
           "report_numbers": [
             {
               "source": "arXiv",
               "value": "IPMU16-0197"
             }
           ],
-          "documents": [
-            {
-              "filename": "scoap",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "ef5ede74b2b18ebe5d35334d809bbaec",
-              "url": "https://inspirehep.net/files/ef5ede74b2b18ebe5d35334d809bbaec"
-            }
-          ],
           "citation_count": 94,
+          "citation_count_without_self_citations": 87,
           "publication_info": [
             {
               "journal_volume": "03",
@@ -233374,6 +233365,15 @@
               },
               "page_start": "122",
               "journal_title": "JHEP"
+            }
+          ],
+          "documents": [
+            {
+              "filename": "scoap",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "ef5ede74b2b18ebe5d35334d809bbaec",
+              "url": "https://inspirehep.net/files/ef5ede74b2b18ebe5d35334d809bbaec"
             }
           ],
           "citeable": true,
@@ -236382,6 +236382,7 @@
           "curated": true
         },
         "updated": "2023-10-03T09:34:34.206717+00:00",
+        "created": "2016-12-23T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1505565?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1505565?format=latex-eu",
@@ -236391,8 +236392,7 @@
           "cv": "https://inspirehep.net/api/literature/1505565?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1505565"
         },
-        "id": "1505565",
-        "created": "2016-12-23T00:00:00+00:00"
+        "id": "1505565"
       },
       {
         "metadata": {
@@ -236583,13 +236583,13 @@
               "recid": 982834
             }
           ],
-          "citation_count_without_self_citations": 234,
           "report_numbers": [
             {
               "value": "IPMU16-0172"
             }
           ],
           "citation_count": 275,
+          "citation_count_without_self_citations": 234,
           "publication_info": [
             {
               "journal_volume": "95",
@@ -240758,6 +240758,7 @@
           "curated": true
         },
         "updated": "2026-04-07T03:57:22.266718+00:00",
+        "created": "2016-11-21T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1499030?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1499030?format=latex-eu",
@@ -240767,8 +240768,7 @@
           "cv": "https://inspirehep.net/api/literature/1499030?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1499030"
         },
-        "id": "1499030",
-        "created": "2016-11-21T00:00:00+00:00"
+        "id": "1499030"
       },
       {
         "metadata": {
@@ -240963,8 +240963,8 @@
               "recid": 1060297
             }
           ],
-          "citation_count_without_self_citations": 155,
           "citation_count": 178,
+          "citation_count_without_self_citations": 155,
           "publication_info": [
             {
               "journal_volume": "02",
@@ -243272,6 +243272,7 @@
           "curated": true
         },
         "updated": "2023-09-10T03:33:26.343547+00:00",
+        "created": "2016-09-20T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1487235?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1487235?format=latex-eu",
@@ -243281,8 +243282,7 @@
           "cv": "https://inspirehep.net/api/literature/1487235?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1487235"
         },
-        "id": "1487235",
-        "created": "2016-09-20T00:00:00+00:00"
+        "id": "1487235"
       },
       {
         "metadata": {
@@ -243464,7 +243464,6 @@
               "recid": 1198420
             }
           ],
-          "citation_count_without_self_citations": 22,
           "report_numbers": [
             {
               "value": "UT-16-27"
@@ -243476,16 +243475,8 @@
               "value": "KIAS-P16069"
             }
           ],
-          "documents": [
-            {
-              "filename": "scoap",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "dc564e8587dfb12d5d65f4e3dbaf3a72",
-              "url": "https://inspirehep.net/files/dc564e8587dfb12d5d65f4e3dbaf3a72"
-            }
-          ],
           "citation_count": 31,
+          "citation_count_without_self_citations": 22,
           "publication_info": [
             {
               "journal_volume": "11",
@@ -243496,6 +243487,15 @@
               },
               "page_start": "184",
               "journal_title": "JHEP"
+            }
+          ],
+          "documents": [
+            {
+              "filename": "scoap",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "dc564e8587dfb12d5d65f4e3dbaf3a72",
+              "url": "https://inspirehep.net/files/dc564e8587dfb12d5d65f4e3dbaf3a72"
             }
           ],
           "citeable": true,
@@ -246812,6 +246812,7 @@
           "curated": true
         },
         "updated": "2023-10-03T09:18:17.552395+00:00",
+        "created": "2016-09-16T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1486649?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1486649?format=latex-eu",
@@ -246821,8 +246822,7 @@
           "cv": "https://inspirehep.net/api/literature/1486649?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1486649"
         },
-        "id": "1486649",
-        "created": "2016-09-16T00:00:00+00:00"
+        "id": "1486649"
       },
       {
         "metadata": {
@@ -246936,13 +246936,23 @@
               "recid": 1060297
             }
           ],
-          "citation_count_without_self_citations": 21,
           "report_numbers": [
             {
               "value": "UT-16-22"
             },
             {
               "value": "IPMU-16-0075"
+            }
+          ],
+          "citation_count": 22,
+          "citation_count_without_self_citations": 21,
+          "publication_info": [
+            {
+              "journal_volume": "761",
+              "page_end": "423",
+              "year": 2016,
+              "page_start": "419",
+              "journal_title": "Phys.Lett.B"
             }
           ],
           "documents": [
@@ -246952,16 +246962,6 @@
               "source": "SCOAP3",
               "key": "3251b3acaaccdc82eda5952f83bb8d98",
               "url": "https://inspirehep.net/files/3251b3acaaccdc82eda5952f83bb8d98"
-            }
-          ],
-          "citation_count": 22,
-          "publication_info": [
-            {
-              "journal_volume": "761",
-              "page_end": "423",
-              "year": 2016,
-              "page_start": "419",
-              "journal_title": "Phys.Lett.B"
             }
           ],
           "citeable": true,
@@ -254991,6 +254991,7 @@
           "curated": true
         },
         "updated": "2023-10-03T08:32:14.447344+00:00",
+        "created": "2016-05-25T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1465487?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1465487?format=latex-eu",
@@ -255000,8 +255001,7 @@
           "cv": "https://inspirehep.net/api/literature/1465487?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1465487"
         },
-        "id": "1465487",
-        "created": "2016-05-25T00:00:00+00:00"
+        "id": "1465487"
       },
       {
         "metadata": {
@@ -255111,13 +255111,13 @@
               "recid": 982834
             }
           ],
-          "citation_count_without_self_citations": 18,
           "report_numbers": [
             {
               "value": "IPMU-16-0072"
             }
           ],
           "citation_count": 23,
+          "citation_count_without_self_citations": 18,
           "publication_info": [
             {
               "journal_volume": "94",
@@ -259354,6 +259354,7 @@
           "curated": true
         },
         "updated": "2023-10-03T08:25:41.090815+00:00",
+        "created": "2016-05-18T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1459234?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1459234?format=latex-eu",
@@ -259363,8 +259364,7 @@
           "cv": "https://inspirehep.net/api/literature/1459234?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1459234"
         },
-        "id": "1459234",
-        "created": "2016-05-18T00:00:00+00:00"
+        "id": "1459234"
       },
       {
         "metadata": {
@@ -259512,7 +259512,6 @@
               "recid": 1060297
             }
           ],
-          "citation_count_without_self_citations": 154,
           "report_numbers": [
             {
               "value": "UT-16-20"
@@ -259525,6 +259524,7 @@
             }
           ],
           "citation_count": 176,
+          "citation_count_without_self_citations": 154,
           "publication_info": [
             {
               "journal_volume": "94",
@@ -261438,6 +261438,7 @@
           "curated": true
         },
         "updated": "2023-09-10T03:35:27.740988+00:00",
+        "created": "2016-05-02T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1454064?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1454064?format=latex-eu",
@@ -261447,8 +261448,7 @@
           "cv": "https://inspirehep.net/api/literature/1454064?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1454064"
         },
-        "id": "1454064",
-        "created": "2016-05-02T00:00:00+00:00"
+        "id": "1454064"
       },
       {
         "metadata": {
@@ -261577,7 +261577,6 @@
               "recid": 1074536
             }
           ],
-          "citation_count_without_self_citations": 73,
           "report_numbers": [
             {
               "value": "IPMU16-0039"
@@ -261586,16 +261585,8 @@
               "value": "LAPTH-013-16"
             }
           ],
-          "documents": [
-            {
-              "filename": "scoap",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "4b89b8dbe0a44a4ee8d317afd3485dab",
-              "url": "https://inspirehep.net/files/4b89b8dbe0a44a4ee8d317afd3485dab"
-            }
-          ],
           "citation_count": 83,
+          "citation_count_without_self_citations": 73,
           "publication_info": [
             {
               "journal_volume": "11",
@@ -261606,6 +261597,15 @@
               },
               "page_start": "070",
               "journal_title": "JHEP"
+            }
+          ],
+          "documents": [
+            {
+              "filename": "scoap",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "4b89b8dbe0a44a4ee8d317afd3485dab",
+              "url": "https://inspirehep.net/files/4b89b8dbe0a44a4ee8d317afd3485dab"
             }
           ],
           "citeable": true,
@@ -274755,6 +274755,7 @@
           "curated": true
         },
         "updated": "2023-03-09T18:49:59.357966+00:00",
+        "created": "2016-03-25T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1434316?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1434316?format=latex-eu",
@@ -274764,8 +274765,7 @@
           "cv": "https://inspirehep.net/api/literature/1434316?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1434316"
         },
-        "id": "1434316",
-        "created": "2016-03-25T00:00:00+00:00"
+        "id": "1434316"
       },
       {
         "metadata": {
@@ -274851,7 +274851,6 @@
               "recid": 1060297
             }
           ],
-          "citation_count_without_self_citations": 67,
           "report_numbers": [
             {
               "value": "UT-16-04"
@@ -274860,16 +274859,8 @@
               "value": "IPMU-16-0012"
             }
           ],
-          "documents": [
-            {
-              "filename": "scoap3-fulltext.pdf",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "172b62a82f7a8179a0102c366425f503",
-              "url": "https://inspirehep.net/files/172b62a82f7a8179a0102c366425f503"
-            }
-          ],
           "citation_count": 83,
+          "citation_count_without_self_citations": 67,
           "publication_info": [
             {
               "journal_volume": "10",
@@ -274880,6 +274871,15 @@
               },
               "page_start": "043",
               "journal_title": "JCAP"
+            }
+          ],
+          "documents": [
+            {
+              "filename": "scoap3-fulltext.pdf",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "172b62a82f7a8179a0102c366425f503",
+              "url": "https://inspirehep.net/files/172b62a82f7a8179a0102c366425f503"
             }
           ],
           "citeable": true,
@@ -277915,6 +277915,7 @@
           "curated": true
         },
         "updated": "2023-03-07T01:28:32.137605+00:00",
+        "created": "2016-02-02T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1418784?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1418784?format=latex-eu",
@@ -277924,8 +277925,7 @@
           "cv": "https://inspirehep.net/api/literature/1418784?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1418784"
         },
-        "id": "1418784",
-        "created": "2016-02-02T00:00:00+00:00"
+        "id": "1418784"
       },
       {
         "metadata": {
@@ -278004,10 +278004,24 @@
               "recid": 982946
             }
           ],
-          "citation_count_without_self_citations": 101,
           "report_numbers": [
             {
               "value": "IPMU-15-0096"
+            }
+          ],
+          "citation_count": 115,
+          "citation_count_without_self_citations": 101,
+          "publication_info": [
+            {
+              "journal_volume": "02",
+              "pubinfo_freetext": "JCAP02(2016)003",
+              "artid": "003",
+              "year": 2016,
+              "journal_record": {
+                "$ref": "https://inspirehep.net/api/journals/1212538"
+              },
+              "page_start": "003",
+              "journal_title": "JCAP"
             }
           ],
           "documents": [
@@ -278026,20 +278040,6 @@
               "source": "SCOAP3",
               "key": "cf541e1877e9bc81efbd31f5595c4649",
               "url": "https://inspirehep.net/files/cf541e1877e9bc81efbd31f5595c4649"
-            }
-          ],
-          "citation_count": 115,
-          "publication_info": [
-            {
-              "journal_volume": "02",
-              "pubinfo_freetext": "JCAP02(2016)003",
-              "artid": "003",
-              "year": 2016,
-              "journal_record": {
-                "$ref": "https://inspirehep.net/api/journals/1212538"
-              },
-              "page_start": "003",
-              "journal_title": "JCAP"
             }
           ],
           "citeable": true,
@@ -280567,6 +280567,7 @@
           "curated": true
         },
         "updated": "2023-03-07T03:38:16.602213+00:00",
+        "created": "2015-06-26T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1377913?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1377913?format=latex-eu",
@@ -280576,8 +280577,7 @@
           "cv": "https://inspirehep.net/api/literature/1377913?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1377913"
         },
-        "id": "1377913",
-        "created": "2015-06-26T00:00:00+00:00"
+        "id": "1377913"
       },
       {
         "metadata": {
@@ -280719,7 +280719,6 @@
               "recid": 1060297
             }
           ],
-          "citation_count_without_self_citations": 1,
           "report_numbers": [
             {
               "value": "UT-15-19"
@@ -280729,6 +280728,7 @@
             }
           ],
           "citation_count": 6,
+          "citation_count_without_self_citations": 1,
           "publication_info": [
             {
               "journal_volume": "10",
@@ -287468,6 +287468,7 @@
           "curated": true
         },
         "updated": "2023-10-03T08:45:48.378188+00:00",
+        "created": "2015-05-19T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1370672?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1370672?format=latex-eu",
@@ -287477,8 +287478,7 @@
           "cv": "https://inspirehep.net/api/literature/1370672?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1370672"
         },
-        "id": "1370672",
-        "created": "2015-05-19T00:00:00+00:00"
+        "id": "1370672"
       },
       {
         "metadata": {
@@ -287620,7 +287620,6 @@
               "recid": 1060297
             }
           ],
-          "citation_count_without_self_citations": 36,
           "report_numbers": [
             {
               "value": "UT-15-15"
@@ -287630,6 +287629,7 @@
             }
           ],
           "citation_count": 43,
+          "citation_count_without_self_citations": 36,
           "publication_info": [
             {
               "journal_volume": "10",
@@ -294695,6 +294695,7 @@
           "curated": true
         },
         "updated": "2023-10-03T09:13:33.845308+00:00",
+        "created": "2015-04-28T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1364858?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1364858?format=latex-eu",
@@ -294704,8 +294705,7 @@
           "cv": "https://inspirehep.net/api/literature/1364858?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1364858"
         },
-        "id": "1364858",
-        "created": "2015-04-28T00:00:00+00:00"
+        "id": "1364858"
       },
       {
         "metadata": {
@@ -294746,7 +294746,13 @@
               "recid": 1309535
             }
           ],
+          "citation_count": 0,
           "citation_count_without_self_citations": 0,
+          "publication_info": [
+            {
+              "year": 2015
+            }
+          ],
           "documents": [
             {
               "filename": "document",
@@ -294754,12 +294760,6 @@
               "source": "Tokyo U.",
               "key": "557db7a1da39629de67e30be4fa7a1c5",
               "url": "https://inspirehep.net/files/557db7a1da39629de67e30be4fa7a1c5"
-            }
-          ],
-          "citation_count": 0,
-          "publication_info": [
-            {
-              "year": 2015
             }
           ],
           "$schema": "https://inspirehep.net/schemas/records/hep.json",
@@ -300752,6 +300752,7 @@
           "curated": true
         },
         "updated": "2026-06-15T10:49:00.767847+00:00",
+        "created": "2016-09-12T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1486102?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1486102?format=latex-eu",
@@ -300761,8 +300762,7 @@
           "cv": "https://inspirehep.net/api/literature/1486102?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1486102"
         },
-        "id": "1486102",
-        "created": "2016-09-12T00:00:00+00:00"
+        "id": "1486102"
       },
       {
         "metadata": {
@@ -300905,22 +300905,13 @@
               "recid": 1060297
             }
           ],
-          "citation_count_without_self_citations": 115,
           "report_numbers": [
             {
               "value": "UT-15-03"
             }
           ],
-          "documents": [
-            {
-              "filename": "scoap3-fulltext.pdf",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "b0b3407e36032ee55be5a232a8c98220",
-              "url": "https://inspirehep.net/files/b0b3407e36032ee55be5a232a8c98220"
-            }
-          ],
           "citation_count": 145,
+          "citation_count_without_self_citations": 115,
           "publication_info": [
             {
               "journal_volume": "05",
@@ -300931,6 +300922,15 @@
               },
               "page_start": "038",
               "journal_title": "JCAP"
+            }
+          ],
+          "documents": [
+            {
+              "filename": "scoap3-fulltext.pdf",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "b0b3407e36032ee55be5a232a8c98220",
+              "url": "https://inspirehep.net/files/b0b3407e36032ee55be5a232a8c98220"
             }
           ],
           "citeable": true,
@@ -301731,6 +301731,7 @@
           "curated": true
         },
         "updated": "2023-10-03T09:21:51.896681+00:00",
+        "created": "2015-02-10T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1343475?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1343475?format=latex-eu",
@@ -301740,8 +301741,7 @@
           "cv": "https://inspirehep.net/api/literature/1343475?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1343475"
         },
-        "id": "1343475",
-        "created": "2015-02-10T00:00:00+00:00"
+        "id": "1343475"
       },
       {
         "metadata": {
@@ -301866,22 +301866,13 @@
               "recid": 1257925
             }
           ],
-          "citation_count_without_self_citations": 21,
           "report_numbers": [
             {
               "value": "UT-14-31"
             }
           ],
-          "documents": [
-            {
-              "filename": "scoap",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "78e86106af7cbd41c50f3e56c616fa2b",
-              "url": "https://inspirehep.net/files/78e86106af7cbd41c50f3e56c616fa2b"
-            }
-          ],
           "citation_count": 30,
+          "citation_count_without_self_citations": 21,
           "publication_info": [
             {
               "journal_volume": "11",
@@ -301892,6 +301883,15 @@
               },
               "page_start": "151",
               "journal_title": "JHEP"
+            }
+          ],
+          "documents": [
+            {
+              "filename": "scoap",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "78e86106af7cbd41c50f3e56c616fa2b",
+              "url": "https://inspirehep.net/files/78e86106af7cbd41c50f3e56c616fa2b"
             }
           ],
           "citeable": true,
@@ -304829,6 +304829,7 @@
           "curated": true
         },
         "updated": "2023-10-03T09:08:56.334841+00:00",
+        "created": "2014-07-29T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1308488?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1308488?format=latex-eu",
@@ -304838,8 +304839,7 @@
           "cv": "https://inspirehep.net/api/literature/1308488?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1308488"
         },
-        "id": "1308488",
-        "created": "2014-07-29T00:00:00+00:00"
+        "id": "1308488"
       },
       {
         "metadata": {
@@ -304899,22 +304899,13 @@
               "recid": 1257925
             }
           ],
-          "citation_count_without_self_citations": 20,
           "report_numbers": [
             {
               "value": "UT-14-22"
             }
           ],
-          "documents": [
-            {
-              "filename": "scoap3-fulltext.pdf",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "9b437849baf0859d92336cb3497f7f14",
-              "url": "https://inspirehep.net/files/9b437849baf0859d92336cb3497f7f14"
-            }
-          ],
           "citation_count": 23,
+          "citation_count_without_self_citations": 20,
           "publication_info": [
             {
               "journal_volume": "08",
@@ -304925,6 +304916,15 @@
               },
               "page_start": "051",
               "journal_title": "JCAP"
+            }
+          ],
+          "documents": [
+            {
+              "filename": "scoap3-fulltext.pdf",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "9b437849baf0859d92336cb3497f7f14",
+              "url": "https://inspirehep.net/files/9b437849baf0859d92336cb3497f7f14"
             }
           ],
           "citeable": true,
@@ -306534,6 +306534,7 @@
           "curated": true
         },
         "updated": "2023-12-13T11:08:57.546052+00:00",
+        "created": "2014-05-14T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1295880?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1295880?format=latex-eu",
@@ -306543,8 +306544,7 @@
           "cv": "https://inspirehep.net/api/literature/1295880?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1295880"
         },
-        "id": "1295880",
-        "created": "2014-05-14T00:00:00+00:00"
+        "id": "1295880"
       },
       {
         "metadata": {
@@ -306755,7 +306755,6 @@
               "recid": 982946
             }
           ],
-          "citation_count_without_self_citations": 26,
           "report_numbers": [
             {
               "value": "IPMU-14-0093"
@@ -306768,6 +306767,7 @@
             }
           ],
           "citation_count": 39,
+          "citation_count_without_self_citations": 26,
           "publication_info": [
             {
               "journal_volume": "90",
@@ -310176,6 +310176,7 @@
           "curated": true
         },
         "updated": "2023-03-07T00:08:40.930034+00:00",
+        "created": "2014-04-14T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1290113?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1290113?format=latex-eu",
@@ -310185,8 +310186,7 @@
           "cv": "https://inspirehep.net/api/literature/1290113?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1290113"
         },
-        "id": "1290113",
-        "created": "2014-04-14T00:00:00+00:00"
+        "id": "1290113"
       },
       {
         "metadata": {
@@ -310276,22 +310276,13 @@
               "recid": 1060297
             }
           ],
-          "citation_count_without_self_citations": 22,
           "report_numbers": [
             {
               "value": "UT-14-15"
             }
           ],
-          "documents": [
-            {
-              "filename": "scoap3-fulltext.pdf",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "bb08a042ce7c92d018184ddf1694c653",
-              "url": "https://inspirehep.net/files/bb08a042ce7c92d018184ddf1694c653"
-            }
-          ],
           "citation_count": 25,
+          "citation_count_without_self_citations": 22,
           "publication_info": [
             {
               "journal_volume": "08",
@@ -310302,6 +310293,15 @@
               },
               "page_start": "062",
               "journal_title": "JCAP"
+            }
+          ],
+          "documents": [
+            {
+              "filename": "scoap3-fulltext.pdf",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "bb08a042ce7c92d018184ddf1694c653",
+              "url": "https://inspirehep.net/files/bb08a042ce7c92d018184ddf1694c653"
             }
           ],
           "citeable": true,
@@ -311725,6 +311725,7 @@
           "curated": true
         },
         "updated": "2023-12-13T11:08:02.955048+00:00",
+        "created": "2014-04-08T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1288856?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1288856?format=latex-eu",
@@ -311734,8 +311735,7 @@
           "cv": "https://inspirehep.net/api/literature/1288856?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1288856"
         },
-        "id": "1288856",
-        "created": "2014-04-08T00:00:00+00:00"
+        "id": "1288856"
       },
       {
         "metadata": {
@@ -311904,7 +311904,6 @@
               "recid": 982946
             }
           ],
-          "citation_count_without_self_citations": 118,
           "report_numbers": [
             {
               "value": "IPMU-14-0027"
@@ -311917,6 +311916,7 @@
             }
           ],
           "citation_count": 143,
+          "citation_count_without_self_citations": 118,
           "publication_info": [
             {
               "journal_volume": "89",
@@ -320626,6 +320626,7 @@
           "curated": true
         },
         "updated": "2023-03-07T02:53:47.689313+00:00",
+        "created": "2014-02-13T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1281042?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1281042?format=latex-eu",
@@ -320635,8 +320636,7 @@
           "cv": "https://inspirehep.net/api/literature/1281042?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1281042"
         },
-        "id": "1281042",
-        "created": "2014-02-13T00:00:00+00:00"
+        "id": "1281042"
       },
       {
         "metadata": {
@@ -320729,13 +320729,13 @@
               "recid": 1257925
             }
           ],
-          "citation_count_without_self_citations": 7,
           "report_numbers": [
             {
               "value": "UT-14-03"
             }
           ],
           "citation_count": 10,
+          "citation_count_without_self_citations": 7,
           "publication_info": [
             {
               "journal_volume": "89",
@@ -322225,6 +322225,7 @@
           "curated": true
         },
         "updated": "2023-12-13T11:06:51.256069+00:00",
+        "created": "2014-02-11T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1280678?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1280678?format=latex-eu",
@@ -322234,8 +322235,7 @@
           "cv": "https://inspirehep.net/api/literature/1280678?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1280678"
         },
-        "id": "1280678",
-        "created": "2014-02-11T00:00:00+00:00"
+        "id": "1280678"
       },
       {
         "metadata": {
@@ -322358,22 +322358,13 @@
               "recid": 1257925
             }
           ],
-          "citation_count_without_self_citations": 10,
           "report_numbers": [
             {
               "value": "UT-14-02"
             }
           ],
-          "documents": [
-            {
-              "filename": "scoap3-fulltext.pdf",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "813d1e29364fe1b529048ac2cd14efd8",
-              "url": "https://inspirehep.net/files/813d1e29364fe1b529048ac2cd14efd8"
-            }
-          ],
           "citation_count": 15,
+          "citation_count_without_self_citations": 10,
           "publication_info": [
             {
               "journal_volume": "06",
@@ -322384,6 +322375,15 @@
               },
               "page_start": "013",
               "journal_title": "JCAP"
+            }
+          ],
+          "documents": [
+            {
+              "filename": "scoap3-fulltext.pdf",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "813d1e29364fe1b529048ac2cd14efd8",
+              "url": "https://inspirehep.net/files/813d1e29364fe1b529048ac2cd14efd8"
             }
           ],
           "citeable": true,
@@ -323990,6 +323990,7 @@
           "curated": true
         },
         "updated": "2023-10-03T08:11:31.474765+00:00",
+        "created": "2014-01-24T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1278548?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1278548?format=latex-eu",
@@ -323999,8 +324000,7 @@
           "cv": "https://inspirehep.net/api/literature/1278548?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1278548"
         },
-        "id": "1278548",
-        "created": "2014-01-24T00:00:00+00:00"
+        "id": "1278548"
       },
       {
         "metadata": {
@@ -324090,7 +324090,6 @@
               "recid": 1309535
             }
           ],
-          "citation_count_without_self_citations": 123,
           "report_numbers": [
             {
               "value": "IPMU-13-0233"
@@ -324099,16 +324098,8 @@
               "value": "UT-13-43"
             }
           ],
-          "documents": [
-            {
-              "filename": "scoap",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "5cb2970ca0ccd24a9f12430f464e722a",
-              "url": "https://inspirehep.net/files/5cb2970ca0ccd24a9f12430f464e722a"
-            }
-          ],
           "citation_count": 157,
+          "citation_count_without_self_citations": 123,
           "publication_info": [
             {
               "journal_volume": "05",
@@ -324119,6 +324110,15 @@
               },
               "page_start": "006",
               "journal_title": "JHEP"
+            }
+          ],
+          "documents": [
+            {
+              "filename": "scoap",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "5cb2970ca0ccd24a9f12430f464e722a",
+              "url": "https://inspirehep.net/files/5cb2970ca0ccd24a9f12430f464e722a"
             }
           ],
           "citeable": true,
@@ -325934,6 +325934,7 @@
           "curated": true
         },
         "updated": "2023-12-13T11:05:39.980568+00:00",
+        "created": "2013-12-12T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1268769?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1268769?format=latex-eu",
@@ -325943,8 +325944,7 @@
           "cv": "https://inspirehep.net/api/literature/1268769?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1268769"
         },
-        "id": "1268769",
-        "created": "2013-12-12T00:00:00+00:00"
+        "id": "1268769"
       },
       {
         "metadata": {
@@ -326037,13 +326037,13 @@
               "recid": 1060297
             }
           ],
-          "citation_count_without_self_citations": 24,
           "report_numbers": [
             {
               "value": "UT-13-36"
             }
           ],
           "citation_count": 31,
+          "citation_count_without_self_citations": 24,
           "publication_info": [
             {
               "journal_volume": "01",
@@ -333025,6 +333025,7 @@
           "curated": true
         },
         "updated": "2023-09-10T03:33:42.518323+00:00",
+        "created": "2013-09-27T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1255597?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1255597?format=latex-eu",
@@ -333034,8 +333035,7 @@
           "cv": "https://inspirehep.net/api/literature/1255597?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1255597"
         },
-        "id": "1255597",
-        "created": "2013-09-27T00:00:00+00:00"
+        "id": "1255597"
       },
       {
         "metadata": {
@@ -333196,13 +333196,13 @@
               "recid": 1257925
             }
           ],
-          "citation_count_without_self_citations": 41,
           "report_numbers": [
             {
               "value": "UT-13-30"
             }
           ],
           "citation_count": 53,
+          "citation_count_without_self_citations": 41,
           "publication_info": [
             {
               "journal_volume": "12",
@@ -335182,6 +335182,7 @@
           "curated": true
         },
         "updated": "2023-10-03T08:21:59.673106+00:00",
+        "created": "2013-08-21T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1249869?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1249869?format=latex-eu",
@@ -335191,8 +335192,7 @@
           "cv": "https://inspirehep.net/api/literature/1249869?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1249869"
         },
-        "id": "1249869",
-        "created": "2013-08-21T00:00:00+00:00"
+        "id": "1249869"
       },
       {
         "metadata": {
@@ -335373,13 +335373,13 @@
               "recid": 1257925
             }
           ],
-          "citation_count_without_self_citations": 19,
           "report_numbers": [
             {
               "value": "UT-13-16"
             }
           ],
           "citation_count": 33,
+          "citation_count_without_self_citations": 19,
           "publication_info": [
             {
               "journal_volume": "06",
@@ -343468,6 +343468,7 @@
           "curated": true
         },
         "updated": "2023-10-03T07:58:33.325112+00:00",
+        "created": "2013-04-25T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1229767?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1229767?format=latex-eu",
@@ -343477,8 +343478,7 @@
           "cv": "https://inspirehep.net/api/literature/1229767?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1229767"
         },
-        "id": "1229767",
-        "created": "2013-04-25T00:00:00+00:00"
+        "id": "1229767"
       },
       {
         "metadata": {
@@ -343699,7 +343699,6 @@
               "recid": 1060297
             }
           ],
-          "citation_count_without_self_citations": 23,
           "report_numbers": [
             {
               "value": "UT-13-03"
@@ -343709,6 +343708,7 @@
             }
           ],
           "citation_count": 27,
+          "citation_count_without_self_citations": 23,
           "publication_info": [
             {
               "journal_volume": "721",
@@ -345642,6 +345642,7 @@
           "curated": true
         },
         "updated": "2023-03-06T19:54:03.249295+00:00",
+        "created": "2013-01-31T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1217088?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1217088?format=latex-eu",
@@ -345651,8 +345652,7 @@
           "cv": "https://inspirehep.net/api/literature/1217088?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1217088"
         },
-        "id": "1217088",
-        "created": "2013-01-31T00:00:00+00:00"
+        "id": "1217088"
       },
       {
         "metadata": {
@@ -345718,13 +345718,13 @@
               "recid": 1060297
             }
           ],
-          "citation_count_without_self_citations": 73,
           "report_numbers": [
             {
               "value": "UT-12-45"
             }
           ],
           "citation_count": 94,
+          "citation_count_without_self_citations": 73,
           "publication_info": [
             {
               "journal_volume": "03",
@@ -346966,6 +346966,7 @@
           "curated": true
         },
         "updated": "2023-12-13T10:56:48.849534+00:00",
+        "created": "2012-12-20T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1208241?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1208241?format=latex-eu",
@@ -346975,8 +346976,7 @@
           "cv": "https://inspirehep.net/api/literature/1208241?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1208241"
         },
-        "id": "1208241",
-        "created": "2012-12-20T00:00:00+00:00"
+        "id": "1208241"
       },
       {
         "metadata": {
@@ -347066,13 +347066,13 @@
               "recid": 1060297
             }
           ],
-          "citation_count_without_self_citations": 113,
           "report_numbers": [
             {
               "value": "UT-12-28"
             }
           ],
           "citation_count": 139,
+          "citation_count_without_self_citations": 113,
           "publication_info": [
             {
               "journal_volume": "01",
@@ -350485,6 +350485,7 @@
           "curated": true
         },
         "updated": "2023-10-03T08:06:14.349714+00:00",
+        "created": "2012-08-16T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/1127696?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/1127696?format=latex-eu",
@@ -350494,8 +350495,7 @@
           "cv": "https://inspirehep.net/api/literature/1127696?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A1127696"
         },
-        "id": "1127696",
-        "created": "2012-08-16T00:00:00+00:00"
+        "id": "1127696"
       },
       {
         "metadata": {
@@ -350593,7 +350593,6 @@
               "recid": 1309535
             }
           ],
-          "citation_count_without_self_citations": 22,
           "report_numbers": [
             {
               "value": "UT-11-39"
@@ -350603,6 +350602,7 @@
             }
           ],
           "citation_count": 24,
+          "citation_count_without_self_citations": 22,
           "publication_info": [
             {
               "journal_volume": "01",
@@ -351567,6 +351567,7 @@
           "curated": true
         },
         "updated": "2023-03-07T05:56:36.182368+00:00",
+        "created": "2011-11-21T00:00:00+00:00",
         "links": {
           "bibtex": "https://inspirehep.net/api/literature/946841?format=bibtex",
           "latex-eu": "https://inspirehep.net/api/literature/946841?format=latex-eu",
@@ -351576,8 +351577,7 @@
           "cv": "https://inspirehep.net/api/literature/946841?format=cv",
           "citations": "https://inspirehep.net/api/literature/?q=refersto%3Arecid%3A946841"
         },
-        "id": "946841",
-        "created": "2011-11-21T00:00:00+00:00"
+        "id": "946841"
       }
     ],
     "total": 88
