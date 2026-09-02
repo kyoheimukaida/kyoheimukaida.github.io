@@ -49,7 +49,7 @@ Theoretical particle physics and early-Universe cosmology
 
 <!-- cv-publication-summary:start -->
 - Complete publication list: [INSPIRE author profile](https://inspirehep.net/authors/1309535)
-- Number of INSPIRE literature records: **88**
+- Number of INSPIRE literature records: **89**
 - Full publication and invited-talk lists below are generated automatically.
 <!-- cv-publication-summary:end -->
 
@@ -61,6 +61,11 @@ Theoretical particle physics and early-Universe cosmology
 <div class="record-list" markdown="1">
 
 <!-- cv-full-publications:start -->
+- **[Gravitational Waves from Reheating beyond Instantaneous Thermalization](https://arxiv.org/abs/2609.01480)**  
+  Kyohei Mukaida, and Tenta Tsuji  
+  *arXiv preprint (2026-09-01)*  
+  [[arXiv](https://arxiv.org/abs/2609.01480)]
+
 - **[Revisiting unitarity of single scalar field with non-minimal coupling](https://arxiv.org/abs/2603.06296)**  
   Minxi He, Muzi Hong, Kyohei Mukaida, and Tomoya Nishiki  
   *arXiv preprint (2026-03-06)*  
