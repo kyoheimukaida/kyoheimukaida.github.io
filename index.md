@@ -54,17 +54,16 @@ title: Home
 <div class="card-list" markdown="1">
 
 <!-- recent-papers:start -->
+- **[Gravitational Waves from Reheating beyond Instantaneous Thermalization](https://arxiv.org/abs/2609.01480)**  
+  Kyohei Mukaida, and Tenta Tsuji  
+  *arXiv preprint (2026-09-01)*  
+  [[arXiv](https://arxiv.org/abs/2609.01480)]
+
 - **[Revisiting unitarity of single scalar field with non-minimal coupling](https://arxiv.org/abs/2603.06296)**  
   Minxi He, Muzi Hong, Kyohei Mukaida, and Tomoya Nishiki  
   *arXiv preprint (2026-03-06)*  
   <p class="paper-summary"><strong class="summary-label">Summary:</strong> Using six-point scalar scattering amplitudes, this paper revisits the unitarity-violation scale of a quartic scalar field non-minimally coupled to gravity and compares the Jordan- and Einstein-frame descriptions. It finds frame-independent amplitudes and identifies the scalar potential, rather than target-space curvature from the conformal mode, as the relevant source in the single-field case.</p>  
   [[arXiv](https://arxiv.org/abs/2603.06296)]
-
-- **[Cancellation of loop corrections to soft scalar power spectrum](https://arxiv.org/abs/2603.01961)**  
-  Yohei Ema, Muzi Hong, Ryusuke Jinno, and Kyohei Mukaida  
-  *arXiv preprint (2026-03-02)*  
-  <p class="paper-summary"><strong class="summary-label">Summary:</strong> The authors show that enhanced short-wavelength scalar perturbations do not generate scale-invariant one-loop corrections to superhorizon curvature perturbations in the soft external-momentum limit, including in transient ultra-slow-roll inflation. The cancellation is traced to dilatation symmetry in the in-in effective theory for soft modes, with the tadpole counterterm respecting the same symmetry.</p>  
-  [[arXiv](https://arxiv.org/abs/2603.01961)]
 <!-- recent-papers:end -->
 
 </div>
