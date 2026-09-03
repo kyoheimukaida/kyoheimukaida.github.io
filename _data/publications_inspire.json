@@ -3,11 +3,17 @@
     "hits": [
       {
         "id": "3198665",
-        "updated": "2026-09-02T05:36:52.264248+00:00",
         "created": "2026-09-02T05:28:48.897025+00:00",
+        "updated": "2026-09-03T04:12:18.018196+00:00",
         "metadata": {
-          "citation_count_without_self_citations": 0,
           "citation_count": 0,
+          "citation_count_without_self_citations": 0,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "KEK-TH-2868"
+            }
+          ],
           "authors": [
             {
               "raw_affiliations": [
@@ -23,13 +29,6 @@
               "record": {
                 "$ref": "https://inspirehep.net/api/authors/1309535"
               },
-              "last_name": "Mukaida",
-              "ids": [
-                {
-                  "schema": "INSPIRE BAI",
-                  "value": "K.Mukaida.1"
-                }
-              ],
               "affiliations": [
                 {
                   "record": {
@@ -42,6 +41,13 @@
                     "$ref": "https://inspirehep.net/api/institutions/910392"
                   },
                   "value": "Sokendai, Kanagawa"
+                }
+              ],
+              "last_name": "Mukaida",
+              "ids": [
+                {
+                  "schema": "INSPIRE BAI",
+                  "value": "K.Mukaida.1"
                 }
               ],
               "uuid": "8f55bfd1-17ae-48dc-8a18-5a6fcf2a4d25",
@@ -63,13 +69,6 @@
               "record": {
                 "$ref": "https://inspirehep.net/api/authors/2897307"
               },
-              "last_name": "Tsuji",
-              "ids": [
-                {
-                  "schema": "INSPIRE BAI",
-                  "value": "Tenta.Tsuji.1"
-                }
-              ],
               "affiliations": [
                 {
                   "record": {
@@ -84,15 +83,16 @@
                   "value": "Sokendai, Kanagawa"
                 }
               ],
+              "last_name": "Tsuji",
+              "ids": [
+                {
+                  "schema": "INSPIRE BAI",
+                  "value": "Tenta.Tsuji.1"
+                }
+              ],
               "uuid": "5b717b39-f590-49bf-90d8-487c3feea9f9",
               "first_name": "Tenta",
               "recid": 2897307
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "KEK-TH-2868"
             }
           ],
           "citeable": true,
@@ -3284,12 +3284,6 @@
           "preprint_date": "2026-09-01",
           "author_count": 2,
           "first_author": {
-            "affiliations_identifiers": [
-              {
-                "schema": "ROR",
-                "value": "https://ror.org/01g5y5k24"
-              }
-            ],
             "full_name": "Mukaida, Kyohei",
             "last_name": "Mukaida",
             "first_name": "Kyohei",
@@ -3344,7 +3338,7 @@
               "Literature"
             ],
             "id": "oai:inspirehep.net:3198665",
-            "updated": "2026-09-02T05:36:52.264248"
+            "updated": "2026-09-03T04:12:18.018196"
           },
           "curated": false,
           "arxiv_eprints": [
@@ -3370,11 +3364,29 @@
       },
       {
         "id": "3127292",
-        "updated": "2026-05-26T18:43:52.976089+00:00",
         "created": "2026-03-09T04:08:05.975961+00:00",
+        "updated": "2026-05-26T18:43:52.976089+00:00",
         "metadata": {
-          "citation_count_without_self_citations": 0,
           "citation_count": 0,
+          "citation_count_without_self_citations": 0,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "KEK-TH-2815"
+            },
+            {
+              "source": "arXiv",
+              "value": "CTPU-PTC-26-04"
+            },
+            {
+              "source": "arXiv",
+              "value": "IPMU26-0009"
+            },
+            {
+              "source": "arXiv",
+              "value": "RESCEU-8/26"
+            }
+          ],
           "authors": [
             {
               "full_name_unicode_normalized": "he, minxi",
@@ -3445,24 +3457,6 @@
               "uuid": "d930341a-8058-4655-b360-95932cbef5a2",
               "first_name": "Tomoya",
               "recid": 3132707
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "KEK-TH-2815"
-            },
-            {
-              "source": "arXiv",
-              "value": "CTPU-PTC-26-04"
-            },
-            {
-              "source": "arXiv",
-              "value": "IPMU26-0009"
-            },
-            {
-              "source": "arXiv",
-              "value": "RESCEU-8/26"
             }
           ],
           "citeable": true,
@@ -5070,11 +5064,11 @@
       },
       {
         "id": "3124678",
-        "updated": "2026-05-26T18:43:53.050845+00:00",
         "created": "2026-03-03T04:20:43.343896+00:00",
+        "updated": "2026-05-26T18:43:53.050845+00:00",
         "metadata": {
-          "citation_count_without_self_citations": 6,
           "citation_count": 6,
+          "citation_count_without_self_citations": 6,
           "authors": [
             {
               "full_name_unicode_normalized": "ema, yohei",
@@ -10189,9 +10183,25 @@
       },
       {
         "id": "3062826",
-        "updated": "2026-05-26T18:43:55.821012+00:00",
         "created": "2025-10-06T04:04:29.621113+00:00",
+        "updated": "2026-05-26T18:43:55.821012+00:00",
         "metadata": {
+          "citation_count": 3,
+          "citation_count_without_self_citations": 2,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "TU-1272"
+            },
+            {
+              "source": "arXiv",
+              "value": "KEK-TH-2766"
+            },
+            {
+              "source": "arXiv",
+              "value": "KEK-QUP-2025-0019"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "03",
@@ -10204,8 +10214,6 @@
               "journal_title": "JCAP"
             }
           ],
-          "citation_count_without_self_citations": 2,
-          "citation_count": 3,
           "authors": [
             {
               "affiliations_identifiers": [
@@ -10355,20 +10363,6 @@
               "uuid": "254ecbe8-3027-41c6-97dd-5286b14f0c38",
               "first_name": "Kazunori",
               "recid": 1060297
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "TU-1272"
-            },
-            {
-              "source": "arXiv",
-              "value": "KEK-TH-2766"
-            },
-            {
-              "source": "arXiv",
-              "value": "KEK-QUP-2025-0019"
             }
           ],
           "citeable": true,
@@ -15065,9 +15059,38 @@
       },
       {
         "id": "2983577",
-        "updated": "2026-05-26T18:43:53.972519+00:00",
         "created": "2025-10-01T04:22:25.492673+00:00",
+        "updated": "2026-05-26T18:43:53.972519+00:00",
         "metadata": {
+          "citation_count": 4,
+          "documents": [
+            {
+              "filename": "document",
+              "fulltext": true,
+              "source": "Springer",
+              "key": "6bf42bf3fe8c545ad1efa6ed7ee404c7",
+              "url": "https://inspirehep.net/files/6bf42bf3fe8c545ad1efa6ed7ee404c7"
+            }
+          ],
+          "citation_count_without_self_citations": 2,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "KEK-TH-2761"
+            },
+            {
+              "source": "arXiv",
+              "value": "IPMU25-0048"
+            },
+            {
+              "source": "ROR",
+              "value": "KEK-TH-2761"
+            },
+            {
+              "source": "ROR",
+              "value": "IPMU25-0048"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "03",
@@ -15080,17 +15103,6 @@
               "journal_title": "JHEP"
             }
           ],
-          "citation_count_without_self_citations": 2,
-          "documents": [
-            {
-              "filename": "document",
-              "fulltext": true,
-              "source": "Springer",
-              "key": "6bf42bf3fe8c545ad1efa6ed7ee404c7",
-              "url": "https://inspirehep.net/files/6bf42bf3fe8c545ad1efa6ed7ee404c7"
-            }
-          ],
-          "citation_count": 4,
           "authors": [
             {
               "affiliations_identifiers": [
@@ -15379,24 +15391,6 @@
               "first_name": "Fumio",
               "uuid": "e3a8bf1a-408c-4a16-a1c7-5f9df0086b39",
               "recid": 2638245
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "KEK-TH-2761"
-            },
-            {
-              "source": "arXiv",
-              "value": "IPMU25-0048"
-            },
-            {
-              "source": "ROR",
-              "value": "KEK-TH-2761"
-            },
-            {
-              "source": "ROR",
-              "value": "IPMU25-0048"
             }
           ],
           "citeable": true,
@@ -17653,9 +17647,21 @@
       },
       {
         "id": "2974385",
-        "updated": "2026-05-26T18:43:54.166595+00:00",
         "created": "2025-09-30T04:19:38.417295+00:00",
+        "updated": "2026-05-26T18:43:54.166595+00:00",
         "metadata": {
+          "citation_count": 4,
+          "citation_count_without_self_citations": 2,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "KEK-TH-2764"
+            },
+            {
+              "source": "arXiv",
+              "value": "IPMU25-0047"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "113",
@@ -17671,8 +17677,6 @@
               "journal_title": "Phys.Rev.D"
             }
           ],
-          "citation_count_without_self_citations": 2,
-          "citation_count": 4,
           "authors": [
             {
               "raw_affiliations": [
@@ -17849,16 +17853,6 @@
               "first_name": "Fumio",
               "uuid": "0b4ea3a0-b0ae-46db-b3a3-7d69312b8732",
               "recid": 2638245
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "KEK-TH-2764"
-            },
-            {
-              "source": "arXiv",
-              "value": "IPMU25-0047"
             }
           ],
           "citeable": true,
@@ -22183,9 +22177,11 @@
       },
       {
         "id": "2947415",
-        "updated": "2026-01-13T11:50:17.560528+00:00",
         "created": "2025-07-17T04:14:04.659012+00:00",
+        "updated": "2026-01-13T11:50:17.560528+00:00",
         "metadata": {
+          "citation_count": 7,
+          "citation_count_without_self_citations": 6,
           "publication_info": [
             {
               "journal_volume": "01",
@@ -22198,8 +22194,6 @@
               "journal_title": "JCAP"
             }
           ],
-          "citation_count_without_self_citations": 6,
-          "citation_count": 7,
           "authors": [
             {
               "raw_affiliations": [
@@ -28123,9 +28117,30 @@
       },
       {
         "id": "2941337",
-        "updated": "2026-01-09T08:45:45.160497+00:00",
         "created": "2025-07-03T04:17:05.126300+00:00",
+        "updated": "2026-01-09T08:45:45.160497+00:00",
         "metadata": {
+          "citation_count": 10,
+          "documents": [
+            {
+              "filename": "document",
+              "fulltext": true,
+              "source": "Springer",
+              "key": "f85bec737aee8e9c7364675d597b7a28",
+              "url": "https://inspirehep.net/files/f85bec737aee8e9c7364675d597b7a28"
+            }
+          ],
+          "citation_count_without_self_citations": 8,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "KEK-TH-2737"
+            },
+            {
+              "source": "arXiv",
+              "value": "IPMU25-0035"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "01",
@@ -28138,17 +28153,6 @@
               "journal_title": "JHEP"
             }
           ],
-          "citation_count_without_self_citations": 8,
-          "documents": [
-            {
-              "filename": "document",
-              "fulltext": true,
-              "source": "Springer",
-              "key": "f85bec737aee8e9c7364675d597b7a28",
-              "url": "https://inspirehep.net/files/f85bec737aee8e9c7364675d597b7a28"
-            }
-          ],
-          "citation_count": 10,
           "authors": [
             {
               "raw_affiliations": [
@@ -28342,16 +28346,6 @@
               ],
               "first_name": "Fumio",
               "recid": 2638245
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "KEK-TH-2737"
-            },
-            {
-              "source": "arXiv",
-              "value": "IPMU25-0035"
             }
           ],
           "citeable": true,
@@ -38531,9 +38525,28 @@
       },
       {
         "id": "2937211",
-        "updated": "2026-02-09T07:35:25.099595+00:00",
         "created": "2025-06-23T04:09:46.656731+00:00",
+        "updated": "2026-02-09T07:35:25.099595+00:00",
         "metadata": {
+          "citation_count": 10,
+          "citation_count_without_self_citations": 9,
+          "report_numbers": [
+            {
+              "value": "CERN-TH-2025-117"
+            },
+            {
+              "value": "RESCEU-14/25"
+            },
+            {
+              "value": "IPMU25-0030"
+            },
+            {
+              "value": "KOBE-COSMO-25-13"
+            },
+            {
+              "value": "KEK-TH-2731"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "01",
@@ -38546,8 +38559,6 @@
               "journal_title": "JCAP"
             }
           ],
-          "citation_count_without_self_citations": 9,
-          "citation_count": 10,
           "authors": [
             {
               "raw_affiliations": [
@@ -38715,23 +38726,6 @@
               "uuid": "98571cae-cd08-45f6-b3f8-488ef64b70c7",
               "first_name": "Kyohei",
               "recid": 1309535
-            }
-          ],
-          "report_numbers": [
-            {
-              "value": "CERN-TH-2025-117"
-            },
-            {
-              "value": "RESCEU-14/25"
-            },
-            {
-              "value": "IPMU25-0030"
-            },
-            {
-              "value": "KOBE-COSMO-25-13"
-            },
-            {
-              "value": "KEK-TH-2731"
             }
           ],
           "citeable": true,
@@ -44545,9 +44539,11 @@
       },
       {
         "id": "2928683",
-        "updated": "2026-02-18T22:28:02.108750+00:00",
         "created": "2025-06-04T08:12:49.894198+00:00",
+        "updated": "2026-02-18T22:28:02.108750+00:00",
         "metadata": {
+          "citation_count": 4,
+          "citation_count_without_self_citations": 2,
           "publication_info": [
             {
               "journal_volume": "870",
@@ -44561,8 +44557,6 @@
               "journal_title": "Phys.Lett.B"
             }
           ],
-          "citation_count_without_self_citations": 2,
-          "citation_count": 4,
           "authors": [
             {
               "affiliations_identifiers": [
@@ -46474,9 +46468,11 @@
       },
       {
         "id": "2914985",
-        "updated": "2025-10-03T04:02:32.836245+00:00",
         "created": "2025-04-24T04:20:23.586777+00:00",
+        "updated": "2025-10-03T04:02:32.836245+00:00",
         "metadata": {
+          "citation_count": 58,
+          "citation_count_without_self_citations": 57,
           "publication_info": [
             {
               "journal_volume": "09",
@@ -46489,8 +46485,6 @@
               "journal_title": "JCAP"
             }
           ],
-          "citation_count_without_self_citations": 57,
-          "citation_count": 58,
           "authors": [
             {
               "raw_affiliations": [
@@ -49791,9 +49785,11 @@
       },
       {
         "id": "2903392",
-        "updated": "2026-02-11T04:04:45.236483+00:00",
         "created": "2025-03-25T04:24:00.806520+00:00",
+        "updated": "2026-02-11T04:04:45.236483+00:00",
         "metadata": {
+          "citation_count": 7,
+          "citation_count_without_self_citations": 6,
           "publication_info": [
             {
               "pubinfo_freetext": "JCAP10(2025)032",
@@ -49812,8 +49808,6 @@
               "journal_title": "JCAP"
             }
           ],
-          "citation_count_without_self_citations": 6,
-          "citation_count": 7,
           "authors": [
             {
               "raw_affiliations": [
@@ -53008,11 +53002,25 @@
       },
       {
         "id": "2897402",
-        "updated": "2026-04-02T12:47:43.219486+00:00",
         "created": "2025-03-07T04:14:46.978183+00:00",
+        "updated": "2026-04-02T12:47:43.219486+00:00",
         "metadata": {
-          "citation_count_without_self_citations": 0,
           "citation_count": 0,
+          "citation_count_without_self_citations": 0,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "KEK-TH-2693"
+            },
+            {
+              "source": "arXiv",
+              "value": "KEK-QUP-2025-0004"
+            },
+            {
+              "source": "arXiv",
+              "value": "TU-1245"
+            }
+          ],
           "authors": [
             {
               "raw_affiliations": [
@@ -53122,20 +53130,6 @@
               "first_name": "Kazunori",
               "uuid": "ec2ab7f6-44a0-4d13-be52-96d143bc9a6c",
               "recid": 1060297
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "KEK-TH-2693"
-            },
-            {
-              "source": "arXiv",
-              "value": "KEK-QUP-2025-0004"
-            },
-            {
-              "source": "arXiv",
-              "value": "TU-1245"
             }
           ],
           "citeable": true,
@@ -54875,9 +54869,17 @@
       },
       {
         "id": "2896243",
-        "updated": "2025-08-06T04:20:41.195328+00:00",
         "created": "2025-03-04T04:18:47.529276+00:00",
+        "updated": "2025-08-06T04:20:41.195328+00:00",
         "metadata": {
+          "citation_count": 10,
+          "citation_count_without_self_citations": 9,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "KEK-TH-2692"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "07",
@@ -54890,8 +54892,6 @@
               "journal_title": "JCAP"
             }
           ],
-          "citation_count_without_self_citations": 9,
-          "citation_count": 10,
           "authors": [
             {
               "raw_affiliations": [
@@ -55032,12 +55032,6 @@
               "uuid": "9dbba0ce-c344-4657-b3fb-963a1213927e",
               "first_name": "Tenta",
               "recid": 2897307
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "KEK-TH-2692"
             }
           ],
           "citeable": true,
@@ -59077,9 +59071,34 @@
       },
       {
         "id": "2827677",
-        "updated": "2025-08-06T04:20:42.194672+00:00",
         "created": "2024-09-13T04:17:28.697521+00:00",
+        "updated": "2025-08-06T04:20:42.194672+00:00",
         "metadata": {
+          "citation_count": 36,
+          "documents": [
+            {
+              "filename": "document",
+              "fulltext": true,
+              "source": "Springer",
+              "key": "7ae837a3d5936aaed133b00ca78a889f",
+              "url": "https://inspirehep.net/files/7ae837a3d5936aaed133b00ca78a889f"
+            }
+          ],
+          "citation_count_without_self_citations": 33,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "UMN-TH-4331/24"
+            },
+            {
+              "source": "arXiv",
+              "value": "FTPI-MINN-24-18"
+            },
+            {
+              "source": "arXiv",
+              "value": "KEK-TH-2653"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "12",
@@ -59092,17 +59111,6 @@
               "journal_title": "JHEP"
             }
           ],
-          "citation_count_without_self_citations": 33,
-          "documents": [
-            {
-              "filename": "document",
-              "fulltext": true,
-              "source": "Springer",
-              "key": "7ae837a3d5936aaed133b00ca78a889f",
-              "url": "https://inspirehep.net/files/7ae837a3d5936aaed133b00ca78a889f"
-            }
-          ],
-          "citation_count": 36,
           "authors": [
             {
               "affiliations_identifiers": [
@@ -59208,20 +59216,6 @@
               ],
               "first_name": "Kyohei",
               "recid": 1309535
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "UMN-TH-4331/24"
-            },
-            {
-              "source": "arXiv",
-              "value": "FTPI-MINN-24-18"
-            },
-            {
-              "source": "arXiv",
-              "value": "KEK-TH-2653"
             }
           ],
           "citeable": true,
@@ -62717,9 +62711,33 @@
       },
       {
         "id": "2810388",
-        "updated": "2026-06-19T13:20:44.855279+00:00",
         "created": "2024-07-24T04:25:36.645870+00:00",
+        "updated": "2026-06-19T13:20:44.855279+00:00",
         "metadata": {
+          "citation_count": 15,
+          "citation_count_without_self_citations": 12,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "KEK-TH-2639"
+            },
+            {
+              "source": "arXiv",
+              "value": "EK-TH-2639"
+            },
+            {
+              "source": "arXiv",
+              "value": "TU-1238"
+            },
+            {
+              "source": "arXiv",
+              "value": "CTPU-PTC-24-22"
+            },
+            {
+              "source": "arXiv",
+              "value": "KEK-Cosmo-0351,\n  KEK-QUP-2024-0018"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "10",
@@ -62732,8 +62750,6 @@
               "journal_title": "JCAP"
             }
           ],
-          "citation_count_without_self_citations": 12,
-          "citation_count": 15,
           "authors": [
             {
               "affiliations_identifiers": [
@@ -62934,28 +62950,6 @@
               "uuid": "41cbc247-f926-422f-9d24-07e7d040b04a",
               "first_name": "Masaki",
               "recid": 982946
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "KEK-TH-2639"
-            },
-            {
-              "source": "arXiv",
-              "value": "EK-TH-2639"
-            },
-            {
-              "source": "arXiv",
-              "value": "TU-1238"
-            },
-            {
-              "source": "arXiv",
-              "value": "CTPU-PTC-24-22"
-            },
-            {
-              "source": "arXiv",
-              "value": "KEK-Cosmo-0351,\n  KEK-QUP-2024-0018"
             }
           ],
           "citeable": true,
@@ -64743,9 +64737,21 @@
       },
       {
         "id": "2789266",
-        "updated": "2026-06-19T13:20:34.226890+00:00",
         "created": "2024-05-24T03:49:02.953435+00:00",
+        "updated": "2026-06-19T13:20:34.226890+00:00",
         "metadata": {
+          "citation_count": 6,
+          "citation_count_without_self_citations": 6,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "KEK-TH-2623"
+            },
+            {
+              "source": "arXiv",
+              "value": "TU-1234"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "09",
@@ -64758,8 +64764,6 @@
               "journal_title": "JCAP"
             }
           ],
-          "citation_count_without_self_citations": 6,
-          "citation_count": 6,
           "authors": [
             {
               "affiliations_identifiers": [
@@ -64918,16 +64922,6 @@
               "first_name": "Masaki",
               "uuid": "326deb1e-0809-4275-809d-d575e9234c12",
               "recid": 982946
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "KEK-TH-2623"
-            },
-            {
-              "source": "arXiv",
-              "value": "TU-1234"
             }
           ],
           "citeable": true,
@@ -67574,9 +67568,30 @@
       },
       {
         "id": "2760880",
-        "updated": "2026-06-19T13:20:35.922592+00:00",
         "created": "2024-02-23T03:50:01.457520+00:00",
+        "updated": "2026-06-19T13:20:35.922592+00:00",
         "metadata": {
+          "citation_count": 13,
+          "documents": [
+            {
+              "filename": "document",
+              "fulltext": true,
+              "source": "Springer",
+              "key": "3c01c5c2f8f66c57e02eb7b623f3237a",
+              "url": "https://inspirehep.net/files/3c01c5c2f8f66c57e02eb7b623f3237a"
+            }
+          ],
+          "citation_count_without_self_citations": 11,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "KEK-TH-2602"
+            },
+            {
+              "source": "arXiv",
+              "value": "TU-1224"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "05",
@@ -67589,17 +67604,6 @@
               "journal_title": "JHEP"
             }
           ],
-          "citation_count_without_self_citations": 11,
-          "documents": [
-            {
-              "filename": "document",
-              "fulltext": true,
-              "source": "Springer",
-              "key": "3c01c5c2f8f66c57e02eb7b623f3237a",
-              "url": "https://inspirehep.net/files/3c01c5c2f8f66c57e02eb7b623f3237a"
-            }
-          ],
-          "citation_count": 13,
           "authors": [
             {
               "affiliations_identifiers": [
@@ -67712,16 +67716,6 @@
               ],
               "first_name": "Masaki",
               "recid": 982946
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "KEK-TH-2602"
-            },
-            {
-              "source": "arXiv",
-              "value": "TU-1224"
             }
           ],
           "citeable": true,
@@ -70046,9 +70040,25 @@
       },
       {
         "id": "2756735",
-        "updated": "2025-08-06T04:20:40.198740+00:00",
         "created": "2024-02-09T03:42:58.804199+00:00",
+        "updated": "2025-08-06T04:20:40.198740+00:00",
         "metadata": {
+          "citation_count": 24,
+          "citation_count_without_self_citations": 22,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "KEK-TH-2598"
+            },
+            {
+              "source": "arXiv",
+              "value": "RESCEU-3/24"
+            },
+            {
+              "source": "arXiv",
+              "value": "CTPU-PTC-24-05"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "05",
@@ -70061,8 +70071,6 @@
               "journal_title": "JCAP"
             }
           ],
-          "citation_count_without_self_citations": 22,
-          "citation_count": 24,
           "authors": [
             {
               "raw_affiliations": [
@@ -70189,20 +70197,6 @@
               "uuid": "5251c08c-8128-4b2e-8127-e0b7a169bc4d",
               "first_name": "Kyohei",
               "recid": 1309535
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "KEK-TH-2598"
-            },
-            {
-              "source": "arXiv",
-              "value": "RESCEU-3/24"
-            },
-            {
-              "source": "arXiv",
-              "value": "CTPU-PTC-24-05"
             }
           ],
           "citeable": true,
@@ -73229,9 +73223,21 @@
       },
       {
         "id": "2700457",
-        "updated": "2025-08-06T04:20:40.561708+00:00",
         "created": "2023-09-21T02:58:16.507737+00:00",
+        "updated": "2025-08-06T04:20:40.561708+00:00",
         "metadata": {
+          "citation_count": 42,
+          "citation_count_without_self_citations": 41,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "KEK-TH-2554"
+            },
+            {
+              "source": "arXiv",
+              "value": "KEK-Cosmo-0324"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "109",
@@ -73245,8 +73251,6 @@
               "journal_title": "Phys.Rev.D"
             }
           ],
-          "citation_count_without_self_citations": 41,
-          "citation_count": 42,
           "authors": [
             {
               "affiliations_identifiers": [
@@ -73476,16 +73480,6 @@
               "first_name": "Tsutomu T.",
               "uuid": "57a4261e-4104-40a3-93cf-64567ad1aa77",
               "recid": 982834
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "KEK-TH-2554"
-            },
-            {
-              "source": "arXiv",
-              "value": "KEK-Cosmo-0324"
             }
           ],
           "citeable": true,
@@ -82245,9 +82239,25 @@
       },
       {
         "id": "2691934",
-        "updated": "2025-08-06T04:20:39.663134+00:00",
         "created": "2023-08-31T02:52:11.832191+00:00",
+        "updated": "2025-08-06T04:20:39.663134+00:00",
         "metadata": {
+          "citation_count": 8,
+          "citation_count_without_self_citations": 7,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "KEK-TH-2547"
+            },
+            {
+              "source": "arXiv",
+              "value": "KEK-Cosmo-0320"
+            },
+            {
+              "source": "arXiv",
+              "value": "RESCEU-19/23"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "132",
@@ -82261,8 +82271,6 @@
               "journal_title": "Phys.Rev.Lett."
             }
           ],
-          "citation_count_without_self_citations": 7,
-          "citation_count": 8,
           "authors": [
             {
               "raw_affiliations": [
@@ -82391,20 +82399,6 @@
               "uuid": "68eeec3a-ea66-4352-8ac2-f57165703618",
               "first_name": "Kyohei",
               "recid": 1309535
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "KEK-TH-2547"
-            },
-            {
-              "source": "arXiv",
-              "value": "KEK-Cosmo-0320"
-            },
-            {
-              "source": "arXiv",
-              "value": "RESCEU-19/23"
             }
           ],
           "citeable": true,
@@ -84799,9 +84793,34 @@
       },
       {
         "id": "2691353",
-        "updated": "2025-08-06T04:20:40.934866+00:00",
         "created": "2023-08-29T03:02:24.154504+00:00",
+        "updated": "2025-08-06T04:20:40.934866+00:00",
         "metadata": {
+          "citation_count": 16,
+          "documents": [
+            {
+              "filename": "document",
+              "fulltext": true,
+              "source": "Springer",
+              "key": "99297083908903a0b41d312e066e9cca",
+              "url": "https://inspirehep.net/files/99297083908903a0b41d312e066e9cca"
+            }
+          ],
+          "citation_count_without_self_citations": 12,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "KEK-TH-2545"
+            },
+            {
+              "source": "arXiv",
+              "value": "KEK-Cosmo-0319"
+            },
+            {
+              "source": "arXiv",
+              "value": "RESCEU-15/23"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "01",
@@ -84814,17 +84833,6 @@
               "journal_title": "JHEP"
             }
           ],
-          "citation_count_without_self_citations": 12,
-          "documents": [
-            {
-              "filename": "document",
-              "fulltext": true,
-              "source": "Springer",
-              "key": "99297083908903a0b41d312e066e9cca",
-              "url": "https://inspirehep.net/files/99297083908903a0b41d312e066e9cca"
-            }
-          ],
-          "citation_count": 16,
           "authors": [
             {
               "affiliations_identifiers": [
@@ -84988,20 +84996,6 @@
               "first_name": "Kyohei",
               "uuid": "4f35e7bf-c17a-4fa0-88ce-8dd702ab4c27",
               "recid": 1309535
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "KEK-TH-2545"
-            },
-            {
-              "source": "arXiv",
-              "value": "KEK-Cosmo-0319"
-            },
-            {
-              "source": "arXiv",
-              "value": "RESCEU-15/23"
             }
           ],
           "citeable": true,
@@ -88617,9 +88611,29 @@
       },
       {
         "id": "2651145",
-        "updated": "2025-08-06T04:20:12.399409+00:00",
         "created": "2023-04-14T03:06:20.905641+00:00",
+        "updated": "2025-08-06T04:20:12.399409+00:00",
         "metadata": {
+          "citation_count": 16,
+          "citation_count_without_self_citations": 9,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "NORDITA-2023-014"
+            },
+            {
+              "source": "arXiv",
+              "value": "RESCEU-5/23"
+            },
+            {
+              "source": "arXiv",
+              "value": "KEK-TH-2504"
+            },
+            {
+              "source": "arXiv",
+              "value": "MS-TP-23-13"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "108",
@@ -88634,8 +88648,6 @@
               "journal_title": "Phys.Rev.D"
             }
           ],
-          "citation_count_without_self_citations": 9,
-          "citation_count": 16,
           "authors": [
             {
               "raw_affiliations": [
@@ -88873,24 +88885,6 @@
               "uuid": "b6f6c6f1-0c8d-4b60-a5dc-a18806fec683",
               "first_name": "Jennifer",
               "recid": 1663041
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "NORDITA-2023-014"
-            },
-            {
-              "source": "arXiv",
-              "value": "RESCEU-5/23"
-            },
-            {
-              "source": "arXiv",
-              "value": "KEK-TH-2504"
-            },
-            {
-              "source": "arXiv",
-              "value": "MS-TP-23-13"
             }
           ],
           "citeable": true,
@@ -93304,9 +93298,37 @@
       },
       {
         "id": "2637238",
-        "updated": "2026-04-02T12:05:57.376021+00:00",
         "created": "2023-03-01T03:01:04.721286+00:00",
+        "updated": "2026-04-02T12:05:57.376021+00:00",
         "metadata": {
+          "citation_count": 12,
+          "citation_count_without_self_citations": 9,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "UMN-TH-4209/23"
+            },
+            {
+              "source": "arXiv",
+              "value": "FTPI-MINN-23-03"
+            },
+            {
+              "source": "arXiv",
+              "value": "TU-1176"
+            },
+            {
+              "source": "arXiv",
+              "value": "KEK-QUP-2023-0003,\n  KEK-TH-2498"
+            },
+            {
+              "source": "arXiv",
+              "value": "KEK-QUP-2023-0003"
+            },
+            {
+              "source": "arXiv",
+              "value": "KEK-TH-2498"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "108",
@@ -93320,8 +93342,6 @@
               "journal_title": "Phys.Rev.D"
             }
           ],
-          "citation_count_without_self_citations": 9,
-          "citation_count": 12,
           "authors": [
             {
               "raw_affiliations": [
@@ -93555,32 +93575,6 @@
               "uuid": "43499a36-e401-4880-a225-57b24ffd58f4",
               "first_name": "Kazunori",
               "recid": 1060297
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "UMN-TH-4209/23"
-            },
-            {
-              "source": "arXiv",
-              "value": "FTPI-MINN-23-03"
-            },
-            {
-              "source": "arXiv",
-              "value": "TU-1176"
-            },
-            {
-              "source": "arXiv",
-              "value": "KEK-QUP-2023-0003,\n  KEK-TH-2498"
-            },
-            {
-              "source": "arXiv",
-              "value": "KEK-QUP-2023-0003"
-            },
-            {
-              "source": "arXiv",
-              "value": "KEK-TH-2498"
             }
           ],
           "citeable": true,
@@ -98096,9 +98090,41 @@
       },
       {
         "id": "2164686",
-        "updated": "2026-06-19T13:20:38.265849+00:00",
         "created": "2022-10-13T03:40:57.821208+00:00",
+        "updated": "2026-06-19T13:20:38.265849+00:00",
         "metadata": {
+          "citation_count": 39,
+          "documents": [
+            {
+              "filename": "document",
+              "fulltext": true,
+              "key": "a7fee4b58c524d81eed80f695406c56a",
+              "url": "https://inspirehep.net/files/a7fee4b58c524d81eed80f695406c56a"
+            }
+          ],
+          "citation_count_without_self_citations": 18,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "CERN-TH-2022-162"
+            },
+            {
+              "source": "arXiv",
+              "value": "RESCEU-17/22"
+            },
+            {
+              "source": "arXiv",
+              "value": "KEK-TH-2455"
+            },
+            {
+              "source": "arXiv",
+              "value": "MS-TP-22-37"
+            },
+            {
+              "source": "arXiv",
+              "value": "TU-1170"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "01",
@@ -98111,16 +98137,6 @@
               "journal_title": "JHEP"
             }
           ],
-          "citation_count_without_self_citations": 18,
-          "documents": [
-            {
-              "filename": "document",
-              "fulltext": true,
-              "key": "a7fee4b58c524d81eed80f695406c56a",
-              "url": "https://inspirehep.net/files/a7fee4b58c524d81eed80f695406c56a"
-            }
-          ],
-          "citation_count": 39,
           "authors": [
             {
               "raw_affiliations": [
@@ -98381,28 +98397,6 @@
               "signature_block": "YANADm",
               "first_name": "Masaki",
               "recid": 982946
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "CERN-TH-2022-162"
-            },
-            {
-              "source": "arXiv",
-              "value": "RESCEU-17/22"
-            },
-            {
-              "source": "arXiv",
-              "value": "KEK-TH-2455"
-            },
-            {
-              "source": "arXiv",
-              "value": "MS-TP-22-37"
-            },
-            {
-              "source": "arXiv",
-              "value": "TU-1170"
             }
           ],
           "citeable": true,
@@ -102394,9 +102388,29 @@
       },
       {
         "id": "2164775",
-        "updated": "2026-06-19T13:20:35.998626+00:00",
         "created": "2022-10-13T04:17:38.226355+00:00",
+        "updated": "2026-06-19T13:20:35.998626+00:00",
         "metadata": {
+          "citation_count": 33,
+          "citation_count_without_self_citations": 29,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "KEK-TH-2458"
+            },
+            {
+              "source": "arXiv",
+              "value": "KEK-Cosmo-0298"
+            },
+            {
+              "source": "arXiv",
+              "value": "KEK-QUP-2022-0020"
+            },
+            {
+              "source": "arXiv",
+              "value": "TU-1171"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "01",
@@ -102409,8 +102423,6 @@
               "journal_title": "JCAP"
             }
           ],
-          "citation_count_without_self_citations": 29,
-          "citation_count": 33,
           "authors": [
             {
               "raw_affiliations": [
@@ -102619,24 +102631,6 @@
               "signature_block": "YANADm",
               "first_name": "Masaki",
               "recid": 982946
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "KEK-TH-2458"
-            },
-            {
-              "source": "arXiv",
-              "value": "KEK-Cosmo-0298"
-            },
-            {
-              "source": "arXiv",
-              "value": "KEK-QUP-2022-0020"
-            },
-            {
-              "source": "arXiv",
-              "value": "TU-1171"
             }
           ],
           "citeable": true,
@@ -106971,9 +106965,25 @@
       },
       {
         "id": "2141779",
-        "updated": "2026-06-19T13:20:41.838731+00:00",
         "created": "2022-08-26T03:01:34.363165+00:00",
+        "updated": "2026-06-19T13:20:41.838731+00:00",
         "metadata": {
+          "citation_count": 32,
+          "documents": [
+            {
+              "filename": "document",
+              "fulltext": true,
+              "key": "2e691ee2f867c74e78e6cfb070214528",
+              "url": "https://inspirehep.net/files/2e691ee2f867c74e78e6cfb070214528"
+            }
+          ],
+          "citation_count_without_self_citations": 27,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "KEK-TH-2443; TU-1165"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "10",
@@ -106986,16 +106996,6 @@
               "journal_title": "JHEP"
             }
           ],
-          "citation_count_without_self_citations": 27,
-          "documents": [
-            {
-              "filename": "document",
-              "fulltext": true,
-              "key": "2e691ee2f867c74e78e6cfb070214528",
-              "url": "https://inspirehep.net/files/2e691ee2f867c74e78e6cfb070214528"
-            }
-          ],
-          "citation_count": 32,
           "authors": [
             {
               "raw_affiliations": [
@@ -107114,12 +107114,6 @@
               "signature_block": "YANADm",
               "first_name": "Masaki",
               "recid": 982946
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "KEK-TH-2443; TU-1165"
             }
           ],
           "citeable": true,
@@ -110196,9 +110190,43 @@
       },
       {
         "id": "2132764",
-        "updated": "2026-06-19T13:20:34.613895+00:00",
         "created": "2022-08-08T02:42:21.012563+00:00",
+        "updated": "2026-06-19T13:20:34.613895+00:00",
         "metadata": {
+          "citation_count": 33,
+          "documents": [
+            {
+              "filename": "Publication",
+              "material": "publication",
+              "fulltext": true,
+              "description": "Fulltext",
+              "key": "77a0aeac0bee3709095f4caa85d190fe",
+              "url": "https://inspirehep.net/files/77a0aeac0bee3709095f4caa85d190fe"
+            }
+          ],
+          "citation_count_without_self_citations": 27,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "CERN-TH-2022-134"
+            },
+            {
+              "source": "arXiv",
+              "value": "RESCEU-13/22"
+            },
+            {
+              "source": "arXiv",
+              "value": "KEK-TH-2441"
+            },
+            {
+              "source": "arXiv",
+              "value": "MS-TP-22-23"
+            },
+            {
+              "source": "arXiv",
+              "value": "TU-1164"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "130",
@@ -110212,18 +110240,6 @@
               "journal_title": "Phys.Rev.Lett."
             }
           ],
-          "citation_count_without_self_citations": 27,
-          "documents": [
-            {
-              "filename": "Publication",
-              "material": "publication",
-              "fulltext": true,
-              "description": "Fulltext",
-              "key": "77a0aeac0bee3709095f4caa85d190fe",
-              "url": "https://inspirehep.net/files/77a0aeac0bee3709095f4caa85d190fe"
-            }
-          ],
-          "citation_count": 33,
           "authors": [
             {
               "raw_affiliations": [
@@ -110418,28 +110434,6 @@
               "uuid": "294a86b8-1233-4992-bd90-10fd29aa44a7",
               "first_name": "Masaki",
               "recid": 982946
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "CERN-TH-2022-134"
-            },
-            {
-              "source": "arXiv",
-              "value": "RESCEU-13/22"
-            },
-            {
-              "source": "arXiv",
-              "value": "KEK-TH-2441"
-            },
-            {
-              "source": "arXiv",
-              "value": "MS-TP-22-23"
-            },
-            {
-              "source": "arXiv",
-              "value": "TU-1164"
             }
           ],
           "citeable": true,
@@ -114053,9 +114047,17 @@
       },
       {
         "id": "2100489",
-        "updated": "2026-04-07T03:57:22.342939+00:00",
         "created": "2022-06-27T02:56:44.868491+00:00",
+        "updated": "2026-04-07T03:57:22.342939+00:00",
         "metadata": {
+          "citation_count": 8,
+          "citation_count_without_self_citations": 8,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "KEK-TH-2434"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "12",
@@ -114068,8 +114070,6 @@
               "journal_title": "JCAP"
             }
           ],
-          "citation_count_without_self_citations": 8,
-          "citation_count": 8,
           "authors": [
             {
               "raw_affiliations": [
@@ -114201,12 +114201,6 @@
               "signature_block": "TADy",
               "first_name": "Yuichiro",
               "recid": 1316436
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "KEK-TH-2434"
             }
           ],
           "citeable": true,
@@ -116133,9 +116127,25 @@
       },
       {
         "id": "2096424",
-        "updated": "2023-10-03T07:54:24.050623+00:00",
         "created": "2022-06-16T03:14:01.228464+00:00",
+        "updated": "2023-10-03T07:54:24.050623+00:00",
         "metadata": {
+          "citation_count": 4,
+          "documents": [
+            {
+              "filename": "document",
+              "fulltext": true,
+              "key": "b025d39dd66d73bb886cc74567553afe",
+              "url": "https://inspirehep.net/files/b025d39dd66d73bb886cc74567553afe"
+            }
+          ],
+          "citation_count_without_self_citations": 4,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "KEK-TH-2431"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "09",
@@ -116148,16 +116158,6 @@
               "journal_title": "JHEP"
             }
           ],
-          "citation_count_without_self_citations": 4,
-          "documents": [
-            {
-              "filename": "document",
-              "fulltext": true,
-              "key": "b025d39dd66d73bb886cc74567553afe",
-              "url": "https://inspirehep.net/files/b025d39dd66d73bb886cc74567553afe"
-            }
-          ],
-          "citation_count": 4,
           "authors": [
             {
               "raw_affiliations": [
@@ -116370,12 +116370,6 @@
               "signature_block": "MACADk",
               "first_name": "Kyohei",
               "recid": 1309535
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "KEK-TH-2431"
             }
           ],
           "citeable": true,
@@ -117778,9 +117772,29 @@
       },
       {
         "id": "2075536",
-        "updated": "2023-10-03T08:00:39.972199+00:00",
         "created": "2022-05-03T03:13:41.258662+00:00",
+        "updated": "2023-10-03T08:00:39.972199+00:00",
         "metadata": {
+          "citation_count": 20,
+          "documents": [
+            {
+              "filename": "document",
+              "fulltext": true,
+              "key": "9e86e5e23979177ec6dd5b27d31ef2fa",
+              "url": "https://inspirehep.net/files/9e86e5e23979177ec6dd5b27d31ef2fa"
+            }
+          ],
+          "citation_count_without_self_citations": 8,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "CERN-TH-2022-075"
+            },
+            {
+              "source": "arXiv",
+              "value": "KEK-TH-2422"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "08",
@@ -117793,16 +117807,6 @@
               "journal_title": "JHEP"
             }
           ],
-          "citation_count_without_self_citations": 8,
-          "documents": [
-            {
-              "filename": "document",
-              "fulltext": true,
-              "key": "9e86e5e23979177ec6dd5b27d31ef2fa",
-              "url": "https://inspirehep.net/files/9e86e5e23979177ec6dd5b27d31ef2fa"
-            }
-          ],
-          "citation_count": 20,
           "authors": [
             {
               "raw_affiliations": [
@@ -117980,16 +117984,6 @@
               "signature_block": "MACADk",
               "first_name": "Kyohei",
               "recid": 1309535
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "CERN-TH-2022-075"
-            },
-            {
-              "source": "arXiv",
-              "value": "KEK-TH-2422"
             }
           ],
           "citeable": true,
@@ -119646,9 +119640,37 @@
       },
       {
         "id": "2071392",
-        "updated": "2023-10-03T07:38:07.174173+00:00",
         "created": "2022-04-25T04:01:27.644638+00:00",
+        "updated": "2023-10-03T07:38:07.174173+00:00",
         "metadata": {
+          "citation_count": 7,
+          "documents": [
+            {
+              "filename": "document",
+              "fulltext": true,
+              "key": "f2d50740e6630709066e8d807a78c5f7",
+              "url": "https://inspirehep.net/files/f2d50740e6630709066e8d807a78c5f7"
+            }
+          ],
+          "citation_count_without_self_citations": 7,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "CERN-TH-2022-069"
+            },
+            {
+              "source": "arXiv",
+              "value": "UMN-TH-4120/22"
+            },
+            {
+              "source": "arXiv",
+              "value": "FTPI-MINN-22-11"
+            },
+            {
+              "source": "arXiv",
+              "value": "KEK-TH-2415"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "11",
@@ -119661,16 +119683,6 @@
               "journal_title": "JHEP"
             }
           ],
-          "citation_count_without_self_citations": 7,
-          "documents": [
-            {
-              "filename": "document",
-              "fulltext": true,
-              "key": "f2d50740e6630709066e8d807a78c5f7",
-              "url": "https://inspirehep.net/files/f2d50740e6630709066e8d807a78c5f7"
-            }
-          ],
-          "citation_count": 7,
           "authors": [
             {
               "affiliations_identifiers": [
@@ -119833,24 +119845,6 @@
               "signature_block": "MACADk",
               "first_name": "Kyohei",
               "recid": 1309535
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "CERN-TH-2022-069"
-            },
-            {
-              "source": "arXiv",
-              "value": "UMN-TH-4120/22"
-            },
-            {
-              "source": "arXiv",
-              "value": "FTPI-MINN-22-11"
-            },
-            {
-              "source": "arXiv",
-              "value": "KEK-TH-2415"
             }
           ],
           "citeable": true,
@@ -121388,9 +121382,21 @@
       },
       {
         "id": "2062395",
-        "updated": "2026-04-07T03:57:24.416952+00:00",
         "created": "2022-04-05T03:03:39.319670+00:00",
+        "updated": "2026-04-07T03:57:24.416952+00:00",
         "metadata": {
+          "citation_count": 33,
+          "citation_count_without_self_citations": 26,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "RESCEU-3/22"
+            },
+            {
+              "source": "arXiv",
+              "value": "KEK-TH-2402"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "09",
@@ -121403,8 +121409,6 @@
               "journal_title": "JCAP"
             }
           ],
-          "citation_count_without_self_citations": 26,
-          "citation_count": 33,
           "authors": [
             {
               "raw_affiliations": [
@@ -121576,16 +121580,6 @@
               "signature_block": "TADy",
               "first_name": "Yuichiro",
               "recid": 1316436
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "RESCEU-3/22"
-            },
-            {
-              "source": "arXiv",
-              "value": "KEK-TH-2402"
             }
           ],
           "citeable": true,
@@ -124725,9 +124719,29 @@
       },
       {
         "id": "1996675",
-        "updated": "2023-10-03T10:04:42.010974+00:00",
         "created": "2021-12-24T03:05:37.846817+00:00",
+        "updated": "2023-10-03T10:04:42.010974+00:00",
         "metadata": {
+          "citation_count": 36,
+          "documents": [
+            {
+              "filename": "document",
+              "fulltext": true,
+              "key": "aa5c9512e06a9d18fb6dc3c80a2f3b27",
+              "url": "https://inspirehep.net/files/aa5c9512e06a9d18fb6dc3c80a2f3b27"
+            }
+          ],
+          "citation_count_without_self_citations": 25,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "TU-1140"
+            },
+            {
+              "source": "arXiv",
+              "value": "KEK-TH-2379"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "05",
@@ -124740,16 +124754,6 @@
               "journal_title": "JHEP"
             }
           ],
-          "citation_count_without_self_citations": 25,
-          "documents": [
-            {
-              "filename": "document",
-              "fulltext": true,
-              "key": "aa5c9512e06a9d18fb6dc3c80a2f3b27",
-              "url": "https://inspirehep.net/files/aa5c9512e06a9d18fb6dc3c80a2f3b27"
-            }
-          ],
-          "citation_count": 36,
           "authors": [
             {
               "affiliations_identifiers": [
@@ -124930,16 +124934,6 @@
               "signature_block": "NACYANk",
               "first_name": "Kazunori",
               "recid": 1060297
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "TU-1140"
-            },
-            {
-              "source": "arXiv",
-              "value": "KEK-TH-2379"
             }
           ],
           "citeable": true,
@@ -127877,9 +127871,25 @@
       },
       {
         "id": "1961465",
-        "updated": "2026-06-19T13:20:35.121847+00:00",
         "created": "2021-11-08T02:41:18.787517+00:00",
+        "updated": "2026-06-19T13:20:35.121847+00:00",
         "metadata": {
+          "citation_count": 24,
+          "citation_count_without_self_citations": 20,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "KEK-TH-2364"
+            },
+            {
+              "source": "arXiv",
+              "value": "CERN-TH-2021-183"
+            },
+            {
+              "source": "arXiv",
+              "value": "TU-1137"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "129",
@@ -127893,8 +127903,6 @@
               "journal_title": "Phys.Rev.Lett."
             }
           ],
-          "citation_count_without_self_citations": 20,
-          "citation_count": 24,
           "authors": [
             {
               "raw_affiliations": [
@@ -128048,20 +128056,6 @@
               "signature_block": "YANADm",
               "first_name": "Masaki",
               "recid": 982946
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "KEK-TH-2364"
-            },
-            {
-              "source": "arXiv",
-              "value": "CERN-TH-2021-183"
-            },
-            {
-              "source": "arXiv",
-              "value": "TU-1137"
             }
           ],
           "citeable": true,
@@ -135434,9 +135428,17 @@
       },
       {
         "id": "1940015",
-        "updated": "2024-02-19T11:16:48.099638+00:00",
         "created": "2021-10-08T02:51:40.175558+00:00",
+        "updated": "2024-02-19T11:16:48.099638+00:00",
         "metadata": {
+          "citation_count": 17,
+          "citation_count_without_self_citations": 9,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "KEK-TH-2349"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "105",
@@ -135451,8 +135453,6 @@
               "journal_title": "Phys.Rev.D"
             }
           ],
-          "citation_count_without_self_citations": 9,
-          "citation_count": 17,
           "authors": [
             {
               "raw_affiliations": [
@@ -135614,12 +135614,6 @@
               "first_name": "Hiromasa",
               "uuid": "36437e79-61df-4bc7-b5c1-caf81260a469",
               "recid": 1775969
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "KEK-TH-2349"
             }
           ],
           "citeable": true,
@@ -137073,9 +137067,29 @@
       },
       {
         "id": "1879671",
-        "updated": "2023-10-03T09:07:45.865220+00:00",
         "created": "2021-07-09T03:00:22.443489+00:00",
+        "updated": "2023-10-03T09:07:45.865220+00:00",
         "metadata": {
+          "citation_count": 56,
+          "documents": [
+            {
+              "filename": "document",
+              "fulltext": true,
+              "key": "7615e6dca1f1a72b380bb4c4d9687ef6",
+              "url": "https://inspirehep.net/files/7615e6dca1f1a72b380bb4c4d9687ef6"
+            }
+          ],
+          "citation_count_without_self_citations": 31,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "KEK-TH-2334"
+            },
+            {
+              "source": "arXiv",
+              "value": "MIT-CTP/5313"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "01",
@@ -137088,16 +137102,6 @@
               "journal_title": "JHEP"
             }
           ],
-          "citation_count_without_self_citations": 31,
-          "documents": [
-            {
-              "filename": "document",
-              "fulltext": true,
-              "key": "7615e6dca1f1a72b380bb4c4d9687ef6",
-              "url": "https://inspirehep.net/files/7615e6dca1f1a72b380bb4c4d9687ef6"
-            }
-          ],
-          "citation_count": 56,
           "authors": [
             {
               "raw_affiliations": [
@@ -137291,16 +137295,6 @@
               "signature_block": "Yx",
               "first_name": "Xiaojun",
               "recid": 1470862
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "KEK-TH-2334"
-            },
-            {
-              "source": "arXiv",
-              "value": "MIT-CTP/5313"
             }
           ],
           "citeable": true,
@@ -147193,9 +147187,30 @@
       },
       {
         "id": "1840549",
-        "updated": "2023-10-03T08:15:42.855136+00:00",
         "created": "2021-01-14T00:00:00+00:00",
+        "updated": "2023-10-03T08:15:42.855136+00:00",
         "metadata": {
+          "citation_count": 31,
+          "documents": [
+            {
+              "filename": "scoap",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "6c10ccdbb2087081cd9ef239f3479124",
+              "url": "https://inspirehep.net/files/6c10ccdbb2087081cd9ef239f3479124"
+            }
+          ],
+          "citation_count_without_self_citations": 29,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "DESY-21-006"
+            },
+            {
+              "source": "arXiv",
+              "value": "CERN-TH-2021-010"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "05",
@@ -147208,17 +147223,6 @@
               "journal_title": "JHEP"
             }
           ],
-          "citation_count_without_self_citations": 29,
-          "documents": [
-            {
-              "filename": "scoap",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "6c10ccdbb2087081cd9ef239f3479124",
-              "url": "https://inspirehep.net/files/6c10ccdbb2087081cd9ef239f3479124"
-            }
-          ],
-          "citation_count": 31,
           "authors": [
             {
               "raw_affiliations": [
@@ -147360,16 +147364,6 @@
               "signature_block": "MACADk",
               "first_name": "Kyohei",
               "recid": 1309535
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "DESY-21-006"
-            },
-            {
-              "source": "arXiv",
-              "value": "CERN-TH-2021-010"
             }
           ],
           "citeable": true,
@@ -148792,9 +148786,38 @@
       },
       {
         "id": "1831069",
-        "updated": "2026-06-19T13:20:35.895651+00:00",
         "created": "2020-11-19T00:00:00+00:00",
+        "updated": "2026-06-19T13:20:35.895651+00:00",
         "metadata": {
+          "citation_count": 68,
+          "documents": [
+            {
+              "filename": "scoap3-fulltext.pdf",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "3e8c3f94d8b7dd86ae971b803628d72b",
+              "url": "https://inspirehep.net/files/3e8c3f94d8b7dd86ae971b803628d72b"
+            }
+          ],
+          "citation_count_without_self_citations": 48,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "CERN-TH-2020-196"
+            },
+            {
+              "source": "arXiv",
+              "value": "RESCEU-22/20"
+            },
+            {
+              "source": "arXiv",
+              "value": "DESY-20-202"
+            },
+            {
+              "source": "arXiv",
+              "value": "TU-1112"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "126",
@@ -148809,17 +148832,6 @@
               "journal_title": "Phys.Rev.Lett."
             }
           ],
-          "citation_count_without_self_citations": 48,
-          "documents": [
-            {
-              "filename": "scoap3-fulltext.pdf",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "3e8c3f94d8b7dd86ae971b803628d72b",
-              "url": "https://inspirehep.net/files/3e8c3f94d8b7dd86ae971b803628d72b"
-            }
-          ],
-          "citation_count": 68,
           "authors": [
             {
               "raw_affiliations": [
@@ -149049,24 +149061,6 @@
               "signature_block": "YANADm",
               "first_name": "Masaki",
               "recid": 982946
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "CERN-TH-2020-196"
-            },
-            {
-              "source": "arXiv",
-              "value": "RESCEU-22/20"
-            },
-            {
-              "source": "arXiv",
-              "value": "DESY-20-202"
-            },
-            {
-              "source": "arXiv",
-              "value": "TU-1112"
             }
           ],
           "citeable": true,
@@ -152283,9 +152277,33 @@
       },
       {
         "id": "1827858",
-        "updated": "2024-08-09T12:47:19.719696+00:00",
         "created": "2020-11-04T00:00:00+00:00",
+        "updated": "2024-08-09T12:47:19.719696+00:00",
         "metadata": {
+          "citation_count": 97,
+          "documents": [
+            {
+              "filename": "10.1103_PhysRevLett.126.131301.pdf",
+              "description": "Fulltext from Publisher",
+              "key": "8f7af1fe60a24c8f4558f5c71c1be93c",
+              "url": "https://inspirehep.net/files/8f7af1fe60a24c8f4558f5c71c1be93c"
+            }
+          ],
+          "citation_count_without_self_citations": 86,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "CERN-TH-2020-182"
+            },
+            {
+              "source": "arXiv",
+              "value": "DESY-20-188"
+            },
+            {
+              "source": "arXiv",
+              "value": "DESY 20-188"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "126",
@@ -152300,16 +152318,6 @@
               "journal_title": "Phys.Rev.Lett."
             }
           ],
-          "citation_count_without_self_citations": 86,
-          "documents": [
-            {
-              "filename": "10.1103_PhysRevLett.126.131301.pdf",
-              "description": "Fulltext from Publisher",
-              "key": "8f7af1fe60a24c8f4558f5c71c1be93c",
-              "url": "https://inspirehep.net/files/8f7af1fe60a24c8f4558f5c71c1be93c"
-            }
-          ],
-          "citation_count": 97,
           "authors": [
             {
               "raw_affiliations": [
@@ -152469,20 +152477,6 @@
               "first_name": "Tsutomu T.",
               "uuid": "5d40cbcb-c3b7-4735-beae-aa74903afa06",
               "recid": 982834
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "CERN-TH-2020-182"
-            },
-            {
-              "source": "arXiv",
-              "value": "DESY-20-188"
-            },
-            {
-              "source": "arXiv",
-              "value": "DESY 20-188"
             }
           ],
           "citeable": true,
@@ -156834,9 +156828,30 @@
       },
       {
         "id": "1810045",
-        "updated": "2023-10-03T09:11:15.834080+00:00",
         "created": "2020-08-05T00:00:00+00:00",
+        "updated": "2023-10-03T09:11:15.834080+00:00",
         "metadata": {
+          "citation_count": 41,
+          "documents": [
+            {
+              "filename": "scoap",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "56249f5ae4a02616cf53f76eada06700",
+              "url": "https://inspirehep.net/files/56249f5ae4a02616cf53f76eada06700"
+            }
+          ],
+          "citation_count_without_self_citations": 34,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "DESY 20-130"
+            },
+            {
+              "source": "arXiv",
+              "value": "DESY-20-130"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "02",
@@ -156849,17 +156864,6 @@
               "journal_title": "JHEP"
             }
           ],
-          "citation_count_without_self_citations": 34,
-          "documents": [
-            {
-              "filename": "scoap",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "56249f5ae4a02616cf53f76eada06700",
-              "url": "https://inspirehep.net/files/56249f5ae4a02616cf53f76eada06700"
-            }
-          ],
-          "citation_count": 41,
           "authors": [
             {
               "raw_affiliations": [
@@ -156984,16 +156988,6 @@
               "first_name": "Jorinde",
               "uuid": "834be0f1-a1ee-43b1-8b0d-40d90f21182e",
               "recid": 1589979
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "DESY 20-130"
-            },
-            {
-              "source": "arXiv",
-              "value": "DESY-20-130"
             }
           ],
           "citeable": true,
@@ -159363,9 +159357,38 @@
       },
       {
         "id": "1799619",
-        "updated": "2026-06-19T13:20:36.020736+00:00",
         "created": "2020-06-08T00:00:00+00:00",
+        "updated": "2026-06-19T13:20:36.020736+00:00",
         "metadata": {
+          "citation_count": 94,
+          "documents": [
+            {
+              "filename": "scoap",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "92dd3f1949fcbb248f58fbd112b36fea",
+              "url": "https://inspirehep.net/files/92dd3f1949fcbb248f58fbd112b36fea"
+            }
+          ],
+          "citation_count_without_self_citations": 81,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "DESY 20-100"
+            },
+            {
+              "source": "arXiv",
+              "value": "DESY-20-100"
+            },
+            {
+              "source": "arXiv",
+              "value": "CERN-TH-2020-088"
+            },
+            {
+              "source": "arXiv",
+              "value": "TU-1102"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "08",
@@ -159378,17 +159401,6 @@
               "journal_title": "JHEP"
             }
           ],
-          "citation_count_without_self_citations": 81,
-          "documents": [
-            {
-              "filename": "scoap",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "92dd3f1949fcbb248f58fbd112b36fea",
-              "url": "https://inspirehep.net/files/92dd3f1949fcbb248f58fbd112b36fea"
-            }
-          ],
-          "citation_count": 94,
           "authors": [
             {
               "raw_affiliations": [
@@ -159599,24 +159611,6 @@
               "signature_block": "YANADm",
               "first_name": "Masaki",
               "recid": 982946
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "DESY 20-100"
-            },
-            {
-              "source": "arXiv",
-              "value": "DESY-20-100"
-            },
-            {
-              "source": "arXiv",
-              "value": "CERN-TH-2020-088"
-            },
-            {
-              "source": "arXiv",
-              "value": "TU-1102"
             }
           ],
           "citeable": true,
@@ -161147,9 +161141,29 @@
       },
       {
         "id": "1787827",
-        "updated": "2023-12-13T12:12:31.867306+00:00",
         "created": "2020-03-25T00:00:00+00:00",
+        "updated": "2023-12-13T12:12:31.867306+00:00",
         "metadata": {
+          "citation_count": 210,
+          "citation_count_without_self_citations": 195,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "IPMU 20-0029"
+            },
+            {
+              "source": "arXiv",
+              "value": "DESY 20-042"
+            },
+            {
+              "source": "arXiv",
+              "value": "DESY-20-042"
+            },
+            {
+              "source": "arXiv",
+              "value": "CTPU-PTC-20-05"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "101",
@@ -161161,8 +161175,6 @@
               "journal_title": "Phys.Rev.D"
             }
           ],
-          "citation_count_without_self_citations": 194,
-          "citation_count": 209,
           "authors": [
             {
               "raw_affiliations": [
@@ -161178,6 +161190,12 @@
               "record": {
                 "$ref": "https://inspirehep.net/api/authors/1806201"
               },
+              "ids": [
+                {
+                  "schema": "INSPIRE BAI",
+                  "value": "Keisuke.Inomata.1"
+                }
+              ],
               "last_name": "Inomata",
               "affiliations": [
                 {
@@ -161193,15 +161211,9 @@
                   "value": "Tokyo U., IPMU"
                 }
               ],
-              "ids": [
-                {
-                  "schema": "INSPIRE BAI",
-                  "value": "Keisuke.Inomata.1"
-                }
-              ],
               "signature_block": "INANATk",
-              "first_name": "Keisuke",
               "uuid": "308641bc-0869-4d98-8e0c-1839307dc99d",
+              "first_name": "Keisuke",
               "recid": 1806201
             },
             {
@@ -161219,6 +161231,12 @@
               "record": {
                 "$ref": "https://inspirehep.net/api/authors/1062520"
               },
+              "ids": [
+                {
+                  "schema": "INSPIRE BAI",
+                  "value": "Masahiro.Kawasaki.1"
+                }
+              ],
               "last_name": "Kawasaki",
               "affiliations": [
                 {
@@ -161234,15 +161252,9 @@
                   "value": "Tokyo U., IPMU"
                 }
               ],
-              "ids": [
-                {
-                  "schema": "INSPIRE BAI",
-                  "value": "Masahiro.Kawasaki.1"
-                }
-              ],
               "signature_block": "CASACm",
-              "first_name": "Masahiro",
               "uuid": "cd5d097a-0729-42e7-899d-32d86594a454",
+              "first_name": "Masahiro",
               "recid": 1062520
             },
             {
@@ -161257,6 +161269,12 @@
               "record": {
                 "$ref": "https://inspirehep.net/api/authors/1309535"
               },
+              "ids": [
+                {
+                  "schema": "INSPIRE BAI",
+                  "value": "K.Mukaida.1"
+                }
+              ],
               "last_name": "Mukaida",
               "affiliations": [
                 {
@@ -161266,15 +161284,9 @@
                   "value": "DESY"
                 }
               ],
-              "ids": [
-                {
-                  "schema": "INSPIRE BAI",
-                  "value": "K.Mukaida.1"
-                }
-              ],
               "signature_block": "MACADk",
-              "first_name": "Kyohei",
               "uuid": "fd2b22d4-909e-4589-ade6-b2794c2a767d",
+              "first_name": "Kyohei",
               "recid": 1309535
             },
             {
@@ -161289,6 +161301,12 @@
               "record": {
                 "$ref": "https://inspirehep.net/api/authors/1198420"
               },
+              "ids": [
+                {
+                  "schema": "INSPIRE BAI",
+                  "value": "Takahiro.Terada.1"
+                }
+              ],
               "last_name": "Terada",
               "affiliations": [
                 {
@@ -161298,15 +161316,9 @@
                   "value": "IBS, Daejeon, CTPU"
                 }
               ],
-              "ids": [
-                {
-                  "schema": "INSPIRE BAI",
-                  "value": "Takahiro.Terada.1"
-                }
-              ],
               "signature_block": "TARADt",
-              "first_name": "Takahiro",
               "uuid": "502aa330-f5bc-42c2-8077-e419af562f87",
+              "first_name": "Takahiro",
               "recid": 1198420
             },
             {
@@ -161323,6 +161335,12 @@
               "record": {
                 "$ref": "https://inspirehep.net/api/authors/982834"
               },
+              "ids": [
+                {
+                  "schema": "INSPIRE BAI",
+                  "value": "T.T.Yanagida.1"
+                }
+              ],
               "last_name": "Yanagida",
               "affiliations": [
                 {
@@ -161338,34 +161356,10 @@
                   "value": "Shanghai Jiaotong U."
                 }
               ],
-              "ids": [
-                {
-                  "schema": "INSPIRE BAI",
-                  "value": "T.T.Yanagida.1"
-                }
-              ],
               "signature_block": "YANAGADt",
-              "first_name": "Tsutomu T.",
               "uuid": "ab321451-34e2-448e-8d3d-9f1b882c112a",
+              "first_name": "Tsutomu T.",
               "recid": 982834
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "IPMU 20-0029"
-            },
-            {
-              "source": "arXiv",
-              "value": "DESY 20-042"
-            },
-            {
-              "source": "arXiv",
-              "value": "DESY-20-042"
-            },
-            {
-              "source": "arXiv",
-              "value": "CTPU-PTC-20-05"
             }
           ],
           "citeable": true,
@@ -166077,8 +166071,8 @@
             "updated": "2023-12-13T12:12:31.867306"
           },
           "journal_title_variants": [
-            "Phys.Rev.D",
-            "Phys. Rev. D"
+            "Phys. Rev. D",
+            "Phys.Rev.D"
           ],
           "arxiv_eprints": [
             {
@@ -166745,6 +166739,16 @@
             }
           ],
           "first_author": {
+            "affiliations_identifiers": [
+              {
+                "schema": "ROR",
+                "value": "https://ror.org/008td3p62"
+              },
+              {
+                "schema": "ROR",
+                "value": "https://ror.org/02chw6z69"
+              }
+            ],
             "full_name": "Inomata, Keisuke",
             "last_name": "Inomata",
             "first_name": "Keisuke",
@@ -166815,9 +166819,30 @@
       },
       {
         "id": "1782641",
-        "updated": "2023-10-03T09:13:54.504895+00:00",
         "created": "2020-02-28T00:00:00+00:00",
+        "updated": "2023-10-03T09:13:54.504895+00:00",
         "metadata": {
+          "citation_count": 44,
+          "documents": [
+            {
+              "filename": "scoap",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "0cc1dfb47c46266c6f2ad5da5ab8d577",
+              "url": "https://inspirehep.net/files/0cc1dfb47c46266c6f2ad5da5ab8d577"
+            }
+          ],
+          "citation_count_without_self_citations": 33,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "DESY 20-031"
+            },
+            {
+              "source": "arXiv",
+              "value": "DESY-20-031"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "11",
@@ -166830,17 +166855,6 @@
               "journal_title": "JHEP"
             }
           ],
-          "citation_count_without_self_citations": 33,
-          "documents": [
-            {
-              "filename": "scoap",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "0cc1dfb47c46266c6f2ad5da5ab8d577",
-              "url": "https://inspirehep.net/files/0cc1dfb47c46266c6f2ad5da5ab8d577"
-            }
-          ],
-          "citation_count": 44,
           "authors": [
             {
               "raw_affiliations": [
@@ -166969,16 +166983,6 @@
               "uuid": "c5586feb-2e15-49ea-a24d-926a413e8a92",
               "first_name": "Jorinde",
               "recid": 1589979
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "DESY 20-031"
-            },
-            {
-              "source": "arXiv",
-              "value": "DESY-20-031"
             }
           ],
           "citeable": true,
@@ -169208,9 +169212,26 @@
       },
       {
         "id": "1781025",
-        "updated": "2025-02-10T00:49:45.839206+00:00",
         "created": "2020-02-18T00:00:00+00:00",
+        "updated": "2025-02-10T00:49:45.839206+00:00",
         "metadata": {
+          "citation_count": 49,
+          "documents": [
+            {
+              "filename": "scoap",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "90bf3d6810aa1d9b5b97e2952d253451",
+              "url": "https://inspirehep.net/files/90bf3d6810aa1d9b5b97e2952d253451"
+            }
+          ],
+          "citation_count_without_self_citations": 37,
+          "report_numbers": [
+            {
+              "source": "DESY",
+              "value": "DESY-20-022"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "09",
@@ -169223,17 +169244,6 @@
               "journal_title": "JHEP"
             }
           ],
-          "citation_count_without_self_citations": 37,
-          "documents": [
-            {
-              "filename": "scoap",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "90bf3d6810aa1d9b5b97e2952d253451",
-              "url": "https://inspirehep.net/files/90bf3d6810aa1d9b5b97e2952d253451"
-            }
-          ],
-          "citation_count": 49,
           "authors": [
             {
               "raw_affiliations": [
@@ -169417,12 +169427,6 @@
               "signature_block": "MACADk",
               "first_name": "Kyohei",
               "recid": 1309535
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "DESY",
-              "value": "DESY-20-022"
             }
           ],
           "citeable": true,
@@ -175454,9 +175458,28 @@
       },
       {
         "id": "1760744",
-        "updated": "2023-03-07T05:51:44.809499+00:00",
         "created": "2019-10-25T00:00:00+00:00",
+        "updated": "2023-03-07T05:51:44.809499+00:00",
         "metadata": {
+          "citation_count": 34,
+          "documents": [
+            {
+              "filename": "scoap3-fulltext.pdf",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "de0b4560d9a425cdd25c7aff3319ae92",
+              "url": "https://inspirehep.net/files/de0b4560d9a425cdd25c7aff3319ae92"
+            }
+          ],
+          "citation_count_without_self_citations": 25,
+          "report_numbers": [
+            {
+              "value": "DESY-19-181"
+            },
+            {
+              "value": "IPMU19-0148"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "124",
@@ -175471,17 +175494,6 @@
               "journal_title": "Phys.Rev.Lett."
             }
           ],
-          "citation_count_without_self_citations": 25,
-          "documents": [
-            {
-              "filename": "scoap3-fulltext.pdf",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "de0b4560d9a425cdd25c7aff3319ae92",
-              "url": "https://inspirehep.net/files/de0b4560d9a425cdd25c7aff3319ae92"
-            }
-          ],
-          "citation_count": 34,
           "authors": [
             {
               "raw_affiliations": [
@@ -175621,14 +175633,6 @@
               "signature_block": "PATRACk",
               "first_name": "Kalliopi",
               "recid": 1050246
-            }
-          ],
-          "report_numbers": [
-            {
-              "value": "DESY-19-181"
-            },
-            {
-              "value": "IPMU19-0148"
             }
           ],
           "citeable": true,
@@ -180969,9 +180973,30 @@
       },
       {
         "id": "1757411",
-        "updated": "2023-10-03T08:40:01.893749+00:00",
         "created": "2019-10-04T00:00:00+00:00",
+        "updated": "2023-10-03T08:40:01.893749+00:00",
         "metadata": {
+          "citation_count": 90,
+          "documents": [
+            {
+              "filename": "scoap",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "7cc64ea413983d2e6940f4158c3fb3b4",
+              "url": "https://inspirehep.net/files/7cc64ea413983d2e6940f4158c3fb3b4"
+            }
+          ],
+          "citation_count_without_self_citations": 77,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "DESY-19-166"
+            },
+            {
+              "source": "arXiv",
+              "value": "DESY 19-166"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "02",
@@ -180986,17 +181011,6 @@
               "journal_title": "JHEP"
             }
           ],
-          "citation_count_without_self_citations": 77,
-          "documents": [
-            {
-              "filename": "scoap",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "7cc64ea413983d2e6940f4158c3fb3b4",
-              "url": "https://inspirehep.net/files/7cc64ea413983d2e6940f4158c3fb3b4"
-            }
-          ],
-          "citation_count": 90,
           "authors": [
             {
               "raw_affiliations": [
@@ -181122,16 +181136,6 @@
               "signature_block": "MACADk",
               "first_name": "Kyohei",
               "recid": 1309535
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "DESY-19-166"
-            },
-            {
-              "source": "arXiv",
-              "value": "DESY 19-166"
             }
           ],
           "citeable": true,
@@ -183332,9 +183336,20 @@
       },
       {
         "id": "1737620",
-        "updated": "2023-10-03T07:29:45.827705+00:00",
         "created": "2019-06-03T00:00:00+00:00",
+        "updated": "2023-10-03T07:29:45.827705+00:00",
         "metadata": {
+          "citation_count": 96,
+          "citation_count_without_self_citations": 78,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "DESY 19-084"
+            },
+            {
+              "value": "DESY-19-084"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "10",
@@ -183349,8 +183364,6 @@
               "journal_title": "JCAP"
             }
           ],
-          "citation_count_without_self_citations": 78,
-          "citation_count": 96,
           "authors": [
             {
               "raw_affiliations": [
@@ -183487,15 +183500,6 @@
               "first_name": "Kyohei",
               "uuid": "3e2e2ad5-fd09-43b2-8d15-d747931d260e",
               "recid": 1309535
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "DESY 19-084"
-            },
-            {
-              "value": "DESY-19-084"
             }
           ],
           "citeable": true,
@@ -185804,9 +185808,30 @@
       },
       {
         "id": "1717870",
-        "updated": "2023-03-07T04:13:03.233315+00:00",
         "created": "2019-02-01T00:00:00+00:00",
+        "updated": "2023-03-07T04:13:03.233315+00:00",
         "metadata": {
+          "citation_count": 78,
+          "documents": [
+            {
+              "filename": "scoap",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "3fbb63657c00670136a9eaa2191b91a3",
+              "url": "https://inspirehep.net/files/3fbb63657c00670136a9eaa2191b91a3"
+            }
+          ],
+          "citation_count_without_self_citations": 64,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "DESY 19-014"
+            },
+            {
+              "source": "arXiv",
+              "value": "DESY-19-014"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "07",
@@ -185819,17 +185844,6 @@
               "journal_title": "JHEP"
             }
           ],
-          "citation_count_without_self_citations": 64,
-          "documents": [
-            {
-              "filename": "scoap",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "3fbb63657c00670136a9eaa2191b91a3",
-              "url": "https://inspirehep.net/files/3fbb63657c00670136a9eaa2191b91a3"
-            }
-          ],
-          "citation_count": 78,
           "authors": [
             {
               "raw_affiliations": [
@@ -185968,16 +185982,6 @@
               "signature_block": "YANADm",
               "first_name": "Masaki",
               "recid": 982946
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "DESY 19-014"
-            },
-            {
-              "source": "arXiv",
-              "value": "DESY-19-014"
             }
           ],
           "citeable": true,
@@ -187073,9 +187077,34 @@
       },
       {
         "id": "1710080",
-        "updated": "2023-10-03T07:30:38.656576+00:00",
         "created": "2018-12-20T00:00:00+00:00",
+        "updated": "2023-10-03T07:30:38.656576+00:00",
         "metadata": {
+          "citation_count": 35,
+          "documents": [
+            {
+              "filename": "scoap",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "cb6a7373fd6a1178a230566a13e37e0e",
+              "url": "https://inspirehep.net/files/cb6a7373fd6a1178a230566a13e37e0e"
+            }
+          ],
+          "citation_count_without_self_citations": 27,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "DESY-18-223"
+            },
+            {
+              "source": "arXiv",
+              "value": "DESY 18-223"
+            },
+            {
+              "source": "arXiv",
+              "value": "KEK-TH-2090"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "03",
@@ -187090,17 +187119,6 @@
               "journal_title": "JHEP"
             }
           ],
-          "citation_count_without_self_citations": 27,
-          "documents": [
-            {
-              "filename": "scoap",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "cb6a7373fd6a1178a230566a13e37e0e",
-              "url": "https://inspirehep.net/files/cb6a7373fd6a1178a230566a13e37e0e"
-            }
-          ],
-          "citation_count": 35,
           "authors": [
             {
               "raw_affiliations": [
@@ -187285,20 +187303,6 @@
               "signature_block": "SATr",
               "first_name": "Ryosuke",
               "recid": 1069270
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "DESY-18-223"
-            },
-            {
-              "source": "arXiv",
-              "value": "DESY 18-223"
-            },
-            {
-              "source": "arXiv",
-              "value": "KEK-TH-2090"
             }
           ],
           "citeable": true,
@@ -188987,9 +188991,25 @@
       },
       {
         "id": "1688890",
-        "updated": "2023-03-07T06:38:50.079691+00:00",
         "created": "2018-08-21T00:00:00+00:00",
+        "updated": "2023-03-07T06:38:50.079691+00:00",
         "metadata": {
+          "citation_count": 47,
+          "documents": [
+            {
+              "filename": "scoap3-fulltext.pdf",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "27fe25aa6ac40c83387b60ec0d5e2c7d",
+              "url": "https://inspirehep.net/files/27fe25aa6ac40c83387b60ec0d5e2c7d"
+            }
+          ],
+          "citation_count_without_self_citations": 40,
+          "report_numbers": [
+            {
+              "value": "DESY-18-123"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "98",
@@ -189001,17 +189021,6 @@
               "journal_title": "Phys.Rev.D"
             }
           ],
-          "citation_count_without_self_citations": 40,
-          "documents": [
-            {
-              "filename": "scoap3-fulltext.pdf",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "27fe25aa6ac40c83387b60ec0d5e2c7d",
-              "url": "https://inspirehep.net/files/27fe25aa6ac40c83387b60ec0d5e2c7d"
-            }
-          ],
-          "citation_count": 47,
           "authors": [
             {
               "raw_affiliations": [
@@ -189111,11 +189120,6 @@
               "signature_block": "MACADk",
               "first_name": "Kyohei",
               "recid": 1309535
-            }
-          ],
-          "report_numbers": [
-            {
-              "value": "DESY-18-123"
             }
           ],
           "citeable": true,
@@ -192353,9 +192357,30 @@
       },
       {
         "id": "1683958",
-        "updated": "2024-08-28T01:00:08.579246+00:00",
         "created": "2018-07-27T00:00:00+00:00",
+        "updated": "2024-08-28T01:00:08.579246+00:00",
         "metadata": {
+          "citation_count": 45,
+          "documents": [
+            {
+              "filename": "scoap3-fulltext.pdf",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "e8ada67ff29e815f3de4f88fdb47966b",
+              "url": "https://inspirehep.net/files/e8ada67ff29e815f3de4f88fdb47966b"
+            }
+          ],
+          "citation_count_without_self_citations": 36,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "DESY-18-124"
+            },
+            {
+              "source": "arXiv",
+              "value": "DESY 18-124"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "99",
@@ -192367,17 +192392,6 @@
               "journal_title": "Phys.Rev.D"
             }
           ],
-          "citation_count_without_self_citations": 36,
-          "documents": [
-            {
-              "filename": "scoap3-fulltext.pdf",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "e8ada67ff29e815f3de4f88fdb47966b",
-              "url": "https://inspirehep.net/files/e8ada67ff29e815f3de4f88fdb47966b"
-            }
-          ],
-          "citation_count": 45,
           "authors": [
             {
               "raw_affiliations": [
@@ -192578,16 +192592,6 @@
               "signature_block": "YANADm",
               "first_name": "Masaki",
               "recid": 982946
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "DESY-18-124"
-            },
-            {
-              "source": "arXiv",
-              "value": "DESY 18-124"
             }
           ],
           "citeable": true,
@@ -194316,9 +194320,20 @@
       },
       {
         "id": "1679252",
-        "updated": "2023-10-03T08:49:44.494078+00:00",
         "created": "2018-06-25T00:00:00+00:00",
+        "updated": "2023-10-03T08:49:44.494078+00:00",
         "metadata": {
+          "citation_count": 146,
+          "citation_count_without_self_citations": 121,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "DESY 18-098"
+            },
+            {
+              "value": "DESY-18-098"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "11",
@@ -194333,8 +194348,6 @@
               "journal_title": "JCAP"
             }
           ],
-          "citation_count_without_self_citations": 121,
-          "citation_count": 146,
           "authors": [
             {
               "raw_affiliations": [
@@ -194419,15 +194432,6 @@
               "signature_block": "MACADk",
               "first_name": "Kyohei",
               "recid": 1309535
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "DESY 18-098"
-            },
-            {
-              "value": "DESY-18-098"
             }
           ],
           "citeable": true,
@@ -198967,9 +198971,19 @@
       },
       {
         "id": "1636737",
-        "updated": "2025-07-17T14:20:33.961342+00:00",
         "created": "2017-11-17T00:00:00+00:00",
+        "updated": "2025-07-17T14:20:33.961342+00:00",
         "metadata": {
+          "citation_count": 170,
+          "citation_count_without_self_citations": 147,
+          "report_numbers": [
+            {
+              "value": "IPMU-17-0158"
+            },
+            {
+              "value": "DESY-17-190"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "97",
@@ -198979,8 +198993,6 @@
               "journal_title": "Phys.Rev.D"
             }
           ],
-          "citation_count_without_self_citations": 147,
-          "citation_count": 170,
           "authors": [
             {
               "raw_affiliations": [
@@ -199131,14 +199143,6 @@
               "uuid": "1b46c9bc-6ceb-4087-8689-a6a29582bfc3",
               "first_name": "Tsutomu T.",
               "recid": 982834
-            }
-          ],
-          "report_numbers": [
-            {
-              "value": "IPMU-17-0158"
-            },
-            {
-              "value": "DESY-17-190"
             }
           ],
           "citeable": true,
@@ -204833,9 +204837,19 @@
       },
       {
         "id": "1638332",
-        "updated": "2023-03-07T02:22:05.522037+00:00",
         "created": "2017-11-27T00:00:00+00:00",
+        "updated": "2023-03-07T02:22:05.522037+00:00",
         "metadata": {
+          "citation_count": 139,
+          "citation_count_without_self_citations": 120,
+          "report_numbers": [
+            {
+              "value": "IPMU-17-0165"
+            },
+            {
+              "value": "DESY-17-209"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "97",
@@ -204845,8 +204859,6 @@
               "journal_title": "Phys.Rev.D"
             }
           ],
-          "citation_count_without_self_citations": 120,
-          "citation_count": 139,
           "authors": [
             {
               "affiliations_identifiers": [
@@ -205087,14 +205099,6 @@
               "uuid": "da13cc6c-132f-4886-9789-edc5ac092625",
               "first_name": "Tsutomu T.",
               "recid": 982834
-            }
-          ],
-          "report_numbers": [
-            {
-              "value": "IPMU-17-0165"
-            },
-            {
-              "value": "DESY-17-209"
             }
           ],
           "citeable": true,
@@ -210213,9 +210217,16 @@
       },
       {
         "id": "1625098",
-        "updated": "2026-04-07T03:57:21.652570+00:00",
         "created": "2017-09-25T00:00:00+00:00",
+        "updated": "2026-04-07T03:57:21.652570+00:00",
         "metadata": {
+          "citation_count": 13,
+          "citation_count_without_self_citations": 8,
+          "report_numbers": [
+            {
+              "value": "IPMU-17-0133"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "96",
@@ -210225,8 +210236,6 @@
               "journal_title": "Phys.Rev.D"
             }
           ],
-          "citation_count_without_self_citations": 8,
-          "citation_count": 13,
           "authors": [
             {
               "affiliations_identifiers": [
@@ -210492,11 +210501,6 @@
               "uuid": "634e9966-1d58-4e1a-bc5b-cdca91947cdc",
               "first_name": "Tsutomu T.",
               "recid": 982834
-            }
-          ],
-          "report_numbers": [
-            {
-              "value": "IPMU-17-0133"
             }
           ],
           "citeable": true,
@@ -216153,9 +216157,19 @@
       },
       {
         "id": "1607778",
-        "updated": "2023-03-07T01:07:26.335192+00:00",
         "created": "2017-06-28T00:00:00+00:00",
+        "updated": "2023-03-07T01:07:26.335192+00:00",
         "metadata": {
+          "citation_count": 24,
+          "citation_count_without_self_citations": 16,
+          "report_numbers": [
+            {
+              "value": "UT-17-21"
+            },
+            {
+              "value": "IPMU-17-0090"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "12",
@@ -216168,8 +216182,6 @@
               "journal_title": "JCAP"
             }
           ],
-          "citation_count_without_self_citations": 16,
-          "citation_count": 24,
           "authors": [
             {
               "raw_affiliations": [
@@ -216274,14 +216286,6 @@
               "uuid": "76af4d48-1a98-4bb0-b12d-23326aa0c323",
               "first_name": "Kazunori",
               "recid": 1060297
-            }
-          ],
-          "report_numbers": [
-            {
-              "value": "UT-17-21"
-            },
-            {
-              "value": "IPMU-17-0090"
             }
           ],
           "citeable": true,
@@ -219947,9 +219951,16 @@
       },
       {
         "id": "1605120",
-        "updated": "2023-03-07T02:15:08.724069+00:00",
         "created": "2017-06-15T00:00:00+00:00",
+        "updated": "2023-03-07T02:15:08.724069+00:00",
         "metadata": {
+          "citation_count": 81,
+          "citation_count_without_self_citations": 75,
+          "report_numbers": [
+            {
+              "value": "IPMU-17-0069"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "96",
@@ -219959,8 +219970,6 @@
               "journal_title": "Phys.Rev.D"
             }
           ],
-          "citation_count_without_self_citations": 75,
-          "citation_count": 81,
           "authors": [
             {
               "raw_affiliations": [
@@ -220025,11 +220034,6 @@
               "uuid": "cb2782b2-271c-46bd-9599-c0efc5a4f4d3",
               "first_name": "Masaki",
               "recid": 982946
-            }
-          ],
-          "report_numbers": [
-            {
-              "value": "IPMU-17-0069"
             }
           ],
           "citeable": true,
@@ -230430,9 +230434,31 @@
       },
       {
         "id": "1508818",
-        "updated": "2023-03-07T02:04:08.648502+00:00",
         "created": "2017-01-13T00:00:00+00:00",
+        "updated": "2023-03-07T02:04:08.648502+00:00",
         "metadata": {
+          "citation_count": 41,
+          "documents": [
+            {
+              "filename": "scoap3-fulltext.pdf",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "91c80b868b477a473594b945612cec04",
+              "url": "https://inspirehep.net/files/91c80b868b477a473594b945612cec04"
+            }
+          ],
+          "citation_count_without_self_citations": 37,
+          "report_numbers": [
+            {
+              "value": "IPMU17-0008"
+            },
+            {
+              "value": "KIAS-P17003"
+            },
+            {
+              "value": "UT-17-01"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "767",
@@ -230443,17 +230469,6 @@
               "journal_title": "Phys.Lett.B"
             }
           ],
-          "citation_count_without_self_citations": 37,
-          "documents": [
-            {
-              "filename": "scoap3-fulltext.pdf",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "91c80b868b477a473594b945612cec04",
-              "url": "https://inspirehep.net/files/91c80b868b477a473594b945612cec04"
-            }
-          ],
-          "citation_count": 41,
           "authors": [
             {
               "affiliations_identifiers": [
@@ -230669,17 +230684,6 @@
               "signature_block": "YANADy",
               "first_name": "Yusuke",
               "recid": 1274262
-            }
-          ],
-          "report_numbers": [
-            {
-              "value": "IPMU17-0008"
-            },
-            {
-              "value": "KIAS-P17003"
-            },
-            {
-              "value": "UT-17-01"
             }
           ],
           "citeable": true,
@@ -233495,9 +233499,16 @@
       },
       {
         "id": "1508458",
-        "updated": "2026-04-07T03:57:21.151866+00:00",
         "created": "2017-01-11T00:00:00+00:00",
+        "updated": "2026-04-07T03:57:21.151866+00:00",
         "metadata": {
+          "citation_count": 279,
+          "citation_count_without_self_citations": 249,
+          "report_numbers": [
+            {
+              "value": "IPMU17-0009"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "96",
@@ -233507,8 +233518,6 @@
               "journal_title": "Phys.Rev.D"
             }
           ],
-          "citation_count_without_self_citations": 249,
-          "citation_count": 279,
           "authors": [
             {
               "raw_affiliations": [
@@ -233694,11 +233703,6 @@
               "first_name": "Tsutomu T.",
               "uuid": "b3b81849-67de-4506-b88a-778bcc4ac135",
               "recid": 982834
-            }
-          ],
-          "report_numbers": [
-            {
-              "value": "IPMU17-0009"
             }
           ],
           "citeable": true,
@@ -236497,9 +236501,26 @@
       },
       {
         "id": "1505565",
-        "updated": "2023-10-03T09:34:34.206717+00:00",
         "created": "2016-12-23T00:00:00+00:00",
+        "updated": "2023-10-03T09:34:34.206717+00:00",
         "metadata": {
+          "citation_count": 94,
+          "documents": [
+            {
+              "filename": "scoap",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "ef5ede74b2b18ebe5d35334d809bbaec",
+              "url": "https://inspirehep.net/files/ef5ede74b2b18ebe5d35334d809bbaec"
+            }
+          ],
+          "citation_count_without_self_citations": 87,
+          "report_numbers": [
+            {
+              "source": "arXiv",
+              "value": "IPMU16-0197"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "03",
@@ -236514,17 +236535,6 @@
               "journal_title": "JHEP"
             }
           ],
-          "citation_count_without_self_citations": 87,
-          "documents": [
-            {
-              "filename": "scoap",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "ef5ede74b2b18ebe5d35334d809bbaec",
-              "url": "https://inspirehep.net/files/ef5ede74b2b18ebe5d35334d809bbaec"
-            }
-          ],
-          "citation_count": 94,
           "authors": [
             {
               "raw_affiliations": [
@@ -236638,12 +236648,6 @@
               "first_name": "Masaki",
               "uuid": "e6f0ba59-e438-410b-8e94-0f5536025a71",
               "recid": 982946
-            }
-          ],
-          "report_numbers": [
-            {
-              "source": "arXiv",
-              "value": "IPMU16-0197"
             }
           ],
           "citeable": true,
@@ -239679,9 +239683,16 @@
       },
       {
         "id": "1499030",
-        "updated": "2026-04-07T03:57:22.266718+00:00",
         "created": "2016-11-21T00:00:00+00:00",
+        "updated": "2026-04-07T03:57:22.266718+00:00",
         "metadata": {
+          "citation_count": 278,
+          "citation_count_without_self_citations": 237,
+          "report_numbers": [
+            {
+              "value": "IPMU16-0172"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "95",
@@ -239691,8 +239702,6 @@
               "journal_title": "Phys.Rev.D"
             }
           ],
-          "citation_count_without_self_citations": 236,
-          "citation_count": 277,
           "authors": [
             {
               "raw_affiliations": [
@@ -239708,6 +239717,13 @@
               "record": {
                 "$ref": "https://inspirehep.net/api/authors/1806201"
               },
+              "ids": [
+                {
+                  "schema": "INSPIRE BAI",
+                  "value": "Keisuke.Inomata.1"
+                }
+              ],
+              "last_name": "Inomata",
               "affiliations": [
                 {
                   "record": {
@@ -239720,13 +239736,6 @@
                     "$ref": "https://inspirehep.net/api/institutions/911254"
                   },
                   "value": "Tokyo U., IPMU"
-                }
-              ],
-              "last_name": "Inomata",
-              "ids": [
-                {
-                  "schema": "INSPIRE BAI",
-                  "value": "Keisuke.Inomata.1"
                 }
               ],
               "signature_block": "INANATk",
@@ -239749,6 +239758,13 @@
               "record": {
                 "$ref": "https://inspirehep.net/api/authors/1062520"
               },
+              "ids": [
+                {
+                  "schema": "INSPIRE BAI",
+                  "value": "Masahiro.Kawasaki.1"
+                }
+              ],
+              "last_name": "Kawasaki",
               "affiliations": [
                 {
                   "record": {
@@ -239761,13 +239777,6 @@
                     "$ref": "https://inspirehep.net/api/institutions/911254"
                   },
                   "value": "Tokyo U., IPMU"
-                }
-              ],
-              "last_name": "Kawasaki",
-              "ids": [
-                {
-                  "schema": "INSPIRE BAI",
-                  "value": "Masahiro.Kawasaki.1"
                 }
               ],
               "signature_block": "CASACm",
@@ -239787,19 +239796,19 @@
               "record": {
                 "$ref": "https://inspirehep.net/api/authors/1309535"
               },
+              "ids": [
+                {
+                  "schema": "INSPIRE BAI",
+                  "value": "K.Mukaida.1"
+                }
+              ],
+              "last_name": "Mukaida",
               "affiliations": [
                 {
                   "record": {
                     "$ref": "https://inspirehep.net/api/institutions/911254"
                   },
                   "value": "Tokyo U., IPMU"
-                }
-              ],
-              "last_name": "Mukaida",
-              "ids": [
-                {
-                  "schema": "INSPIRE BAI",
-                  "value": "K.Mukaida.1"
                 }
               ],
               "signature_block": "MACADk",
@@ -239822,6 +239831,13 @@
               "record": {
                 "$ref": "https://inspirehep.net/api/authors/1316436"
               },
+              "ids": [
+                {
+                  "schema": "INSPIRE BAI",
+                  "value": "Yuchiro.Tada.1"
+                }
+              ],
+              "last_name": "Tada",
               "affiliations": [
                 {
                   "record": {
@@ -239834,13 +239850,6 @@
                     "$ref": "https://inspirehep.net/api/institutions/911254"
                   },
                   "value": "Tokyo U., IPMU"
-                }
-              ],
-              "last_name": "Tada",
-              "ids": [
-                {
-                  "schema": "INSPIRE BAI",
-                  "value": "Yuchiro.Tada.1"
                 }
               ],
               "signature_block": "TADy",
@@ -239859,6 +239868,13 @@
               "record": {
                 "$ref": "https://inspirehep.net/api/authors/982834"
               },
+              "ids": [
+                {
+                  "schema": "INSPIRE BAI",
+                  "value": "T.T.Yanagida.1"
+                }
+              ],
+              "last_name": "Yanagida",
               "affiliations": [
                 {
                   "record": {
@@ -239867,22 +239883,10 @@
                   "value": "Tokyo U., IPMU"
                 }
               ],
-              "last_name": "Yanagida",
-              "ids": [
-                {
-                  "schema": "INSPIRE BAI",
-                  "value": "T.T.Yanagida.1"
-                }
-              ],
               "signature_block": "YANAGADt",
               "uuid": "853f715c-0845-4444-b14d-e30e521934b2",
               "first_name": "Tsutomu T.",
               "recid": 982834
-            }
-          ],
-          "report_numbers": [
-            {
-              "value": "IPMU16-0172"
             }
           ],
           "citeable": true,
@@ -242154,8 +242158,8 @@
             "updated": "2026-04-07T03:57:22.266718"
           },
           "journal_title_variants": [
-            "Phys.Rev.D",
-            "Phys. Rev. D"
+            "Phys. Rev. D",
+            "Phys.Rev.D"
           ],
           "arxiv_eprints": [
             {
@@ -243994,6 +243998,16 @@
             }
           ],
           "first_author": {
+            "affiliations_identifiers": [
+              {
+                "schema": "ROR",
+                "value": "https://ror.org/008td3p62"
+              },
+              {
+                "schema": "ROR",
+                "value": "https://ror.org/02chw6z69"
+              }
+            ],
             "full_name": "Inomata, Keisuke",
             "last_name": "Inomata",
             "first_name": "Keisuke",
@@ -244055,9 +244069,11 @@
       },
       {
         "id": "1487235",
-        "updated": "2023-09-10T03:33:26.343547+00:00",
         "created": "2016-09-20T00:00:00+00:00",
+        "updated": "2023-09-10T03:33:26.343547+00:00",
         "metadata": {
+          "citation_count": 178,
+          "citation_count_without_self_citations": 155,
           "publication_info": [
             {
               "journal_volume": "02",
@@ -244070,8 +244086,6 @@
               "journal_title": "JCAP"
             }
           ],
-          "citation_count_without_self_citations": 155,
-          "citation_count": 178,
           "authors": [
             {
               "raw_affiliations": [
@@ -246569,9 +246583,31 @@
       },
       {
         "id": "1486649",
-        "updated": "2023-10-03T09:18:17.552395+00:00",
         "created": "2016-09-16T00:00:00+00:00",
+        "updated": "2023-10-03T09:18:17.552395+00:00",
         "metadata": {
+          "citation_count": 31,
+          "documents": [
+            {
+              "filename": "scoap",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "dc564e8587dfb12d5d65f4e3dbaf3a72",
+              "url": "https://inspirehep.net/files/dc564e8587dfb12d5d65f4e3dbaf3a72"
+            }
+          ],
+          "citation_count_without_self_citations": 22,
+          "report_numbers": [
+            {
+              "value": "UT-16-27"
+            },
+            {
+              "value": "IPMU16-0137"
+            },
+            {
+              "value": "KIAS-P16069"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "11",
@@ -246584,17 +246620,6 @@
               "journal_title": "JHEP"
             }
           ],
-          "citation_count_without_self_citations": 22,
-          "documents": [
-            {
-              "filename": "scoap",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "dc564e8587dfb12d5d65f4e3dbaf3a72",
-              "url": "https://inspirehep.net/files/dc564e8587dfb12d5d65f4e3dbaf3a72"
-            }
-          ],
-          "citation_count": 31,
           "authors": [
             {
               "affiliations_identifiers": [
@@ -246771,17 +246796,6 @@
               "signature_block": "TARADt",
               "first_name": "Takahiro",
               "recid": 1198420
-            }
-          ],
-          "report_numbers": [
-            {
-              "value": "UT-16-27"
-            },
-            {
-              "value": "IPMU16-0137"
-            },
-            {
-              "value": "KIAS-P16069"
             }
           ],
           "citeable": true,
@@ -250109,19 +250123,10 @@
       },
       {
         "id": "1465487",
-        "updated": "2023-10-03T08:32:14.447344+00:00",
         "created": "2016-05-25T00:00:00+00:00",
+        "updated": "2023-10-03T08:32:14.447344+00:00",
         "metadata": {
-          "publication_info": [
-            {
-              "journal_volume": "761",
-              "page_end": "423",
-              "year": 2016,
-              "page_start": "419",
-              "journal_title": "Phys.Lett.B"
-            }
-          ],
-          "citation_count_without_self_citations": 21,
+          "citation_count": 22,
           "documents": [
             {
               "filename": "scoap3-fulltext.pdf",
@@ -250131,7 +250136,24 @@
               "url": "https://inspirehep.net/files/3251b3acaaccdc82eda5952f83bb8d98"
             }
           ],
-          "citation_count": 22,
+          "citation_count_without_self_citations": 21,
+          "report_numbers": [
+            {
+              "value": "UT-16-22"
+            },
+            {
+              "value": "IPMU-16-0075"
+            }
+          ],
+          "publication_info": [
+            {
+              "journal_volume": "761",
+              "page_end": "423",
+              "year": 2016,
+              "page_start": "419",
+              "journal_title": "Phys.Lett.B"
+            }
+          ],
           "authors": [
             {
               "raw_affiliations": [
@@ -250240,14 +250262,6 @@
               "uuid": "baa1766d-d312-4622-a3c5-9bd7e85303d0",
               "first_name": "Kazunori",
               "recid": 1060297
-            }
-          ],
-          "report_numbers": [
-            {
-              "value": "UT-16-22"
-            },
-            {
-              "value": "IPMU-16-0075"
             }
           ],
           "citeable": true,
@@ -258288,9 +258302,16 @@
       },
       {
         "id": "1459234",
-        "updated": "2023-10-03T08:25:41.090815+00:00",
         "created": "2016-05-18T00:00:00+00:00",
+        "updated": "2023-10-03T08:25:41.090815+00:00",
         "metadata": {
+          "citation_count": 23,
+          "citation_count_without_self_citations": 18,
+          "report_numbers": [
+            {
+              "value": "IPMU-16-0072"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "94",
@@ -258300,8 +258321,6 @@
               "journal_title": "Phys.Rev.D"
             }
           ],
-          "citation_count_without_self_citations": 18,
-          "citation_count": 23,
           "authors": [
             {
               "raw_affiliations": [
@@ -258406,11 +258425,6 @@
               "uuid": "bbe77815-35be-4741-8437-999656a33d92",
               "first_name": "Tsutomu T.",
               "recid": 982834
-            }
-          ],
-          "report_numbers": [
-            {
-              "value": "IPMU-16-0072"
             }
           ],
           "citeable": true,
@@ -262651,9 +262665,22 @@
       },
       {
         "id": "1454064",
-        "updated": "2023-09-10T03:35:27.740988+00:00",
         "created": "2016-05-02T00:00:00+00:00",
+        "updated": "2023-09-10T03:35:27.740988+00:00",
         "metadata": {
+          "citation_count": 176,
+          "citation_count_without_self_citations": 154,
+          "report_numbers": [
+            {
+              "value": "UT-16-20"
+            },
+            {
+              "value": "KEK-TH-1898"
+            },
+            {
+              "value": "IPMU-16-0062"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "94",
@@ -262663,8 +262690,6 @@
               "journal_title": "Phys.Rev.D"
             }
           ],
-          "citation_count_without_self_citations": 154,
-          "citation_count": 176,
           "authors": [
             {
               "raw_affiliations": [
@@ -262851,17 +262876,6 @@
               "signature_block": "NACYANk",
               "first_name": "Kazunori",
               "recid": 1060297
-            }
-          ],
-          "report_numbers": [
-            {
-              "value": "UT-16-20"
-            },
-            {
-              "value": "KEK-TH-1898"
-            },
-            {
-              "value": "IPMU-16-0062"
             }
           ],
           "citeable": true,
@@ -264773,9 +264787,28 @@
       },
       {
         "id": "1434316",
-        "updated": "2023-03-09T18:49:59.357966+00:00",
         "created": "2016-03-25T00:00:00+00:00",
+        "updated": "2023-03-09T18:49:59.357966+00:00",
         "metadata": {
+          "citation_count": 85,
+          "documents": [
+            {
+              "filename": "scoap",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "4b89b8dbe0a44a4ee8d317afd3485dab",
+              "url": "https://inspirehep.net/files/4b89b8dbe0a44a4ee8d317afd3485dab"
+            }
+          ],
+          "citation_count_without_self_citations": 75,
+          "report_numbers": [
+            {
+              "value": "IPMU16-0039"
+            },
+            {
+              "value": "LAPTH-013-16"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "11",
@@ -264788,17 +264821,6 @@
               "journal_title": "JHEP"
             }
           ],
-          "citation_count_without_self_citations": 75,
-          "documents": [
-            {
-              "filename": "scoap",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "4b89b8dbe0a44a4ee8d317afd3485dab",
-              "url": "https://inspirehep.net/files/4b89b8dbe0a44a4ee8d317afd3485dab"
-            }
-          ],
-          "citation_count": 85,
           "authors": [
             {
               "raw_affiliations": [
@@ -264958,14 +264980,6 @@
               "first_name": "Yue-Lin Sming",
               "uuid": "d0b9cb32-da62-483c-a985-1a251b6012a8",
               "recid": 1074536
-            }
-          ],
-          "report_numbers": [
-            {
-              "value": "IPMU16-0039"
-            },
-            {
-              "value": "LAPTH-013-16"
             }
           ],
           "citeable": true,
@@ -278142,9 +278156,28 @@
       },
       {
         "id": "1418784",
-        "updated": "2023-03-07T01:28:32.137605+00:00",
         "created": "2016-02-02T00:00:00+00:00",
+        "updated": "2023-03-07T01:28:32.137605+00:00",
         "metadata": {
+          "citation_count": 83,
+          "documents": [
+            {
+              "filename": "scoap3-fulltext.pdf",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "172b62a82f7a8179a0102c366425f503",
+              "url": "https://inspirehep.net/files/172b62a82f7a8179a0102c366425f503"
+            }
+          ],
+          "citation_count_without_self_citations": 67,
+          "report_numbers": [
+            {
+              "value": "UT-16-04"
+            },
+            {
+              "value": "IPMU-16-0012"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "10",
@@ -278157,17 +278190,6 @@
               "journal_title": "JCAP"
             }
           ],
-          "citation_count_without_self_citations": 67,
-          "documents": [
-            {
-              "filename": "scoap3-fulltext.pdf",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "172b62a82f7a8179a0102c366425f503",
-              "url": "https://inspirehep.net/files/172b62a82f7a8179a0102c366425f503"
-            }
-          ],
-          "citation_count": 83,
           "authors": [
             {
               "affiliations_identifiers": [
@@ -278274,14 +278296,6 @@
               "uuid": "9572f168-1346-4f70-bbeb-957967a66914",
               "first_name": "Kazunori",
               "recid": 1060297
-            }
-          ],
-          "report_numbers": [
-            {
-              "value": "UT-16-04"
-            },
-            {
-              "value": "IPMU-16-0012"
             }
           ],
           "citeable": true,
@@ -281334,23 +281348,10 @@
       },
       {
         "id": "1377913",
-        "updated": "2023-03-07T03:38:16.602213+00:00",
         "created": "2015-06-26T00:00:00+00:00",
+        "updated": "2023-03-07T03:38:16.602213+00:00",
         "metadata": {
-          "publication_info": [
-            {
-              "journal_volume": "02",
-              "pubinfo_freetext": "JCAP02(2016)003",
-              "artid": "003",
-              "year": 2016,
-              "journal_record": {
-                "$ref": "https://inspirehep.net/api/journals/1212538"
-              },
-              "page_start": "003",
-              "journal_title": "JCAP"
-            }
-          ],
-          "citation_count_without_self_citations": 102,
+          "citation_count": 117,
           "documents": [
             {
               "filename": "10.1088_1475-7516_2016_02_003.pdf",
@@ -281369,7 +281370,25 @@
               "url": "https://inspirehep.net/files/cf541e1877e9bc81efbd31f5595c4649"
             }
           ],
-          "citation_count": 117,
+          "citation_count_without_self_citations": 102,
+          "report_numbers": [
+            {
+              "value": "IPMU-15-0096"
+            }
+          ],
+          "publication_info": [
+            {
+              "journal_volume": "02",
+              "pubinfo_freetext": "JCAP02(2016)003",
+              "artid": "003",
+              "year": 2016,
+              "journal_record": {
+                "$ref": "https://inspirehep.net/api/journals/1212538"
+              },
+              "page_start": "003",
+              "journal_title": "JCAP"
+            }
+          ],
           "authors": [
             {
               "raw_affiliations": [
@@ -281467,11 +281486,6 @@
               "signature_block": "YANADm",
               "first_name": "Masaki",
               "recid": 982946
-            }
-          ],
-          "report_numbers": [
-            {
-              "value": "IPMU-15-0096"
             }
           ],
           "citeable": true,
@@ -283994,9 +284008,19 @@
       },
       {
         "id": "1370672",
-        "updated": "2023-10-03T08:45:48.378188+00:00",
         "created": "2015-05-19T00:00:00+00:00",
+        "updated": "2023-10-03T08:45:48.378188+00:00",
         "metadata": {
+          "citation_count": 6,
+          "citation_count_without_self_citations": 1,
+          "report_numbers": [
+            {
+              "value": "UT-15-19"
+            },
+            {
+              "value": "IPMU-15-0071"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "10",
@@ -284009,8 +284033,6 @@
               "journal_title": "JCAP"
             }
           ],
-          "citation_count_without_self_citations": 1,
-          "citation_count": 6,
           "authors": [
             {
               "raw_affiliations": [
@@ -284147,14 +284169,6 @@
               "uuid": "75774b33-1f48-4542-88e4-8b9199d2ca03",
               "first_name": "Kazunori",
               "recid": 1060297
-            }
-          ],
-          "report_numbers": [
-            {
-              "value": "UT-15-19"
-            },
-            {
-              "value": "IPMU-15-0071"
             }
           ],
           "citeable": true,
@@ -290895,9 +290909,19 @@
       },
       {
         "id": "1364858",
-        "updated": "2023-10-03T09:13:33.845308+00:00",
         "created": "2015-04-28T00:00:00+00:00",
+        "updated": "2023-10-03T09:13:33.845308+00:00",
         "metadata": {
+          "citation_count": 43,
+          "citation_count_without_self_citations": 36,
+          "report_numbers": [
+            {
+              "value": "UT-15-15"
+            },
+            {
+              "value": "IPMU-15-0056"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "10",
@@ -290910,8 +290934,6 @@
               "journal_title": "JCAP"
             }
           ],
-          "citation_count_without_self_citations": 36,
-          "citation_count": 43,
           "authors": [
             {
               "raw_affiliations": [
@@ -291048,14 +291070,6 @@
               "uuid": "5f5f7d4f-c29e-4c14-acba-a03efe6206c2",
               "first_name": "Kazunori",
               "recid": 1060297
-            }
-          ],
-          "report_numbers": [
-            {
-              "value": "UT-15-15"
-            },
-            {
-              "value": "IPMU-15-0056"
             }
           ],
           "citeable": true,
@@ -298122,15 +298136,10 @@
       },
       {
         "id": "1486102",
-        "updated": "2026-06-15T10:49:00.767847+00:00",
         "created": "2016-09-12T00:00:00+00:00",
+        "updated": "2026-06-15T10:49:00.767847+00:00",
         "metadata": {
-          "publication_info": [
-            {
-              "year": 2015
-            }
-          ],
-          "citation_count_without_self_citations": 0,
+          "citation_count": 0,
           "documents": [
             {
               "filename": "document",
@@ -298140,7 +298149,12 @@
               "url": "https://inspirehep.net/files/557db7a1da39629de67e30be4fa7a1c5"
             }
           ],
-          "citation_count": 0,
+          "citation_count_without_self_citations": 0,
+          "publication_info": [
+            {
+              "year": 2015
+            }
+          ],
           "authors": [
             {
               "raw_affiliations": [
@@ -304179,9 +304193,25 @@
       },
       {
         "id": "1343475",
-        "updated": "2023-10-03T09:21:51.896681+00:00",
         "created": "2015-02-10T00:00:00+00:00",
+        "updated": "2023-10-03T09:21:51.896681+00:00",
         "metadata": {
+          "citation_count": 145,
+          "documents": [
+            {
+              "filename": "scoap3-fulltext.pdf",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "b0b3407e36032ee55be5a232a8c98220",
+              "url": "https://inspirehep.net/files/b0b3407e36032ee55be5a232a8c98220"
+            }
+          ],
+          "citation_count_without_self_citations": 115,
+          "report_numbers": [
+            {
+              "value": "UT-15-03"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "05",
@@ -304194,17 +304224,6 @@
               "journal_title": "JCAP"
             }
           ],
-          "citation_count_without_self_citations": 115,
-          "documents": [
-            {
-              "filename": "scoap3-fulltext.pdf",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "b0b3407e36032ee55be5a232a8c98220",
-              "url": "https://inspirehep.net/files/b0b3407e36032ee55be5a232a8c98220"
-            }
-          ],
-          "citation_count": 145,
           "authors": [
             {
               "raw_affiliations": [
@@ -304386,11 +304405,6 @@
               "signature_block": "NACYANk",
               "first_name": "Kazunori",
               "recid": 1060297
-            }
-          ],
-          "report_numbers": [
-            {
-              "value": "UT-15-03"
             }
           ],
           "citeable": true,
@@ -305190,9 +305204,25 @@
       },
       {
         "id": "1308488",
-        "updated": "2023-10-03T09:08:56.334841+00:00",
         "created": "2014-07-29T00:00:00+00:00",
+        "updated": "2023-10-03T09:08:56.334841+00:00",
         "metadata": {
+          "citation_count": 30,
+          "documents": [
+            {
+              "filename": "scoap",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "78e86106af7cbd41c50f3e56c616fa2b",
+              "url": "https://inspirehep.net/files/78e86106af7cbd41c50f3e56c616fa2b"
+            }
+          ],
+          "citation_count_without_self_citations": 21,
+          "report_numbers": [
+            {
+              "value": "UT-14-31"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "11",
@@ -305205,17 +305235,6 @@
               "journal_title": "JHEP"
             }
           ],
-          "citation_count_without_self_citations": 21,
-          "documents": [
-            {
-              "filename": "scoap",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "78e86106af7cbd41c50f3e56c616fa2b",
-              "url": "https://inspirehep.net/files/78e86106af7cbd41c50f3e56c616fa2b"
-            }
-          ],
-          "citation_count": 30,
           "authors": [
             {
               "affiliations_identifiers": [
@@ -305375,11 +305394,6 @@
               "uuid": "cdfaecea-e274-4640-86bf-04af6c0f9d81",
               "first_name": "Masahiro",
               "recid": 1257925
-            }
-          ],
-          "report_numbers": [
-            {
-              "value": "UT-14-31"
             }
           ],
           "citeable": true,
@@ -308338,9 +308352,25 @@
       },
       {
         "id": "1295880",
-        "updated": "2023-12-13T11:08:57.546052+00:00",
         "created": "2014-05-14T00:00:00+00:00",
+        "updated": "2023-12-13T11:08:57.546052+00:00",
         "metadata": {
+          "citation_count": 23,
+          "documents": [
+            {
+              "filename": "scoap3-fulltext.pdf",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "9b437849baf0859d92336cb3497f7f14",
+              "url": "https://inspirehep.net/files/9b437849baf0859d92336cb3497f7f14"
+            }
+          ],
+          "citation_count_without_self_citations": 20,
+          "report_numbers": [
+            {
+              "value": "UT-14-22"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "08",
@@ -308353,17 +308383,6 @@
               "journal_title": "JCAP"
             }
           ],
-          "citation_count_without_self_citations": 20,
-          "documents": [
-            {
-              "filename": "scoap3-fulltext.pdf",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "9b437849baf0859d92336cb3497f7f14",
-              "url": "https://inspirehep.net/files/9b437849baf0859d92336cb3497f7f14"
-            }
-          ],
-          "citation_count": 23,
           "authors": [
             {
               "full_name_unicode_normalized": "mukaida, kyohei",
@@ -308418,11 +308437,6 @@
               "first_name": "Masahiro",
               "uuid": "0540c2f9-0f3f-43f7-8744-174e8cfc2dff",
               "recid": 1257925
-            }
-          ],
-          "report_numbers": [
-            {
-              "value": "UT-14-22"
             }
           ],
           "citeable": true,
@@ -310059,9 +310073,22 @@
       },
       {
         "id": "1290113",
-        "updated": "2023-03-07T00:08:40.930034+00:00",
         "created": "2014-04-14T00:00:00+00:00",
+        "updated": "2023-03-07T00:08:40.930034+00:00",
         "metadata": {
+          "citation_count": 39,
+          "citation_count_without_self_citations": 26,
+          "report_numbers": [
+            {
+              "value": "IPMU-14-0093"
+            },
+            {
+              "value": "ICRR-REPORT-677-2014-3"
+            },
+            {
+              "value": "UT-14-17"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "90",
@@ -310072,8 +310099,6 @@
               "journal_title": "Phys.Rev.D"
             }
           ],
-          "citation_count_without_self_citations": 26,
-          "citation_count": 39,
           "authors": [
             {
               "affiliations_identifiers": [
@@ -310279,17 +310304,6 @@
               "uuid": "67668bff-7e6d-48e7-970f-825941a641eb",
               "first_name": "Masaki",
               "recid": 982946
-            }
-          ],
-          "report_numbers": [
-            {
-              "value": "IPMU-14-0093"
-            },
-            {
-              "value": "ICRR-REPORT-677-2014-3"
-            },
-            {
-              "value": "UT-14-17"
             }
           ],
           "citeable": true,
@@ -313701,9 +313715,25 @@
       },
       {
         "id": "1288856",
-        "updated": "2023-12-13T11:08:02.955048+00:00",
         "created": "2014-04-08T00:00:00+00:00",
+        "updated": "2023-12-13T11:08:02.955048+00:00",
         "metadata": {
+          "citation_count": 25,
+          "documents": [
+            {
+              "filename": "scoap3-fulltext.pdf",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "bb08a042ce7c92d018184ddf1694c653",
+              "url": "https://inspirehep.net/files/bb08a042ce7c92d018184ddf1694c653"
+            }
+          ],
+          "citation_count_without_self_citations": 22,
+          "report_numbers": [
+            {
+              "value": "UT-14-15"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "08",
@@ -313716,17 +313746,6 @@
               "journal_title": "JCAP"
             }
           ],
-          "citation_count_without_self_citations": 22,
-          "documents": [
-            {
-              "filename": "scoap3-fulltext.pdf",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "bb08a042ce7c92d018184ddf1694c653",
-              "url": "https://inspirehep.net/files/bb08a042ce7c92d018184ddf1694c653"
-            }
-          ],
-          "citation_count": 25,
           "authors": [
             {
               "affiliations_identifiers": [
@@ -313811,11 +313830,6 @@
               "first_name": "Kazunori",
               "uuid": "6c3f1d0c-c6cc-4069-9d3f-1def169adc7d",
               "recid": 1060297
-            }
-          ],
-          "report_numbers": [
-            {
-              "value": "UT-14-15"
             }
           ],
           "citeable": true,
@@ -315250,9 +315264,22 @@
       },
       {
         "id": "1281042",
-        "updated": "2023-03-07T02:53:47.689313+00:00",
         "created": "2014-02-13T00:00:00+00:00",
+        "updated": "2023-03-07T02:53:47.689313+00:00",
         "metadata": {
+          "citation_count": 143,
+          "citation_count_without_self_citations": 118,
+          "report_numbers": [
+            {
+              "value": "IPMU-14-0027"
+            },
+            {
+              "value": "ICRR-REPORT-671-2013-20"
+            },
+            {
+              "value": "UT-14-04"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "89",
@@ -315262,8 +315289,6 @@
               "journal_title": "Phys.Rev.D"
             }
           ],
-          "citation_count_without_self_citations": 118,
-          "citation_count": 143,
           "authors": [
             {
               "full_name_unicode_normalized": "harigaya, keisuke",
@@ -315383,17 +315408,6 @@
               "uuid": "9dfa02cd-5a6b-4dfa-af8e-af7bd11f2515",
               "first_name": "Masaki",
               "recid": 982946
-            }
-          ],
-          "report_numbers": [
-            {
-              "value": "IPMU-14-0027"
-            },
-            {
-              "value": "ICRR-REPORT-671-2013-20"
-            },
-            {
-              "value": "UT-14-04"
             }
           ],
           "citeable": true,
@@ -324091,9 +324105,16 @@
       },
       {
         "id": "1280678",
-        "updated": "2023-12-13T11:06:51.256069+00:00",
         "created": "2014-02-11T00:00:00+00:00",
+        "updated": "2023-12-13T11:06:51.256069+00:00",
         "metadata": {
+          "citation_count": 10,
+          "citation_count_without_self_citations": 7,
+          "report_numbers": [
+            {
+              "value": "UT-14-03"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "89",
@@ -324103,8 +324124,6 @@
               "journal_title": "Phys.Rev.D"
             }
           ],
-          "citation_count_without_self_citations": 7,
-          "citation_count": 10,
           "authors": [
             {
               "full_name_unicode_normalized": "mukaida, kyohei",
@@ -324192,11 +324211,6 @@
               "uuid": "e30cbc45-9960-4138-83e6-aca366e2e0e2",
               "first_name": "Masahiro",
               "recid": 1257925
-            }
-          ],
-          "report_numbers": [
-            {
-              "value": "UT-14-03"
             }
           ],
           "citeable": true,
@@ -325690,9 +325704,25 @@
       },
       {
         "id": "1278548",
-        "updated": "2023-10-03T08:11:31.474765+00:00",
         "created": "2014-01-24T00:00:00+00:00",
+        "updated": "2023-10-03T08:11:31.474765+00:00",
         "metadata": {
+          "citation_count": 15,
+          "documents": [
+            {
+              "filename": "scoap3-fulltext.pdf",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "813d1e29364fe1b529048ac2cd14efd8",
+              "url": "https://inspirehep.net/files/813d1e29364fe1b529048ac2cd14efd8"
+            }
+          ],
+          "citation_count_without_self_citations": 10,
+          "report_numbers": [
+            {
+              "value": "UT-14-02"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "06",
@@ -325705,17 +325735,6 @@
               "journal_title": "JCAP"
             }
           ],
-          "citation_count_without_self_citations": 10,
-          "documents": [
-            {
-              "filename": "scoap3-fulltext.pdf",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "813d1e29364fe1b529048ac2cd14efd8",
-              "url": "https://inspirehep.net/files/813d1e29364fe1b529048ac2cd14efd8"
-            }
-          ],
-          "citation_count": 15,
           "authors": [
             {
               "affiliations_identifiers": [
@@ -325833,11 +325852,6 @@
               "uuid": "89d26d0b-fde8-41cd-a849-df1a721b1662",
               "first_name": "Masahiro",
               "recid": 1257925
-            }
-          ],
-          "report_numbers": [
-            {
-              "value": "UT-14-02"
             }
           ],
           "citeable": true,
@@ -327471,9 +327485,28 @@
       },
       {
         "id": "1268769",
-        "updated": "2023-12-13T11:05:39.980568+00:00",
         "created": "2013-12-12T00:00:00+00:00",
+        "updated": "2023-12-13T11:05:39.980568+00:00",
         "metadata": {
+          "citation_count": 159,
+          "documents": [
+            {
+              "filename": "scoap",
+              "description": "Article from SCOAP3",
+              "source": "SCOAP3",
+              "key": "5cb2970ca0ccd24a9f12430f464e722a",
+              "url": "https://inspirehep.net/files/5cb2970ca0ccd24a9f12430f464e722a"
+            }
+          ],
+          "citation_count_without_self_citations": 123,
+          "report_numbers": [
+            {
+              "value": "IPMU-13-0233"
+            },
+            {
+              "value": "UT-13-43"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "05",
@@ -327486,17 +327519,6 @@
               "journal_title": "JHEP"
             }
           ],
-          "citation_count_without_self_citations": 123,
-          "documents": [
-            {
-              "filename": "scoap",
-              "description": "Article from SCOAP3",
-              "source": "SCOAP3",
-              "key": "5cb2970ca0ccd24a9f12430f464e722a",
-              "url": "https://inspirehep.net/files/5cb2970ca0ccd24a9f12430f464e722a"
-            }
-          ],
-          "citation_count": 159,
           "authors": [
             {
               "raw_affiliations": [
@@ -327589,14 +327611,6 @@
               "signature_block": "MACADk",
               "first_name": "Kyohei",
               "recid": 1309535
-            }
-          ],
-          "report_numbers": [
-            {
-              "value": "IPMU-13-0233"
-            },
-            {
-              "value": "UT-13-43"
             }
           ],
           "citeable": true,
@@ -329423,9 +329437,16 @@
       },
       {
         "id": "1255597",
-        "updated": "2023-09-10T03:33:42.518323+00:00",
         "created": "2013-09-27T00:00:00+00:00",
+        "updated": "2023-09-10T03:33:42.518323+00:00",
         "metadata": {
+          "citation_count": 31,
+          "citation_count_without_self_citations": 24,
+          "report_numbers": [
+            {
+              "value": "UT-13-36"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "01",
@@ -329438,8 +329459,6 @@
               "journal_title": "JCAP"
             }
           ],
-          "citation_count_without_self_citations": 24,
-          "citation_count": 31,
           "authors": [
             {
               "full_name_unicode_normalized": "jinno, ryusuke",
@@ -329527,11 +329546,6 @@
               "uuid": "a5f5b710-ee6a-41b6-b436-785136167a88",
               "first_name": "Kazunori",
               "recid": 1060297
-            }
-          ],
-          "report_numbers": [
-            {
-              "value": "UT-13-36"
             }
           ],
           "citeable": true,
@@ -336514,9 +336528,16 @@
       },
       {
         "id": "1249869",
-        "updated": "2023-10-03T08:21:59.673106+00:00",
         "created": "2013-08-21T00:00:00+00:00",
+        "updated": "2023-10-03T08:21:59.673106+00:00",
         "metadata": {
+          "citation_count": 53,
+          "citation_count_without_self_citations": 41,
+          "report_numbers": [
+            {
+              "value": "UT-13-30"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "12",
@@ -336529,8 +336550,6 @@
               "journal_title": "JHEP"
             }
           ],
-          "citation_count_without_self_citations": 41,
-          "citation_count": 53,
           "authors": [
             {
               "raw_affiliations": [
@@ -336686,11 +336705,6 @@
               "signature_block": "TACANATm",
               "first_name": "Masahiro",
               "recid": 1257925
-            }
-          ],
-          "report_numbers": [
-            {
-              "value": "UT-13-30"
             }
           ],
           "citeable": true,
@@ -338671,9 +338685,16 @@
       },
       {
         "id": "1229767",
-        "updated": "2023-10-03T07:58:33.325112+00:00",
         "created": "2013-04-25T00:00:00+00:00",
+        "updated": "2023-10-03T07:58:33.325112+00:00",
         "metadata": {
+          "citation_count": 33,
+          "citation_count_without_self_citations": 19,
+          "report_numbers": [
+            {
+              "value": "UT-13-16"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "06",
@@ -338686,8 +338707,6 @@
               "journal_title": "JHEP"
             }
           ],
-          "citation_count_without_self_citations": 19,
-          "citation_count": 33,
           "authors": [
             {
               "affiliations_identifiers": [
@@ -338863,11 +338882,6 @@
               "uuid": "16c36a2c-7bc5-4710-9d73-dac5a6e46b02",
               "first_name": "Masahiro",
               "recid": 1257925
-            }
-          ],
-          "report_numbers": [
-            {
-              "value": "UT-13-16"
             }
           ],
           "citeable": true,
@@ -346957,9 +346971,19 @@
       },
       {
         "id": "1217088",
-        "updated": "2023-03-06T19:54:03.249295+00:00",
         "created": "2013-01-31T00:00:00+00:00",
+        "updated": "2023-03-06T19:54:03.249295+00:00",
         "metadata": {
+          "citation_count": 27,
+          "citation_count_without_self_citations": 23,
+          "report_numbers": [
+            {
+              "value": "UT-13-03"
+            },
+            {
+              "value": "IPMU-13-0024"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "721",
@@ -346969,8 +346993,6 @@
               "journal_title": "Phys.Lett.B"
             }
           ],
-          "citation_count_without_self_citations": 23,
-          "citation_count": 27,
           "authors": [
             {
               "affiliations_identifiers": [
@@ -347186,14 +347208,6 @@
               "uuid": "deb7a340-e403-4770-98de-b54b9e367d2c",
               "first_name": "Kazunori",
               "recid": 1060297
-            }
-          ],
-          "report_numbers": [
-            {
-              "value": "UT-13-03"
-            },
-            {
-              "value": "IPMU-13-0024"
             }
           ],
           "citeable": true,
@@ -349151,9 +349165,16 @@
       },
       {
         "id": "1208241",
-        "updated": "2023-12-13T10:56:48.849534+00:00",
         "created": "2012-12-20T00:00:00+00:00",
+        "updated": "2023-12-13T10:56:48.849534+00:00",
         "metadata": {
+          "citation_count": 95,
+          "citation_count_without_self_citations": 73,
+          "report_numbers": [
+            {
+              "value": "UT-12-45"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "03",
@@ -349166,8 +349187,6 @@
               "journal_title": "JCAP"
             }
           ],
-          "citation_count_without_self_citations": 73,
-          "citation_count": 95,
           "authors": [
             {
               "affiliations_identifiers": [
@@ -349252,11 +349271,6 @@
               "uuid": "508a44e1-cd82-4d4d-941c-98173ca4d1cf",
               "first_name": "Kazunori",
               "recid": 1060297
-            }
-          ],
-          "report_numbers": [
-            {
-              "value": "UT-12-45"
             }
           ],
           "citeable": true,
@@ -350499,9 +350513,16 @@
       },
       {
         "id": "1127696",
-        "updated": "2023-10-03T08:06:14.349714+00:00",
         "created": "2012-08-16T00:00:00+00:00",
+        "updated": "2023-10-03T08:06:14.349714+00:00",
         "metadata": {
+          "citation_count": 140,
+          "citation_count_without_self_citations": 113,
+          "report_numbers": [
+            {
+              "value": "UT-12-28"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "01",
@@ -350514,8 +350535,6 @@
               "journal_title": "JCAP"
             }
           ],
-          "citation_count_without_self_citations": 113,
-          "citation_count": 140,
           "authors": [
             {
               "affiliations_identifiers": [
@@ -350600,11 +350619,6 @@
               "uuid": "60a6a92e-9b26-4e28-92e1-a79975b76d7c",
               "first_name": "Kazunori",
               "recid": 1060297
-            }
-          ],
-          "report_numbers": [
-            {
-              "value": "UT-12-28"
             }
           ],
           "citeable": true,
@@ -354018,9 +354032,19 @@
       },
       {
         "id": "946841",
-        "updated": "2023-03-07T05:56:36.182368+00:00",
         "created": "2011-11-21T00:00:00+00:00",
+        "updated": "2023-03-07T05:56:36.182368+00:00",
         "metadata": {
+          "citation_count": 24,
+          "citation_count_without_self_citations": 22,
+          "report_numbers": [
+            {
+              "value": "UT-11-39"
+            },
+            {
+              "value": "IPMU-11-0190"
+            }
+          ],
           "publication_info": [
             {
               "journal_volume": "01",
@@ -354033,8 +354057,6 @@
               "journal_title": "JHEP"
             }
           ],
-          "citation_count_without_self_citations": 22,
-          "citation_count": 24,
           "authors": [
             {
               "full_name_unicode_normalized": "hamaguchi, koichi",
@@ -354127,14 +354149,6 @@
               "uuid": "f57130fa-61d5-4cb8-8b25-e4783553ba86",
               "first_name": "Kyohei",
               "recid": 1309535
-            }
-          ],
-          "report_numbers": [
-            {
-              "value": "UT-11-39"
-            },
-            {
-              "value": "IPMU-11-0190"
             }
           ],
           "citeable": true,
