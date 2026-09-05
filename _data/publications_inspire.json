@@ -17710,17 +17710,6 @@
               "record": {
                 "$ref": "https://inspirehep.net/api/authors/1227400"
               },
-              "last_name": "Hamada",
-              "ids": [
-                {
-                  "schema": "ORCID",
-                  "value": "0000-0001-6856-3764"
-                },
-                {
-                  "schema": "INSPIRE BAI",
-                  "value": "Yuta.Hamada.1"
-                }
-              ],
               "affiliations": [
                 {
                   "record": {
@@ -17735,8 +17724,19 @@
                   "value": "Sokendai, Tsukuba"
                 }
               ],
-              "first_name": "Yuta",
+              "last_name": "Hamada",
+              "ids": [
+                {
+                  "schema": "ORCID",
+                  "value": "0000-0001-6856-3764"
+                },
+                {
+                  "schema": "INSPIRE BAI",
+                  "value": "Yuta.Hamada.1"
+                }
+              ],
               "uuid": "2f2ee4a6-16fb-4dc0-92ee-bd0b6dfaadd9",
+              "first_name": "Yuta",
               "recid": 1227400
             },
             {
@@ -17766,17 +17766,6 @@
               "record": {
                 "$ref": "https://inspirehep.net/api/authors/1309535"
               },
-              "last_name": "Mukaida",
-              "ids": [
-                {
-                  "schema": "ORCID",
-                  "value": "0000-0003-1951-9497"
-                },
-                {
-                  "schema": "INSPIRE BAI",
-                  "value": "K.Mukaida.1"
-                }
-              ],
               "affiliations": [
                 {
                   "record": {
@@ -17791,8 +17780,19 @@
                   "value": "Sokendai, Tsukuba"
                 }
               ],
-              "first_name": "Kyohei",
+              "last_name": "Mukaida",
+              "ids": [
+                {
+                  "schema": "ORCID",
+                  "value": "0000-0003-1951-9497"
+                },
+                {
+                  "schema": "INSPIRE BAI",
+                  "value": "K.Mukaida.1"
+                }
+              ],
               "uuid": "b1036afe-0cc5-410a-bd11-cc6f7990b224",
+              "first_name": "Kyohei",
               "recid": 1309535
             },
             {
@@ -17830,17 +17830,6 @@
               "record": {
                 "$ref": "https://inspirehep.net/api/authors/2638245"
               },
-              "last_name": "Uchida",
-              "ids": [
-                {
-                  "schema": "ORCID",
-                  "value": "0000-0002-7527-5100"
-                },
-                {
-                  "schema": "INSPIRE BAI",
-                  "value": "Fumio.Uchida.1"
-                }
-              ],
               "affiliations": [
                 {
                   "record": {
@@ -17855,8 +17844,19 @@
                   "value": "Tokyo U., IPMU"
                 }
               ],
-              "first_name": "Fumio",
+              "last_name": "Uchida",
+              "ids": [
+                {
+                  "schema": "ORCID",
+                  "value": "0000-0002-7527-5100"
+                },
+                {
+                  "schema": "INSPIRE BAI",
+                  "value": "Fumio.Uchida.1"
+                }
+              ],
               "uuid": "0b4ea3a0-b0ae-46db-b3a3-7d69312b8732",
+              "first_name": "Fumio",
               "recid": 2638245
             }
           ],
@@ -21636,7 +21636,7 @@
             "Ken.Ganga.1",
             "U.F.Katz.1",
             "Ren.Yuan.Zhu.1",
-            "M.Shalaby.1",
+            "Mohamad.Shalaby.1",
             "M.M.Tsypin.1",
             "A.Curto.2",
             "R.S.Chivukula.1",
@@ -59133,6 +59133,14 @@
                 "$ref": "https://inspirehep.net/api/authors/1346215"
               },
               "last_name": "Ema",
+              "affiliations": [
+                {
+                  "record": {
+                    "$ref": "https://inspirehep.net/api/institutions/903010"
+                  },
+                  "value": "Minnesota U."
+                }
+              ],
               "ids": [
                 {
                   "schema": "ORCID",
@@ -59143,16 +59151,8 @@
                   "value": "Yohei.Ema.1"
                 }
               ],
-              "affiliations": [
-                {
-                  "record": {
-                    "$ref": "https://inspirehep.net/api/institutions/903010"
-                  },
-                  "value": "Minnesota U."
-                }
-              ],
-              "first_name": "Yohei",
               "uuid": "2270657d-9978-4ff2-8593-92176e4eec9b",
+              "first_name": "Yohei",
               "recid": 1346215
             },
             {
@@ -62441,7 +62441,7 @@
             "J.Bros.5",
             "Z.Z.Xianyu.1",
             "Daniel.R.Green.1",
-            "Jun.Wu.Huang.1",
+            "Junwu.Huang.1",
             "D.M.Marolf.1",
             "S.Jazayeri.1",
             "Charlotte.Sleight.1",
@@ -98136,11 +98136,6 @@
           ],
           "authors": [
             {
-              "raw_affiliations": [
-                {
-                  "value": "Theoretical Physics Department, CERN, Esplanade des Particules, 1211 Geneva 23, Switzerland"
-                }
-              ],
               "affiliations_identifiers": [
                 {
                   "schema": "GRID",
@@ -98151,17 +98146,16 @@
                   "value": "https://ror.org/01ggx4157"
                 }
               ],
+              "raw_affiliations": [
+                {
+                  "value": "Theoretical Physics Department, CERN, Esplanade des Particules, 1211 Geneva 23, Switzerland"
+                }
+              ],
               "full_name_unicode_normalized": "domcke, valerie",
               "full_name": "Domcke, Valerie",
               "record": {
                 "$ref": "https://inspirehep.net/api/authors/1261714"
               },
-              "ids": [
-                {
-                  "schema": "INSPIRE BAI",
-                  "value": "Valerie.F.Domcke.1"
-                }
-              ],
               "last_name": "Domcke",
               "affiliations": [
                 {
@@ -98171,21 +98165,27 @@
                   "value": "CERN"
                 }
               ],
+              "ids": [
+                {
+                  "schema": "INSPIRE BAI",
+                  "value": "Valerie.F.Domcke.1"
+                }
+              ],
               "signature_block": "DANCv",
               "uuid": "de2b9bf4-62b8-4d53-b024-a27379c08e59",
               "first_name": "Valerie",
               "recid": 1261714
             },
             {
-              "raw_affiliations": [
-                {
-                  "value": "Research Center for the Early Universe (RESCEU), Graduate School of Science, The University of Tokyo, Hongo 7-3-1 Bunkyo-ku, 113-0033 Tokyo, Japan"
-                }
-              ],
               "affiliations_identifiers": [
                 {
                   "schema": "GRID",
                   "value": "grid.26999.3d"
+                }
+              ],
+              "raw_affiliations": [
+                {
+                  "value": "Research Center for the Early Universe (RESCEU), Graduate School of Science, The University of Tokyo, Hongo 7-3-1 Bunkyo-ku, 113-0033 Tokyo, Japan"
                 }
               ],
               "full_name_unicode_normalized": "kamada, kohei",
@@ -98193,6 +98193,15 @@
               "record": {
                 "$ref": "https://inspirehep.net/api/authors/1056717"
               },
+              "last_name": "Kamada",
+              "affiliations": [
+                {
+                  "record": {
+                    "$ref": "https://inspirehep.net/api/institutions/907127"
+                  },
+                  "value": "Tokyo U., RESCEU"
+                }
+              ],
               "ids": [
                 {
                   "schema": "ORCID",
@@ -98201,15 +98210,6 @@
                 {
                   "schema": "INSPIRE BAI",
                   "value": "Kohei.Kamada.1"
-                }
-              ],
-              "last_name": "Kamada",
-              "affiliations": [
-                {
-                  "record": {
-                    "$ref": "https://inspirehep.net/api/institutions/907127"
-                  },
-                  "value": "Tokyo U., RESCEU"
                 }
               ],
               "signature_block": "CANADk",
@@ -101719,7 +101719,7 @@
             "Masaki.Yamada.1",
             "S.Willocq.1",
             "Andreas.Piepke.1",
-            "Jun.Wu.Huang.1",
+            "Junwu.Huang.1",
             "P.G.Martin.1",
             "S.R.Klein.1",
             "Jussi.Valiviita.1",
@@ -181051,11 +181051,6 @@
               "recid": 1261714
             },
             {
-              "raw_affiliations": [
-                {
-                  "value": "DESY, Notkestraße 85, D-22607 Hamburg, Germany"
-                }
-              ],
               "affiliations_identifiers": [
                 {
                   "schema": "GRID",
@@ -181066,17 +181061,16 @@
                   "value": "https://ror.org/01js2sh04"
                 }
               ],
+              "raw_affiliations": [
+                {
+                  "value": "DESY, Notkestraße 85, D-22607 Hamburg, Germany"
+                }
+              ],
               "full_name_unicode_normalized": "ema, yohei",
               "full_name": "Ema, Yohei",
               "record": {
                 "$ref": "https://inspirehep.net/api/authors/1346215"
               },
-              "ids": [
-                {
-                  "schema": "INSPIRE BAI",
-                  "value": "Yohei.Ema.1"
-                }
-              ],
               "last_name": "Ema",
               "affiliations": [
                 {
@@ -181084,6 +181078,12 @@
                     "$ref": "https://inspirehep.net/api/institutions/902770"
                   },
                   "value": "DESY"
+                }
+              ],
+              "ids": [
+                {
+                  "schema": "INSPIRE BAI",
+                  "value": "Yohei.Ema.1"
                 }
               ],
               "signature_block": "ENy",
@@ -183052,7 +183052,7 @@
             "P.Copinger.1",
             "Masaki.Yamada.1",
             "T.D.Cohen.1",
-            "Jun.Wu.Huang.1",
+            "Junwu.Huang.1",
             "Xun.Jie.Xu.1",
             "Masahide.Yamaguchi.1",
             "Sabino.Matarrese.1",
@@ -183285,6 +183285,12 @@
             ],
             "full_name": "Domcke, Valerie",
             "last_name": "Domcke",
+            "ids": [
+              {
+                "schema": "ORCID",
+                "value": "0000-0002-7208-4464"
+              }
+            ],
             "first_name": "Valerie",
             "recid": 1261714
           },
