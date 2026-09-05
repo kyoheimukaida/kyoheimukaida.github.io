@@ -18,8 +18,8 @@ It does not include ordinary meetings, internal schedule items, tentative holds,
 <div class="record-list" markdown="1">
 
 <!-- talks-auto:start -->
-- **[Particle Physics in the Early Universe (talk title TBA)](https://indico.ijclab.in2p3.fr/event/13541/)**<br>
-  Invited talk, 2026-09-15, Particle Physics in the Early Universe, Polish Academy of Sciences Scientific Center, Paris, France
+- **[Thermalization Process during Reheating and Gravitational Waves](https://indico.ijclab.in2p3.fr/event/13541/)**<br>
+  Invited talk, 2026-09-15, Particle Physics in the Early Universe, Polish Academy of Sciences Scientific Center, 74 rue Lauriston, Paris 16, France
 
 - **[Cutting Rules for In-In Correlators & Cosmo Collider Signals](https://indico.ipmu.jp/event/519/)**<br>
   Invited talk, 2026-08-04, Quantum Crossroads: Interdisciplinary Workshop at the Interface of Open Quantum Systems, High-Energy Physics, and Quantum Science, Ground-floor Lecture Hall, Kavli IPMU, The University of Tokyo, Kashiwa Campus
