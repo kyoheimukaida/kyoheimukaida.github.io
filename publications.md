@@ -87,10 +87,10 @@ It highlights relatively recent published papers that are not already listed abo
   *JHEP 01 137 (2022)*  
   [[arXiv:2107.03945](https://arxiv.org/abs/2107.03945)] [[DOI](https://doi.org/10.1007/JHEP01(2022)137)]
 
-- **[NANOGrav Results and LIGO-Virgo Primordial Black Holes in Axionlike Curvaton Models](https://arxiv.org/abs/2011.01270)**  
-  Keisuke Inomata, Masahiro Kawasaki, Kyohei Mukaida, and Tsutomu T. Yanagida  
-  *Phys.Rev.Lett. 126 131301 (2021)*  
-  [[arXiv:2011.01270](https://arxiv.org/abs/2011.01270)] [[DOI](https://doi.org/10.1103/PhysRevLett.126.131301)]
+- **[Formation of hot spots around small primordial black holes](https://arxiv.org/abs/2210.06238)**  
+  Minxi He, Kazunori Kohri, Kyohei Mukaida, and Masaki Yamada  
+  *JCAP 01 027 (2023)*  
+  [[arXiv:2210.06238](https://arxiv.org/abs/2210.06238)] [[DOI](https://doi.org/10.1088/1475-7516/2023/01/027)]
 <!-- publications-notable:end -->
 
 </div>
