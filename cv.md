@@ -49,7 +49,7 @@ Theoretical particle physics and early-Universe cosmology
 
 <!-- cv-publication-summary:start -->
 - Complete publication list: [INSPIRE author profile](https://inspirehep.net/authors/1309535)
-- Number of INSPIRE literature records: **89**
+- Number of INSPIRE literature records: **91**
 - Full publication and invited-talk lists below are generated automatically.
 <!-- cv-publication-summary:end -->
 
@@ -61,6 +61,16 @@ Theoretical particle physics and early-Universe cosmology
 <div class="record-list" markdown="1">
 
 <!-- cv-full-publications:start -->
+- **[Baryon number freeze-out in the Standard Model, precisely](https://arxiv.org/abs/2609.07467)**  
+  Cristina Benso, Dietrich Bödeker, Kohei Kamada, Kyohei Mukaida, Laura Sagunski, Philipp Schicho, et al.  
+  *arXiv preprint (2026-09-07)*  
+  [[arXiv](https://arxiv.org/abs/2609.07467)]
+
+- **[High-sensitivity Ultralight Dark Matter detector: Parametrically Amplified Casimir Devices](https://arxiv.org/abs/2609.05621)**  
+  Muping Chen, Hideo Iizuka, Kyohei Mukaida, Kazunori Nakayama, and Burkhant Suerfu  
+  *arXiv preprint (2026-09-04)*  
+  [[arXiv](https://arxiv.org/abs/2609.05621)]
+
 - **[Gravitational Waves from Reheating beyond Instantaneous Thermalization](https://arxiv.org/abs/2609.01480)**  
   Kyohei Mukaida, and Tenta Tsuji  
   *arXiv preprint (2026-09-01)*  
