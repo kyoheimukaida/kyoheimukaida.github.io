@@ -325570,7 +325570,7 @@
               "value": "UT-14-04"
             }
           ],
-          "citation_count": 143,
+          "citation_count": 144,
           "publication_info": [
             {
               "journal_volume": "89",
@@ -325583,18 +325583,18 @@
           "citation_count_without_self_citations": 118,
           "authors": [
             {
+              "affiliations_identifiers": [
+                {
+                  "schema": "ROR",
+                  "value": "https://ror.org/02chw6z69"
+                }
+              ],
               "full_name_unicode_normalized": "harigaya, keisuke",
               "full_name": "Harigaya, Keisuke",
               "curated_relation": true,
               "record": {
                 "$ref": "https://inspirehep.net/api/authors/1078245"
               },
-              "ids": [
-                {
-                  "schema": "INSPIRE BAI",
-                  "value": "Keisuke.Harigaya.1"
-                }
-              ],
               "affiliations": [
                 {
                   "record": {
@@ -325603,24 +325603,38 @@
                   "value": "Tokyo U., IPMU"
                 }
               ],
+              "ids": [
+                {
+                  "schema": "ORCID",
+                  "value": "0000-0001-6516-3386"
+                },
+                {
+                  "schema": "INSPIRE BAI",
+                  "value": "Keisuke.Harigaya.1"
+                }
+              ],
               "last_name": "Harigaya",
               "signature_block": "HARAGYk",
-              "first_name": "Keisuke",
               "uuid": "38b050de-0d1a-4606-b99f-8844c5681bbb",
+              "first_name": "Keisuke",
               "recid": 1078245
             },
             {
+              "affiliations_identifiers": [
+                {
+                  "schema": "ROR",
+                  "value": "https://ror.org/02chw6z69"
+                },
+                {
+                  "schema": "ROR",
+                  "value": "https://ror.org/008td3p62"
+                }
+              ],
               "full_name_unicode_normalized": "kawasaki, masahiro",
               "full_name": "Kawasaki, Masahiro",
               "record": {
                 "$ref": "https://inspirehep.net/api/authors/1062520"
               },
-              "ids": [
-                {
-                  "schema": "INSPIRE BAI",
-                  "value": "Masahiro.Kawasaki.1"
-                }
-              ],
               "affiliations": [
                 {
                   "record": {
@@ -325635,25 +325649,31 @@
                   "value": "Tokyo U., ICRR"
                 }
               ],
+              "ids": [
+                {
+                  "schema": "INSPIRE BAI",
+                  "value": "Masahiro.Kawasaki.1"
+                }
+              ],
               "last_name": "Kawasaki",
               "signature_block": "CASACm",
-              "first_name": "Masahiro",
               "uuid": "add67ca8-7bf8-4a8e-a813-ec35f154ba8c",
+              "first_name": "Masahiro",
               "recid": 1062520
             },
             {
+              "affiliations_identifiers": [
+                {
+                  "schema": "ROR",
+                  "value": "https://ror.org/057zh3y96"
+                }
+              ],
               "full_name_unicode_normalized": "mukaida, kyohei",
               "full_name": "Mukaida, Kyohei",
               "curated_relation": true,
               "record": {
                 "$ref": "https://inspirehep.net/api/authors/1309535"
               },
-              "ids": [
-                {
-                  "schema": "INSPIRE BAI",
-                  "value": "K.Mukaida.1"
-                }
-              ],
               "affiliations": [
                 {
                   "record": {
@@ -325662,25 +325682,39 @@
                   "value": "Tokyo U."
                 }
               ],
+              "ids": [
+                {
+                  "schema": "ORCID",
+                  "value": "0000-0003-1951-9497"
+                },
+                {
+                  "schema": "INSPIRE BAI",
+                  "value": "K.Mukaida.1"
+                }
+              ],
               "last_name": "Mukaida",
               "signature_block": "MACADk",
-              "first_name": "Kyohei",
               "uuid": "11325023-a619-46b1-b03b-bfcdf4bd310a",
+              "first_name": "Kyohei",
               "recid": 1309535
             },
             {
+              "affiliations_identifiers": [
+                {
+                  "schema": "ROR",
+                  "value": "https://ror.org/02chw6z69"
+                },
+                {
+                  "schema": "ROR",
+                  "value": "https://ror.org/008td3p62"
+                }
+              ],
               "full_name_unicode_normalized": "yamada, masaki",
               "full_name": "Yamada, Masaki",
               "curated_relation": true,
               "record": {
                 "$ref": "https://inspirehep.net/api/authors/982946"
               },
-              "ids": [
-                {
-                  "schema": "INSPIRE BAI",
-                  "value": "Masaki.Yamada.1"
-                }
-              ],
               "affiliations": [
                 {
                   "record": {
@@ -325695,10 +325729,20 @@
                   "value": "Tokyo U., ICRR"
                 }
               ],
+              "ids": [
+                {
+                  "schema": "ORCID",
+                  "value": "0000-0002-1110-4740"
+                },
+                {
+                  "schema": "INSPIRE BAI",
+                  "value": "Masaki.Yamada.1"
+                }
+              ],
               "last_name": "Yamada",
               "signature_block": "YANADm",
-              "first_name": "Masaki",
               "uuid": "9dfa02cd-5a6b-4dfa-af8e-af7bd11f2515",
+              "first_name": "Masaki",
               "recid": 982946
             }
           ],
@@ -327781,8 +327825,8 @@
             "updated": "2023-03-07T02:53:47.689313"
           },
           "journal_title_variants": [
-            "Phys. Rev. D",
-            "Phys.Rev.D"
+            "Phys.Rev.D",
+            "Phys. Rev. D"
           ],
           "arxiv_eprints": [
             {
@@ -334336,7 +334380,23 @@
             }
           ],
           "first_author": {
+            "affiliations_identifiers": [
+              {
+                "schema": "ROR",
+                "value": "https://ror.org/02chw6z69"
+              }
+            ],
             "full_name": "Harigaya, Keisuke",
+            "ids": [
+              {
+                "schema": "ORCID",
+                "value": "0000-0001-6516-3386"
+              },
+              {
+                "schema": "INSPIRE BAI",
+                "value": "Keisuke.Harigaya.1"
+              }
+            ],
             "last_name": "Harigaya",
             "first_name": "Keisuke",
             "recid": 1078245
