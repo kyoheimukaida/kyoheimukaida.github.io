@@ -67,15 +67,15 @@ It highlights relatively recent published papers that are not already listed abo
   *JCAP 09 080 (2025)*  
   [[arXiv:2504.16069](https://arxiv.org/abs/2504.16069)] [[DOI](https://doi.org/10.1088/1475-7516/2025/09/080)]
 
-- **[Axion curvaton model for the gravitational waves observed by pulsar timing arrays](https://arxiv.org/abs/2309.11398)**  
-  Keisuke Inomata, Masahiro Kawasaki, Kyohei Mukaida, and Tsutomu T. Yanagida  
-  *Phys.Rev.D 109 043508 (2024)*  
-  [[arXiv:2309.11398](https://arxiv.org/abs/2309.11398)] [[DOI](https://doi.org/10.1103/PhysRevD.109.043508)]
-
 - **[Cutting rule for in-in correlators and cosmological collider](https://arxiv.org/abs/2409.07521)**  
   Yohei Ema, and Kyohei Mukaida  
   *JHEP 12 194 (2024)*  
   [[arXiv:2409.07521](https://arxiv.org/abs/2409.07521)] [[DOI](https://doi.org/10.1007/JHEP12(2024)194)]
+
+- **[Axion curvaton model for the gravitational waves observed by pulsar timing arrays](https://arxiv.org/abs/2309.11398)**  
+  Keisuke Inomata, Masahiro Kawasaki, Kyohei Mukaida, and Tsutomu T. Yanagida  
+  *Phys.Rev.D 109 043508 (2024)*  
+  [[arXiv:2309.11398](https://arxiv.org/abs/2309.11398)] [[DOI](https://doi.org/10.1103/PhysRevD.109.043508)]
 
 - **[Wash-in leptogenesis after axion inflation](https://arxiv.org/abs/2210.06412)**  
   Valerie Domcke, Kohei Kamada, Kyohei Mukaida, Kai Schmitz, and Masaki Yamada  
