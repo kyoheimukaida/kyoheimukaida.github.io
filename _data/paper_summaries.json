@@ -1,4 +1,14 @@
 {
+  "2609.07467": {
+    "summary_en": "This paper follows baryon number through the electroweak crossover using a Boltzmann equation that accounts for the changing Higgs expectation value and sphaleron rate, including higher-order corrections. It determines precise conversion factors relating the final baryon asymmetry to baryon-minus-lepton number and to lepton flavor asymmetries, including the case of vanishing total baryon-minus-lepton number.",
+    "source": "arXiv abstract",
+    "checked": false
+  },
+  "2609.05621": {
+    "summary_en": "This paper proposes using a sphere-and-plate Casimir force device to search for ultralight vector dark matter by parametrically amplifying sub-picometer displacements. Continuous tuning of the device's natural frequency could broaden the accessible dark matter mass range and enable a precise mass measurement if a signal is detected.",
+    "source": "arXiv abstract",
+    "checked": false
+  },
   "1312.3097": {
     "summary_en": "This paper analyzes how energetic, under-occupied particles produced by inflaton decay thermalize during reheating, including small-angle scatterings and soft-particle production in non-Abelian plasmas. It finds that thermalization is often much faster than estimates based only on large-angle number-changing scatterings, giving a milder condition for thermal equilibrium before reheating completes.",
     "source": "arXiv abstract",

@@ -57,11 +57,13 @@ title: Home
 - **[Baryon number freeze-out in the Standard Model, precisely](https://arxiv.org/abs/2609.07467)**  
   Cristina Benso, Dietrich Bödeker, Kohei Kamada, et al.  
   *arXiv preprint (2026-09-07)*  
+  <p class="paper-summary"><strong class="summary-label">Summary:</strong> This paper follows baryon number through the electroweak crossover using a Boltzmann equation that accounts for the changing Higgs expectation value and sphaleron rate, including higher-order corrections. It determines precise conversion factors relating the final baryon asymmetry to baryon-minus-lepton number and to lepton flavor asymmetries, including the case of vanishing total baryon-minus-lepton number.</p>  
   [[arXiv](https://arxiv.org/abs/2609.07467)]
 
 - **[High-sensitivity Ultralight Dark Matter detector: Parametrically Amplified Casimir Devices](https://arxiv.org/abs/2609.05621)**  
   Muping Chen, Hideo Iizuka, Kyohei Mukaida, et al.  
   *arXiv preprint (2026-09-04)*  
+  <p class="paper-summary"><strong class="summary-label">Summary:</strong> This paper proposes using a sphere-and-plate Casimir force device to search for ultralight vector dark matter by parametrically amplifying sub-picometer displacements. Continuous tuning of the device&#x27;s natural frequency could broaden the accessible dark matter mass range and enable a precise mass measurement if a signal is detected.</p>  
   [[arXiv](https://arxiv.org/abs/2609.05621)]
 <!-- recent-papers:end -->
 
