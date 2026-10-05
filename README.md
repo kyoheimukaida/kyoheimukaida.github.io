@@ -4,6 +4,14 @@ Source files for my personal academic website.
 
 Website: https://kyoheimukaida.github.io/
 
+## Paper summaries and website deployment
+
+- The home page shows the three most recent arXiv papers from INSPIRE.
+- English summaries are maintained in `_data/paper_summaries.json` by the weekly Codex task; GitHub Actions only reads the cache and needs no OpenAI API key.
+- The **Deploy website** workflow publishes website changes pushed to `main`. It also runs after successful paper, publication, CV, or grant updater workflows, because their `GITHUB_TOKEN` commits do not trigger push workflows.
+- Deployment compares website inputs with the last successful Pages deployment. Cache-only INSPIRE/citation refreshes and unchanged public pages do not rebuild or redeploy the site.
+- To recover a missed deployment, run **Deploy website** manually. Check the published page after the workflow succeeds; a Git commit alone does not confirm publication.
+
 ## Public-talk calendar operations
 
 The automated data flow is: dedicated public-website Google Calendar → private ICS feed → GitHub Actions → `scripts/update_talks_from_ics.py` → `index.md` and `talks.md` → GitHub Pages.

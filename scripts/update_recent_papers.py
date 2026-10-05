@@ -13,13 +13,14 @@ START = "<!-- recent-papers:start -->"
 END = "<!-- recent-papers:end -->"
 README_PATH = "index.md"
 SUMMARY_CACHE_PATH = "_data/paper_summaries.json"
+RECENT_PAPER_COUNT = 3
 
 # INSPIRE author query.
 # This should return papers associated with Kyohei Mukaida's INSPIRE author profile.
 INSPIRE_QUERY = os.environ.get("INSPIRE_QUERY", "a K.Mukaida.1")
 
 
-def fetch_recent_papers(n: int = 2) -> list[dict[str, Any]]:
+def fetch_recent_papers(n: int = RECENT_PAPER_COUNT) -> list[dict[str, Any]]:
     params = {
         "q": INSPIRE_QUERY,
         "sort": "mostrecent",
@@ -266,7 +267,7 @@ def update_readme(block: str) -> None:
 
 
 def main() -> int:
-    papers = fetch_recent_papers(n=2)
+    papers = fetch_recent_papers()
     summary_cache = load_summary_cache()
     block = "\n\n".join(format_paper(p, summary_cache) for p in papers)
     update_readme(block)

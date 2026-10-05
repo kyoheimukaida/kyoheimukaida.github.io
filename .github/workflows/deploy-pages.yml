@@ -1,0 +1,94 @@
+name: Deploy website
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "**.md"
+      - "**.html"
+      - "_config.yml"
+      - "_layouts/**"
+      - "_includes/**"
+      - "_sass/**"
+      - "assets/**"
+      - "_data/**"
+      - "CNAME"
+      - "Gemfile*"
+      - "scripts/pages_content_changed.py"
+      - ".github/workflows/deploy-pages.yml"
+  # Commits made with GITHUB_TOKEN do not trigger another push workflow.
+  # Listen for the generators finishing, then check out their updated main.
+  workflow_run:
+    workflows: [Update recent papers, Update publications, Update CV, Update grants]
+    types: [completed]
+    branches: [main]
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out current main
+        uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Check for unpublished website content
+        id: content
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          deployments=$(gh api "repos/$GITHUB_REPOSITORY/deployments?environment=github-pages&per_page=100")
+          deployed_sha=""
+          while IFS=$'\t' read -r deployment_id sha; do
+            [[ -n "$deployment_id" ]] || continue
+            state=$(gh api "repos/$GITHUB_REPOSITORY/deployments/$deployment_id/statuses" --jq '.[0].state // ""')
+            if [[ "$state" == "success" ]]; then
+              deployed_sha="$sha"
+              break
+            fi
+          done < <(jq -r '.[] | [.id, .sha] | @tsv' <<< "$deployments")
+          changed=$(python3 scripts/pages_content_changed.py "$deployed_sha")
+          echo "changed=$changed" >> "$GITHUB_OUTPUT"
+          if [[ "$changed" == "false" ]]; then
+            echo "Website content already matches the successful Pages deployment."
+          fi
+
+      - name: Configure GitHub Pages
+        if: steps.content.outputs.changed == 'true'
+        uses: actions/configure-pages@v5
+
+      - name: Build with Jekyll
+        if: steps.content.outputs.changed == 'true'
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+
+      - name: Upload GitHub Pages artifact
+        if: steps.content.outputs.changed == 'true'
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./_site
+
+      - name: Deploy GitHub Pages artifact
+        if: steps.content.outputs.changed == 'true'
+        id: deployment
+        uses: actions/deploy-pages@v4
