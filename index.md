@@ -65,6 +65,12 @@ title: Home
   *arXiv preprint (2026-09-04)*  
   <p class="paper-summary"><strong class="summary-label">Summary:</strong> This paper proposes using a sphere-and-plate Casimir force device to search for ultralight vector dark matter by parametrically amplifying sub-picometer displacements. Continuous tuning of the device&#x27;s natural frequency could broaden the accessible dark matter mass range and enable a precise mass measurement if a signal is detected.</p>  
   [[arXiv](https://arxiv.org/abs/2609.05621)]
+
+- **[Gravitational Waves from Reheating beyond Instantaneous Thermalization](https://arxiv.org/abs/2609.01480)**  
+  Kyohei Mukaida, and Tenta Tsuji  
+  *arXiv preprint (2026-09-01)*  
+  <p class="paper-summary"><strong class="summary-label">Summary:</strong> This paper studies gravitational waves generated during reheating while particles from inflaton decay are still thermalizing, identifying an additional contribution from collisions between energetic particles and the emerging thermal bath. It shows that scattering also erases directional information, changing the low-frequency gravitational-wave spectrum from linear to cubic in frequency.</p>  
+  [[arXiv](https://arxiv.org/abs/2609.01480)]
 <!-- recent-papers:end -->
 
 </div>

@@ -1,4 +1,9 @@
 {
+  "2609.01480": {
+    "summary_en": "This paper studies gravitational waves generated during reheating while particles from inflaton decay are still thermalizing, identifying an additional contribution from collisions between energetic particles and the emerging thermal bath. It shows that scattering also erases directional information, changing the low-frequency gravitational-wave spectrum from linear to cubic in frequency.",
+    "source": "arXiv abstract",
+    "checked": false
+  },
   "2609.07467": {
     "summary_en": "This paper follows baryon number through the electroweak crossover using a Boltzmann equation that accounts for the changing Higgs expectation value and sphaleron rate, including higher-order corrections. It determines precise conversion factors relating the final baryon asymmetry to baryon-minus-lepton number and to lepton flavor asymmetries, including the case of vanishing total baryon-minus-lepton number.",
     "source": "arXiv abstract",
