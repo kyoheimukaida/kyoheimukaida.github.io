@@ -77,15 +77,15 @@ It highlights relatively recent published papers that are not already listed abo
   *Phys.Rev.D 109 043508 (2024)*  
   [[arXiv:2309.11398](https://arxiv.org/abs/2309.11398)] [[DOI](https://doi.org/10.1103/PhysRevD.109.043508)]
 
-- **[Wash-in leptogenesis after axion inflation](https://arxiv.org/abs/2210.06412)**  
-  Valerie Domcke, Kohei Kamada, Kyohei Mukaida, Kai Schmitz, and Masaki Yamada  
-  *JHEP 01 053 (2023)*  
-  [[arXiv:2210.06412](https://arxiv.org/abs/2210.06412)] [[DOI](https://doi.org/10.1007/JHEP01(2023)053)]
-
 - **[Non-Abelian electric field correlator at NLO for dark matter relic abundance and quarkonium transport](https://arxiv.org/abs/2107.03945)**  
   Tobias Binder, Kyohei Mukaida, Bruno Scheihing-Hitschfeld, and Xiaojun Yao  
   *JHEP 01 137 (2022)*  
   [[arXiv:2107.03945](https://arxiv.org/abs/2107.03945)] [[DOI](https://doi.org/10.1007/JHEP01(2022)137)]
+
+- **[Wash-in leptogenesis after axion inflation](https://arxiv.org/abs/2210.06412)**  
+  Valerie Domcke, Kohei Kamada, Kyohei Mukaida, Kai Schmitz, and Masaki Yamada  
+  *JHEP 01 053 (2023)*  
+  [[arXiv:2210.06412](https://arxiv.org/abs/2210.06412)] [[DOI](https://doi.org/10.1007/JHEP01(2023)053)]
 
 - **[Formation of hot spots around small primordial black holes](https://arxiv.org/abs/2210.06238)**  
   Minxi He, Kazunori Kohri, Kyohei Mukaida, and Masaki Yamada  
