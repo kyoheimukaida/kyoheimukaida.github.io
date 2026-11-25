@@ -49,7 +49,7 @@ Theoretical particle physics and early-Universe cosmology
 
 <!-- cv-publication-summary:start -->
 - Complete publication list: [INSPIRE author profile](https://inspirehep.net/authors/1309535)
-- Number of INSPIRE literature records: **91**
+- Number of INSPIRE literature records: **92**
 - Full publication and invited-talk lists below are generated automatically.
 <!-- cv-publication-summary:end -->
 
@@ -61,6 +61,11 @@ Theoretical particle physics and early-Universe cosmology
 <div class="record-list" markdown="1">
 
 <!-- cv-full-publications:start -->
+- **[In-in formalism &$\mathcal{T}_{C}^{\star}$-product: no contribution from total time derivatives](https://arxiv.org/abs/2611.31272)**  
+  Yohei Ema, Muzi Hong, Ryusuke Jinno, and Kyohei Mukaida  
+  *arXiv preprint (2026-11-12)*  
+  [[arXiv](https://arxiv.org/abs/2611.31272)]
+
 - **[Baryon number freeze-out in the Standard Model, precisely](https://arxiv.org/abs/2609.07467)**  
   Cristina Benso, Dietrich Bödeker, Kohei Kamada, Kyohei Mukaida, Laura Sagunski, Philipp Schicho, et al.  
   *arXiv preprint (2026-09-07)*  
