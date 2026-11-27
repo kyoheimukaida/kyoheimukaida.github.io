@@ -255,7 +255,7 @@ def update_readme(block: str) -> None:
     )
 
     replacement = f"{START}\n{block}\n{END}"
-    new_text, count = pattern.subn(replacement, text)
+    new_text, count = pattern.subn(lambda _match: replacement, text)
 
     if count != 1:
         raise RuntimeError(
