@@ -57,6 +57,7 @@ title: Home
 - **[In-in formalism &$\mathcal{T}_{C}^{\star}$-product: no contribution from total time derivatives](https://arxiv.org/abs/2611.31272)**  
   Yohei Ema, Muzi Hong, Ryusuke Jinno, and Kyohei Mukaida  
   *arXiv preprint (2026-11-12)*  
+  <p class="paper-summary"><strong class="summary-label">Summary:</strong> This paper shows that adding a total time derivative to the action does not change inflationary in-in correlators at the evaluation time. The regulated path integral fixes the operator ordering on the closed time contour, so the apparent boundary terms from its forward and backward branches cancel. Explicit examples show how contact terms missed by ordinary time ordering enter the cancellation.</p>  
   [[arXiv](https://arxiv.org/abs/2611.31272)]
 
 - **[Baryon number freeze-out in the Standard Model, precisely](https://arxiv.org/abs/2609.07467)**  

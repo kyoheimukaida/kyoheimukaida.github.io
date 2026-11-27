@@ -1,4 +1,9 @@
 {
+  "2611.31272": {
+    "summary_en": "This paper shows that adding a total time derivative to the action does not change inflationary in-in correlators at the evaluation time. The regulated path integral fixes the operator ordering on the closed time contour, so the apparent boundary terms from its forward and backward branches cancel. Explicit examples show how contact terms missed by ordinary time ordering enter the cancellation.",
+    "source": "arXiv abstract and sections 4–5",
+    "checked": false
+  },
   "2609.01480": {
     "summary_en": "This paper studies gravitational waves generated during reheating while particles from inflaton decay are still thermalizing, identifying an additional contribution from collisions between energetic particles and the emerging thermal bath. It shows that scattering also erases directional information, changing the low-frequency gravitational-wave spectrum from linear to cubic in frequency.",
     "source": "arXiv abstract",
